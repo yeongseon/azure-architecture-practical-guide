@@ -1,0 +1,254 @@
+name: Quality Gates
+
+on:
+  pull_request:
+    paths:
+      - 'docs/**/*.md'
+      - 'scripts/**'
+      - 'mkdocs.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'docs/**/*.md'
+      - 'scripts/**'
+      - 'mkdocs.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  build-docs:
+    name: Build Docs
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install MkDocs build dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install mkdocs-material mkdocs-minify-plugin
+
+      - name: Build documentation with strict validation
+        run: |
+          if ! mkdocs build --strict; then
+            echo "::error::MkDocs strict build failed. Resolve broken links, invalid navigation targets, or other build errors."
+            exit 1
+          fi
+
+  validate-content-sources:
+    name: Validate Content Sources
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install content validation dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml
+
+      - name: Validate content source metadata structure and source types
+        run: |
+          if ! python scripts/validate_content_sources.py; then
+            echo "::error::Content source metadata validation failed. Check content_sources.diagrams structure and allowed source types."
+            exit 1
+          fi
+
+  validate-mermaid:
+    name: Validate Mermaid Diagrams
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Mermaid validation dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml
+
+      - name: Validate Mermaid block formatting
+        run: |
+          if ! python scripts/validate_mermaid_format.py; then
+            echo "::error::Mermaid format validation failed. Mermaid blocks must not be indented."
+            exit 1
+          fi
+
+      - name: Validate Mermaid syntax
+        run: |
+          if ! python scripts/validate_mermaid_syntax.py; then
+            echo "::error::Mermaid syntax validation failed. Review Mermaid diagram definitions."
+            exit 1
+          fi
+
+      - name: Verify Mermaid blocks and diagram-id comments match
+        run: |
+          python <<'PY'
+          from pathlib import Path
+          import re
+          import sys
+
+          docs_dir = Path("docs")
+          mermaid_count = 0
+          diagram_id_count = 0
+
+          for path in docs_dir.rglob("*.md"):
+              text = path.read_text(encoding="utf-8")
+              mermaid_count += len(re.findall(r"^```mermaid\s*$", text, flags=re.MULTILINE))
+              diagram_id_count += len(re.findall(r"<!--\s*diagram-id:\s*.+?-->", text))
+
+          print(f"Mermaid blocks: {mermaid_count}")
+          print(f"Diagram IDs: {diagram_id_count}")
+
+          if mermaid_count != diagram_id_count:
+              print(
+                  "::error::Mismatch between Mermaid blocks and diagram-id comments. Every Mermaid block must have a corresponding <!-- diagram-id: ... --> comment.",
+                  file=sys.stderr,
+              )
+              sys.exit(1)
+          PY
+
+  validate-mslearn-urls:
+    name: Validate MS Learn URLs
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install MS Learn URL validation dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml requests
+
+      - name: Validate Microsoft Learn URLs with verbose output
+        continue-on-error: true
+        run: |
+          if ! python scripts/validate_mslearn_urls.py --verbose; then
+            echo "::error::Microsoft Learn URL validation reported failures. Review transient or stale URL issues."
+            exit 1
+          fi
+
+  validate-pii:
+    name: Validate PII
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install PII validation dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml
+
+      - name: Detect prohibited PII patterns in documentation
+        run: |
+          if ! python scripts/validate_pii.py; then
+            echo "::error::PII validation failed. Remove Azure subscription IDs, tenant IDs, private IPs, or real email addresses."
+            exit 1
+          fi
+
+  validate-cli-flags:
+    name: Validate Azure CLI Long Flags
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install CLI validation dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml
+
+      - name: Enforce Azure CLI long flags in examples
+        run: |
+          if ! python scripts/validate_cli_flags.py; then
+            echo "::error::Azure CLI flag validation failed. Replace short flags such as -g, -n, or -l with long-form flags."
+            exit 1
+          fi
+
+  validate-advr-sections:
+    name: Validate ADVR Sections
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install ADVR validation dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml
+
+      - name: Validate required ADVR sections in design lab files
+        run: |
+          if ! python scripts/validate_advr_sections.py; then
+            echo "::error::ADVR section validation failed. Ensure docs/design-labs/lab-*.md files contain all 16 required H2 sections."
+            exit 1
+          fi
+
+  validate-evidence-tags:
+    name: Validate Evidence Tags
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install evidence validation dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml
+
+      - name: Validate evidence level tags in required sections
+        run: |
+          if ! python scripts/validate_evidence_tags.py; then
+            echo "::error::Evidence tag validation failed. Add at least one required evidence tag in the targeted content sections."
+            exit 1
+          fi
