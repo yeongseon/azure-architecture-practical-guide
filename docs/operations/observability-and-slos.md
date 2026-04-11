@@ -95,7 +95,7 @@ Avoid vanity SLOs that are easy to meet but weakly tied to actual user impact.
 ## Microsoft Learn references
 
 - [Azure Monitor overview](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
-- [Designing a scalable observability solution](https://learn.microsoft.com/en-us/azure/architecture/guide/design-principles/observability)
+- [Designing a monitoring system](https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/observability)
 
 ## Takeaway
 

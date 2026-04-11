@@ -100,7 +100,7 @@ Design questions include:
 
 ## Microsoft Learn anchors
 
-- [Azure networking architecture guides](https://learn.microsoft.com/en-us/azure/architecture/networking/guide/)
+- [Azure networking architecture design](https://learn.microsoft.com/en-us/azure/architecture/networking/)
 - [Hub-spoke reference architecture](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/hub-spoke)
 - [About Azure Virtual WAN](https://learn.microsoft.com/en-us/azure/virtual-wan/virtual-wan-about)
 - [Private endpoint overview](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview)
