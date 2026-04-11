@@ -46,7 +46,7 @@ flowchart LR
 | Global entry | Azure Front Door Standard or Premium | Need global anycast edge, WAF, and origin routing | Application Gateway alone for regional-only exposure | Front Door adds edge cost but simplifies internet entry. [Documented] |
 | Web runtime | App Service | Managed HTTP hosting and strong operational simplicity matter most | Container Apps for container packaging and finer scale behavior | App Service is simpler; Container Apps offers more runtime flexibility. [Correlated] |
 | Relational data | Azure SQL Database | Strong transactional consistency and familiar relational patterns are needed | SQL Managed Instance when compatibility needs are higher | Managed Instance increases operational and cost footprint. [Documented] |
-| Distributed data | Azure Cosmos DB | Global distribution, flexible schema, or low-latency reads dominate | Azure SQL Database with read replicas | Cosmos DB changes consistency and cost design assumptions. [Measured] |
+| Distributed data | Azure Cosmos DB | Global distribution, flexible schema, or low-latency reads dominate | Azure SQL Database with read replicas | Cosmos DB changes consistency and cost design assumptions. [Correlated] |
 | Cache and session | Azure Managed Redis | Hot reads, token/session offload, or event buffering is required | In-memory cache per instance for low criticality | Azure Managed Redis reduces repeated data access but adds stateful operations. [Observed] |
 
 ## Why this choice
@@ -69,7 +69,7 @@ Most public web applications are operational systems, not analytical platforms. 
 |---|---|
 | Security | Layered edge controls, managed identity, and minimized public origin exposure. [Documented] |
 | Reliability | Zone-redundant managed services first; multi-region introduced when business continuity needs justify it. [Documented] |
-| Cost | Start with managed services and right-size scale units before adding premium edge or active-active regions. [Measured] |
+| Cost | Start with managed services and right-size scale units before adding premium edge or active-active regions. [Inferred] |
 | Performance | Cache reads and static assets close to users; keep origin latency predictable. [Correlated] |
 | Operations | Favor platform features such as health checks, slots, and built-in telemetry. [Observed] |
 
@@ -89,7 +89,7 @@ Most public web applications are operational systems, not analytical platforms. 
 ## Risks and watchpoints
 
 - Session affinity can hide poor state design and reduce scale efficiency. [Observed]
-- Cosmos DB cost can rise quickly when partitioning and RU allocation are chosen without measured access patterns. [Measured]
+- Cosmos DB cost can rise quickly when partitioning and RU allocation are chosen without measured access patterns. [Correlated]
 - Multi-region active-active adds operational complexity that many teams underestimate in deployment, cache invalidation, and data conflict handling. [Correlated]
 
 ## Evidence and references
@@ -97,6 +97,8 @@ Most public web applications are operational systems, not analytical platforms. 
 - [Baseline highly available zone-redundant web application](https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)
 - [Azure Front Door overview](https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview)
 - [Data store choice guide](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview)
+- [Azure Container Apps overview](https://learn.microsoft.com/en-us/azure/container-apps/overview)
+- [Choose between Azure Container Apps, AKS, and App Service](https://learn.microsoft.com/en-us/azure/container-apps/compare-options)
 
 ## Next decisions
 

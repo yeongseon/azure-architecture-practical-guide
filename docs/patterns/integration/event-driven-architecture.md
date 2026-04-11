@@ -96,7 +96,7 @@ flowchart LR
 ## Evidence considerations
 
 - `[Documented]` Azure architecture style guidance favors event-driven design where decoupling and extensibility are primary goals.
-- `[Measured]` Throughput, retention, and consumer lag are decisive for service choice.
+- `[Inferred]` Throughput, retention, and consumer lag are decisive for service choice.
 - `[Observed]` Consumer sprawl raises ownership and debugging complexity over time.
 - `[Validated]` Replay and poison-event drills are required before calling the design production ready.
 

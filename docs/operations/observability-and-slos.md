@@ -87,7 +87,7 @@ Avoid vanity SLOs that are easy to meet but weakly tied to actual user impact.
 
 - Critical user journeys have defined SLIs and SLOs.
 - [Observed] Alerts map to actionable ownership.
-- [Measured] Error budget burn, latency, and availability trends are visible.
+- [Observed] Error budget burn, latency, and availability trends are visible.
 - [Validated] Alert routing and escalation paths are exercised.
 - [Correlated] Telemetry joins application, dependency, and platform signals.
 - [Inferred] Observability backlog exists for blind spots and noisy alerts.

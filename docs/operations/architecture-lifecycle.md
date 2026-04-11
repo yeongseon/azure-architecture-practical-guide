@@ -71,7 +71,7 @@ flowchart TD
 
 - Each phase has defined outputs and exit criteria.
 - [Observed] Drift and exceptions are visible rather than hidden in tickets.
-- [Measured] Deployment, incident, cost, and performance trends inform changes.
+- [Correlated] Deployment, incident, cost, and performance trends inform changes.
 - [Validated] Revisit triggers lead to actual architecture reviews.
 - [Correlated] Repeated production pain is linked back to design decisions.
 

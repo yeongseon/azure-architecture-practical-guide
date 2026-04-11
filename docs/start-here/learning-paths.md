@@ -59,12 +59,13 @@ Best for principal engineers, review boards, platform owners, and architects sup
 Recommended order:
 
 1. Intermediate path
-2. Architecture Reviews
-3. [Design Labs](../design-labs/index.md)
+2. [Design Labs](../design-labs/index.md)
+
+Then add Architecture Reviews when the Phase 2 review section is published.
 
 What to focus on:
 
-- [Inferred] falsification criteria and review prompts
+- [Inferred] falsification criteria and review prompts, especially after the Phase 2 Architecture Reviews section is published
 - [Inferred] architecture decisions tied to explicit RTO, RPO, cost, and performance targets
 - [Correlated] how platform constraints influence workload outcomes across portfolios
 
@@ -83,8 +84,8 @@ flowchart TD
     C1 --> C2[Patterns]
     C2 --> C3[Operations]
     D --> D1[Intermediate Path]
-    D1 --> D2[Architecture Reviews]
-    D2 --> D3[Design Labs]
+    D1 --> D2[Design Labs]
+    D2 --> D3[Architecture Reviews<br/>Phase 2 planned]
 ```
 
 ## Which path fits your situation

@@ -16,7 +16,7 @@ Reliability in event-driven systems is measured less by immediate response time 
 ## Monitoring backlog and lag
 
 - Track queue depth, processing age, and dead-letter growth together. [Documented]
-- Distinguish normal burst buffering from sustained consumer inability to keep up. [Measured]
+- Distinguish normal burst buffering from sustained consumer inability to keep up. [Observed]
 - Monitor business backlog in addition to technical backlog when some messages are more urgent than others. [Observed]
 
 ## Scaling consumers
@@ -53,7 +53,7 @@ flowchart LR
 
 | Dimension | Example target |
 |---|---|
-| Event acceptance | Producers can enqueue within agreed latency budget. [Measured] |
+| Event acceptance | Producers can enqueue within agreed latency budget. [Inferred] |
 | Processing completion | Most messages complete within a business-defined time window. [Validated] |
 | DLQ recovery | Dead-letter items are triaged within an agreed operational window. [Observed] |
 
@@ -79,13 +79,13 @@ flowchart LR
 
 ## Architecture review checklist
 
-- Are queue lag thresholds tied to business impact? [Measured]
+- Are queue lag thresholds tied to business impact? [Correlated]
 - Can operators pause, replay, or redirect safely during incidents? [Observed]
 - Are downstream protections in place before consumer scaling expands? [Validated]
 
 ## Revisit triggers
 
-- Backlog age becomes a leading outage signal. [Measured]
+- Backlog age becomes a leading outage signal. [Correlated]
 - The team cannot explain what proportion of failures are transient, poison, or schema-related. [Observed]
 - Operations effort shifts from routine monitoring to continuous manual replay. [Correlated]
 

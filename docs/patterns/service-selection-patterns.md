@@ -64,7 +64,7 @@ The same requirement can produce different answers once constraints are explicit
 Prefer the option that satisfies must-have requirements with the least operational burden.
 
 - `[Inferred]` The most feature-rich service is often not the best fit if the team cannot operate it safely.
-- `[Measured]` Selection should consider projected cost under normal and failure scenarios, not just nominal load.
+- `[Inferred]` Selection should consider projected cost under normal and failure scenarios, not just nominal load.
 - `[Validated]` If two options remain close, test them against latency, deployment, and observability expectations.
 
 ## Azure-specific selection pattern
@@ -121,7 +121,7 @@ flowchart TD
 ## Recommended evidence to capture
 
 - `[Documented]` Microsoft Learn guidance for candidate service categories.
-- `[Measured]` Estimated cost, scaling thresholds, and latency under expected load.
+- `Measured` Estimated cost, scaling thresholds, and latency under expected load.
 - `[Observed]` Team support capability, incident history, and operational complexity.
 - `[Unknown]` Assumptions not yet tested in a proof of concept.
 

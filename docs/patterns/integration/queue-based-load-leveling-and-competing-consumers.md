@@ -76,7 +76,7 @@ flowchart LR
 
 ## Operational trade-offs
 
-- `[Measured]` Queue depth, dequeue latency, and worker throughput are the main health indicators.
+- `[Inferred]` Queue depth, dequeue latency, and worker throughput are the main health indicators.
 - `[Observed]` Scaling workers without downstream protection can simply move the bottleneck.
 - `[Validated]` Poison message handling and replay must be exercised in tests.
 - `[Correlated]` Backlogs often reveal hidden coupling or unrealistic SLA assumptions upstream.

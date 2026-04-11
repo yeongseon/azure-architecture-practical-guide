@@ -11,7 +11,7 @@ content_sources:
 ---
 # Landing Zone and Shared Services Cost and Anti-Patterns
 
-Landing zone cost is often indirect. Teams feel it through shared networking, logging, security tooling, and operational processes rather than through one obvious application bill. [Measured]
+Landing zone cost is often indirect. Teams feel it through shared networking, logging, security tooling, and operational processes rather than through one obvious application bill. [Observed]
 
 ## Cost allocation model
 
@@ -19,7 +19,7 @@ Shared services need explicit cost allocation rules or they become politically d
 
 Typical allocation dimensions:
 
-- Subscription or business unit consumption. [Measured]
+- Subscription or business unit consumption. [Observed]
 - Shared network traffic or egress intensity. [Correlated]
 - Security and monitoring data volume. [Observed]
 
@@ -35,7 +35,7 @@ Too many standing privileges undermine governance and create hidden operational 
 
 ### Hub bottleneck
 
-A central hub that carries too much traffic or too many policy dependencies can turn one platform component into a failure and cost hotspot. [Measured]
+A central hub that carries too much traffic or too many policy dependencies can turn one platform component into a failure and cost hotspot. [Correlated]
 
 ### Shared service without service catalog
 
@@ -62,7 +62,7 @@ flowchart TD
 
 ## Trade-offs to keep visible
 
-- Shared services lower duplication but can obscure consumption if chargeback is weak. [Measured]
+- Shared services lower duplication but can obscure consumption if chargeback is weak. [Correlated]
 - Central security and networking improve consistency but can become expensive failure domains. [Correlated]
 - Governance quality declines when permissions and cost ownership are not reviewed together. [Validated]
 
@@ -74,7 +74,7 @@ flowchart TD
 
 ## Revisit triggers
 
-- Shared service consumption rises without clear cost attribution. [Measured]
+- Shared service consumption rises without clear cost attribution. [Observed]
 - Teams increasingly bypass the platform. [Observed]
 - Central components repeatedly become performance or availability bottlenecks. [Correlated]
 
@@ -84,7 +84,7 @@ Healthy landing zone economics depend on transparent shared-service value, expli
 
 ## Related decisions
 
-- Review chargeback or showback mechanisms before adding more shared services. [Measured]
+- Review chargeback or showback mechanisms before adding more shared services. [Inferred]
 - Evaluate whether platform standardization is removing duplication or merely moving it into central budgets. [Correlated]
 
 ## Adoption note

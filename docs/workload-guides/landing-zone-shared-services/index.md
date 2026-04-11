@@ -38,7 +38,7 @@ Use this workload family for enterprise Azure platform setup: management groups,
 | Governance at scale | Standard guardrails reduce drift across teams. [Documented] |
 | Shared connectivity | Common network and DNS patterns simplify enterprise integration. [Observed] |
 | Platform operations | Monitoring, security, and identity should be reusable capabilities. [Validated] |
-| Cost accountability | Shared services need transparent allocation and review. [Measured] |
+| Cost accountability | Shared services need transparent allocation and review. [Observed] |
 
 <!-- diagram-id: landing-zone-shared-services-scope -->
 ```mermaid
@@ -59,7 +59,7 @@ flowchart LR
 
 - More standardization usually means stronger central accountability and exception management. [Observed]
 - Shared services simplify workload onboarding only when they are reliable and documented as products. [Validated]
-- Cost transparency is part of platform trust, not a finance-only concern. [Measured]
+- Cost transparency is part of platform trust, not a finance-only concern. [Inferred]
 
 ## Architecture review checklist
 
@@ -70,7 +70,7 @@ flowchart LR
 ## Revisit triggers
 
 - Platform teams become approval bottlenecks. [Observed]
-- New subscriptions and regions create unmanaged policy drift. [Measured]
+- New subscriptions and regions create unmanaged policy drift. [Observed]
 - Workload teams bypass shared services due to weak usability or unclear value. [Correlated]
 
 ## Decision takeaway

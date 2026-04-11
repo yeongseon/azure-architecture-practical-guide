@@ -80,7 +80,7 @@ Performance is shared across app, data, and platform teams:
 
 - The workload has explicit latency, throughput, and concurrency goals.
 - [Observed] Bottlenecks are identified across application, network, and data paths.
-- [Measured] Performance tests include realistic steady-state and peak conditions.
+- [Validated] Performance tests include realistic steady-state and peak conditions.
 - [Validated] Autoscaling or partitioning strategies were tested under stress.
 - [Correlated] Cache hit rates, queue depth, and dependency latency are reviewed together.
 - [Inferred] Synchronous dependencies are minimized for non-critical user paths.

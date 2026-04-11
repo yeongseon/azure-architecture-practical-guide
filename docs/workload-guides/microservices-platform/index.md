@@ -58,7 +58,7 @@ flowchart LR
 ## Trade-offs to keep visible
 
 - Team autonomy only pays off when service boundaries are credible. [Validated]
-- Platform consistency requires central investment that small organizations may not recover. [Measured]
+- Platform consistency requires central investment that small organizations may not recover. [Correlated]
 - Faster local change can increase system-wide complexity if contracts and observability are weak. [Observed]
 
 ## Architecture review checklist
@@ -70,7 +70,7 @@ flowchart LR
 ## Revisit triggers
 
 - Shared releases remain common. [Observed]
-- Service count grows while domain clarity shrinks. [Measured]
+- Service count grows while domain clarity shrinks. [Observed]
 - Teams need simpler workload patterns more than more platform features. [Inferred]
 
 ## Decision takeaway

@@ -64,14 +64,14 @@ Keep workflow progress, processed results, and archives in purpose-built stores 
 
 ## Risks and watchpoints
 
-- Backlogs can hide systemic failure until business SLAs are already impacted. [Measured]
+- Backlogs can hide systemic failure until business SLAs are already impacted. [Correlated]
 - Duplicate delivery handling is often underestimated. [Observed]
 - Event schema drift without ownership quickly erodes integration reliability. [Validated]
 
 ## Trade-offs to keep visible
 
 - Durable messaging increases resilience but also increases the need for schema, replay, and backlog governance. [Observed]
-- Consumption-based compute looks inexpensive until downstream dependencies and retries dominate the real cost profile. [Measured]
+- Consumption-based compute looks inexpensive until downstream dependencies and retries dominate the real cost profile. [Correlated]
 - Separating workflow state from transport adds clarity but requires more deliberate data ownership. [Validated]
 
 ## Architecture review checklist
@@ -83,7 +83,7 @@ Keep workflow progress, processed results, and archives in purpose-built stores 
 ## Revisit triggers
 
 - Business stakeholders now require tight synchronous confirmations. [Observed]
-- Event volume has shifted toward streaming telemetry rather than workflow events. [Measured]
+- Event volume has shifted toward streaming telemetry rather than workflow events. [Observed]
 - The team needs stronger service platform capabilities than a messaging-centric baseline provides. [Inferred]
 
 ## Decision takeaway
@@ -100,3 +100,5 @@ This baseline is strongest when messaging, retries, and asynchronous completion 
 - [Event-driven architecture style](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven)
 - [Service Bus messaging overview](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview)
 - [Azure Functions scale and hosting](https://learn.microsoft.com/en-us/azure/azure-functions/functions-scale)
+- [Azure Container Apps overview](https://learn.microsoft.com/en-us/azure/container-apps/overview)
+- [Choose between Azure Container Apps, AKS, and App Service](https://learn.microsoft.com/en-us/azure/container-apps/compare-options)

@@ -104,7 +104,7 @@ flowchart LR
 ## Trade-offs
 
 - `[Documented]` Microservices improve independent deployment and scalability for the right workloads.
-- `[Measured]` Network hops, observability overhead, and platform cost rise with service count.
+- `[Observed]` Network hops, observability overhead, and platform cost rise with service count.
 - `[Observed]` Teams frequently underestimate testing and failure-handling complexity in distributed systems.
 - `[Validated]` A modular monolith can be a durable target architecture, not merely a temporary compromise.
 

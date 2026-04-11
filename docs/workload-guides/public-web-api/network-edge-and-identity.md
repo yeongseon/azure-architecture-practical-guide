@@ -89,7 +89,7 @@ sequenceDiagram
 
 ## Trade-offs to keep visible
 
-- Extra edge layers can improve control while increasing latency, cost, and troubleshooting depth. [Measured]
+- Extra edge layers can improve control while increasing latency, cost, and troubleshooting depth. [Correlated]
 - Platform auth reduces custom code but may not fit highly specialized federation scenarios. [Correlated]
 - Certificate and hostname operations are platform concerns whether or not the product team notices them. [Observed]
 
@@ -102,7 +102,7 @@ sequenceDiagram
 ## Revisit triggers
 
 - Edge policy exceptions keep growing for application-specific reasons. [Observed]
-- Authentication customizations outgrow platform-native capabilities. [Measured]
+- Authentication customizations outgrow platform-native capabilities. [Observed]
 - Incident review shows origin exposure or trust header assumptions are unsafe. [Validated]
 
 ## Decision takeaway

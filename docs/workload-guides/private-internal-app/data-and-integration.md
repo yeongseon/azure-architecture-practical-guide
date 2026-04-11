@@ -92,7 +92,7 @@ flowchart LR
 ## Revisit triggers
 
 - Direct database sharing starts replacing documented interfaces. [Observed]
-- Queue ownership or retry behavior becomes ambiguous. [Measured]
+- Queue ownership or retry behavior becomes ambiguous. [Observed]
 - More external integration needs begin to challenge the private-only assumptions. [Inferred]
 
 ## Decision takeaway

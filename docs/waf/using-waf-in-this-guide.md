@@ -50,7 +50,7 @@ The guide uses evidence tags to avoid false confidence:
 
 - [Documented] Official Microsoft guidance or approved design records exist.
 - [Observed] Runtime behavior, logs, or operational patterns have been seen.
-- [Measured] Numeric evidence such as cost, latency, or recovery time is available.
+- `Measured` Numeric evidence such as cost, latency, or recovery time is available.
 - [Validated] Assumptions have been tested through drills, load tests, or reviews.
 - [Correlated] Several signals align but do not prove full causality.
 - [Inferred] The conclusion is reasoned from context and supporting evidence.

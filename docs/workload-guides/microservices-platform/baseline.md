@@ -45,7 +45,7 @@ flowchart LR
 |---|---|---|---|
 | Runtime | AKS for maximum control, Container Apps for reduced platform overhead | Choose based on operational capability and workload complexity. [Documented] | AKS offers control; Container Apps lowers platform burden. [Correlated] |
 | North-south traffic | API Management or gateway | Central policy, auth, and productized API exposure. [Documented] | Gateway sprawl can occur if every team creates its own. [Observed] |
-| East-west concerns | Service mesh or Dapr only when needed | Standardizes retries, mTLS, discovery, or pub-sub abstractions. [Inferred] | Adds complexity and learning curve. [Measured] |
+| East-west concerns | Service mesh or Dapr only when needed | Standardizes retries, mTLS, discovery, or pub-sub abstractions. [Inferred] | Adds complexity and learning curve. [Observed] |
 | Data | Database per service | Preserves service autonomy and bounded context ownership. [Documented] | Increases integration and reporting complexity. [Observed] |
 
 ## Why this choice
@@ -72,11 +72,11 @@ Shared databases often turn microservices into a distributed monolith. Database 
 
 - Service mesh adoption before teams understand service communication basics. [Observed]
 - Shared platform components becoming a central delivery bottleneck. [Correlated]
-- Excessive service granularity increasing cost and failure modes. [Measured]
+- Excessive service granularity increasing cost and failure modes. [Observed]
 
 ## Trade-offs to keep visible
 
-- Platform flexibility increases both runtime and governance surface area. [Measured]
+- Platform flexibility increases both runtime and governance surface area. [Inferred]
 - Per-service data ownership improves autonomy but makes cross-service reporting and transactions harder. [Observed]
 - Gateway and mesh capabilities help most when service count and policy complexity are already real. [Correlated]
 
@@ -89,7 +89,7 @@ Shared databases often turn microservices into a distributed monolith. Database 
 ## Revisit triggers
 
 - Shared database pressure reappears. [Observed]
-- Teams use the platform mainly as a place to host one large application. [Measured]
+- Teams use the platform mainly as a place to host one large application. [Observed]
 - Tooling overhead grows faster than feature throughput. [Correlated]
 
 ## Decision takeaway
@@ -101,3 +101,6 @@ This baseline works when the platform provides consistent paved roads while leav
 - [Architect microservices on Azure](https://learn.microsoft.com/en-us/azure/architecture/microservices/)
 - [Interservice communication in a microservices architecture](https://learn.microsoft.com/en-us/azure/architecture/microservices/design/interservice-communication)
 - [Data considerations for microservices](https://learn.microsoft.com/en-us/azure/architecture/microservices/design/data-considerations)
+- [Azure Kubernetes Service (AKS) overview](https://learn.microsoft.com/en-us/azure/aks/what-is-aks)
+- [Azure Container Apps overview](https://learn.microsoft.com/en-us/azure/container-apps/overview)
+- [Choose between Azure Container Apps, AKS, and App Service](https://learn.microsoft.com/en-us/azure/container-apps/compare-options)

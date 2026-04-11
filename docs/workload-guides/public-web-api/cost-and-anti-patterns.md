@@ -11,20 +11,20 @@ content_sources:
 ---
 # Public Web and API Cost and Anti-Patterns
 
-Public workloads often accumulate cost through defensive overprovisioning, premium edge features that are not actively used, and data services selected for hypothetical scale rather than measured demand. [Measured]
+Public workloads often accumulate cost through defensive overprovisioning, premium edge features that are not actively used, and data services selected for hypothetical scale rather than measured demand. [Correlated]
 
 ## Main cost drivers
 
 | Layer | Typical driver | Review signal |
 |---|---|---|
-| Edge | WAF policy tier, rules processing, outbound data transfer | Is global edge capability actually required? [Measured] |
+| Edge | WAF policy tier, rules processing, outbound data transfer | Is global edge capability actually required? [Inferred] |
 | Compute | Always-on instance count, premium plans, idle headroom | Does peak demand justify the baseline capacity? [Observed] |
 | Data | Provisioned throughput, storage redundancy, backup retention | Are consistency and replication settings tied to business requirements? [Validated] |
 | Observability | High-cardinality telemetry and long retention | Is all collected data used operationally? [Observed] |
 
 ## Cost optimization guidance
 
-- Right-size App Service plans and review whether isolated or premium tiers are used for a documented requirement. [Measured]
+- Right-size App Service plans and review whether isolated or premium tiers are used for a documented requirement. [Documented]
 - Compare App Service reserved capacity or savings options for steady-state workloads. [Documented]
 - Use Container Apps scale-to-zero only when latency expectations and traffic patterns support it; otherwise cold-start avoidance may justify always-ready instances. [Correlated]
 - Put static assets on the right delivery path to reduce repeated origin processing. [Observed]
@@ -33,7 +33,7 @@ Public workloads often accumulate cost through defensive overprovisioning, premi
 
 ### Over-provisioning for fear of spikes
 
-Teams sometimes run peak-season capacity year-round because autoscale policy confidence is low. This raises cost without improving architecture quality. The fix is to validate scaling behavior with load testing and clear rollback thresholds. [Measured]
+Teams sometimes run peak-season capacity year-round because autoscale policy confidence is low. This raises cost without improving architecture quality. The fix is to validate scaling behavior with load testing and clear rollback thresholds. [Validated]
 
 ### Paying for premium features without consuming them
 
@@ -45,7 +45,7 @@ Stable, long-lived web workloads often qualify for discounts that are ignored be
 
 ### Treating cache as free performance
 
-Redis can lower origin load, but it also adds service cost, memory sizing decisions, and operational risk. If cache hit rate is low or data churn is high, the economics may not work. [Measured]
+Redis can lower origin load, but it also adds service cost, memory sizing decisions, and operational risk. If cache hit rate is low or data churn is high, the economics may not work. [Correlated]
 
 ## Cost review flow
 
@@ -63,12 +63,12 @@ flowchart TD
 ## What good looks like
 
 - A documented reason exists for every premium tier. [Validated]
-- Performance tests inform scale policy instead of guesswork. [Measured]
+- Performance tests inform scale policy instead of guesswork. [Validated]
 - Cost anomalies are reviewed with architecture context, not only invoice data. [Correlated]
 
 ## Trade-offs to keep visible
 
-- Premium runtime or edge tiers are worthwhile only when they protect a measured user or business outcome. [Measured]
+- Premium runtime or edge tiers are worthwhile only when they protect a measured user or business outcome. [Inferred]
 - Cost savings from autoscale depend on confidence in performance testing and rollback. [Observed]
 - Data and telemetry spend can outweigh compute when left ungoverned. [Correlated]
 
@@ -80,7 +80,7 @@ flowchart TD
 
 ## Revisit triggers
 
-- Spending grows while utilization and SLO performance stay flat. [Measured]
+- Spending grows while utilization and SLO performance stay flat. [Correlated]
 - Premium features remain enabled without operational use. [Observed]
 - Cost optimization efforts begin to conflict with user-facing latency or reliability goals. [Correlated]
 
@@ -90,7 +90,7 @@ Public web cost discipline comes from linking each major spending area to a user
 
 ## Related decisions
 
-- Reassess edge and data service tiers after major traffic pattern changes. [Measured]
+- Reassess edge and data service tiers after major traffic pattern changes. [Inferred]
 - Keep cost reviews paired with architecture reviews so optimization does not erode resilience or security. [Correlated]
 
 ## Adoption note

@@ -97,7 +97,7 @@ Use a simple prioritization sequence:
 ## Validation guidance
 
 - Trade-offs are written into ADRs or review records.
-- [Measured] Cost, latency, and recovery data are compared after major design shifts.
+- [Observed] Cost, latency, and recovery data are compared after major design shifts.
 - [Validated] High-risk decisions are exercised through drills or load tests.
 - [Inferred] Deferred improvements include explicit revisit triggers.
 - [Unknown] Any unowned trade-off is a governance gap.

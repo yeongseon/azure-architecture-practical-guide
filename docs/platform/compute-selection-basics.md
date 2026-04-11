@@ -94,6 +94,9 @@ flowchart TD
 - [Choose a compute service](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-overview)
 - [App Service documentation](https://learn.microsoft.com/en-us/azure/app-service/)
 - [Azure Kubernetes Service documentation](https://learn.microsoft.com/en-us/azure/aks/)
+- [Azure Kubernetes Service (AKS) overview](https://learn.microsoft.com/en-us/azure/aks/what-is-aks)
+- [Azure Container Apps overview](https://learn.microsoft.com/en-us/azure/container-apps/overview)
+- [Choose between Azure Container Apps, AKS, and App Service](https://learn.microsoft.com/en-us/azure/container-apps/compare-options)
 
 ## Takeaway
 

@@ -85,7 +85,7 @@ These commitment models are valuable when demand is stable enough. The architect
 
 - Cost ownership and mandatory tags are defined.
 - [Observed] Budget alerts reach teams that can act.
-- [Measured] Spend by workload, environment, and shared service is visible.
+- [Observed] Spend by workload, environment, and shared service is visible.
 - [Validated] Commitment discounts are reviewed against real usage.
 - [Correlated] Cost anomalies are linked to traffic, releases, or topology changes.
 - [Inferred] FinOps insights influence architecture reviews and backlog priorities.

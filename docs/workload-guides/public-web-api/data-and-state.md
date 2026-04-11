@@ -73,19 +73,19 @@ Public APIs often mix strongly consistent transactional writes with eventually c
 
 1. Is the primary system of record obvious, or has cache/state sprawl blurred ownership? [Observed]
 2. Can the application scale horizontally without affinity to a specific node? [Validated]
-3. Has globally distributed data been chosen for a real latency or residency need rather than as premature future-proofing? [Measured]
+3. Has globally distributed data been chosen for a real latency or residency need rather than as premature future-proofing? [Inferred]
 
 ## Trade-offs to keep visible
 
 - More shared state usually means less scale efficiency. [Observed]
-- Distributed databases and caches add capability only when the access pattern actually needs them. [Measured]
+- Distributed databases and caches add capability only when the access pattern actually needs them. [Inferred]
 - File handling paths can dominate security and cost even when they are not the main product feature. [Correlated]
 
 ## Architecture review checklist
 
 - Is the system of record obvious for each major data domain? [Validated]
 - Can the application scale without sticky sessions? [Observed]
-- Are cache and file patterns justified by measurable user or system behavior? [Measured]
+- Are cache and file patterns justified by measurable user or system behavior? [Inferred]
 
 ## Revisit triggers
 

@@ -80,7 +80,7 @@ flowchart LR
 
 - Environment topology and parameter strategy are defined.
 - [Observed] Promotion paths are standardized and auditable.
-- [Measured] Drift, failed deployments, and rollback frequency are tracked.
+- [Observed] Drift, failed deployments, and rollback frequency are tracked.
 - [Validated] Non-production environments prove policy and dependency compatibility.
 - [Correlated] Production deployment issues are traced back to template or promotion design.
 - [Inferred] Module reuse reduces inconsistent implementation of core controls.

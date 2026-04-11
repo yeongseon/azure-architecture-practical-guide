@@ -10,7 +10,7 @@ content_sources:
 ---
 # Repository Map
 
-This page shows how the documentation is intended to be organized in the current MkDocs navigation so readers can move quickly between platform fundamentals, patterns, workloads, and review content.
+This page shows how the published Phase 1 documentation is organized in the current MkDocs navigation so readers can move quickly between platform fundamentals, patterns, workloads, and operational guidance.
 
 ## High-level structure
 
@@ -23,39 +23,41 @@ flowchart TD
     A --> E[Patterns]
     A --> F[Workload Guides]
     A --> G[Operations]
-    A --> H[Architecture Reviews]
+    A --> H[Architecture Reviews<br/>Phase 2 planned]
     A --> I[Design Labs]
     A --> J[Reference]
-    A --> K[Visualization]
-    A --> L[Meta]
+    A --> K[Visualization<br/>planned]
+    A --> L[Meta<br/>planned]
 ```
 
 ## Current section counts
 
-The counts below reflect the current `mkdocs.yml` navigation structure, not only the files that already exist in the repository.
+The counts below reflect the current published Phase 1 `mkdocs.yml` navigation structure.
 
-| Section | Approximate page count | Role in the guide |
+| Section | Published nav entries | Role in the guide |
 |---|---:|---|
 | Home | 1 | Main landing page |
-| Start Here | 7 | Orientation and onboarding |
+| Start Here | 6 | Orientation and onboarding |
 | Platform | 12 | Azure foundation decisions |
 | Well-Architected Framework | 9 | Evaluation lens and pillar trade-offs |
-| Architecture Patterns | 21 | Reusable decision patterns |
-| Workload Guides | 41 | Scenario baselines and anti-patterns |
+| Architecture Patterns | 14 | Reusable decision patterns |
+| Workload Guides | 28 | Scenario baselines and anti-patterns |
 | Operations | 9 | Governance and runtime practices |
-| Architecture Reviews | 32 | Review methods, cards, and playbooks |
-| Design Labs | 10 | Guided architecture exercises |
-| Reference | 13 | Cheatsheets and glossary |
-| Visualization | 5 | Graph and map views |
-| Meta | 8 | Contribution and content policy |
+| Design Labs | 5 | Guided architecture exercises |
+| Reference | 10 | Cheatsheets and validation status |
+| About | 1 | Project background and related repositories |
+| Architecture Reviews *(Phase 2 planned)* | — | Review methods, cards, and playbooks |
+| Visualization *(planned)* | — | Graph and map views |
+| Meta *(planned)* | — | Contribution and content policy |
 
 ## How to navigate efficiently
 
 - [Inferred] Start Here is the orientation layer.
 - [Documented] Platform is the foundation layer because it establishes Azure resource, identity, network, and resilience boundaries.
 - [Inferred] WAF and Patterns form the decision layer.
-- [Inferred] Workload Guides, Operations, and Architecture Reviews form the application layer for real projects.
-- [Inferred] Reference, Visualization, and Meta support maintenance and reuse.
+- [Inferred] Workload Guides and Operations form the application layer for current Phase 1 readers.
+- [Inferred] Reference supports maintenance and reuse for the published site.
+- [Assumed] Architecture Reviews, Visualization, and Meta are useful future expansions, but they are not part of the current published nav.
 
 ## Cross-section connections
 
@@ -64,9 +66,11 @@ The counts below reflect the current `mkdocs.yml` navigation structure, not only
 | Platform | WAF | Foundational choices must be evaluated against cost, reliability, security, performance, and operations |
 | WAF | Patterns | Pillar trade-offs become reusable design patterns |
 | Patterns | Workload Guides | Workloads are assembled from multiple patterns under concrete constraints |
-| Workload Guides | Architecture Reviews | Reviewers need practical baseline expectations |
-| Operations | Architecture Reviews | Operational maturity is part of architecture quality |
+| Workload Guides | Design Labs | Design exercises use practical baseline expectations |
+| Operations | Design Labs | Operational maturity is part of architecture quality |
 | Reference | Every section | Common terminology and decision matrices reduce ambiguity |
+| Workload Guides | Architecture Reviews *(Phase 2 planned)* | Future review content should build on the published baselines |
+| Operations | Architecture Reviews *(Phase 2 planned)* | Future review content should evaluate operational maturity |
 
 ## Maintainer notes
 
@@ -97,6 +101,6 @@ Signals that a page likely belongs elsewhere:
 
 ## Takeaway
 
-[Inferred] The repository is organized to move readers from fundamentals to applied review.
+[Inferred] The published Phase 1 repository is organized to move readers from fundamentals to patterns, workloads, operations, and design labs.
 
-When in doubt, ask where the page sits in that flow: orientation, foundation, decision pattern, workload application, operation, or review.
+When in doubt, ask where the page sits in that flow: orientation, foundation, decision pattern, workload application, operation, design lab, or planned future review content.

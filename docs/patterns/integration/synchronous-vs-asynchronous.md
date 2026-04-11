@@ -78,7 +78,7 @@ flowchart TD
 ## Failure behavior
 
 - `[Observed]` Synchronous chains create visible outages quickly when a dependency is slow or unavailable.
-- `[Measured]` Queue-based flows usually absorb burst load better at the cost of completion latency.
+- `[Observed]` Queue-based flows usually absorb burst load better at the cost of completion latency.
 - `[Validated]` Async designs need dead-letter, replay, and idempotency tests before they can be trusted.
 - `[Unknown]` If downstream processing time variance is not known, synchronous assumptions are weak.
 

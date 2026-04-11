@@ -11,13 +11,13 @@ content_sources:
 ---
 # Microservices Platform Cost and Anti-Patterns
 
-Microservices platforms cost more than simpler architectures because networking, observability, platform operations, and duplicated service scaffolding are part of the operating model. The architecture is justified only when autonomy and domain complexity return more value than that overhead. [Measured]
+Microservices platforms cost more than simpler architectures because networking, observability, platform operations, and duplicated service scaffolding are part of the operating model. The architecture is justified only when autonomy and domain complexity return more value than that overhead. [Correlated]
 
 ## Main cost drivers
 
 | Driver | Why it matters |
 |---|---|
-| Runtime baseline | Many services need minimum replicas, ingress, and supporting components. [Measured] |
+| Runtime baseline | Many services need minimum replicas, ingress, and supporting components. [Observed] |
 | Networking and gateway layers | Gateways, meshes, and egress add operational and direct cost. [Observed] |
 | Observability | Distributed tracing and logs multiply telemetry volume. [Correlated] |
 | Platform engineering | Shared platform work is necessary, not optional. [Validated] |
@@ -34,7 +34,7 @@ A shared schema undermines bounded contexts and turns service coordination into 
 
 ### Nano-services
 
-Overly small services create too much coordination cost for the value delivered. [Measured]
+Overly small services create too much coordination cost for the value delivered. [Observed]
 
 ### Tool-first platform sprawl
 
@@ -64,7 +64,7 @@ flowchart TD
 
 ## Trade-offs to keep visible
 
-- Autonomy gains can be erased by excessive service count. [Measured]
+- Autonomy gains can be erased by excessive service count. [Correlated]
 - Platform tooling saves effort only if teams adopt shared practices consistently. [Observed]
 - Observability spend is justified when it shortens major-incident diagnosis across services. [Correlated]
 
@@ -77,7 +77,7 @@ flowchart TD
 ## Revisit triggers
 
 - Teams complain more about platform friction than service delivery benefits. [Observed]
-- Shared dependencies and release coordination keep increasing. [Measured]
+- Shared dependencies and release coordination keep increasing. [Observed]
 - Telemetry and gateway costs outpace growth in business capability. [Correlated]
 
 ## Decision takeaway

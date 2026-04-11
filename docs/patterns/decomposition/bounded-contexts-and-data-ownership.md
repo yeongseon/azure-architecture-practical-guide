@@ -88,7 +88,7 @@ flowchart LR
 
 ## Trade-offs
 
-- `[Measured]` Strong ownership can increase data duplication and event propagation latency.
+- `[Inferred]` Strong ownership can increase data duplication and event propagation latency.
 - `[Observed]` It reduces coordination cost and schema contention over time.
 - `[Correlated]` Teams with explicit data ownership usually achieve clearer accountability during incidents.
 - `[Assumed]` Additional reporting patterns may be needed when many cross-context queries exist.

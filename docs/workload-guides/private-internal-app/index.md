@@ -68,7 +68,7 @@ flowchart LR
 
 ## Trade-offs to keep visible
 
-- Reduced public exposure often comes with higher DNS and hybrid networking complexity. [Measured]
+- Reduced public exposure often comes with higher DNS and hybrid networking complexity. [Correlated]
 - Private-only access is valuable only if user and operator routes remain dependable during incidents. [Observed]
 - Managed services still require enterprise network design discipline. [Validated]
 
@@ -81,7 +81,7 @@ flowchart LR
 ## Revisit triggers
 
 - Users increasingly need secure internet access rather than network-bound access. [Observed]
-- Connectivity and DNS operations dominate incident volume. [Measured]
+- Connectivity and DNS operations dominate incident volume. [Observed]
 - The application is becoming a platform for many autonomous teams rather than one internal product. [Inferred]
 
 ## Decision takeaway

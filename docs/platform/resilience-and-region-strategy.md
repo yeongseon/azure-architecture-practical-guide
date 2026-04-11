@@ -54,7 +54,7 @@ flowchart TD
 
 ## RTO and RPO as design inputs
 
-[Measured] Recovery targets should be explicit numbers, not adjectives such as "highly available."
+[Inferred] Recovery targets should be explicit numbers, not adjectives such as "highly available."
 
 Architectural consequences include:
 

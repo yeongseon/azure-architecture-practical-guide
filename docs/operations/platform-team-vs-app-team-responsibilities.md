@@ -76,7 +76,7 @@ Use clear interfaces:
 
 - Responsibilities for core operational domains are explicit.
 - [Observed] Teams can identify the right owner for platform, workload, and security issues.
-- [Measured] Repeated exception categories are tracked.
+- [Observed] Repeated exception categories are tracked.
 - [Validated] Incident and drill reviews confirm handoffs and escalation paths work.
 - [Correlated] Platform roadmap changes respond to recurring app-team friction.
 - [Inferred] Shared responsibility reduces ambiguity without diluting accountability.

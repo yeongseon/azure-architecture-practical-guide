@@ -79,12 +79,12 @@ If ingress uses an App Service Private Endpoint, platform dependencies are reach
 - Confirm there is no public ingress path from the internet and that public network access is explicitly disabled on the App Service. [Validated]
 - Test internal name resolution and fail scenarios for private DNS and endpoint access. [Validated]
 - Run application connectivity tests to Azure SQL and Key Vault over their intended private paths. [Observed]
-- Review cost deltas from private endpoints, DNS, and monitoring against the Bicep baseline in `infra/bicep/lab-02/`. [Measured]
+- Review cost deltas from private endpoints, DNS, and monitoring against the Bicep baseline in `infra/bicep/lab-02/`. [Validated]
 
 ## Falsification Criteria
 
 - The application must support unmanaged external users or public APIs. [Observed]
-- Private connectivity introduces unacceptable operational friction for the owning team. [Measured]
+- Private connectivity introduces unacceptable operational friction for the owning team. [Observed]
 - Network architecture or policy prevents the required private endpoint and DNS model. [Validated]
 
 ## Evidence

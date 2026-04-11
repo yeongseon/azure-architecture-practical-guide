@@ -62,7 +62,7 @@ flowchart LR
 ## Common mistakes
 
 - Building service-to-service call chains so deep that one user request traverses many services synchronously. [Observed]
-- Adopting service mesh before a real need for mTLS, traffic shaping, or policy consistency exists. [Measured]
+- Adopting service mesh before a real need for mTLS, traffic shaping, or policy consistency exists. [Observed]
 - Reusing one identity principal across many services. [Validated]
 
 ## Review questions
@@ -74,7 +74,7 @@ flowchart LR
 ## Trade-offs to keep visible
 
 - Synchronous communication improves immediacy but raises cascade risk. [Observed]
-- Stronger east-west identity and mTLS controls add operational complexity that must be justified. [Measured]
+- Stronger east-west identity and mTLS controls add operational complexity that must be justified. [Inferred]
 - Gateway and mesh adoption should follow a problem statement, not precede it. [Validated]
 
 ## Architecture review checklist
@@ -85,7 +85,7 @@ flowchart LR
 
 ## Revisit triggers
 
-- Average request path keeps adding synchronous hops. [Measured]
+- Average request path keeps adding synchronous hops. [Observed]
 - Shared secrets remain in broad use between services. [Observed]
 - Gateway policy or service mesh becomes a delivery bottleneck. [Correlated]
 

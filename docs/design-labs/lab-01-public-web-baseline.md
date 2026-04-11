@@ -76,13 +76,13 @@ If the workload uses Front Door for edge protection and routing, App Service for
 - Run load tests against Front Door and App Service autoscale thresholds. [Validated]
 - Perform a dependency failure exercise for Azure SQL connection handling and Key Vault secret retrieval fallback. [Validated]
 - Review WAF, identity, and secret flows with a threat model. [Documented]
-- Compare estimated monthly cost with the reference Bicep deployment in `infra/bicep/lab-01/`. [Measured]
+- Compare estimated monthly cost with the reference Bicep deployment in `infra/bicep/lab-01/`. [Validated]
 
 ## Falsification Criteria
 
-- Required latency cannot be met without moving to regional edge caching or a different compute model. [Measured]
+- Required latency cannot be met without moving to regional edge caching or a different compute model. [Validated]
 - The app requires container-level control, sidecars, or custom network routing not well served by App Service. [Observed]
-- Database throughput or tenancy isolation requirements outgrow the baseline Azure SQL choice. [Measured]
+- Database throughput or tenancy isolation requirements outgrow the baseline Azure SQL choice. [Validated]
 
 ## Evidence
 

@@ -79,7 +79,7 @@ flowchart LR
 - Identity boundaries and privileged roles are defined.
 - Data classification and required protections are known.
 - [Observed] Secrets are minimized and rotated through managed processes.
-- [Measured] Security-relevant logs cover authentication, authorization, and control changes.
+- [Observed] Security-relevant logs cover authentication, authorization, and control changes.
 - [Validated] Access reviews, incident exercises, and control tests occur regularly.
 - [Correlated] Network controls align with identity and data sensitivity boundaries.
 - [Inferred] Default-deny and least-privilege principles guide new changes.

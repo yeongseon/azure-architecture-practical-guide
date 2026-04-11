@@ -65,7 +65,7 @@ flowchart LR
 ## Trade-offs to keep visible
 
 - Central visibility improves governance only when workload teams can still access and act on their own signals. [Observed]
-- Unified monitoring reduces duplication but can increase data volume and RBAC complexity. [Measured]
+- Unified monitoring reduces duplication but can increase data volume and RBAC complexity. [Correlated]
 - Identity guardrails must balance least privilege with operational responsiveness. [Validated]
 
 ## Architecture review checklist
@@ -76,7 +76,7 @@ flowchart LR
 
 ## Revisit triggers
 
-- Telemetry growth outpaces operational usage. [Measured]
+- Telemetry growth outpaces operational usage. [Observed]
 - SOC alerts repeatedly lack workload remediation ownership. [Observed]
 - Platform operations tooling becomes harder to govern than the workloads it supports. [Correlated]
 

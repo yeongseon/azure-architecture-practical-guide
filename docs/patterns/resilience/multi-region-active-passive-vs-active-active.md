@@ -83,7 +83,7 @@ flowchart LR
 
 - Active-passive may still require warm standby, replicated data, monitoring, and regular drills.
 - Active-active increases baseline compute, networking, observability, and test cost.
-- `[Measured]` Cost comparison must include data replication, cross-region traffic, and failover exercises, not only idle compute.
+- `[Inferred]` Cost comparison must include data replication, cross-region traffic, and failover exercises, not only idle compute.
 
 ## Common anti-patterns
 

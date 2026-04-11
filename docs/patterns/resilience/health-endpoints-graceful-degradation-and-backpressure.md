@@ -80,7 +80,7 @@ flowchart TD
 
 ## Evidence expectations
 
-- `[Measured]` Queue depth, saturation, rejected requests, and degraded-mode latency should be tracked.
+- `[Observed]` Queue depth, saturation, rejected requests, and degraded-mode latency should be tracked.
 - `[Observed]` Good health checks reduce false positives during maintenance and downstream outages.
 - `[Validated]` Degraded-mode drills must prove the workload remains useful, not merely reachable.
 - `[Correlated]` Rising throttles often correlate with a dependency bottleneck elsewhere in the system.

@@ -74,14 +74,14 @@ If orders are accepted through a thin API and durably queued in Service Bus befo
 ## Validation Plan
 
 - Test duplicate delivery handling and idempotent processing logic. [Validated]
-- Run backlog growth and drain-rate tests under peak order bursts. [Measured]
+- Run backlog growth and drain-rate tests under peak order bursts. [Validated]
 - Simulate downstream subscriber outages and verify notification retry or dead-letter behavior. [Validated]
-- Compare throughput and cost characteristics using the reference assets in `infra/bicep/lab-03/`. [Measured]
+- Compare throughput and cost characteristics using the reference assets in `infra/bicep/lab-03/`. [Validated]
 
 ## Falsification Criteria
 
 - The business requires immediate all-or-nothing synchronous completion across all order steps. [Documented]
-- Ordering guarantees, transaction boundaries, or processing latency cannot be met with the selected broker and function model. [Measured]
+- Ordering guarantees, transaction boundaries, or processing latency cannot be met with the selected broker and function model. [Validated]
 - Operational maturity is insufficient to manage retries, poison messages, and event versioning. [Observed]
 
 ## Evidence
@@ -103,7 +103,7 @@ If orders are accepted through a thin API and durably queued in Service Bus befo
 - Define message TTL, retry, dead-letter, and replay procedures. [Validated]
 - Enforce managed identity, secret minimization, and diagnostic collection for broker and functions. [Documented]
 - Publish schema ownership and event versioning rules. [Observed]
-- Set alerts for queue depth, dead-letter growth, function failures, and notification delivery anomalies. [Measured]
+- Set alerts for queue depth, dead-letter growth, function failures, and notification delivery anomalies. [Observed]
 
 ## Revisit Triggers
 

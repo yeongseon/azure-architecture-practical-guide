@@ -48,7 +48,7 @@ flowchart LR
 
 - Every major architecture decision names affected pillars.
 - [Observed] Review conversations distinguish symptoms from root design causes.
-- [Measured] SLOs, budget thresholds, and recovery targets are defined before scale events.
+- [Documented] SLOs, budget thresholds, and recovery targets are defined before scale events.
 - [Validated] Failover drills, security reviews, and deployment rehearsals confirm assumptions.
 - [Correlated] Cost spikes, latency regressions, and incident trends are tied to design changes.
 - [Inferred] Teams understand that pillar optimization is contextual, not absolute.

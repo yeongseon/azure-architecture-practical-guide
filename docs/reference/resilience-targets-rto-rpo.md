@@ -32,7 +32,7 @@ Use this page to set recovery expectations before choosing topology, replication
 
 | Pattern | Expected recovery profile |
 |---|---|
-| Single-region with backups | Longer RTO and higher data-loss risk under regional outage. [Measured] |
+| Single-region with backups | Longer RTO and higher data-loss risk under regional outage. [Inferred] |
 | Single-region with zone redundancy | Better intra-region fault tolerance, little help for region loss. [Documented] |
 | Multi-region active-passive | Faster recovery if failover is rehearsed and dependencies are paired. [Validated] |
 | Multi-region active-active | Fastest customer recovery when data and routing patterns support it. [Assumed] |

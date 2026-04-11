@@ -77,7 +77,7 @@ flowchart TD
 
 - Required standards are mapped to specific policy controls.
 - [Observed] Policy violations and exemptions are visible by scope and owner.
-- [Measured] Compliance trend and remediation time are tracked.
+- [Observed] Compliance trend and remediation time are tracked.
 - [Validated] New policies are tested before wide enforcement.
 - [Correlated] Repeated exception patterns trigger architecture or platform changes.
 - [Unknown] Any control without owner or escalation path is flagged.

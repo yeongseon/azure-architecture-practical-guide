@@ -89,22 +89,23 @@ flowchart LR
     B --> C[Patterns]
     C --> D[Workload Guides]
     D --> E[Operations]
-    E --> F[Architecture Reviews]
-    F --> G[Design Labs]
+    E --> F[Architecture Reviews<br/>Phase 2 planned]
+    E --> G[Design Labs]
 ```
 
 - [Documented] Platform establishes Azure building blocks and governance context.
 - [Inferred] Well-Architected gives the evaluation lens for later trade-offs.
 - [Inferred] Patterns turn service knowledge into reusable decision shapes.
 - [Inferred] Workload guides package those shapes into practical blueprints.
-- [Inferred] Architecture reviews and labs test whether the design still holds under pressure.
+- [Inferred] Design labs test whether the design still holds under pressure in the published Phase 1 scope.
+- [Assumed] Architecture Reviews will extend that validation path when the Phase 2 section is published.
 
 ## How to read it efficiently
 
 1. Read the platform fundamentals before debating advanced patterns.
 2. Use the Well-Architected pages when trade-offs are unclear.
 3. Use workload guides when a team needs a concrete starting baseline.
-4. Use review content before major architecture checkpoints or investment decisions.
+4. Use design labs now for guided validation, and use Architecture Reviews once that Phase 2 section is published.
 
 ## Microsoft Learn anchors
 

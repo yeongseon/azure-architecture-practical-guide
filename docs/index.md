@@ -70,10 +70,12 @@ flowchart LR
     C --> D[Architecture Patterns]
     D --> E[Workload Guides]
     E --> F[Operations]
-    F --> G[Architecture Reviews]
-    G --> H[Design Labs]
+    F --> G[Architecture Reviews<br/>Phase 2 planned]
+    F --> H[Design Labs]
     H --> I[Reference]
 ```
+
+Architecture Reviews are planned for Phase 2. In the current published Phase 1 site, the practical path runs from Start Here through Platform, Well-Architected Framework, Patterns, Workload Guides, Operations, Design Labs, and Reference.
 
 ## Scope and disclaimer
 

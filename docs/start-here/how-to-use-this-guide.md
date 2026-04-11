@@ -23,14 +23,19 @@ Use this repository like a layered architecture workbook rather than a book that
 4. [Architecture Patterns](../patterns/index.md)
 5. Relevant [Workload Guide](../workload-guides/index.md)
 6. [Operations](../operations/index.md)
-7. Architecture Reviews
+7. [Design Labs](../design-labs/index.md)
+
+After that published Phase 1 path, add Architecture Reviews when the Phase 2 section is available.
 
 ### If you are reviewing an existing architecture
 
 1. [Overview](overview.md)
 2. [Platform](../platform/index.md)
-3. Architecture Reviews
-4. Targeted pattern or workload pages that match the system under review
+3. Targeted pattern or workload pages that match the system under review
+4. [Operations](../operations/index.md)
+5. [Design Labs](../design-labs/index.md)
+
+Use Architecture Reviews later as a Phase 2 extension for a more formal review workflow.
 
 ### If you are migrating from ad hoc Azure usage to a managed platform
 
@@ -49,8 +54,9 @@ flowchart LR
     C --> D[Patterns]
     D --> E[Workload Guides]
     E --> F[Operations]
-    F --> G[Architecture Reviews]
+    F --> G[Design Labs]
     G --> H[Reference]
+    F --> I[Architecture Reviews<br/>Phase 2 planned]
 ```
 
 Interpret the connections this way:
@@ -60,7 +66,8 @@ Interpret the connections this way:
 - [Inferred] Patterns translate those principles into reusable decision shapes.
 - [Validated] Workload guides give a practical starting topology for common scenarios.
 - [Validated] Operations turns architecture into durable runtime ownership.
-- [Validated] Reviews test whether the architecture still holds against evidence.
+- [Validated] Design labs provide the published hands-on validation path in Phase 1.
+- [Assumed] Architecture Reviews will add a dedicated review layer when the Phase 2 section is published.
 
 ## How to use this guide with Microsoft documentation
 
@@ -90,7 +97,7 @@ Vertical reading example:
 
 - start at `platform/index.md`
 - continue to one workload baseline
-- finish with an architecture review playbook
+- finish with a design lab today, then add an architecture review playbook when Phase 2 publishes
 
 ## When to stop reading a page
 

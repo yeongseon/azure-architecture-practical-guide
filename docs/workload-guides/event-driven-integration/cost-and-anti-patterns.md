@@ -11,13 +11,13 @@ content_sources:
 ---
 # Event-Driven Integration Cost and Anti-Patterns
 
-Messaging-based architectures can be cost-efficient, but only when the number of events, fan-out behavior, retention, and consumer execution model are grounded in measured business demand. [Measured]
+Messaging-based architectures can be cost-efficient, but only when the number of events, fan-out behavior, retention, and consumer execution model are grounded in measured business demand. [Correlated]
 
 ## Main cost drivers
 
 | Driver | Why it matters |
 |---|---|
-| Message volume and operations | Costs grow with transaction count and delivery pattern. [Measured] |
+| Message volume and operations | Costs grow with transaction count and delivery pattern. [Correlated] |
 | Fan-out to many subscribers | Each subscriber can multiply downstream processing cost. [Observed] |
 | Consumer execution time | Event-driven compute is economical only when runtimes stay aligned with event work. [Correlated] |
 | Long retention or replay archives | Helpful for recovery, but not free. [Documented] |
@@ -30,7 +30,7 @@ Not every file transfer or two-system notification needs a full event backbone. 
 
 ### Chatty events
 
-Events that expose tiny field-level changes or highly repetitive low-value signals can create operational noise and inflated downstream cost. [Measured]
+Events that expose tiny field-level changes or highly repetitive low-value signals can create operational noise and inflated downstream cost. [Observed]
 
 ### Missing DLQ monitoring
 
@@ -62,19 +62,19 @@ flowchart TD
 
 ## Trade-offs to keep visible
 
-- Cheaper event acceptance can still produce expensive downstream processing. [Measured]
+- Cheaper event acceptance can still produce expensive downstream processing. [Inferred]
 - Fine-grained events improve flexibility only if consumers truly need that granularity. [Observed]
 - Long replay retention adds resilience but can dilute accountability for fixing source issues. [Correlated]
 
 ## Architecture review checklist
 
-- Is the event volume forecast based on measured business activity? [Measured]
+- Is the event volume forecast based on measured business activity? [Inferred]
 - Are fan-out subscriptions justified by explicit consumer value? [Validated]
 - Does the cost review include broker, compute, storage, and operator effort together? [Correlated]
 
 ## Revisit triggers
 
-- Message volume grows faster than business value delivered. [Measured]
+- Message volume grows faster than business value delivered. [Correlated]
 - Subscriber sprawl leads to weak ownership and duplicated transformations. [Observed]
 - Broker selection no longer matches payload or throughput profile. [Inferred]
 
@@ -85,7 +85,7 @@ The most cost-effective event architecture is usually the one with the fewest ev
 ## Related decisions
 
 - Revisit event shape before adding more infrastructure to handle rising volume. [Observed]
-- Prefer consolidation of low-value event streams over blind scaling of every consumer path. [Measured]
+- Prefer consolidation of low-value event streams over blind scaling of every consumer path. [Inferred]
 
 ## Adoption note
 

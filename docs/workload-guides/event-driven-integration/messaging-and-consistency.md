@@ -49,7 +49,7 @@ Good practice includes:
 
 - Categorizing dead-letter reasons. [Validated]
 - Defining ownership for triage and replay. [Documented]
-- Setting backlog thresholds tied to business impact. [Measured]
+- Setting backlog thresholds tied to business impact. [Correlated]
 
 ## Saga pattern for distributed transactions
 
@@ -82,7 +82,7 @@ flowchart TD
 
 ## Trade-offs to keep visible
 
-- Stronger delivery guarantees increase cost and operational ceremony. [Measured]
+- Stronger delivery guarantees increase cost and operational ceremony. [Correlated]
 - Consumer simplicity often depends on more explicit business reconciliation processes. [Correlated]
 - “Exactly-once” language should be reserved for narrowly proven boundaries, not broad architecture claims. [Validated]
 
@@ -94,7 +94,7 @@ flowchart TD
 
 ## Revisit triggers
 
-- Duplicate business actions appear despite technical deduplication. [Measured]
+- Duplicate business actions appear despite technical deduplication. [Observed]
 - Dead-letter growth becomes a recurring manual burden. [Observed]
 - Workflow spans now require orchestration patterns beyond current saga design. [Inferred]
 

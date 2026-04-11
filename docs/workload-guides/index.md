@@ -91,7 +91,7 @@ Landing zones answer platform questions such as subscription hierarchy, guardrai
 ## Evidence posture and review expectations
 
 - Prefer Microsoft Learn as the starting source for service capabilities and reference architectures. [Documented]
-- Treat benchmark numbers and cost examples as directional until validated in your tenant and region. [Measured]
+- Treat benchmark numbers and cost examples as directional until validated in your tenant and region. [Inferred]
 - Use architecture decision records when deviating from a baseline for compliance, latency, or organizational reasons. [Validated]
 
 ## Related Microsoft Learn references

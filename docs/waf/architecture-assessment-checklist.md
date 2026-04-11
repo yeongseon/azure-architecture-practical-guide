@@ -49,14 +49,14 @@ Use a 0 to 4 scale for each checkpoint:
 - Critical user journeys and dependencies are identified.
 - RTO and RPO targets are defined.
 - [Observed] Failure domains and shared dependencies are understood.
-- [Measured] Recovery times and failover behavior are captured.
+- [Validated] Recovery times and failover behavior are captured.
 - [Validated] Restore and failover drills have been run.
 
 ## Security checklist
 
 - Trust boundaries, identity flows, and privileged roles are mapped.
 - [Observed] Secrets and credentials follow managed patterns.
-- [Measured] Security logs and control changes are retained and reviewable.
+- [Observed] Security logs and control changes are retained and reviewable.
 - [Validated] Access reviews and policy checks occur regularly.
 - [Unknown] Undocumented access paths are listed as risk.
 
@@ -64,7 +64,7 @@ Use a 0 to 4 scale for each checkpoint:
 
 - Cost allocation tags and budgets exist.
 - [Observed] Non-production environments have lifecycle controls.
-- [Measured] Major services have utilization or consumption visibility.
+- [Observed] Major services have utilization or consumption visibility.
 - [Correlated] Cost spikes can be linked to topology, traffic, or release changes.
 - [Validated] Reservation or savings assumptions were tested against actual use.
 
@@ -72,7 +72,7 @@ Use a 0 to 4 scale for each checkpoint:
 
 - Provisioning and policy are managed as code.
 - [Observed] Alerts support diagnosis and action.
-- [Measured] Change failure rate and restoration time are tracked.
+- [Observed] Change failure rate and restoration time are tracked.
 - [Validated] Rollback or compensating deployment paths are rehearsed.
 - [Inferred] Shared-service ownership and escalation are clear.
 
@@ -80,7 +80,7 @@ Use a 0 to 4 scale for each checkpoint:
 
 - Latency, throughput, and concurrency goals are known.
 - [Observed] Bottlenecks and saturation signals are visible.
-- [Measured] Testing reflects realistic peak and dependency behavior.
+- [Validated] Testing reflects realistic peak and dependency behavior.
 - [Validated] Scaling and partitioning strategies were stress tested.
 - [Correlated] Cache, queue, and dependency metrics are reviewed together.
 

@@ -33,7 +33,7 @@ Do not start here just because the application has a browser front end. If the w
 ## Prerequisites
 
 - A clear definition of user identity model: workforce, external customer, or partner federation. [Assumed]
-- Expected SLO, peak traffic profile, and regional footprint. [Measured]
+- Expected SLO, peak traffic profile, and regional footprint. [Assumed]
 - Data classification and regulatory requirements for public access, retention, and residency. [Validated]
 
 ## What this family optimizes for
@@ -72,7 +72,7 @@ flowchart LR
 1. Front Door only, or Front Door plus regional Application Gateway for additional Layer 7 controls. [Documented]
 2. App Service versus Container Apps based on packaging, scaling granularity, and platform maturity needs. [Correlated]
 3. Relational versus NoSQL data path, including session and cache placement. [Documented]
-4. Active-active versus active-passive regional design. [Measured]
+4. Active-active versus active-passive regional design. [Inferred]
 
 ## Signals that this is the wrong family
 
@@ -83,7 +83,7 @@ flowchart LR
 ## Trade-offs to keep visible
 
 - Managed web services accelerate delivery but do not eliminate edge and abuse management responsibilities. [Observed]
-- Global resiliency features add cost and design complexity that should track business need. [Measured]
+- Global resiliency features add cost and design complexity that should track business need. [Correlated]
 - Public identity and session choices have direct scaling consequences. [Correlated]
 
 ## Architecture review checklist
@@ -107,6 +107,8 @@ This family fits when public ingress, managed web operations, and predictable AP
 - [Baseline highly available zone-redundant web application](https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)
 - [Azure Front Door overview](https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview)
 - [Azure App Service reliability](https://learn.microsoft.com/en-us/azure/reliability/reliability-app-service)
+- [Azure Container Apps overview](https://learn.microsoft.com/en-us/azure/container-apps/overview)
+- [Choose between Azure Container Apps, AKS, and App Service](https://learn.microsoft.com/en-us/azure/container-apps/compare-options)
 
 ## Next reading
 

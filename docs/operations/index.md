@@ -55,7 +55,7 @@ This section intentionally stays architectural. It explains how to choose operat
 
 - Architecture decisions and exceptions are written down.
 - [Observed] Production behavior is visible through meaningful telemetry.
-- [Measured] SLOs, budgets, and recovery targets are tracked.
+- [Observed] SLOs, budgets, and recovery targets are tracked.
 - [Validated] Promotion paths, failover plans, and guardrails are exercised.
 - [Correlated] Cost, performance, and incident patterns influence architecture changes.
 - [Inferred] Platform and app team boundaries reduce ambiguity during change and failure.

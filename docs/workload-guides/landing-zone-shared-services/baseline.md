@@ -61,13 +61,13 @@ The goal is not full centralization. Workload teams should inherit standards and
 ## Risks and watchpoints
 
 - Central teams becoming gatekeepers for every change. [Observed]
-- Hub network designs turning into throughput or policy bottlenecks. [Measured]
+- Hub network designs turning into throughput or policy bottlenecks. [Observed]
 - Policy inheritance used without exception governance, causing delivery friction. [Validated]
 
 ## Trade-offs to keep visible
 
 - Central consistency can degrade into platform gatekeeping if service boundaries are weak. [Observed]
-- Shared networking and security create economies of scale but also concentrated dependency risk. [Measured]
+- Shared networking and security create economies of scale but also concentrated dependency risk. [Correlated]
 - Subscription separation improves accountability only when platform and workload roles are explicit. [Validated]
 
 ## Architecture review checklist
@@ -79,7 +79,7 @@ The goal is not full centralization. Workload teams should inherit standards and
 ## Revisit triggers
 
 - Exception handling consumes too much central effort. [Observed]
-- Shared services begin constraining workload release speed. [Measured]
+- Shared services begin constraining workload release speed. [Observed]
 - Subscription boundaries no longer match accountability or compliance needs. [Correlated]
 
 ## Decision takeaway

@@ -89,7 +89,7 @@ Cost optimization should be shared:
 
 - Workload and environment tags support allocation.
 - Budgets and anomaly reviews exist for subscriptions or management groups.
-- [Measured] Peak, average, and idle utilization are known for major components.
+- [Observed] Peak, average, and idle utilization are known for major components.
 - [Validated] Reservation or savings plan assumptions have been compared to usage patterns.
 - [Observed] Non-production environments have shutdown or reduced-capacity strategies.
 - [Correlated] High-cost services are mapped to concrete user or business outcomes.

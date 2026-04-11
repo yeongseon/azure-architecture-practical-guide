@@ -43,7 +43,7 @@ This guide adds an opinionated operating layer on top of those sources:
 - Cloud architect: read [Overview](overview.md), [Learning Paths](learning-paths.md), then [Platform](../platform/index.md).
 - Platform engineer: read [How to Use This Guide](how-to-use-this-guide.md), then [Platform](../platform/landing-zones-basics.md) and [Operations](../operations/index.md).
 - Senior developer: read [Overview](overview.md), then [Platform](../platform/compute-selection-basics.md) and one workload guide.
-- Reviewer: jump from [Overview](overview.md) to the Architecture Reviews section when those pages are available in your local checkout.
+- Reviewer: start with [Overview](overview.md), one relevant workload guide, and [Design Labs](../design-labs/index.md); use Architecture Reviews when that section is published in Phase 2.
 
 ## Orientation map
 
@@ -53,10 +53,10 @@ flowchart TD
     A[Start Here] --> B[Platform Fundamentals]
     A --> C[Well-Architected Lens]
     A --> D[Patterns and Workloads]
-    B --> E[Architecture Reviews]
+    B --> E[Architecture Reviews<br/>Phase 2 planned]
     C --> E
     D --> E
-    E --> F[Operations and Design Labs]
+    D --> F[Operations and Design Labs]
 ```
 
 ## Decision boundary for this section

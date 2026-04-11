@@ -82,7 +82,7 @@ flowchart TD
 - IaC is the primary mechanism for platform and workload provisioning.
 - Promotion paths and approval criteria exist across environments.
 - [Observed] Alerts are tied to user impact, dependency health, or guardrail breach.
-- [Measured] Change failure rate, deployment frequency, and time to restore are tracked.
+- [Observed] Change failure rate, deployment frequency, and time to restore are tracked.
 - [Validated] Rollback or compensating deployment paths are rehearsed.
 - [Correlated] Incident reviews lead to architecture or runbook changes, not only tickets.
 - [Inferred] Shared services include explicit support and escalation ownership.

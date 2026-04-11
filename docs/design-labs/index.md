@@ -56,7 +56,7 @@ Use the evidence tags consistently:
 
 - [Documented] for Microsoft Learn or approved standards.
 - [Observed] for platform behavior seen in deployments or logs.
-- [Measured] for latency, throughput, cost, or recovery numbers.
+- `Measured` for latency, throughput, cost, or recovery numbers.
 - [Validated] for drills, tests, or proof-of-concept results.
 - [Correlated] when multiple weak signals support a conclusion.
 - [Inferred] when reasoning is required across sources.

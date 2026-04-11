@@ -97,7 +97,7 @@ Examples where identity-first often works well include Azure SQL Database, Stora
 ## Evidence and trade-offs
 
 - `[Observed]` Managed Identity usually lowers rotation burden and accidental secret exposure risk.
-- `[Measured]` Access failures often decrease when secret distribution steps are removed.
+- `[Observed]` Access failures often decrease when secret distribution steps are removed.
 - `[Validated]` Rotation drills should prove the application survives key or secret renewal without manual intervention.
 - `[Unknown]` Third-party dependencies may still force nonideal secret handling patterns.
 

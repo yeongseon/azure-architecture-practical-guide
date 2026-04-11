@@ -83,7 +83,7 @@ Plan drills that move beyond control-plane success:
 
 - Critical services and recovery targets are defined.
 - [Observed] Recovery dependencies include people, access, and communications.
-- [Measured] Drill results record real restoration time and blockers.
+- [Validated] Drill results record real restoration time and blockers.
 - [Validated] Technical drills supplement tabletop exercises.
 - [Correlated] Incident findings influence continuity architecture.
 - [Unknown] Untested recovery paths are tracked as risk.

@@ -11,13 +11,13 @@ content_sources:
 ---
 # Private Internal App Cost and Anti-Patterns
 
-Private architectures often appear inexpensive at the application layer but accumulate cost and complexity in networking, DNS, and hybrid connectivity. [Measured]
+Private architectures often appear inexpensive at the application layer but accumulate cost and complexity in networking, DNS, and hybrid connectivity. [Observed]
 
 ## Cost factors to watch
 
 | Area | Why cost rises |
 |---|---|
-| Private Endpoints | Per-endpoint deployment growth across environments and services. [Measured] |
+| Private Endpoints | Per-endpoint deployment growth across environments and services. [Observed] |
 | VNet integration and address planning | Additional network boundaries and operational overhead. [Observed] |
 | ASE v3 isolation model | Full isolation and ILB-based inbound access typically carry higher cost than multitenant App Service with Private Endpoint. [Correlated] |
 | Hybrid connectivity | ExpressRoute circuits, gateways, and redundant paths. [Documented] |
@@ -27,7 +27,7 @@ Private architectures often appear inexpensive at the application layer but accu
 
 - Consolidate endpoint strategy where security boundaries allow, but do not compromise blast-radius requirements. [Correlated]
 - Review whether private-only access is needed for every environment or whether lower tiers can use simpler patterns with documented exception handling. [Inferred]
-- Align retention and logging volume with operational use; internal systems frequently over-collect telemetry. [Measured]
+- Align retention and logging volume with operational use; internal systems frequently over-collect telemetry. [Inferred]
 
 ## Common anti-patterns
 
@@ -66,11 +66,11 @@ flowchart TD
 
 - Every networking premium has a security or compliance rationale. [Validated]
 - Connectivity and DNS ownership are explicit. [Observed]
-- Runtime SKU choices match actual scale and performance needs. [Measured]
+- Runtime SKU choices match actual scale and performance needs. [Validated]
 
 ## Trade-offs to keep visible
 
-- Private networking spend is justified only when it reduces real business risk or compliance exposure. [Measured]
+- Private networking spend is justified only when it reduces real business risk or compliance exposure. [Inferred]
 - Central DNS and connectivity services can be efficient or expensive depending on operational maturity. [Correlated]
 - Simplifying access with premium services may still be cheaper than prolonged outage and support effort. [Inferred]
 
@@ -82,7 +82,7 @@ flowchart TD
 
 ## Revisit triggers
 
-- Networking charges rise faster than business criticality. [Measured]
+- Networking charges rise faster than business criticality. [Correlated]
 - Support teams spend excessive time diagnosing private resolution and path issues. [Observed]
 - Lower environments copy every production-grade network control without clear value. [Inferred]
 
@@ -92,7 +92,7 @@ The right private architecture cost model includes platform complexity, support 
 
 ## Related decisions
 
-- Reduce duplicated lower-environment controls when they do not materially change risk. [Measured]
+- Reduce duplicated lower-environment controls when they do not materially change risk. [Inferred]
 - Compare private-path costs against the cost of broader public exposure with compensating controls. [Correlated]
 
 ## Adoption note

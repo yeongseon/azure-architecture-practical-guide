@@ -31,7 +31,7 @@ Architecture implications:
 
 - Standardize correlation IDs and trace context propagation. [Documented]
 - Combine application traces with platform logs and dependency telemetry. [Validated]
-- Sample intelligently so cost remains sustainable while preserving critical diagnostic paths. [Measured]
+- Sample intelligently so cost remains sustainable while preserving critical diagnostic paths. [Inferred]
 
 ## Reliability patterns
 
@@ -61,7 +61,7 @@ flowchart TD
 ## Reliability stance
 
 - Design for partial failure as the normal case. [Validated]
-- Keep retry budgets and timeout budgets explicit across service chains. [Measured]
+- Keep retry budgets and timeout budgets explicit across service chains. [Inferred]
 - Ensure readiness probes check what the orchestrator actually needs to know, not every optional dependency. [Observed]
 
 ## Common mistakes
@@ -74,12 +74,12 @@ flowchart TD
 
 1. Is each service's system of record clear? [Validated]
 2. Can one request be traced end to end across services and dependencies? [Observed]
-3. Are resilience patterns consistent enough to avoid accidental retry storms? [Measured]
+3. Are resilience patterns consistent enough to avoid accidental retry storms? [Correlated]
 
 ## Trade-offs to keep visible
 
 - Database-per-service autonomy raises reconciliation and reporting effort. [Observed]
-- Full-fidelity tracing improves diagnostics but can materially increase telemetry cost. [Measured]
+- Full-fidelity tracing improves diagnostics but can materially increase telemetry cost. [Correlated]
 - Retry and circuit-breaker patterns help only when dependency budgets are also explicit. [Correlated]
 
 ## Architecture review checklist
@@ -91,7 +91,7 @@ flowchart TD
 ## Revisit triggers
 
 - Shared reporting or analytics demands start recreating a hidden shared schema. [Observed]
-- Telemetry cost grows without corresponding incident-resolution benefit. [Measured]
+- Telemetry cost grows without corresponding incident-resolution benefit. [Correlated]
 - Reliability patterns differ so much between teams that diagnosis becomes inconsistent. [Correlated]
 
 ## Decision takeaway

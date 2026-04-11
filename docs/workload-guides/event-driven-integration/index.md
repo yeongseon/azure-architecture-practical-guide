@@ -71,7 +71,7 @@ flowchart LR
 
 - A growing number of synchronous exceptions appear because the workflow no longer tolerates delay. [Observed]
 - Consumers need stronger domain ownership and independent platform controls than the integration baseline provides. [Inferred]
-- Messaging cost or replay complexity begins to exceed the value of loose coupling. [Measured]
+- Messaging cost or replay complexity begins to exceed the value of loose coupling. [Correlated]
 
 ## Decision takeaway
 

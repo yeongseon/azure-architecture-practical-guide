@@ -48,7 +48,7 @@ flowchart LR
 |---|---|---|
 | [Documented] | Explicitly stated in official guidance | Microsoft Learn, standards, approved ADRs |
 | [Observed] | Seen in telemetry, deployments, or operations | Logs, metrics, platform behavior |
-| [Measured] | Quantified result | Load test, cost export, recovery metric |
+| `Measured` | Quantified result | Load test, cost export, recovery metric |
 | [Validated] | Confirmed through experiment or drill | Failover test, threat model review |
 | [Correlated] | Multiple signals support the conclusion | Combined logs, incidents, review notes |
 | [Inferred] | Reasoned synthesis from evidence | Architecture analysis |
@@ -62,7 +62,7 @@ flowchart LR
 3. Rank quality attributes so trade-offs are explicit.
 4. Keep candidate options realistic and comparable.
 5. State the architecture hypothesis in falsifiable language.
-6. Predict outcomes with numbers where possible. [Measured]
+6. Predict outcomes with numbers where possible. [Inferred]
 7. Define validation steps that can be scheduled and owned.
 8. Record guardrails so the design survives beyond diagram approval.
 

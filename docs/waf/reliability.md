@@ -66,7 +66,7 @@ Reliability reviews should name and validate both:
 - **RTO**: the maximum acceptable restoration time.
 - **RPO**: the maximum acceptable data loss window.
 
-[Measured] These targets are meaningful only when tied to workload scope. A reporting workload and a payment workflow should not inherit the same assumptions.
+[Inferred] These targets are meaningful only when tied to workload scope. A reporting workload and a payment workflow should not inherit the same assumptions.
 
 ## Ownership
 
@@ -80,7 +80,7 @@ Reliability reviews should name and validate both:
 - Critical user journeys and dependencies are identified.
 - RTO and RPO targets exist for each important data and service path.
 - [Observed] Failure domains such as zones, regions, and shared services are mapped.
-- [Measured] Recovery time and failover duration are captured during drills.
+- [Validated] Recovery time and failover duration are captured during drills.
 - [Validated] Backup restoration and dependency-failure scenarios were tested.
 - [Correlated] Incident trends are compared with topology and deployment changes.
 - [Inferred] Graceful degradation paths exist for partial dependency failure.

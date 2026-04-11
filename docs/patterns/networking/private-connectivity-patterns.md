@@ -83,7 +83,7 @@ flowchart TD
 ## Trade-offs and evidence
 
 - `[Observed]` Private networking increases troubleshooting complexity for application teams.
-- `[Measured]` Cost should include DNS, firewall, routing, and support overhead, not just circuit or endpoint charges.
+- `[Inferred]` Cost should include DNS, firewall, routing, and support overhead, not just circuit or endpoint charges.
 - `[Validated]` End-to-end connectivity tests must cover failover, name resolution, and certificate behavior.
 - `[Unknown]` If hybrid DNS ownership is unclear, private connectivity will likely be fragile.
 

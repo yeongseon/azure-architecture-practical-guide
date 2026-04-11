@@ -37,7 +37,7 @@ Good practices:
 
 - Warm new instances before switching traffic. [Observed]
 - Separate schema-breaking changes from application rollout when possible. [Correlated]
-- Measure error budget impact of release frequency, not only deployment speed. [Measured]
+- Measure error budget impact of release frequency, not only deployment speed. [Validated]
 
 ## Disaster recovery strategy
 
@@ -81,20 +81,20 @@ flowchart LR
 
 ## Trade-offs to keep visible
 
-- Higher availability targets usually require stronger dependency governance, not only more instances. [Measured]
+- Higher availability targets usually require stronger dependency governance, not only more instances. [Inferred]
 - Multi-region readiness adds release and data complexity that should be justified by business continuity needs. [Correlated]
 - Synthetic monitoring is useful only when it reflects real user journeys. [Validated]
 
 ## Architecture review checklist
 
-- Are health checks tied to readiness rather than simple liveness? [Validated]
-- Can deployment rollback happen without database incompatibility? [Observed]
+- Are health checks tied to readiness rather than simple liveness? [Documented]
+- Can deployment rollback happen without database incompatibility? [Validated]
 - Do SLOs and error budgets drive release decisions? [Correlated]
 
 ## Revisit triggers
 
 - Customer-visible incidents occur without being detected first by telemetry. [Observed]
-- Regional dependency issues dominate outage minutes. [Measured]
+- Regional dependency issues dominate outage minutes. [Observed]
 - Release speed is increasing but rollback confidence is not. [Correlated]
 
 ## Decision takeaway
