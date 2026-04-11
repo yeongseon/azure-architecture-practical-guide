@@ -46,14 +46,14 @@ flowchart LR
 
 | Tag | Meaning | Typical source |
 |---|---|---|
-| [Documented] | Explicitly stated in official guidance | Microsoft Learn, standards, approved ADRs |
-| [Observed] | Seen in telemetry, deployments, or operations | Logs, metrics, platform behavior |
-| [Measured] | Quantified result | Load test, cost export, recovery metric |
-| [Validated] | Confirmed through experiment or drill | Failover test, threat model review |
-| [Correlated] | Multiple signals support the conclusion | Combined logs, incidents, review notes |
-| [Inferred] | Reasoned synthesis from evidence | Architecture analysis |
-| [Assumed] | Working assumption pending proof | Early design workshop |
-| [Unknown] | Missing or unresolved evidence | Gap to investigate |
+| Documented | Explicitly stated in official guidance | Microsoft Learn, standards, approved ADRs |
+| Observed | Seen in telemetry, deployments, or operations | Logs, metrics, platform behavior |
+| Measured | Quantified result | Load test, cost export, recovery metric |
+| Validated | Confirmed through experiment or drill | Failover test, threat model review |
+| Correlated | Multiple signals support the conclusion | Combined logs, incidents, review notes |
+| Inferred | Reasoned synthesis from evidence | Architecture analysis |
+| Assumed | Working assumption pending proof | Early design workshop |
+| Unknown | Missing or unresolved evidence | Gap to investigate |
 
 ## How to write an ADVR record
 

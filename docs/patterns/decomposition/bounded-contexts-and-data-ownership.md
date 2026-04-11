@@ -28,7 +28,7 @@ Each service or bounded context should own the persistence of its authoritative 
 - Cross-context queries should be materialized or composed, not implemented by direct table sharing.
 - Reporting stores can aggregate multiple sources, but they are not the transactional source of truth.
 
-`[Documented]` Microsoft guidance for microservices emphasizes domain analysis and service boundaries before implementation detail.
+[Documented] Microsoft guidance for microservices emphasizes domain analysis and service boundaries before implementation detail.
 
 ## Azure implications
 
@@ -88,10 +88,10 @@ flowchart LR
 
 ## Trade-offs
 
-- `[Inferred]` Strong ownership can increase data duplication and event propagation latency.
-- `[Observed]` It reduces coordination cost and schema contention over time.
-- `[Correlated]` Teams with explicit data ownership usually achieve clearer accountability during incidents.
-- `[Assumed]` Additional reporting patterns may be needed when many cross-context queries exist.
+- [Inferred] Strong ownership can increase data duplication and event propagation latency.
+- [Observed] It reduces coordination cost and schema contention over time.
+- [Correlated] Teams with explicit data ownership usually achieve clearer accountability during incidents.
+- [Assumed] Additional reporting patterns may be needed when many cross-context queries exist.
 
 ## When not to over-separate
 

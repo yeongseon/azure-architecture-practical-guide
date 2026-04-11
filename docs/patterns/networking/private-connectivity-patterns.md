@@ -24,7 +24,7 @@ Private connectivity on Azure is not one feature. It is a set of patterns for ke
 - Simpler in some cases, but the service still exposes a public endpoint model.
 - Less isolating than Private Link-based access.
 
-`[Documented]` Private Endpoints provide stronger private-access semantics than Service Endpoints for supported services.
+[Documented] Private Endpoints provide stronger private-access semantics than Service Endpoints for supported services.
 
 ## VNet integration patterns
 
@@ -82,10 +82,10 @@ flowchart TD
 
 ## Trade-offs and evidence
 
-- `[Observed]` Private networking increases troubleshooting complexity for application teams.
-- `[Inferred]` Cost should include DNS, firewall, routing, and support overhead, not just circuit or endpoint charges.
-- `[Validated]` End-to-end connectivity tests must cover failover, name resolution, and certificate behavior.
-- `[Unknown]` If hybrid DNS ownership is unclear, private connectivity will likely be fragile.
+- [Observed] Private networking increases troubleshooting complexity for application teams.
+- [Inferred] Cost should include DNS, firewall, routing, and support overhead, not just circuit or endpoint charges.
+- [Validated] End-to-end connectivity tests must cover failover, name resolution, and certificate behavior.
+- [Unknown] If hybrid DNS ownership is unclear, private connectivity will likely be fragile.
 
 ## When not to choose the more private option
 

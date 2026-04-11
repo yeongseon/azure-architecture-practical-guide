@@ -35,7 +35,7 @@ Capture the workload need before discussing services.
 - Team skill set and operating capacity
 - Deployment speed and rollback expectations
 
-`[Documented]` Microsoft Learn technology choice guides organize Azure options around workload needs rather than around product marketing categories.
+[Documented] Microsoft Learn technology choice guides organize Azure options around workload needs rather than around product marketing categories.
 
 ## Constraints narrow the field
 
@@ -63,9 +63,9 @@ The same requirement can produce different answers once constraints are explicit
 
 Prefer the option that satisfies must-have requirements with the least operational burden.
 
-- `[Inferred]` The most feature-rich service is often not the best fit if the team cannot operate it safely.
-- `[Inferred]` Selection should consider projected cost under normal and failure scenarios, not just nominal load.
-- `[Validated]` If two options remain close, test them against latency, deployment, and observability expectations.
+- [Inferred] The most feature-rich service is often not the best fit if the team cannot operate it safely.
+- [Inferred] Selection should consider projected cost under normal and failure scenarios, not just nominal load.
+- [Validated] If two options remain close, test them against latency, deployment, and observability expectations.
 
 ## Azure-specific selection pattern
 
@@ -120,10 +120,10 @@ flowchart TD
 
 ## Recommended evidence to capture
 
-- `[Documented]` Microsoft Learn guidance for candidate service categories.
+- [Documented] Microsoft Learn guidance for candidate service categories.
 - [Measured] Estimated cost, scaling thresholds, and latency under expected load.
-- `[Observed]` Team support capability, incident history, and operational complexity.
-- `[Unknown]` Assumptions not yet tested in a proof of concept.
+- [Observed] Team support capability, incident history, and operational complexity.
+- [Unknown] Assumptions not yet tested in a proof of concept.
 
 ## Microsoft Learn reference
 

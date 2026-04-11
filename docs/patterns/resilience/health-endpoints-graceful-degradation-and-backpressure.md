@@ -18,7 +18,7 @@ Health endpoints expose the current ability of a service to do useful work.
 - Readiness asks whether the service should receive traffic.
 - Dependency-aware checks can indicate degraded but still functional states.
 
-`[Documented]` Health monitoring is most effective when checks reflect real dependency readiness rather than merely returning process status.
+[Documented] Health monitoring is most effective when checks reflect real dependency readiness rather than merely returning process status.
 
 ## Graceful degradation
 
@@ -80,10 +80,10 @@ flowchart TD
 
 ## Evidence expectations
 
-- `[Observed]` Queue depth, saturation, rejected requests, and degraded-mode latency should be tracked.
-- `[Observed]` Good health checks reduce false positives during maintenance and downstream outages.
-- `[Validated]` Degraded-mode drills must prove the workload remains useful, not merely reachable.
-- `[Correlated]` Rising throttles often correlate with a dependency bottleneck elsewhere in the system.
+- [Observed] Queue depth, saturation, rejected requests, and degraded-mode latency should be tracked.
+- [Observed] Good health checks reduce false positives during maintenance and downstream outages.
+- [Validated] Degraded-mode drills must prove the workload remains useful, not merely reachable.
+- [Correlated] Rising throttles often correlate with a dependency bottleneck elsewhere in the system.
 
 ## When not to over-engineer
 

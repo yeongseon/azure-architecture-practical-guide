@@ -53,11 +53,11 @@ flowchart LR
 
 | Principle | Meaning in practice |
 |---|---|
-| MSLearn-first | [Documented] core claims should trace back to Microsoft Learn |
-| Architecture-first | [Inferred] the guide should prioritize decisions and consequences over product detail |
-| Evidence-tagged | [Documented] important claims should declare their confidence level |
-| Reusable | [Inferred] patterns and review methods should work across more than one workload |
-| Low-PII | [Documented] examples should avoid real tenant, subscription, or private environment data |
+| MSLearn-first | **Documented** core claims should trace back to Microsoft Learn |
+| Architecture-first | **Inferred** the guide should prioritize decisions and consequences over product detail |
+| Evidence-tagged | **Documented** important claims should declare their confidence level |
+| Reusable | **Inferred** patterns and review methods should work across more than one workload |
+| Low-PII | **Documented** examples should avoid real tenant, subscription, or private environment data |
 
 ## What the project is not
 

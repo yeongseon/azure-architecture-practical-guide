@@ -50,7 +50,7 @@ In active-active, multiple regions serve live traffic concurrently.
 | Asynchronous | Common for many globally distributed applications | Better latency and scale, but possible data lag |
 | Synchronous | Narrower use where consistency is strict and latency budget allows | Higher write latency and tighter regional coupling |
 
-`[Inferred]` Many teams say "active-active" when the stateless tier is active-active but the state tier is effectively active-passive or eventually consistent.
+[Inferred] Many teams say "active-active" when the stateless tier is active-active but the state tier is effectively active-passive or eventually consistent.
 
 ## Azure traffic options
 
@@ -83,7 +83,7 @@ flowchart LR
 
 - Active-passive may still require warm standby, replicated data, monitoring, and regular drills.
 - Active-active increases baseline compute, networking, observability, and test cost.
-- `[Inferred]` Cost comparison must include data replication, cross-region traffic, and failover exercises, not only idle compute.
+- [Inferred] Cost comparison must include data replication, cross-region traffic, and failover exercises, not only idle compute.
 
 ## Common anti-patterns
 
@@ -94,10 +94,10 @@ flowchart LR
 
 ## Evidence to require
 
-- `[Documented]` Failover mode, authority to trigger, and rollback steps.
-- `[Observed]` Replication lag and control plane propagation behavior.
-- `[Validated]` Region failover drills and application recovery testing.
-- `[Unknown]` Any dependency that remains single-region and untested.
+- [Documented] Failover mode, authority to trigger, and rollback steps.
+- [Observed] Replication lag and control plane propagation behavior.
+- [Validated] Region failover drills and application recovery testing.
+- [Unknown] Any dependency that remains single-region and untested.
 
 ## When not to choose active-active
 

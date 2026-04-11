@@ -50,9 +50,9 @@ The goal is not to prescribe one universal design. The goal is to make trade-off
 
 Architecture patterns are rarely right or wrong in isolation. They are conditionally appropriate.
 
-- `[Documented]` Microsoft Learn generally describes the baseline pattern and recommended Azure building blocks.
-- `[Inferred]` The best fit often depends on team structure, release cadence, and operational maturity more than on raw service features.
-- `[Validated]` The most reliable pattern choice comes from drills, performance tests, chaos tests, and rollback exercises.
+- [Documented] Microsoft Learn generally describes the baseline pattern and recommended Azure building blocks.
+- [Inferred] The best fit often depends on team structure, release cadence, and operational maturity more than on raw service features.
+- [Validated] The most reliable pattern choice comes from drills, performance tests, chaos tests, and rollback exercises.
 
 ## Pattern relationship map
 
@@ -109,9 +109,9 @@ flowchart TD
 When applying any pattern in this guide, collect evidence beyond diagrams:
 
 - [Measured] Latency, throughput, cost, and recovery time objectives.
-- `[Observed]` Incident trends, deployment frequency, and dependency failures.
-- `[Correlated]` Signals that link architecture choices to production pain points.
-- `[Unknown]` Explicit gaps that still need tests or drills.
+- [Observed] Incident trends, deployment frequency, and dependency failures.
+- [Correlated] Signals that link architecture choices to production pain points.
+- [Unknown] Explicit gaps that still need tests or drills.
 
 ## Microsoft Learn references
 

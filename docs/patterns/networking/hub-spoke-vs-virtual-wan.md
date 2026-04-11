@@ -95,10 +95,10 @@ flowchart TD
 
 ## Evidence and trade-offs
 
-- `[Documented]` Hub-spoke is a standard Azure reference topology for centralized connectivity.
-- `[Observed]` Operational complexity rises quickly when peering, route tables, firewalls, and DNS all evolve independently.
-- `[Inferred]` Cost should include shared appliances, gateways, cross-region traffic, and support burden.
-- `[Validated]` Connectivity failover and route-change drills should be tested before broad rollout.
+- [Documented] Hub-spoke is a standard Azure reference topology for centralized connectivity.
+- [Observed] Operational complexity rises quickly when peering, route tables, firewalls, and DNS all evolve independently.
+- [Inferred] Cost should include shared appliances, gateways, cross-region traffic, and support burden.
+- [Validated] Connectivity failover and route-change drills should be tested before broad rollout.
 
 ## When not to use hub-spoke
 

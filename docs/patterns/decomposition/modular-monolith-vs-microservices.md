@@ -24,7 +24,7 @@ A monolith is usually better when these conditions hold:
 - Release coordination is not a bottleneck.
 - Operational maturity for distributed tracing, messaging, and resilience is limited.
 
-`[Inferred]` For many internal and early-stage business systems, the main risk is premature distribution, not insufficient decomposition.
+[Inferred] For many internal and early-stage business systems, the main risk is premature distribution, not insufficient decomposition.
 
 ## Why modular monolith is a strong intermediate state
 
@@ -103,10 +103,10 @@ flowchart LR
 
 ## Trade-offs
 
-- `[Documented]` Microservices improve independent deployment and scalability for the right workloads.
-- `[Observed]` Network hops, observability overhead, and platform cost rise with service count.
-- `[Observed]` Teams frequently underestimate testing and failure-handling complexity in distributed systems.
-- `[Validated]` A modular monolith can be a durable target architecture, not merely a temporary compromise.
+- [Documented] Microservices improve independent deployment and scalability for the right workloads.
+- [Observed] Network hops, observability overhead, and platform cost rise with service count.
+- [Observed] Teams frequently underestimate testing and failure-handling complexity in distributed systems.
+- [Validated] A modular monolith can be a durable target architecture, not merely a temporary compromise.
 
 ## When not to choose microservices
 

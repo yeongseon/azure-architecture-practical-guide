@@ -21,7 +21,7 @@ Good retry design includes:
 - Clear limits on retry count and total elapsed time
 - Idempotent operations where possible
 
-`[Documented]` Azure guidance recommends retries for transient faults, but not for every failure class.
+[Documented] Azure guidance recommends retries for transient faults, but not for every failure class.
 
 ## Circuit Breaker pattern
 
@@ -89,10 +89,10 @@ flowchart LR
 
 ## Evidence and trade-offs
 
-- `[Inferred]` Retry success rate, fallback rate, and dependency latency distributions matter more than static policy values.
-- `[Observed]` Breakers often reveal chronic dependency slowness rather than rare outages.
-- `[Validated]` Chaos testing should confirm that a failing dependency does not consume all capacity.
-- `[Unknown]` If failure modes are not classified, retry rules are usually too broad.
+- [Inferred] Retry success rate, fallback rate, and dependency latency distributions matter more than static policy values.
+- [Observed] Breakers often reveal chronic dependency slowness rather than rare outages.
+- [Validated] Chaos testing should confirm that a failing dependency does not consume all capacity.
+- [Unknown] If failure modes are not classified, retry rules are usually too broad.
 
 ## When not to rely on retries alone
 

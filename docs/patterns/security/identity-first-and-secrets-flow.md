@@ -28,7 +28,7 @@ Managed Identity is usually the preferred starting point for Azure-hosted worklo
 - Supports token-based access to Azure resources.
 - Reduces secret rotation and distribution problems.
 
-`[Documented]` Managed identities are the Azure-native way for resources to authenticate to services that support Microsoft Entra ID.
+[Documented] Managed identities are the Azure-native way for resources to authenticate to services that support Microsoft Entra ID.
 
 ## Key Vault integration patterns
 
@@ -96,10 +96,10 @@ Examples where identity-first often works well include Azure SQL Database, Stora
 
 ## Evidence and trade-offs
 
-- `[Observed]` Managed Identity usually lowers rotation burden and accidental secret exposure risk.
-- `[Observed]` Access failures often decrease when secret distribution steps are removed.
-- `[Validated]` Rotation drills should prove the application survives key or secret renewal without manual intervention.
-- `[Unknown]` Third-party dependencies may still force nonideal secret handling patterns.
+- [Observed] Managed Identity usually lowers rotation burden and accidental secret exposure risk.
+- [Observed] Access failures often decrease when secret distribution steps are removed.
+- [Validated] Rotation drills should prove the application survives key or secret renewal without manual intervention.
+- [Unknown] Third-party dependencies may still force nonideal secret handling patterns.
 
 ## When not to overcomplicate
 

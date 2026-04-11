@@ -51,14 +51,14 @@ This repository builds on those sources by focusing on:
 
 Every non-trivial claim should be tagged with an evidence level:
 
-- [Documented] official Microsoft Learn or approved design records say it directly
-- [Observed] teams have directly seen the behavior in delivery or operations
-- [Measured] data such as latency, cost, throughput, or recovery metrics support it
-- [Validated] a test, drill, or proof of concept confirmed it
-- [Correlated] multiple signals point in the same direction without proving causation
-- [Inferred] the conclusion follows from several documented facts
-- [Assumed] the team is using a working assumption pending validation
-- [Unknown] the evidence is missing or contradictory
+- **Documented** official Microsoft Learn or approved design records say it directly
+- **Observed** teams have directly seen the behavior in delivery or operations
+- **Measured** data such as latency, cost, throughput, or recovery metrics support it
+- **Validated** a test, drill, or proof of concept confirmed it
+- **Correlated** multiple signals point in the same direction without proving causation
+- **Inferred** the conclusion follows from several documented facts
+- **Assumed** the team is using a working assumption pending validation
+- **Unknown** the evidence is missing or contradictory
 
 ## Scope boundary
 

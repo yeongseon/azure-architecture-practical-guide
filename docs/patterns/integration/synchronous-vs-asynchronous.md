@@ -77,10 +77,10 @@ flowchart TD
 
 ## Failure behavior
 
-- `[Observed]` Synchronous chains create visible outages quickly when a dependency is slow or unavailable.
-- `[Observed]` Queue-based flows usually absorb burst load better at the cost of completion latency.
-- `[Validated]` Async designs need dead-letter, replay, and idempotency tests before they can be trusted.
-- `[Unknown]` If downstream processing time variance is not known, synchronous assumptions are weak.
+- [Observed] Synchronous chains create visible outages quickly when a dependency is slow or unavailable.
+- [Observed] Queue-based flows usually absorb burst load better at the cost of completion latency.
+- [Validated] Async designs need dead-letter, replay, and idempotency tests before they can be trusted.
+- [Unknown] If downstream processing time variance is not known, synchronous assumptions are weak.
 
 ## When not to use synchronous calls
 

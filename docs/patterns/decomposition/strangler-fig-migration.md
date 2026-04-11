@@ -30,7 +30,7 @@ A big-bang rewrite is still possible when:
 - Regulatory or contractual constraints require a complete platform replacement by a fixed date.
 - There is little value in keeping the old runtime available during migration.
 
-`[Inferred]` Most enterprise workloads are poor candidates for big-bang rewrites because hidden dependencies surface late.
+[Inferred] Most enterprise workloads are poor candidates for big-bang rewrites because hidden dependencies surface late.
 
 ## Azure implementation pattern
 
@@ -91,10 +91,10 @@ flowchart LR
 
 ## Evidence to collect per slice
 
-- `[Documented]` The migrated capability, contract, and rollback path.
-- `[Observed]` Routing behavior, errors, and operational support burden.
+- [Documented] The migrated capability, contract, and rollback path.
+- [Observed] Routing behavior, errors, and operational support burden.
 - [Measured] Latency, success rate, and cost before and after extraction.
-- `[Validated]` Failback and incident drill outcomes.
+- [Validated] Failback and incident drill outcomes.
 
 ## Azure service considerations
 
