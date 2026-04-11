@@ -25,7 +25,7 @@ flowchart TD
     D -->|No| F{Need large binary/object or file storage?}
     F -->|Yes| G[Azure Storage]
     F -->|No| H{Need sub-millisecond cache or transient state?}
-    H -->|Yes| I[Azure Cache for Redis]
+    H -->|Yes| I[Azure Managed Redis\n(formerly Azure Cache for Redis)]
     H -->|No| J[Re-evaluate domain and access pattern]
 ```
 
@@ -36,7 +36,9 @@ flowchart TD
 | Azure SQL | Relational data, transactional workloads, reporting-friendly schemas | Forcing global-scale or schema-flexible use cases into rigid relational patterns |
 | Cosmos DB | Distributed NoSQL with low-latency and multiple data models | Underestimating partitioning and cost implications |
 | Azure Storage | Objects, files, queues, archival, durable simple storage | Using it as if it were a transactional application database |
-| Redis | Caching, session state, low-latency transient access | Treating cache as source of truth |
+| Azure Managed Redis (formerly Azure Cache for Redis) | Caching, session state, low-latency transient access | Treating cache as source of truth |
+
+[Documented] Microsoft has announced the transition from Azure Cache for Redis to Azure Managed Redis. See [Azure Cache for Redis overview](https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/cache-overview).
 
 ## Selection criteria
 
@@ -65,7 +67,7 @@ flowchart TD
 
 ## Common failure modes
 
-- [Observed] using Redis as primary data store without recovery discipline
+- [Observed] using Azure Managed Redis as primary data store without recovery discipline
 - [Observed] moving to NoSQL before understanding access patterns or partition keys
 - [Observed] choosing object storage because it is cheap, then rebuilding database behavior on top of it
 - [Unknown] assuming all workloads need global distribution from day one
@@ -83,6 +85,7 @@ flowchart TD
 - [Data store decision tree](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-decision-tree)
 - [Azure Cosmos DB documentation](https://learn.microsoft.com/en-us/azure/cosmos-db/)
 - [Azure Storage documentation](https://learn.microsoft.com/en-us/azure/storage/)
+- [Azure Cache for Redis overview](https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/cache-overview)
 
 ## Takeaway
 

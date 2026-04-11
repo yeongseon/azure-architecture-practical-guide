@@ -19,6 +19,7 @@ Private architectures often appear inexpensive at the application layer but accu
 |---|---|
 | Private Endpoints | Per-endpoint deployment growth across environments and services. [Measured] |
 | VNet integration and address planning | Additional network boundaries and operational overhead. [Observed] |
+| ASE v3 isolation model | Full isolation and ILB-based inbound access typically carry higher cost than multitenant App Service with Private Endpoint. [Correlated] |
 | Hybrid connectivity | ExpressRoute circuits, gateways, and redundant paths. [Documented] |
 | Premium runtime tiers | Chosen for convenience even when scale or isolation needs are modest. [Observed] |
 
@@ -41,6 +42,8 @@ Private DNS design is an architecture concern. If it is deferred, teams usually 
 ### SNAT exhaustion and hidden egress limits
 
 Applications with many outbound private or hybrid dependencies can encounter connection scaling issues if outbound behavior is not reviewed. [Correlated]
+
+- Treating VNet integration as if it provides private inbound access on multitenant App Service. Private ingress requires an **App Service Private Endpoint** and corresponding DNS design; ILB-based ingress belongs to **ASE v3** scenarios. [Inferred]
 
 ### Recreating on-premises complexity in Azure
 

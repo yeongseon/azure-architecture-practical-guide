@@ -77,8 +77,8 @@ Reliability reviews should name and validate both:
 
 ## Reliability checklist
 
-- [Documented] Critical user journeys and dependencies are identified.
-- [Documented] RTO and RPO targets exist for each important data and service path.
+- Critical user journeys and dependencies are identified.
+- RTO and RPO targets exist for each important data and service path.
 - [Observed] Failure domains such as zones, regions, and shared services are mapped.
 - [Measured] Recovery time and failover duration are captured during drills.
 - [Validated] Backup restoration and dependency-failure scenarios were tested.

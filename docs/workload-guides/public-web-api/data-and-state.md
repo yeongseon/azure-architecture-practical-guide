@@ -29,9 +29,11 @@ The best session strategy is often **no server-side session at all**. Stateless 
 
 When server-side state is required:
 
-- Use **Azure Cache for Redis** for short-lived session or token-related state shared across instances. [Documented]
+- Use **Azure Managed Redis (formerly Azure Cache for Redis)** for short-lived session or token-related state shared across instances. [Documented]
 - Treat sticky sessions as a temporary compatibility technique, not a scale strategy. [Observed]
-- Keep session data small and disposable; do not turn Redis into a hidden system of record. [Validated]
+- Keep session data small and disposable; do not turn Azure Managed Redis into a hidden system of record. [Validated]
+
+[Documented] Microsoft has announced the transition from Azure Cache for Redis to Azure Managed Redis. See [Azure Cache for Redis overview](https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/cache-overview).
 
 ## File storage patterns
 
@@ -51,7 +53,7 @@ flowchart TD
     A[Request handling] --> B{Can the request stay stateless?}
     B -->|Yes| C[Use token and durable data only]
     B -->|No| D{Is state short-lived and shared?}
-    D -->|Yes| E[Use Azure Cache for Redis]
+    D -->|Yes| E[Use Azure Managed Redis]
     D -->|No| F{Is it durable business data?}
     F -->|Yes| G[Use Azure SQL Database or Azure Cosmos DB]
     F -->|No| H[Revisit application design]

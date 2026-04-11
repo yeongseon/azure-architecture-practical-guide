@@ -46,15 +46,15 @@ Use a 0 to 4 scale for each checkpoint:
 
 ## Reliability checklist
 
-- [Documented] Critical user journeys and dependencies are identified.
-- [Documented] RTO and RPO targets are defined.
+- Critical user journeys and dependencies are identified.
+- RTO and RPO targets are defined.
 - [Observed] Failure domains and shared dependencies are understood.
 - [Measured] Recovery times and failover behavior are captured.
 - [Validated] Restore and failover drills have been run.
 
 ## Security checklist
 
-- [Documented] Trust boundaries, identity flows, and privileged roles are mapped.
+- Trust boundaries, identity flows, and privileged roles are mapped.
 - [Observed] Secrets and credentials follow managed patterns.
 - [Measured] Security logs and control changes are retained and reviewable.
 - [Validated] Access reviews and policy checks occur regularly.
@@ -62,7 +62,7 @@ Use a 0 to 4 scale for each checkpoint:
 
 ## Cost optimization checklist
 
-- [Documented] Cost allocation tags and budgets exist.
+- Cost allocation tags and budgets exist.
 - [Observed] Non-production environments have lifecycle controls.
 - [Measured] Major services have utilization or consumption visibility.
 - [Correlated] Cost spikes can be linked to topology, traffic, or release changes.
@@ -70,7 +70,7 @@ Use a 0 to 4 scale for each checkpoint:
 
 ## Operational excellence checklist
 
-- [Documented] Provisioning and policy are managed as code.
+- Provisioning and policy are managed as code.
 - [Observed] Alerts support diagnosis and action.
 - [Measured] Change failure rate and restoration time are tracked.
 - [Validated] Rollback or compensating deployment paths are rehearsed.
@@ -78,7 +78,7 @@ Use a 0 to 4 scale for each checkpoint:
 
 ## Performance efficiency checklist
 
-- [Documented] Latency, throughput, and concurrency goals are known.
+- Latency, throughput, and concurrency goals are known.
 - [Observed] Bottlenecks and saturation signals are visible.
 - [Measured] Testing reflects realistic peak and dependency behavior.
 - [Validated] Scaling and partitioning strategies were stress tested.

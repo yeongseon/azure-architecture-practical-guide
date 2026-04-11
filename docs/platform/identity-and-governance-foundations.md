@@ -61,7 +61,9 @@ Architectural implications:
 
 [Documented] Azure Policy evaluates resources against rules and can deny, audit, append, or deploy configuration-related effects.
 
-[Documented] Azure Blueprints historically provided packaged governance artifacts, but many platform teams now center on Policy, IaC, and management-group design for ongoing control.
+[Documented] Azure Blueprints is deprecated. Microsoft recommends using Azure Policy combined with Bicep modules, Template Specs, or Deployment Stacks for governance packaging. See [Azure Blueprints deprecation](https://learn.microsoft.com/en-us/azure/governance/blueprints/overview).
+
+[Documented] Azure Blueprints historically provided packaged governance artifacts, but current platform baselines should favor Azure Policy, Infrastructure as Code, and management-group design for ongoing control. See [Transition from Azure Blueprints](https://learn.microsoft.com/en-us/azure/governance/blueprints/overview).
 
 [Inferred] The architecture principle is more important than the packaging mechanism: guardrails should be inheritable, reviewable, and automatable.
 
@@ -101,6 +103,7 @@ Architectural implications:
 - [What is Microsoft Entra ID?](https://learn.microsoft.com/en-us/entra/fundamentals/whatis)
 - [Azure Policy overview](https://learn.microsoft.com/en-us/azure/governance/policy/overview)
 - [Privileged Identity Management](https://learn.microsoft.com/en-us/entra/id-governance/privileged-identity-management/pim-configure)
+- [Azure Blueprints overview and deprecation](https://learn.microsoft.com/en-us/azure/governance/blueprints/overview)
 
 ## Takeaway
 

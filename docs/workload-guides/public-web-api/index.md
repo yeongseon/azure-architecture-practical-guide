@@ -49,7 +49,7 @@ Do not start here just because the application has a browser front end. If the w
 
 - **Edge**: Azure Front Door for global entry, caching, WAF, and split-region routing. [Documented]
 - **Compute**: Azure App Service for managed web hosting or Azure Container Apps when container packaging and event-driven scale are important. [Documented]
-- **Data**: Azure SQL Database for relational workloads, Azure Cosmos DB for globally distributed or flexible-schema patterns, Azure Cache for Redis for state or caching. [Documented]
+- **Data**: Azure SQL Database for relational workloads, Azure Cosmos DB for globally distributed or flexible-schema patterns, Azure Managed Redis (formerly Azure Cache for Redis) for state or caching. [Documented]
 - **Observability**: Azure Monitor, Application Insights, and Log Analytics for request, dependency, and platform telemetry. [Documented]
 
 <!-- diagram-id: public-web-api-decision-scope -->

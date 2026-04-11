@@ -51,7 +51,7 @@ Plan drills that move beyond control-plane success:
 
 ## Chaos engineering on Azure
 
-[Documented] Chaos practices are useful when they target realistic failure modes and are run with safety boundaries. They are not random breakage. Good chaos exercises test hypotheses such as dependency latency, zonal failure, node loss, or configuration drift under controlled conditions.
+[Inferred] Chaos practices are useful when they target realistic failure modes and are run with safety boundaries. They are not random breakage. Good chaos exercises test hypotheses such as dependency latency, zonal failure, node loss, or configuration drift under controlled conditions.
 
 ## Common anti-patterns
 
@@ -81,7 +81,7 @@ Plan drills that move beyond control-plane success:
 
 ## Validation checklist
 
-- [Documented] Critical services and recovery targets are defined.
+- Critical services and recovery targets are defined.
 - [Observed] Recovery dependencies include people, access, and communications.
 - [Measured] Drill results record real restoration time and blockers.
 - [Validated] Technical drills supplement tabletop exercises.

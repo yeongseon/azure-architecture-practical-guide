@@ -12,7 +12,7 @@ content_sources:
 ---
 # Architecture Patterns
 
-This section organizes practical Azure architecture patterns into decisions that teams repeatedly face: how to decompose systems, integrate services, design for resilience, connect networks securely, and release change safely.
+This section organizes practical Azure architecture patterns into decisions that teams repeatedly face: how to decompose systems, integrate services, design for resilience, connect networks securely, and choose Azure services deliberately.
 
 The goal is not to prescribe one universal design. The goal is to make trade-offs explicit so a team can choose a pattern that fits business criticality, team maturity, scale targets, and operating model.
 
@@ -21,8 +21,9 @@ The goal is not to prescribe one universal design. The goal is to make trade-off
 - Decomposition patterns for deciding service boundaries and migration paths.
 - Integration patterns for synchronous APIs, messaging, and events.
 - Resilience patterns for retries, failover, load shaping, and graceful degradation.
-- Networking and security patterns for connectivity, identity, and secrets flow.
-- Deployment patterns for controlled rollout and environment promotion.
+- Networking patterns for connectivity choices and private access.
+- Security patterns for identity-first access and secrets flow.
+- Service selection patterns for mapping architecture intent to Azure services.
 
 ## How to use these pattern guides
 
@@ -41,8 +42,9 @@ The goal is not to prescribe one universal design. The goal is to make trade-off
 | Decomposition | Boundaries and migration | Monolith vs microservices, bounded contexts, strangler migration |
 | Integration | Communication style | Request-response, events, queues, orchestration |
 | Resilience | Failure handling | Retry, circuit breaker, bulkhead, multi-region failover |
-| Networking/Security | Connectivity and trust | Hub-spoke, private connectivity, identity-first access |
-| Deployment | Safe change rollout | Blue-green, canary, stamps, promotion guardrails |
+| Networking | Connectivity design | Hub-spoke, Virtual WAN, private connectivity |
+| Security | Trust and secret flow | Managed identity, secret handling, workload access patterns |
+| Service Selection Patterns | Azure mapping choices | Service fit by architecture intent and workload constraints |
 
 ## Decision model
 
@@ -60,8 +62,9 @@ flowchart TD
     A[Business goals and constraints] --> B[Decomposition]
     A --> C[Integration]
     A --> D[Resilience]
-    A --> E[Networking and Security]
-    A --> F[Deployment]
+    A --> E[Networking]
+    A --> F[Security]
+    A --> G[Service Selection]
     B --> B1[Modular monolith]
     B --> B2[Microservices]
     B --> B3[Strangler Fig]
@@ -72,8 +75,8 @@ flowchart TD
     D --> D3[Multi-region]
     E --> E1[Hub-spoke or Virtual WAN]
     E --> E2[Private connectivity]
-    E --> E3[Managed identity]
-    F --> F1[Blue-green and canary]
+    F --> F1[Managed identity]
+    G --> G1[Azure service selection]
 ```
 
 ## Recommended reading order
@@ -84,7 +87,7 @@ flowchart TD
 2. Decomposition guidance
 3. Integration guidance
 4. Resilience guidance
-5. Networking and security guidance
+5. Networking, security, and service selection guidance
 
 ### If you are modernizing an existing workload
 

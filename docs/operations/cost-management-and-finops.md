@@ -83,7 +83,7 @@ These commitment models are valuable when demand is stable enough. The architect
 
 ## Validation checklist
 
-- [Documented] Cost ownership and mandatory tags are defined.
+- Cost ownership and mandatory tags are defined.
 - [Observed] Budget alerts reach teams that can act.
 - [Measured] Spend by workload, environment, and shared service is visible.
 - [Validated] Commitment discounts are reviewed against real usage.

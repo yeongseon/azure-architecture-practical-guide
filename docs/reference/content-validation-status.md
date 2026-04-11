@@ -26,11 +26,14 @@ Each content area is checked for:
 
 | Section | Source coverage | Diagram metadata | Evidence tagging | Validation status |
 |---|---|---|---|---|
-| Home | Complete | Complete | Partial | In review |
-| Design Labs | Complete for Phase 1 files | Complete | Complete | Ready for review |
-| Reference | Complete for Phase 1 files | Complete | Complete | Ready for review |
-| Workload Guides | Not yet populated | Not yet populated | Not yet populated | Pending |
-| Architecture Reviews | Not yet populated | Not yet populated | Not yet populated | Pending |
+| Start Here | Complete | Complete | Complete | Ready for review |
+| Platform | Complete | Complete | Complete | Ready for review |
+| WAF | Complete | Complete | Complete | Ready for review |
+| Patterns | Partial (13 pattern pages plus index) | Complete | Complete | In review |
+| Workload Guides | Partial (5 of 8 planned workload families published) | Complete for published guides | Complete for published guides | In review |
+| Operations | Complete | Complete | Complete | Ready for review |
+| Design Labs | Partial (3 of 8 planned labs published) | Complete for published labs | Complete for published labs | In review |
+| Reference | Complete | Complete | Complete | Ready for review |
 
 <!-- diagram-id: content-validation-lifecycle -->
 ```mermaid
@@ -45,6 +48,7 @@ flowchart LR
 
 - **Complete** means the criterion is present and reviewable, not that every technical claim has production proof. [Correlated]
 - **Ready for review** means the page can enter a stricter architecture or editorial review loop. [Observed]
+- **In review** means content exists and is structurally reviewable, but the section is still incomplete or only partially populated against the intended scope. [Observed]
 - **Pending** means content is absent or lacks enough structure to evaluate. [Unknown]
 
 ## Microsoft Learn references

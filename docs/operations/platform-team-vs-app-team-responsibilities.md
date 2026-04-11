@@ -74,7 +74,7 @@ Use clear interfaces:
 
 ## Validation checklist
 
-- [Documented] Responsibilities for core operational domains are explicit.
+- Responsibilities for core operational domains are explicit.
 - [Observed] Teams can identify the right owner for platform, workload, and security issues.
 - [Measured] Repeated exception categories are tracked.
 - [Validated] Incident and drill reviews confirm handoffs and escalation paths work.

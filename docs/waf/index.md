@@ -46,7 +46,7 @@ flowchart LR
 
 ## What good looks like
 
-- [Documented] Every major architecture decision names affected pillars.
+- Every major architecture decision names affected pillars.
 - [Observed] Review conversations distinguish symptoms from root design causes.
 - [Measured] SLOs, budget thresholds, and recovery targets are defined before scale events.
 - [Validated] Failover drills, security reviews, and deployment rehearsals confirm assumptions.

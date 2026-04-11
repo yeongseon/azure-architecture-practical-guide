@@ -16,7 +16,7 @@ Observability is the ability to infer system state from telemetry. Service objec
 - **SLO**: the target value or range for an SLI over time.
 - **SLA**: the formal commitment, usually contractual or provider-defined.
 
-[Documented] SLOs should reflect user value, while SLIs should be measurable and actionable. SLAs are not a substitute for internal service objectives.
+[Inferred] SLOs should reflect user value, while SLIs should be measurable and actionable. SLAs are not a substitute for internal service objectives.
 
 ## Observability model
 
@@ -85,7 +85,7 @@ Avoid vanity SLOs that are easy to meet but weakly tied to actual user impact.
 
 ## Validation checklist
 
-- [Documented] Critical user journeys have defined SLIs and SLOs.
+- Critical user journeys have defined SLIs and SLOs.
 - [Observed] Alerts map to actionable ownership.
 - [Measured] Error budget burn, latency, and availability trends are visible.
 - [Validated] Alert routing and escalation paths are exercised.

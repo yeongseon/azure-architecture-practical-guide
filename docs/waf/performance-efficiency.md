@@ -78,7 +78,7 @@ Performance is shared across app, data, and platform teams:
 
 ## Performance efficiency checklist
 
-- [Documented] The workload has explicit latency, throughput, and concurrency goals.
+- The workload has explicit latency, throughput, and concurrency goals.
 - [Observed] Bottlenecks are identified across application, network, and data paths.
 - [Measured] Performance tests include realistic steady-state and peak conditions.
 - [Validated] Autoscaling or partitioning strategies were tested under stress.

@@ -13,7 +13,7 @@ This matrix helps architects move from workload type to likely Azure service com
 | Workload type | Front-end and compute | Data and state | Integration | Notes |
 |---|---|---|---|---|
 | Public web application | Front Door + App Service | Azure SQL + Key Vault | Event Grid or Service Bus as needed | Strong baseline for managed HTTP workloads. [Documented] |
-| Private internal application | Private ingress + App Service with VNet | Azure SQL or PostgreSQL + Key Vault | Private Endpoints, optional Service Bus | Prefer when no internet exposure is allowed. [Documented] |
+| Private internal application | App Service Private Endpoint for inbound + App Service VNet integration for outbound | Azure SQL or PostgreSQL + Key Vault | Private Endpoints, optional Service Bus | Prefer when no internet exposure is allowed. [Documented] |
 | Event-driven business workflow | API + Functions or App Service | Cosmos DB or Azure SQL | Service Bus + Event Grid | Best for decoupled processing and notifications. [Correlated] |
 | Serverless file or data processing | Functions or Container Apps jobs | Storage + optional Redis | Event Grid or queues | Strong elasticity for bursty pipelines. [Observed] |
 | Microservices platform | AKS or Container Apps | Polyglot stores | Service Bus, Event Grid, API gateway | Choose only if service autonomy justifies the added ops load. [Inferred] |

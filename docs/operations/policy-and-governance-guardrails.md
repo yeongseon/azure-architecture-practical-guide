@@ -12,7 +12,7 @@ Guardrails are the controls that keep Azure architecture decisions from eroding 
 
 ## What guardrails should do
 
-[Documented] Governance controls should enforce minimum standards without making every workload identical. Effective guardrails:
+[Inferred] Governance controls should enforce minimum standards without making every workload identical. Effective guardrails:
 
 - block clearly unacceptable configurations,
 - audit conditions that need review,
@@ -75,7 +75,7 @@ flowchart TD
 
 ## Validation checklist
 
-- [Documented] Required standards are mapped to specific policy controls.
+- Required standards are mapped to specific policy controls.
 - [Observed] Policy violations and exemptions are visible by scope and owner.
 - [Measured] Compliance trend and remediation time are tracked.
 - [Validated] New policies are tested before wide enforcement.

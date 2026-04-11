@@ -53,7 +53,7 @@ This section intentionally stays architectural. It explains how to choose operat
 
 ## What good operations look like
 
-- [Documented] Architecture decisions and exceptions are written down.
+- Architecture decisions and exceptions are written down.
 - [Observed] Production behavior is visible through meaningful telemetry.
 - [Measured] SLOs, budgets, and recovery targets are tracked.
 - [Validated] Promotion paths, failover plans, and guardrails are exercised.

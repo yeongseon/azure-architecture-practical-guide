@@ -16,7 +16,7 @@ What is the default Azure architecture for public web applications and APIs when
 
 ## Recommended baseline
 
-Use **Azure Front Door** as the global ingress and WAF layer, terminate at **Azure App Service** or **Azure Container Apps** for the web and API tier, and place operational data in **Azure SQL Database** or **Azure Cosmos DB** depending on transactional and distribution needs. Add **Azure Cache for Redis** only when latency, session, or hot-read patterns justify it. [Documented]
+Use **Azure Front Door** as the global ingress and WAF layer, terminate at **Azure App Service** or **Azure Container Apps** for the web and API tier, and place operational data in **Azure SQL Database** or **Azure Cosmos DB** depending on transactional and distribution needs. Add **Azure Managed Redis (formerly Azure Cache for Redis)** only when latency, session, or hot-read patterns justify it. [Documented]
 
 ## Canonical reference architecture
 
@@ -26,7 +26,7 @@ flowchart LR
     Users[Internet users and partner clients]
     FD[Azure Front Door\nWAF, TLS, routing]
     Web[App Service or Container Apps\nweb and API tier]
-    Redis[Azure Cache for Redis\noptional cache or session]
+    Redis[Azure Managed Redis\noptional cache or session]
     SQL[Azure SQL Database]
     Cosmos[Azure Cosmos DB\noptional alternative]
     Monitor[Azure Monitor and Application Insights]
@@ -47,7 +47,7 @@ flowchart LR
 | Web runtime | App Service | Managed HTTP hosting and strong operational simplicity matter most | Container Apps for container packaging and finer scale behavior | App Service is simpler; Container Apps offers more runtime flexibility. [Correlated] |
 | Relational data | Azure SQL Database | Strong transactional consistency and familiar relational patterns are needed | SQL Managed Instance when compatibility needs are higher | Managed Instance increases operational and cost footprint. [Documented] |
 | Distributed data | Azure Cosmos DB | Global distribution, flexible schema, or low-latency reads dominate | Azure SQL Database with read replicas | Cosmos DB changes consistency and cost design assumptions. [Measured] |
-| Cache and session | Azure Cache for Redis | Hot reads, token/session offload, or event buffering is required | In-memory cache per instance for low criticality | Redis reduces repeated data access but adds stateful operations. [Observed] |
+| Cache and session | Azure Managed Redis | Hot reads, token/session offload, or event buffering is required | In-memory cache per instance for low criticality | Azure Managed Redis reduces repeated data access but adds stateful operations. [Observed] |
 
 ## Why this choice
 

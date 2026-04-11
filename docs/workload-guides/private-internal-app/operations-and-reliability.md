@@ -19,7 +19,7 @@ Internal workloads still need explicit SLOs, but those targets often prioritize 
 |---|---|---|
 | Back-office support app | 99.5% to 99.9% | Good rollback and restore matter more than active-active design. [Inferred] |
 | Operational process system | 99.9% to 99.95% | Requires dependency monitoring, tested failover, and runbook maturity. [Observed] |
-| Enterprise-critical internal platform | 99.95% or higher | Network, identity, and dependency budgets must be managed explicitly. [Measured] |
+| Enterprise-critical internal platform | 99.95% or higher | Network, identity, and dependency budgets must be managed explicitly. [Observed] |
 
 ## Monitoring without public endpoints
 
@@ -33,11 +33,13 @@ The absence of public endpoints changes probe strategy but not the need for obse
 
 Private endpoint failures often present as timeouts, DNS misresolution, or intermittent authentication issues rather than explicit endpoint alarms. [Observed]
 
+For App Service workloads, monitor the **Private Endpoint** path for inbound user access separately from **VNet integration** paths used for outbound dependency calls. [Inferred]
+
 Operational expectations:
 
 - Monitor name resolution success paths. [Validated]
 - Include dependency connection checks in readiness and smoke tests. [Correlated]
-- Track hybrid network circuit health as part of application availability review. [Measured]
+- Track hybrid network circuit health as part of application availability review. [Observed]
 
 ## Reliability loop
 
@@ -68,7 +70,7 @@ flowchart LR
 ## Failure patterns to drill
 
 - Private DNS zone linkage removed or misrouted. [Observed]
-- ExpressRoute or VPN impairment during a production business cycle. [Measured]
+- ExpressRoute or VPN impairment during a production business cycle. [Observed]
 - Service dependency reachable but blocked by identity or RBAC drift. [Correlated]
 
 ## Trade-offs to keep visible
@@ -81,12 +83,12 @@ flowchart LR
 
 - Are private dependency checks built into synthetic monitoring? [Validated]
 - Can the team distinguish Azure service health from hybrid path failure? [Observed]
-- Are DNS and connectivity drills part of reliability testing? [Measured]
+- Are DNS and connectivity drills part of reliability testing? [Validated]
 
 ## Revisit triggers
 
 - Most incidents trace back to hidden network dependencies. [Observed]
-- Business continuity requirements exceed the current hybrid design. [Measured]
+- Business continuity requirements exceed the current hybrid design. [Observed]
 - Central monitoring exists, but recovery still depends on ad hoc tribal knowledge. [Correlated]
 
 ## Decision takeaway

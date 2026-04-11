@@ -7,7 +7,7 @@ content_sources:
       justification: "Summarizes decision scope for private internal application architectures on Azure."
       based_on:
         - https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
-        - https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant
+        - https://learn.microsoft.com/en-us/azure/app-service/overview-vnet-integration
 ---
 # Private Internal App
 
@@ -20,6 +20,8 @@ Use this workload family for line-of-business applications, internal portals, an
 - Data stores and integrations benefit from removing public network exposure. [Validated]
 
 This family is especially useful when the business driver is risk reduction, internal process integrity, or regulatory separation rather than consumer growth and internet elasticity. [Inferred]
+
+For Azure App Service variants in this family, private inbound access should terminate on an **App Service Private Endpoint**, while **VNet integration** is reserved for outbound connectivity from the app to private dependencies. [Documented]
 
 ## Audience
 
@@ -55,6 +57,7 @@ flowchart LR
 
 - Public endpoints should be disabled or operationally unreachable wherever practical. [Documented]
 - Network and DNS design are part of the application baseline, not separate afterthoughts. [Validated]
+- App Service private ingress depends on **Private Endpoint** plus **Private DNS**; VNet integration alone does not make the app privately reachable. [Documented]
 - Managed identity should replace embedded secrets for service-to-service connections by default. [Documented]
 
 ## Signals that this is the wrong family
@@ -93,6 +96,7 @@ Internal application baselines are most effective when application, network, and
 
 - [Private Endpoint overview](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview)
 - [Baseline highly available zone-redundant web application](https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)
+- [Virtual network integration for App Service](https://learn.microsoft.com/en-us/azure/app-service/overview-vnet-integration)
 - [Azure Monitor overview](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
 
 ## Next reading

@@ -78,7 +78,7 @@ flowchart LR
 
 ## Validation checklist
 
-- [Documented] Environment topology and parameter strategy are defined.
+- Environment topology and parameter strategy are defined.
 - [Observed] Promotion paths are standardized and auditable.
 - [Measured] Drift, failed deployments, and rollback frequency are tracked.
 - [Validated] Non-production environments prove policy and dependency compatibility.

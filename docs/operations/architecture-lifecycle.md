@@ -42,7 +42,7 @@ flowchart TD
 
 ## When to revisit architecture decisions
 
-[Documented] The need to revisit architecture usually follows a material change in business or technical context. Common triggers include:
+[Inferred] The need to revisit architecture usually follows a material change in business or technical context. Common triggers include:
 
 - major traffic growth or tenant mix change,
 - new compliance or data residency constraints,
@@ -69,7 +69,7 @@ flowchart TD
 
 ## Validation checkpoints
 
-- [Documented] Each phase has defined outputs and exit criteria.
+- Each phase has defined outputs and exit criteria.
 - [Observed] Drift and exceptions are visible rather than hidden in tickets.
 - [Measured] Deployment, incident, cost, and performance trends inform changes.
 - [Validated] Revisit triggers lead to actual architecture reviews.

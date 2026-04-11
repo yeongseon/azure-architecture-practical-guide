@@ -13,6 +13,8 @@ content_sources:
 
 Internal applications often sit at the center of enterprise process flows, so architecture quality depends on predictable data access and controlled integration boundaries rather than public API scale alone. [Observed]
 
+In this workload family, App Service private ingress and private dependency access are separate concerns: use **Private Endpoint** for inbound reachability to the app, and use **VNet integration** for outbound calls from the app to databases, messaging, and other private services. [Documented]
+
 ## Database access over private endpoints
 
 The preferred baseline is to keep database access on private network paths and authenticate through managed identity where the service combination supports it. [Documented]

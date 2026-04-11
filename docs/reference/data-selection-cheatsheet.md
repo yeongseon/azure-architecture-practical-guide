@@ -16,7 +16,7 @@ Use this page to narrow the primary Azure data store for a workload. Confirm fin
 | Azure Cosmos DB | Document, key-value, graph, column-family APIs | Tunable depending on API and configuration | Very high global and partitioned scale | Moderate to high | Globally distributed and low-latency operational data |
 | Azure Database for PostgreSQL | Relational with PostgreSQL ecosystem | Strong transactional consistency | High for app data and extensions-based workloads | Moderate | PostgreSQL-native apps and open-source alignment |
 | Azure Storage | Object, file, queue, table primitives | Service-specific | Very high for durable object storage | Low | Files, blobs, backups, static content, archives |
-| Azure Cache for Redis | In-memory key-value cache | Memory-based, application-dependent patterns | High for low-latency cache use cases | Moderate | Session state, caching, transient fast access |
+| Azure Managed Redis (formerly Azure Cache for Redis) | In-memory key-value cache | Memory-based, application-dependent patterns | High for low-latency cache use cases | Moderate | Session state, caching, transient fast access |
 
 ## Selection notes
 
@@ -24,7 +24,9 @@ Use this page to narrow the primary Azure data store for a workload. Confirm fin
 - Choose **Cosmos DB** when partitioned scale, flexible schemas, or global distribution dominate. [Documented]
 - Choose **PostgreSQL** when application portability or PostgreSQL features matter. [Observed]
 - Choose **Storage** for durable objects, not as a substitute for transactional databases. [Validated]
-- Choose **Redis** as a cache or transient state accelerator, not the authoritative system of record. [Documented]
+- Choose **Azure Managed Redis** as a cache or transient state accelerator, not the authoritative system of record. [Documented]
+
+[Documented] Microsoft has announced the transition from Azure Cache for Redis to Azure Managed Redis. See [Azure Cache for Redis overview](https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/cache-overview).
 
 <!-- diagram-id: data-selection-map -->
 ```mermaid
@@ -37,7 +39,7 @@ flowchart LR
     F -->|Yes| G[Azure Cosmos DB]
     F -->|No| H{Object or cache pattern?}
     H -->|Object| I[Azure Storage]
-    H -->|Cache| J[Azure Cache for Redis]
+    H -->|Cache| J[Azure Managed Redis]
 ```
 
 ## Microsoft Learn references

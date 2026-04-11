@@ -7,6 +7,7 @@ content_sources:
       justification: "Summarizes network and access flow for private internal applications using Private Link, VNet integration, and enterprise connectivity."
       based_on:
         - https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
+        - https://learn.microsoft.com/en-us/azure/app-service/overview-vnet-integration
         - https://learn.microsoft.com/en-us/azure/dns/private-dns-privatednszone
 ---
 # Private Internal App Network and Access
@@ -16,7 +17,8 @@ For private internal apps, architecture quality is determined as much by routing
 ## Preferred network posture
 
 - Use **Private Endpoints** for data and integration services whenever supported. [Documented]
-- Use **VNet integration** so the application tier can reach private dependencies without public egress assumptions. [Documented]
+- Use **App Service Private Endpoint** for inbound private access to the application tier and **disable public network access** on the App Service to ensure a true private-only posture. [Documented]
+- Use **VNet integration** so the application tier can reach private dependencies without public egress assumptions; this is outbound only. [Documented]
 - Apply **NSG rules** and route control to enforce least-necessary east-west communication. [Observed]
 
 ## Private DNS design
@@ -27,7 +29,7 @@ Design expectations:
 
 - Assign clear ownership for Private DNS zones. [Validated]
 - Decide whether DNS is centralized in a hub or delegated per environment. [Correlated]
-- Validate split-horizon and on-premises forwarding behavior before production cutover. [Measured]
+- Validate split-horizon and on-premises forwarding behavior before production cutover. [Validated]
 
 ## On-premises connectivity choices
 
@@ -44,11 +46,17 @@ Design expectations:
 flowchart TD
     A[Corporate users and systems] --> B[ExpressRoute or VPN]
     B --> C[Hub or shared connectivity]
-    C --> D[Spoke VNet hosting application]
-    D --> E[App Service with VNet integration]
-    E --> F[Private Endpoints for SQL, Storage, Service Bus]
-    C --> G[Private DNS zones and forwarders]
+    C --> D[Spoke VNet with App Service Private Endpoint]
+    D --> E[App Service]
+    E --> F[VNet integration for outbound]
+    F --> G[Private Endpoints for SQL, Storage, Service Bus]
+    C --> H[Private DNS zones and forwarders]
+    H --> D
+    H --> G
 ```
+
+> [!NOTE]
+> On multitenant App Service, **VNet integration does not provide private inbound access**. Use **Private Endpoint** for inbound private reachability and the `privatelink.azurewebsites.net` Private DNS zone for name resolution. If the workload needs full network isolation and inbound access through an **Internal Load Balancer**, consider **ASE v3**, which typically carries a higher cost. [Documented]
 
 ## NSG and route design principles
 
@@ -80,13 +88,13 @@ Do not collapse user and operator paths into the same endpoint. Separate adminis
 
 ## Architecture review checklist
 
-- Is private DNS forwarding tested from every relevant network edge? [Measured]
+- Is private DNS forwarding tested from every relevant network edge? [Validated]
 - Are NSG rules minimal and documented enough for incident review? [Observed]
 - Can operators explain the intended egress and east-west paths? [Validated]
 
 ## Revisit triggers
 
-- Private name resolution issues become a regular outage cause. [Measured]
+- Private name resolution issues become a regular outage cause. [Observed]
 - User access patterns shift toward broader remote access models. [Observed]
 - Network policy exceptions outnumber the baseline rules. [Correlated]
 
