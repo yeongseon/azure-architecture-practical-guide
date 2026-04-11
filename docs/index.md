@@ -39,9 +39,9 @@ This site is organized so you can move from Azure fundamentals to architecture p
 
     ---
 
-    Jump into workload guides, architecture reviews, and design labs for practical review workflows.
+    Jump into workload guides and design labs for practical review workflows.
 
-    [:octicons-arrow-right-24: Architecture Reviews](architecture-reviews/index.md)
+    [:octicons-arrow-right-24: Design Labs](design-labs/index.md)
 
 </div>
 
@@ -55,7 +55,6 @@ This site is organized so you can move from Azure fundamentals to architecture p
 | [Architecture Patterns](patterns/index.md) | Compare decomposition, integration, data, resilience, security, and deployment patterns. |
 | [Workload Guides](workload-guides/index.md) | Use baseline blueprints for common Azure workload types. |
 | [Operations](operations/index.md) | Run architecture lifecycle processes with ADRs, guardrails, observability, and FinOps. |
-| [Architecture Reviews](architecture-reviews/index.md) | Review designs using decision trees, evidence maps, anti-patterns, and playbooks. |
 | [Design Labs](design-labs/index.md) | Practice architecture design with guided scenarios. |
 | [Reference](reference/index.md) | Look up matrices, cheatsheets, mappings, and glossary entries. |
 
