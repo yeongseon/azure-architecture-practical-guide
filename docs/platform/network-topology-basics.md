@@ -6,7 +6,7 @@ content_sources:
       source: self-generated
       justification: "Synthesized from Azure networking architecture guidance, hub-spoke patterns, Virtual WAN, private endpoint, service endpoint, and DNS guidance."
       based_on:
-        - https://learn.microsoft.com/en-us/azure/architecture/networking/guide/
+        - https://learn.microsoft.com/en-us/azure/architecture/networking/guide/private-link-hub-spoke-network
         - https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/hub-spoke
         - https://learn.microsoft.com/en-us/azure/virtual-wan/virtual-wan-about
         - https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview

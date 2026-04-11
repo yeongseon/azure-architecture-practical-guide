@@ -7,7 +7,7 @@ content_sources:
       justification: "Synthesized from Azure Landing Zone conceptual architecture and Cloud Adoption Framework guidance."
       based_on:
         - https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
-        - https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/
+        - https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-areas
 ---
 # Landing Zones Basics
 
@@ -89,7 +89,7 @@ flowchart TD
 ## Microsoft Learn anchors
 
 - [Cloud Adoption Framework landing zones](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/)
-- [Landing zone design areas](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/)
+- [Landing zone design areas](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-areas)
 - [Enterprise-scale landing zone architecture](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/azure-landing-zone)
 
 ## Takeaway

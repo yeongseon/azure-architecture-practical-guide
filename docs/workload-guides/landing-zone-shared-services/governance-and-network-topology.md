@@ -7,7 +7,7 @@ content_sources:
       justification: "Shows governance and connectivity topology for landing zones and shared services."
       based_on:
         - https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/
-        - https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity/
+        - https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity
 ---
 # Landing Zone and Shared Services Governance and Network Topology
 
@@ -97,5 +97,5 @@ It also clarifies shared accountability. [Correlated]
 ## Microsoft Learn references
 
 - [Azure best practices and recommendations](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/)
-- [Network topology and connectivity design area](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity/)
+- [Network topology and connectivity design area](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity)
 - [Azure Firewall architecture guidance](https://learn.microsoft.com/en-us/azure/architecture/networking/guide/azure-firewall)

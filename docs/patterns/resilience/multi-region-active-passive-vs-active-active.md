@@ -4,7 +4,7 @@ content_sources:
     - id: multi-region-mode-comparison
       type: flowchart
       source: mslearn-adapted
-      mslearn_url: https://learn.microsoft.com/en-us/azure/architecture/guide/networking/global-web-applications/
+      mslearn_url: https://learn.microsoft.com/en-us/azure/architecture/guide/networking/global-web-applications/overview
 ---
 # Multi-Region Active-Passive vs Active-Active
 
@@ -107,7 +107,7 @@ flowchart LR
 
 ## Microsoft Learn reference
 
-- https://learn.microsoft.com/en-us/azure/architecture/guide/networking/global-web-applications/
+- https://learn.microsoft.com/en-us/azure/architecture/guide/networking/global-web-applications/overview
 
 ## Takeaway
 
