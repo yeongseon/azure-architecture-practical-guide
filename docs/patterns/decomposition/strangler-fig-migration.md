@@ -93,7 +93,7 @@ flowchart LR
 
 - `[Documented]` The migrated capability, contract, and rollback path.
 - `[Observed]` Routing behavior, errors, and operational support burden.
-- `Measured` Latency, success rate, and cost before and after extraction.
+- [Measured] Latency, success rate, and cost before and after extraction.
 - `[Validated]` Failback and incident drill outcomes.
 
 ## Azure service considerations

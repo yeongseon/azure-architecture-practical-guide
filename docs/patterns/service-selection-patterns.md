@@ -121,7 +121,7 @@ flowchart TD
 ## Recommended evidence to capture
 
 - `[Documented]` Microsoft Learn guidance for candidate service categories.
-- `Measured` Estimated cost, scaling thresholds, and latency under expected load.
+- [Measured] Estimated cost, scaling thresholds, and latency under expected load.
 - `[Observed]` Team support capability, incident history, and operational complexity.
 - `[Unknown]` Assumptions not yet tested in a proof of concept.
 

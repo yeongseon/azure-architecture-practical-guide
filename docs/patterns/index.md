@@ -108,7 +108,7 @@ flowchart TD
 
 When applying any pattern in this guide, collect evidence beyond diagrams:
 
-- `Measured` Latency, throughput, cost, and recovery time objectives.
+- [Measured] Latency, throughput, cost, and recovery time objectives.
 - `[Observed]` Incident trends, deployment frequency, and dependency failures.
 - `[Correlated]` Signals that link architecture choices to production pain points.
 - `[Unknown]` Explicit gaps that still need tests or drills.

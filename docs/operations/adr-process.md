@@ -77,7 +77,7 @@ An ADR log should be chronological, searchable, and linked to architecture diagr
 
 - [Documented] Official guidance and internal standards support the choice.
 - [Observed] Current operational pain or platform behavior is described.
-- `Measured` Cost, latency, throughput, or recovery data informs the choice.
+- [Measured] Cost, latency, throughput, or recovery data informs the choice.
 - [Validated] Proof-of-concept or drill results exist for risky decisions.
 - [Unknown] Missing data is called out explicitly rather than hidden.
 
