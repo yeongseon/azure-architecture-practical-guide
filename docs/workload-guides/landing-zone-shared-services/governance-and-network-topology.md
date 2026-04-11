@@ -49,9 +49,9 @@ flowchart TD
 
 ## Architecture review questions
 
-1. Are policies preventing drift without becoming opaque blockers? [Observed]
-2. Can the network topology scale with new subscriptions, regions, and connectivity requirements? [Inferred]
-3. Is centralized DNS and firewall ownership backed by operational SLAs? [Documented]
+1. Are policies preventing drift without becoming opaque blockers?
+2. Can the network topology scale with new subscriptions, regions, and connectivity requirements?
+3. Is centralized DNS and firewall ownership backed by operational SLAs?
 
 ## Common mistakes
 
@@ -67,9 +67,9 @@ flowchart TD
 
 ## Architecture review checklist
 
-- Are policy failures explainable to workload teams? [Observed]
-- Is hub or Virtual WAN design sized for expected regional growth? [Inferred]
-- Do shared firewall and DNS services have operational ownership and support paths? [Documented]
+- Are policy failures explainable to workload teams?
+- Is hub or Virtual WAN design sized for expected regional growth?
+- Do shared firewall and DNS services have operational ownership and support paths?
 
 ## Revisit triggers
 

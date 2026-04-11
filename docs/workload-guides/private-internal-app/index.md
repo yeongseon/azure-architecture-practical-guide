@@ -74,9 +74,9 @@ flowchart LR
 
 ## Architecture review checklist
 
-- Are private DNS and connectivity ownership clearly assigned? [Validated]
-- Can the application operate if one hybrid path is impaired? [Correlated]
-- Is the private posture tied to a real business or compliance need? [Observed]
+- Are private DNS and connectivity ownership clearly assigned?
+- Can the application operate if one hybrid path is impaired?
+- Is the private posture tied to a real business or compliance need?
 
 ## Revisit triggers
 

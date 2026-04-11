@@ -79,9 +79,9 @@ flowchart LR
 
 ## Architecture review checklist
 
-- Are queue lag thresholds tied to business impact? [Correlated]
-- Can operators pause, replay, or redirect safely during incidents? [Observed]
-- Are downstream protections in place before consumer scaling expands? [Validated]
+- Are queue lag thresholds tied to business impact?
+- Can operators pause, replay, or redirect safely during incidents?
+- Are downstream protections in place before consumer scaling expands?
 
 ## Revisit triggers
 

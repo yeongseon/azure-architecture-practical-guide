@@ -76,9 +76,9 @@ flowchart TD
 
 ## Architecture review checklist
 
-- Does each private endpoint or premium tier have a documented reason? [Validated]
-- Are hybrid connectivity costs visible to workload owners? [Observed]
-- Is DNS support effort included in the architecture's real cost model? [Correlated]
+- Does each private endpoint or premium tier have a documented reason?
+- Are hybrid connectivity costs visible to workload owners?
+- Is DNS support effort included in the architecture's real cost model?
 
 ## Revisit triggers
 

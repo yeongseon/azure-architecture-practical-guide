@@ -63,9 +63,9 @@ flowchart LR
 
 ## Architecture review checklist
 
-- Are platform responsibilities distinct from workload responsibilities? [Validated]
-- Can teams understand the guardrails they inherit? [Observed]
-- Are shared services backed by operating expectations and ownership? [Correlated]
+- Are platform responsibilities distinct from workload responsibilities?
+- Can teams understand the guardrails they inherit?
+- Are shared services backed by operating expectations and ownership?
 
 ## Revisit triggers
 

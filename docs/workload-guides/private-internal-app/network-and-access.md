@@ -76,9 +76,9 @@ Do not collapse user and operator paths into the same endpoint. Separate adminis
 
 ## Architecture review questions
 
-1. Can any dependency still be reached from the public internet when the intended model is private-only? [Validated]
-2. Is DNS centrally governed enough to avoid split-resolution surprises? [Observed]
-3. Does failure of the on-premises network make the cloud application unusable even for cloud-hosted operators? [Correlated]
+1. Can any dependency still be reached from the public internet when the intended model is private-only?
+2. Is DNS centrally governed enough to avoid split-resolution surprises?
+3. Does failure of the on-premises network make the cloud application unusable even for cloud-hosted operators?
 
 ## Trade-offs to keep visible
 
@@ -88,9 +88,9 @@ Do not collapse user and operator paths into the same endpoint. Separate adminis
 
 ## Architecture review checklist
 
-- Is private DNS forwarding tested from every relevant network edge? [Validated]
-- Are NSG rules minimal and documented enough for incident review? [Observed]
-- Can operators explain the intended egress and east-west paths? [Validated]
+- Is private DNS forwarding tested from every relevant network edge?
+- Are NSG rules minimal and documented enough for incident review?
+- Can operators explain the intended egress and east-west paths?
 
 ## Revisit triggers
 

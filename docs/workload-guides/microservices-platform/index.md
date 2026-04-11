@@ -63,9 +63,9 @@ flowchart LR
 
 ## Architecture review checklist
 
-- Is decomposition driven by domain and ownership rather than tooling fashion? [Validated]
-- Can teams release and support services independently? [Observed]
-- Is there a platform team with clear product responsibilities? [Correlated]
+- Is decomposition driven by domain and ownership rather than tooling fashion?
+- Can teams release and support services independently?
+- Is there a platform team with clear product responsibilities?
 
 ## Revisit triggers
 

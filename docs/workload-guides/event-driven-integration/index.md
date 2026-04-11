@@ -63,9 +63,9 @@ flowchart LR
 
 ## Architecture review checklist
 
-- Is every event or command tied to a business owner? [Validated]
-- Can operators distinguish backlog growth from business outage? [Observed]
-- Are replay, deduplication, and compensation expectations documented? [Correlated]
+- Is every event or command tied to a business owner?
+- Can operators distinguish backlog growth from business outage?
+- Are replay, deduplication, and compensation expectations documented?
 
 ## Revisit triggers
 

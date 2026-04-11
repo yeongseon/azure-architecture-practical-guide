@@ -37,7 +37,7 @@ The counts below reflect the current published Phase 1 `mkdocs.yml` navigation s
 | Section | Published nav entries | Role in the guide |
 |---|---:|---|
 | Home | 1 | Main landing page |
-| Start Here | 6 | Orientation and onboarding |
+| Start Here (including About) | 7 | Orientation, onboarding, and project background |
 | Platform | 12 | Azure foundation decisions |
 | Well-Architected Framework | 9 | Evaluation lens and pillar trade-offs |
 | Architecture Patterns | 14 | Reusable decision patterns |
@@ -45,7 +45,6 @@ The counts below reflect the current published Phase 1 `mkdocs.yml` navigation s
 | Operations | 9 | Governance and runtime practices |
 | Design Labs | 5 | Guided architecture exercises |
 | Reference | 10 | Cheatsheets and validation status |
-| About | 1 | Project background and related repositories |
 | Architecture Reviews *(Phase 2 planned)* | — | Review methods, cards, and playbooks |
 | Visualization *(planned)* | — | Graph and map views |
 | Meta *(planned)* | — | Contribution and content policy |

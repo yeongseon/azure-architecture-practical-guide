@@ -72,9 +72,9 @@ flowchart TD
 
 ## Review questions
 
-1. Is each service's system of record clear? [Validated]
-2. Can one request be traced end to end across services and dependencies? [Observed]
-3. Are resilience patterns consistent enough to avoid accidental retry storms? [Correlated]
+1. Is each service's system of record clear?
+2. Can one request be traced end to end across services and dependencies?
+3. Are resilience patterns consistent enough to avoid accidental retry storms?
 
 ## Trade-offs to keep visible
 
@@ -84,9 +84,9 @@ flowchart TD
 
 ## Architecture review checklist
 
-- Can traces connect user-facing latency to dependency behavior? [Validated]
-- Is each data store owned by one service boundary? [Observed]
-- Are resilience defaults consistent across the platform? [Correlated]
+- Can traces connect user-facing latency to dependency behavior?
+- Is each data store owned by one service boundary?
+- Are resilience defaults consistent across the platform?
 
 ## Revisit triggers
 

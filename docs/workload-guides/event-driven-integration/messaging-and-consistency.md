@@ -76,9 +76,9 @@ flowchart TD
 
 ## Review questions
 
-1. Are message semantics aligned with business process importance? [Validated]
-2. Can every consumer safely retry or replay messages? [Observed]
-3. Is dead-letter ownership explicit and staffed? [Correlated]
+1. Are message semantics aligned with business process importance?
+2. Can every consumer safely retry or replay messages?
+3. Is dead-letter ownership explicit and staffed?
 
 ## Trade-offs to keep visible
 
@@ -88,9 +88,9 @@ flowchart TD
 
 ## Architecture review checklist
 
-- Is duplicate handling verifiable in design and operations? [Validated]
-- Does every DLQ path have an owner and replay decision process? [Observed]
-- Are event schemas versioned in a way producers and consumers can both sustain? [Correlated]
+- Is duplicate handling verifiable in design and operations?
+- Does every DLQ path have an owner and replay decision process?
+- Are event schemas versioned in a way producers and consumers can both sustain?
 
 ## Revisit triggers
 

@@ -97,9 +97,9 @@ Private Endpoints let teams keep managed services while avoiding the false choic
 
 ## Architecture review checklist
 
-- Are dependency private endpoints and DNS records part of the baseline runbook? [Validated]
-- Can operators access the environment during a business-critical incident? [Observed]
-- Is the on-premises dependency chain visible in recovery planning? [Correlated]
+- Are dependency private endpoints and DNS records part of the baseline runbook?
+- Can operators access the environment during a business-critical incident?
+- Is the on-premises dependency chain visible in recovery planning?
 
 ## Revisit triggers
 

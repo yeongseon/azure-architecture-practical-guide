@@ -82,9 +82,9 @@ Shared databases often turn microservices into a distributed monolith. Database 
 
 ## Architecture review checklist
 
-- Is the runtime choice aligned with platform engineering maturity? [Validated]
-- Are gateway, identity, and data ownership standards explicit? [Observed]
-- Can each service fail or deploy without coordinated platform-wide change? [Correlated]
+- Is the runtime choice aligned with platform engineering maturity?
+- Are gateway, identity, and data ownership standards explicit?
+- Can each service fail or deploy without coordinated platform-wide change?
 
 ## Revisit triggers
 

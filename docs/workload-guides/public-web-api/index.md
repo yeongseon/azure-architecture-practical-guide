@@ -88,9 +88,9 @@ flowchart LR
 
 ## Architecture review checklist
 
-- Is the workload truly internet-facing in business terms? [Validated]
-- Are traffic variability and identity expectations understood early? [Observed]
-- Is there a clear reason to choose web workload patterns over private or event-driven baselines? [Correlated]
+- Is the workload truly internet-facing in business terms?
+- Are traffic variability and identity expectations understood early?
+- Is there a clear reason to choose web workload patterns over private or event-driven baselines?
 
 ## Revisit triggers
 

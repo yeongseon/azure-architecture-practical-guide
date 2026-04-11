@@ -76,9 +76,9 @@ Keep workflow progress, processed results, and archives in purpose-built stores 
 
 ## Architecture review checklist
 
-- Is the selected broker aligned with the actual delivery semantics required? [Documented]
-- Can consumers fail independently without forcing producers to stop? [Observed]
-- Are archive, replay, and retention responsibilities assigned? [Correlated]
+- Is the selected broker aligned with the actual delivery semantics required?
+- Can consumers fail independently without forcing producers to stop?
+- Are archive, replay, and retention responsibilities assigned?
 
 ## Revisit triggers
 

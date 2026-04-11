@@ -70,9 +70,9 @@ flowchart LR
 
 ## Architecture review checklist
 
-- Is the workspace strategy clear about retention, ownership, and access? [Validated]
-- Can incidents be handed from central teams to workload teams without losing context? [Observed]
-- Are identity lifecycle and privileged access processes continuously operated? [Correlated]
+- Is the workspace strategy clear about retention, ownership, and access?
+- Can incidents be handed from central teams to workload teams without losing context?
+- Are identity lifecycle and privileged access processes continuously operated?
 
 ## Revisit triggers
 

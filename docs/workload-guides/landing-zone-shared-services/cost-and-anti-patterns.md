@@ -68,9 +68,9 @@ flowchart TD
 
 ## Architecture review checklist
 
-- Are platform costs allocated with a method teams understand? [Observed]
-- Do shared services publish ownership, expectations, and consumption rules? [Validated]
-- Are hub and monitoring costs reviewed as product dependencies rather than overhead only? [Correlated]
+- Are platform costs allocated with a method teams understand?
+- Do shared services publish ownership, expectations, and consumption rules?
+- Are hub and monitoring costs reviewed as product dependencies rather than overhead only?
 
 ## Revisit triggers
 

@@ -12,7 +12,7 @@ This baseline fits managed internet-facing applications that need strong default
 
 ## Decision question
 
-What is the default Azure architecture for public web applications and APIs when a team needs managed scale, resilient ingress, and operationally simple data access? [Validated]
+What is the default Azure architecture for public web applications and APIs when a team needs managed scale, resilient ingress, and operationally simple data access?
 
 ## Recommended baseline
 

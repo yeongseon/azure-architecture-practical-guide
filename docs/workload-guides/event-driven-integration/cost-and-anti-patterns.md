@@ -68,9 +68,9 @@ flowchart TD
 
 ## Architecture review checklist
 
-- Is the event volume forecast based on measured business activity? [Inferred]
-- Are fan-out subscriptions justified by explicit consumer value? [Validated]
-- Does the cost review include broker, compute, storage, and operator effort together? [Correlated]
+- Is the event volume forecast based on measured business activity?
+- Are fan-out subscriptions justified by explicit consumer value?
+- Does the cost review include broker, compute, storage, and operator effort together?
 
 ## Revisit triggers
 

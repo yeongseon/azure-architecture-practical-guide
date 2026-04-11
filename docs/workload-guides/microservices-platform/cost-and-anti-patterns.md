@@ -70,9 +70,9 @@ flowchart TD
 
 ## Architecture review checklist
 
-- Is the number of services explainable by domain needs? [Validated]
-- Are platform capabilities adopted incrementally? [Observed]
-- Does cost review include engineering and operational overhead? [Correlated]
+- Is the number of services explainable by domain needs?
+- Are platform capabilities adopted incrementally?
+- Does cost review include engineering and operational overhead?
 
 ## Revisit triggers
 

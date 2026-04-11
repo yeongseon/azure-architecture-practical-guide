@@ -26,14 +26,14 @@ Each content area is checked for:
 
 | Section | Source coverage | Diagram metadata | Evidence tagging | Validation status |
 |---|---|---|---|---|
-| Start Here | Complete | Complete | Complete | Ready for review |
-| Platform | Complete | Complete | Complete | Ready for review |
-| WAF | Complete | Complete | Complete | Ready for review |
-| Patterns | Partial (13 pattern pages plus index) | Complete | Complete | In review |
-| Workload Guides | Partial (5 of 8 planned workload families published) | Complete for published guides | Complete for published guides | In review |
-| Operations | Complete | Complete | Complete | Ready for review |
-| Design Labs | Partial (3 of 8 planned labs published) | Complete for published labs | Complete for published labs | In review |
-| Reference | Complete | Complete | Complete | Ready for review |
+| Start Here | Complete | Complete | In review | Ready for review |
+| Platform | Complete | Complete | In review | Ready for review |
+| WAF | Complete | Complete | In review | Ready for review |
+| Patterns | Partial (13 pattern pages plus index) | Complete | In review | In review |
+| Workload Guides | Partial (5 of 8 planned workload families published) | Complete for published guides | In review | In review |
+| Operations | Complete | Complete | In review | Ready for review |
+| Design Labs | Partial (3 of 8 planned labs published) | Complete for published labs | In review | In review |
+| Reference | Complete | Complete | In review | Ready for review |
 
 <!-- diagram-id: content-validation-lifecycle -->
 ```mermaid

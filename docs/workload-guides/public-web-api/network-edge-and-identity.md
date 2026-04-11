@@ -83,9 +83,9 @@ sequenceDiagram
 
 ## Review questions
 
-1. Can the application tier be reached directly, bypassing edge policy? [Validated]
-2. Is there a single owner for certificate, hostname, and WAF policy lifecycle? [Observed]
-3. Does the chosen identity model support external users, APIs, and service principals without forcing one-size-fits-all token handling? [Inferred]
+1. Can the application tier be reached directly, bypassing edge policy?
+2. Is there a single owner for certificate, hostname, and WAF policy lifecycle?
+3. Does the chosen identity model support external users, APIs, and service principals without forcing one-size-fits-all token handling?
 
 ## Trade-offs to keep visible
 
@@ -95,9 +95,9 @@ sequenceDiagram
 
 ## Architecture review checklist
 
-- Can any client bypass the intended edge control path? [Validated]
-- Is there one clear owner for WAF, certificates, and custom domains? [Observed]
-- Are user, partner, and service identities handled with deliberate boundaries? [Correlated]
+- Can any client bypass the intended edge control path?
+- Is there one clear owner for WAF, certificates, and custom domains?
+- Are user, partner, and service identities handled with deliberate boundaries?
 
 ## Revisit triggers
 

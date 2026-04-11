@@ -81,9 +81,9 @@ flowchart LR
 
 ## Architecture review checklist
 
-- Are private dependency checks built into synthetic monitoring? [Validated]
-- Can the team distinguish Azure service health from hybrid path failure? [Observed]
-- Are DNS and connectivity drills part of reliability testing? [Validated]
+- Are private dependency checks built into synthetic monitoring?
+- Can the team distinguish Azure service health from hybrid path failure?
+- Are DNS and connectivity drills part of reliability testing?
 
 ## Revisit triggers
 

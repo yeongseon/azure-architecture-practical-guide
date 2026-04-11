@@ -21,7 +21,7 @@ Target SLOs should match business criticality rather than default to generic “
 |---|---|---|
 | Informational or low-impact site | 99.9% | Regional resilience and solid rollback may be enough. [Inferred] |
 | Revenue or customer workflow critical | 99.95% to 99.99% | Requires stronger dependency isolation, disciplined release process, and tested failover. [Correlated] |
-| Mission-critical public API | 99.99% or higher | Usually demands multi-region design, dependency budgeting, and active resilience testing. [Measured] |
+| Mission-critical public API | 99.99% or higher | Usually demands multi-region design, dependency budgeting, and active resilience testing. [Documented] |
 
 ## Health checks and autoscaling
 
@@ -87,9 +87,9 @@ flowchart LR
 
 ## Architecture review checklist
 
-- Are health checks tied to readiness rather than simple liveness? [Documented]
-- Can deployment rollback happen without database incompatibility? [Validated]
-- Do SLOs and error budgets drive release decisions? [Correlated]
+- Are health checks tied to readiness rather than simple liveness?
+- Can deployment rollback happen without database incompatibility?
+- Do SLOs and error budgets drive release decisions?
 
 ## Revisit triggers
 

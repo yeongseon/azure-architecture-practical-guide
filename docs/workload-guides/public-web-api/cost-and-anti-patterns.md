@@ -17,10 +17,10 @@ Public workloads often accumulate cost through defensive overprovisioning, premi
 
 | Layer | Typical driver | Review signal |
 |---|---|---|
-| Edge | WAF policy tier, rules processing, outbound data transfer | Is global edge capability actually required? [Inferred] |
-| Compute | Always-on instance count, premium plans, idle headroom | Does peak demand justify the baseline capacity? [Observed] |
-| Data | Provisioned throughput, storage redundancy, backup retention | Are consistency and replication settings tied to business requirements? [Validated] |
-| Observability | High-cardinality telemetry and long retention | Is all collected data used operationally? [Observed] |
+| Edge | WAF policy tier, rules processing, outbound data transfer | Is global edge capability actually required? |
+| Compute | Always-on instance count, premium plans, idle headroom | Does peak demand justify the baseline capacity? |
+| Data | Provisioned throughput, storage redundancy, backup retention | Are consistency and replication settings tied to business requirements? |
+| Observability | High-cardinality telemetry and long retention | Is all collected data used operationally? |
 
 ## Cost optimization guidance
 
@@ -74,9 +74,9 @@ flowchart TD
 
 ## Architecture review checklist
 
-- Is every premium capability tied to a requirement or validation result? [Validated]
-- Are cache, database, and observability costs reviewed together? [Correlated]
-- Does the team revisit reserved capacity or savings options for stable demand? [Documented]
+- Is every premium capability tied to a requirement or validation result?
+- Are cache, database, and observability costs reviewed together?
+- Does the team revisit reserved capacity or savings options for stable demand?
 
 ## Revisit triggers
 

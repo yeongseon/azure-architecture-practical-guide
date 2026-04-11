@@ -67,9 +67,9 @@ flowchart LR
 
 ## Review questions
 
-1. Is the communication pattern chosen for business need or platform fashion? [Observed]
-2. Can the system tolerate partial failure without user-visible cascade? [Validated]
-3. Are user identity, service identity, and admin identity clearly separated? [Documented]
+1. Is the communication pattern chosen for business need or platform fashion?
+2. Can the system tolerate partial failure without user-visible cascade?
+3. Are user identity, service identity, and admin identity clearly separated?
 
 ## Trade-offs to keep visible
 
@@ -79,9 +79,9 @@ flowchart LR
 
 ## Architecture review checklist
 
-- Are service contracts and timeout budgets documented? [Validated]
-- Is service identity separated from user and operator identity? [Documented]
-- Can the team explain why each communication mode exists? [Observed]
+- Are service contracts and timeout budgets documented?
+- Is service identity separated from user and operator identity?
+- Can the team explain why each communication mode exists?
 
 ## Revisit triggers
 

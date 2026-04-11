@@ -73,9 +73,9 @@ flowchart LR
 
 ## Review questions
 
-1. Are integration responsibilities clear enough to know who owns schema, retry, and dead-letter handling? [Validated]
-2. Is every sensitive dependency using a private access path where supported? [Observed]
-3. Are secrets still present where managed identity could remove them? [Documented]
+1. Are integration responsibilities clear enough to know who owns schema, retry, and dead-letter handling?
+2. Is every sensitive dependency using a private access path where supported?
+3. Are secrets still present where managed identity could remove them?
 
 ## Trade-offs to keep visible
 
@@ -85,9 +85,9 @@ flowchart LR
 
 ## Architecture review checklist
 
-- Is every system of record clearly identified? [Validated]
-- Are integration channels chosen for business semantics rather than convenience? [Observed]
-- Can identity and authorization issues be diagnosed without falling back to shared secrets? [Correlated]
+- Is every system of record clearly identified?
+- Are integration channels chosen for business semantics rather than convenience?
+- Can identity and authorization issues be diagnosed without falling back to shared secrets?
 
 ## Revisit triggers
 

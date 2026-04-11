@@ -72,9 +72,9 @@ The goal is not full centralization. Workload teams should inherit standards and
 
 ## Architecture review checklist
 
-- Is the management group model aligned to the organization, not just to technical preference? [Documented]
-- Are shared services separated from workload ownership boundaries? [Validated]
-- Can the platform scale to more teams and regions without redesign? [Correlated]
+- Is the management group model aligned to the organization, not just to technical preference?
+- Are shared services separated from workload ownership boundaries?
+- Can the platform scale to more teams and regions without redesign?
 
 ## Revisit triggers
 
