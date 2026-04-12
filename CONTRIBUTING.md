@@ -6,33 +6,31 @@ Thank you for your interest in contributing!
 
 ### Reporting Issues
 - Use GitHub Issues for bugs, questions, or suggestions.
-- Include architecture context, constraints, and expected outcomes when reporting issues.
-- Tag issues appropriately (architecture-decision, documentation, infrastructure).
+- Include reproduction steps when reporting bugs.
+- Tag issues appropriately (documentation, bug, enhancement).
 
-### Submitting Architecture Decisions and Guide Updates
+### Submitting Changes
 1. Fork the repository.
-2. Create a branch: `architecture-decision/your-topic-name`.
-3. Follow the repository authoring standards and ADVR methodology in `AGENTS.md`.
-4. Include:
-    - Complete 16-section documentation where applicable.
-    - Supporting Bicep templates or validation assets if applicable.
-    - Evidence-tagged conclusions.
+2. Create a branch: `feature/your-change-description`.
+3. Make your changes — architecture patterns, workload guides, design labs, or review playbooks.
+4. Test with `mkdocs build --strict` before submitting.
 5. Submit a Pull Request.
 
 ### Documentation Standards
-- Use the canonical repository structure and navigation in `mkdocs.yml`.
-- Follow the Evidence Levels in `AGENTS.md` for conclusions.
-- Include Mermaid diagrams where applicable.
-- Test with `mkdocs build --strict` before submitting.
+- All CLI examples must use long flags (`--resource-group`, not `-g`).
+- All documents should include Mermaid diagrams where applicable.
+- All content must reference Microsoft Learn with source URLs.
+- No PII (subscription IDs, tenant IDs, etc.) in CLI output examples.
+- Use 4-space indentation for nested lists and admonitions.
 
 ### Code Standards
 - Shell scripts: Use `set -e`, quote variables.
 - Python: Follow PEP 8, include type hints.
-- Infrastructure: Use Bicep over ARM.
+- Infrastructure: Use Bicep over ARM templates.
 
 ## Review Process
 1. Automated CI checks (MkDocs build, linting).
-2. Maintainer review for technical accuracy and completeness.
+2. Maintainer review for accuracy and completeness.
 3. Merge to main triggers deployment.
 
 ## Code of Conduct
