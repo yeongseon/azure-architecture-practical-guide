@@ -66,7 +66,7 @@ Why this matters:
 | Storage | Sibling guide | [azure-storage-practical-guide](https://github.com/yeongseon/azure-storage-practical-guide) |
 | Functions | Sibling guide | [azure-functions-practical-guide](https://github.com/yeongseon/azure-functions-practical-guide) |
 | Container Apps | Sibling guide | [azure-container-apps-practical-guide](https://github.com/yeongseon/azure-container-apps-practical-guide) |
-| AKS | Sibling guide | [azure-aks-practical-guide](https://github.com/yeongseon/azure-aks-practical-guide) |
+| AKS | Sibling guide | [azure-kubernetes-service-practical-guide](https://github.com/yeongseon/azure-kubernetes-service-practical-guide) |
 | Monitoring | Sibling guide | [azure-monitoring-practical-guide](https://github.com/yeongseon/azure-monitoring-practical-guide) |
 
 ## Ownership heuristic

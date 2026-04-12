@@ -80,7 +80,7 @@ The broader practical-guide family separates architecture-level decisions from s
 | [azure-storage-practical-guide](https://github.com/yeongseon/azure-storage-practical-guide) | Storage implementation detail and usage patterns |
 | [azure-functions-practical-guide](https://github.com/yeongseon/azure-functions-practical-guide) | Functions-specific delivery guidance |
 | [azure-container-apps-practical-guide](https://github.com/yeongseon/azure-container-apps-practical-guide) | Container Apps implementation and operations |
-| [azure-aks-practical-guide](https://github.com/yeongseon/azure-aks-practical-guide) | AKS platform and workload operations |
+| [azure-kubernetes-service-practical-guide](https://github.com/yeongseon/azure-kubernetes-service-practical-guide) | AKS platform and workload operations |
 | [azure-monitoring-practical-guide](https://github.com/yeongseon/azure-monitoring-practical-guide) | Monitoring implementation and observability detail |
 
 ## Governance stance
