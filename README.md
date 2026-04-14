@@ -10,7 +10,7 @@ Comprehensive guide for designing, reviewing, and operating Azure architectures 
 |---------|-------------|
 | [Start Here](https://yeongseon.github.io/azure-architecture-practical-guide/) | Overview, learning paths, repository map, and how to use the guide |
 | [Platform](https://yeongseon.github.io/azure-architecture-practical-guide/platform/) | Azure architecture foundations including landing zones, identity, networking, compute, data, and resilience |
-| [Well-Architected Framework](https://yeongseon.github.io/azure-architecture-practical-guide/waf/) | Cost, security, reliability, performance, and operational excellence guidance |
+| [Well-Architected Framework](https://yeongseon.github.io/azure-architecture-practical-guide/waf/) | Reliability, Security, Cost Optimization, Operational Excellence, and Performance Efficiency guidance |
 | [Architecture Patterns](https://yeongseon.github.io/azure-architecture-practical-guide/patterns/) | Proven decomposition, integration, data, resilience, networking, security, and deployment patterns |
 | [Workload Guides](https://yeongseon.github.io/azure-architecture-practical-guide/workload-guides/) | Practical blueprints for public web, internal apps, integration, serverless, microservices, data, and AI workloads |
 | [Operations](https://yeongseon.github.io/azure-architecture-practical-guide/operations/) | ADRs, IaC, governance guardrails, observability, FinOps, and continuity practices |

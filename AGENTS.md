@@ -44,7 +44,7 @@ The documentation is organized by intent and lifecycle stage:
 |---|---|
 | **Start Here** | Entry points, learning paths, repository map |
 | **Platform** | Azure architecture foundations — landing zones, identity, networking, compute, data, resilience |
-| **Well-Architected Framework** | Cost, security, reliability, performance, and operational excellence guidance |
+| **Well-Architected Framework** | Reliability, Security, Cost Optimization, Operational Excellence, and Performance Efficiency guidance |
 | **Architecture Patterns** | Proven decomposition, integration, data, resilience, networking, security, and deployment patterns |
 | **Workload Guides** | Practical blueprints for public web, internal apps, integration, serverless, microservices, data, and AI workloads |
 | **Operations** | ADRs, IaC, governance guardrails, observability, FinOps, and continuity practices |
