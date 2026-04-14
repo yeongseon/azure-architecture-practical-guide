@@ -15,10 +15,10 @@ Architecture Reviews provide a structured methodology for evaluating Azure workl
 
 | Section | Purpose |
 |---|---|
-| [First 60 Minutes](first-60-minutes/) | Rapid architecture assessment framework for initial workload evaluations |
-| [Playbooks](playbooks/) | Step-by-step review guides for common workload archetypes |
-| [Anti-Patterns](anti-patterns/) | Architecture failure modes and corrective patterns |
-| [Migration Playbooks](migration-playbooks/) | Stepwise modernization and transition guides |
+| First 60 Minutes | Rapid architecture assessment framework for initial workload evaluations |
+| Playbooks | Step-by-step review guides for common workload archetypes |
+| Anti-Patterns | Architecture failure modes and corrective patterns |
+| Migration Playbooks | Stepwise modernization and transition guides |
 
 ## Review methodology
 
@@ -42,9 +42,9 @@ flowchart LR
 
 ## See Also
 
-- [Well-Architected Framework](../waf/)
-- [Design Labs](../design-labs/)
-- [Architecture Patterns](../patterns/)
+- [Well-Architected Framework](../waf/index.md)
+- [Design Labs](../design-labs/index.md)
+- [Architecture Patterns](../patterns/index.md)
 
 ## Sources
 
