@@ -206,3 +206,5 @@ nav:
     - reference/waf-pillar-to-pattern-map.md
     - reference/content-validation-status.md
     - reference/validation-status.md
+  - Contributing:
+    - contributing/index.md
