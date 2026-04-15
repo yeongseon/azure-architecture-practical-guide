@@ -39,7 +39,7 @@ Use this page to set recovery expectations before choosing topology, replication
 
 <!-- diagram-id: resilience-rto-rpo-map -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Business tier] --> B[Set RTO and RPO]
     B --> C{Regional outage tolerance?}
     C -->|Low| D[Single region or zonal]

@@ -42,7 +42,7 @@ Use this workload family for enterprise Azure platform setup: management groups,
 
 <!-- diagram-id: landing-zone-shared-services-scope -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Enterprise governance] --> B[Management groups and policy]
     B --> C[Platform subscriptions]
     C --> D[Shared connectivity, identity, security, monitoring]

@@ -65,7 +65,7 @@ Teams should decide what stale means before implementation.
 
 <!-- diagram-id: cache-aside-cqrs-materialized-view-selection -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Write API] --> B[Transactional data store]
     B --> C[Change event or projection job]
     C --> D[Read model or materialized view]

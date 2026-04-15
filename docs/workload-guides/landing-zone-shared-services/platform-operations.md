@@ -39,7 +39,7 @@ Security operations center integration matters when platform signals, identity e
 
 <!-- diagram-id: landing-zone-platform-operations -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Platform telemetry] --> B[Azure Monitor and Log Analytics]
     C[Identity events] --> B
     D[Security signals] --> B

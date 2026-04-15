@@ -51,7 +51,7 @@ The DR model should align with dependency topology:
 
 <!-- diagram-id: public-web-api-reliability-loop -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[User traffic and synthetic probes] --> B[Health checks and telemetry]
     B --> C[Autoscale and deployment decisions]
     C --> D[Runtime capacity and routing state]

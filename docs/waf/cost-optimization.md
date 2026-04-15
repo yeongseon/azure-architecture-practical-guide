@@ -34,7 +34,7 @@ Cost Optimization in the Azure Well-Architected Framework is about aligning tech
 
 <!-- diagram-id: waf-cost-diagram-1 -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Business value target] --> B[Select topology and service tiers]
     B --> C[Tag allocate and budget]
     C --> D[Observe spend utilization and waste]

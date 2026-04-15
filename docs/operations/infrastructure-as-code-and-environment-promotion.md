@@ -26,7 +26,7 @@ Infrastructure as Code (IaC) is the operational foundation for repeatable Azure 
 
 <!-- diagram-id: iac-promotion-diagram-1 -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Source definitions] --> B[Development environment]
     B --> C[Staging or pre-production]
     C --> D[Production]

@@ -42,7 +42,7 @@ Use this workload family when domain complexity, team boundaries, and release in
 
 <!-- diagram-id: microservices-platform-scope -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Many product teams] --> B[Shared service platform]
     B --> C[Independent services]
     C --> D[Per-service data]

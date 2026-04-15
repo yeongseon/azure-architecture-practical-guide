@@ -84,7 +84,7 @@ Out of scope:
 
 <!-- diagram-id: start-here-overview-diagram-1 -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Platform] --> B[Well-Architected]
     B --> C[Patterns]
     C --> D[Workload Guides]

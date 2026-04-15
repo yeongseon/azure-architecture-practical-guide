@@ -22,7 +22,7 @@ Use **Azure Front Door** as the global ingress and WAF layer, terminate at **Azu
 
 <!-- diagram-id: public-web-api-baseline-architecture -->
 ```mermaid
-flowchart LR
+flowchart TD
     Users[Internet users and partner clients]
     FD[Azure Front Door\nWAF, TLS, routing]
     Web[App Service or Container Apps\nweb and API tier]

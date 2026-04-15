@@ -24,7 +24,7 @@ FinOps is the operating discipline that connects Azure consumption to business a
 
 <!-- diagram-id: finops-diagram-1 -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Allocate and tag] --> B[Budget and forecast]
     B --> C[Observe spend and anomalies]
     C --> D[Optimize usage commitments and design]

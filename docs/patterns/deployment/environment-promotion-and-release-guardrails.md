@@ -57,7 +57,7 @@ The objective is not more bureaucracy. The objective is repeatable evidence that
 
 <!-- diagram-id: environment-promotion-release-guardrails-flow -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Code and IaC change] --> B[Build and static validation]
     B --> C[Dev and test environment]
     C --> D[Security, policy, and integration checks]

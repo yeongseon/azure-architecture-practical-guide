@@ -56,7 +56,7 @@ The right DR pattern depends on whether the workload is stateless execution arou
 
 <!-- diagram-id: serverless-processing-reliability-loop -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Triggers and incoming backlog] --> B[Functions runtime scale and execution]
     B --> C[Telemetry, alerts, and dependency signals]
     C --> D[Retry, throttle, or failover actions]

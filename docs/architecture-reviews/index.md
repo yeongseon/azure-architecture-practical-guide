@@ -24,7 +24,7 @@ Architecture Reviews provide a structured methodology for evaluating Azure workl
 
 <!-- diagram-id: architecture-reviews-methodology -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Scope and context] --> B[First 60 minutes]
     B --> C[Pillar-by-pillar review]
     C --> D[Anti-pattern check]

@@ -57,7 +57,7 @@ The objective is not one product deployment but a trust model that applies to ev
 
 <!-- diagram-id: zero-trust-workload-controls -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[User or service request] --> B[Identity verification]
     B --> C[Policy and authorization decision]
     C --> D[Application workload]

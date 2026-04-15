@@ -37,7 +37,7 @@ Each content area is checked for:
 
 <!-- diagram-id: content-validation-lifecycle -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Draft content] --> B[Source check]
     B --> C[Diagram metadata check]
     C --> D[Evidence tagging review]

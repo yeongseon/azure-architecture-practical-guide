@@ -42,7 +42,7 @@ Use this workload family when the system's main value comes from asynchronous co
 
 <!-- diagram-id: event-driven-integration-scope -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Producers] --> B[Messaging backbone]
     B --> C[Consumers and processors]
     C --> D[Operational data stores]

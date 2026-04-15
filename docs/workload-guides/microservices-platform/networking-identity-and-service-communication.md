@@ -47,7 +47,7 @@ API Management, Envoy-based gateways, service mesh, and Dapr solve different pro
 
 <!-- diagram-id: microservices-platform-service-communication -->
 ```mermaid
-flowchart LR
+flowchart TD
     Clients[Clients] --> Gateway[API Management or gateway]
     Gateway --> S1[Service A]
     Gateway --> S2[Service B]

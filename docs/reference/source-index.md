@@ -70,7 +70,7 @@ This index catalogs the major Microsoft Learn sources already reused across the 
 
 <!-- diagram-id: source-index-sections -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Source index] --> B[Platform]
     A --> C[WAF]
     A --> D[Patterns]

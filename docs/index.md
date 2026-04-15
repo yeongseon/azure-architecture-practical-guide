@@ -62,7 +62,7 @@ For orientation and study order, start with [Start Here](start-here/index.md).
 
 <!-- diagram-id: index-diagram-1 -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Start Here] --> B[Platform]
     B --> C[Well-Architected Framework]
     C --> D[Architecture Patterns]

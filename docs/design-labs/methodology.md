@@ -14,7 +14,7 @@ The Design Labs section uses a 16-section Architecture Decision and Validation R
 
 <!-- diagram-id: advr-method-cycle -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Frame decision] --> B[Compare options]
     B --> C[Choose recommendation]
     C --> D[Predict outcomes]

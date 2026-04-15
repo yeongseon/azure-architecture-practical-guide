@@ -51,7 +51,7 @@ Do not start here only because “serverless” sounds cheaper. Stable, latency-
 
 <!-- diagram-id: serverless-processing-scope -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Events, schedules, or API calls] --> B[Serverless trigger layer]
     B --> C[Functions, Logic Apps, or Container Apps Jobs]
     C --> D[Workflow state and durable storage]

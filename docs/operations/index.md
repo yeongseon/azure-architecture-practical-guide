@@ -27,7 +27,7 @@ Operations is where architecture becomes durable. This section focuses on the li
 
 <!-- diagram-id: operations-index-diagram-1 -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Design] --> B[Build]
     B --> C[Deploy]
     C --> D[Operate]

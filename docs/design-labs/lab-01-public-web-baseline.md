@@ -12,7 +12,7 @@ This lab should be used with the Public Web and API workload guidance and the de
 
 <!-- diagram-id: lab-01-architecture -->
 ```mermaid
-flowchart LR
+flowchart TD
     U[Internet users] --> FD[Azure Front Door]
     FD --> AS[App Service zone-redundant]
     AS --> SQL[Azure SQL]

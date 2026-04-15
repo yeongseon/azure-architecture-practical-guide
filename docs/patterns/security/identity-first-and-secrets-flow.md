@@ -61,7 +61,7 @@ The important architecture question is not only where a secret is stored, but ho
 
 <!-- diagram-id: identity-first-secrets-flow -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Azure workload] --> B[Managed Identity]
     B --> C{Target supports Entra ID?}
     C -->|Yes| D[Access target resource directly]

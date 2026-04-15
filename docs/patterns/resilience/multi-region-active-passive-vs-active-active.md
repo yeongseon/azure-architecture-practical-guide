@@ -62,7 +62,7 @@ In active-active, multiple regions serve live traffic concurrently.
 
 <!-- diagram-id: multi-region-mode-comparison -->
 ```mermaid
-flowchart LR
+flowchart TD
     U[Global users] --> G[Front Door or Traffic Manager]
     G --> A1[Region A active]
     G --> B1[Region B passive or active]

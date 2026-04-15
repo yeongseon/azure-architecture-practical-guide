@@ -60,7 +60,7 @@ Every message handler should be safe to run more than once.
 
 <!-- diagram-id: saga-idempotency-outbox-flow -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Client request] --> B[Order service local transaction]
     B --> C[Business state written]
     B --> D[Outbox record written]

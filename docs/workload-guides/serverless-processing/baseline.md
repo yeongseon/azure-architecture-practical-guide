@@ -22,7 +22,7 @@ Use **Azure Functions** as the primary execution runtime, receive work through *
 
 <!-- diagram-id: serverless-processing-baseline-architecture -->
 ```mermaid
-flowchart LR
+flowchart TD
     Src[Source systems, users, and schedules]
     Ingress[Event Grid, Service Bus, Storage queues, or HTTP]
     Fn[Azure Functions\ntrigger handlers and orchestrations]

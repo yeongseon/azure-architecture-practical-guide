@@ -63,7 +63,7 @@ A big-bang rewrite is still possible when:
 
 <!-- diagram-id: strangler-fig-flow -->
 ```mermaid
-flowchart LR
+flowchart TD
     U[Users and clients] --> F[Azure Front Door or API Management]
     F --> L[Legacy application]
     F --> N1[New capability A]

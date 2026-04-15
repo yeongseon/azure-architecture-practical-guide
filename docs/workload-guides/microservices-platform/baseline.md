@@ -18,7 +18,7 @@ Use **AKS** or **Azure Container Apps** as the service runtime, place **API Mana
 
 <!-- diagram-id: microservices-platform-baseline-architecture -->
 ```mermaid
-flowchart LR
+flowchart TD
     Users[Users and client applications]
     APIM[API Management or gateway]
     Runtime[AKS or Azure Container Apps]

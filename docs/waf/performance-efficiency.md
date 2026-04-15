@@ -34,7 +34,7 @@ Performance Efficiency is about meeting demand with the least wasteful architect
 
 <!-- diagram-id: waf-performance-diagram-1 -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[User demand profile] --> B[Identify bottlenecks]
     B --> C[Scale cache or partition]
     C --> D[Measure latency throughput and saturation]

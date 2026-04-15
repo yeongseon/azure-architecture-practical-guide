@@ -41,7 +41,7 @@ The guide is intentionally:
 
 <!-- diagram-id: about-diagram-1 -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Official Azure guidance] --> B[Practical architecture synthesis]
     B --> C[Platform and pattern baselines]
     C --> D[Workload guides and operations]

@@ -93,7 +93,7 @@ Microservices become more appropriate when:
 
 <!-- diagram-id: modular-monolith-vs-microservices-map -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Single application] --> B[Modular monolith]
     B --> C{Need independent scale or release?}
     C -- No --> D[Stay modular monolith]

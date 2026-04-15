@@ -55,7 +55,7 @@ This is useful when:
 
 <!-- diagram-id: queue-load-leveling-competing-consumers -->
 ```mermaid
-flowchart LR
+flowchart TD
     P[Producer or API] --> Q[Queue]
     Q --> W1[Worker 1]
     Q --> W2[Worker 2]

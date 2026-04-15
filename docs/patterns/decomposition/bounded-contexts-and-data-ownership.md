@@ -58,7 +58,7 @@ This is especially important during incremental migration when a modern service 
 
 <!-- diagram-id: bounded-context-ownership-map -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Sales context] --> ADB[Sales data]
     B[Billing context] --> BDB[Billing data]
     C[Fulfillment context] --> CDB[Fulfillment data]

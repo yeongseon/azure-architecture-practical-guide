@@ -48,7 +48,7 @@ Use Architecture Reviews later as a Phase 2 extension for a more formal review w
 
 <!-- diagram-id: start-here-how-to-use-diagram-1 -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Start Here] --> B[Platform]
     B --> C[WAF]
     C --> D[Patterns]

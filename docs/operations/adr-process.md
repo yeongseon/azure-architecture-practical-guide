@@ -25,7 +25,7 @@ Architecture Decision Records (ADRs) are short, durable documents that explain w
 
 <!-- diagram-id: adr-process-diagram-1 -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Decision question] --> B[Options and evidence]
     B --> C[Review and recommendation]
     C --> D[Adopt ADR]

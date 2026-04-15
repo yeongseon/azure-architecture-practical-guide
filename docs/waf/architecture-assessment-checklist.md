@@ -14,7 +14,7 @@ This checklist combines all five Azure Well-Architected pillars into one repeata
 
 <!-- diagram-id: waf-assessment-diagram-1 -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Collect business context] --> B[Map architecture and dependencies]
     B --> C[Score by pillar]
     C --> D[Record trade-offs and gaps]

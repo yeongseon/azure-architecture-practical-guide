@@ -67,7 +67,7 @@ Event sourcing stores state changes as an append-only event log instead of only 
 
 <!-- diagram-id: event-driven-platform-selection -->
 ```mermaid
-flowchart LR
+flowchart TD
     P[Producer service] --> Q{Event intent}
     Q -->|Business command or workflow| SB[Azure Service Bus]
     Q -->|Reactive notification| EG[Azure Event Grid]

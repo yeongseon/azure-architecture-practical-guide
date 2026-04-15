@@ -14,7 +14,7 @@ This lab should be used with the Private Internal App workload guidance and the 
 
 <!-- diagram-id: lab-02-architecture -->
 ```mermaid
-flowchart LR
+flowchart TD
     U[Corporate users] --> PE[App Service Private Endpoint]
     PE --> AS[App Service]
     AS --> VI[VNet integration for outbound]

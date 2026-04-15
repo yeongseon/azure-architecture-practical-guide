@@ -12,7 +12,7 @@ This lab should be used with the Event-Driven Integration workload guidance and 
 
 <!-- diagram-id: lab-03-architecture -->
 ```mermaid
-flowchart LR
+flowchart TD
     API[Order API] --> SB[Azure Service Bus]
     SB --> FN[Azure Functions]
     FN --> CDB[Azure Cosmos DB]

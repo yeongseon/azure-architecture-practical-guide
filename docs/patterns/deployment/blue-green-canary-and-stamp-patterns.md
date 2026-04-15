@@ -63,7 +63,7 @@ The shared goal is safer release progression, but each pattern optimizes a diffe
 
 <!-- diagram-id: deployment-rollout-pattern-selection -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Release pipeline] --> B{Deployment pattern}
     B -->|Blue-green| C[Blue environment]
     B -->|Blue-green| D[Green environment]

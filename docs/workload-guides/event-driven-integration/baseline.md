@@ -18,7 +18,7 @@ Use **Service Bus** or **Event Grid** as the event transport layer, run consumer
 
 <!-- diagram-id: event-driven-integration-baseline-architecture -->
 ```mermaid
-flowchart LR
+flowchart TD
     Prod[Producers and source systems]
     SB[Azure Service Bus or Event Grid]
     Fn[Azure Functions or Container Apps consumers]

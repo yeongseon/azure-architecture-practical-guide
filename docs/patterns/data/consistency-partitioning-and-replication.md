@@ -58,7 +58,7 @@ The primary design question is not whether all three are needed, but which trade
 
 <!-- diagram-id: consistency-partitioning-replication-tradeoffs -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Application workload] --> B{Business consistency need}
     B -->|Tight correctness| C[Primary write region]
     B -->|Read scale and locality| D[Partitioned store]

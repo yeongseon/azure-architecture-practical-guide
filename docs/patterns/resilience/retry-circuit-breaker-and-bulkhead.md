@@ -48,7 +48,7 @@ Bulkheads can exist as:
 
 <!-- diagram-id: retry-circuit-bulkhead-map -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Caller] --> B[Retry policy]
     B --> C[Circuit breaker]
     C --> D[Bulkhead-isolated dependency]

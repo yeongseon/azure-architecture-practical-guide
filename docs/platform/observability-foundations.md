@@ -26,7 +26,7 @@ Observability is the architecture capability that turns unknown behavior into me
 
 <!-- diagram-id: platform-observability-foundations-diagram-1 -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Azure Resources and Applications] --> B[Metrics]
     A --> C[Logs]
     A --> D[Traces]

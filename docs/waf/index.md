@@ -36,7 +36,7 @@ This section emphasizes decision quality, ownership, and validation over service
 
 <!-- diagram-id: waf-index-diagram-1 -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Business goals] --> B[Architecture options]
     B --> C[Assess against five pillars]
     C --> D[Record trade-offs and owners]

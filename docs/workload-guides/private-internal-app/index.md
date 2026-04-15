@@ -46,7 +46,7 @@ For Azure App Service variants in this family, private inbound access should ter
 
 <!-- diagram-id: private-internal-app-scope -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Employees and managed devices] --> B[Private connectivity]
     B --> C[Private application tier]
     C --> D[Private data services]

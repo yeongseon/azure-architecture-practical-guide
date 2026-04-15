@@ -27,7 +27,7 @@ This page compares common Azure network topologies and the quick choice between 
 
 <!-- diagram-id: network-topology-map -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Enterprise network need] --> B{Scale and central control?}
     B -->|High| C[Hub-spoke or Virtual WAN]
     B -->|Low| D[Flat VNet]

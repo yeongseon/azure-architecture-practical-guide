@@ -54,7 +54,7 @@ Do not start here just because the application has a browser front end. If the w
 
 <!-- diagram-id: public-web-api-decision-scope -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Internet users or partner systems] --> B[Global edge and WAF]
     B --> C[Managed web or API runtime]
     C --> D[Operational data stores]

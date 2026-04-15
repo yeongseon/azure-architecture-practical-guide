@@ -41,7 +41,7 @@ Poison message strategy should be explicit before production launch. [Validated]
 
 <!-- diagram-id: event-driven-integration-operations-loop -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Queue depth and lag metrics] --> B[Consumer scale and concurrency]
     B --> C[Processing results and failures]
     C --> D[DLQ triage and replay]

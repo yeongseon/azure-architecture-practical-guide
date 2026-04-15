@@ -41,7 +41,7 @@ Use a design lab first to frame the decision, then use the aligned workload guid
 
 <!-- diagram-id: design-labs-index-map -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Decision question] --> B[ADVR sections]
     B --> C[Candidate options]
     C --> D[Recommended option]

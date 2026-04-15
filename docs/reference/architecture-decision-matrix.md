@@ -29,7 +29,7 @@ This matrix helps architects move from workload type to likely Azure service com
 
 <!-- diagram-id: architecture-decision-matrix-flow -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Workload type] --> B{Interaction style}
     B -->|HTTP-centric| C[App Service or Container Apps]
     B -->|Event-driven| D[Functions plus messaging]

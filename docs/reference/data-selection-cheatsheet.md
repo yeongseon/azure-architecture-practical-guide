@@ -30,7 +30,7 @@ Use this page to narrow the primary Azure data store for a workload. Confirm fin
 
 <!-- diagram-id: data-selection-map -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Need data store] --> B{Relational?}
     B -->|Yes| C{SQL Server alignment?}
     C -->|Yes| D[Azure SQL]

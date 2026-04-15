@@ -34,7 +34,7 @@ Security in the Azure Well-Architected Framework is about reducing the probabili
 
 <!-- diagram-id: waf-security-diagram-1 -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Identity and access] --> B[Network and workload boundaries]
     B --> C[Data and secret protection]
     C --> D[Monitoring and detection]

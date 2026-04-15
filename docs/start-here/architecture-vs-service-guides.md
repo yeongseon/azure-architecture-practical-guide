@@ -25,7 +25,7 @@ Sibling service guides and Microsoft Learn explain how to configure the chosen s
 
 <!-- diagram-id: start-here-architecture-vs-service-guides-diagram-1 -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Architecture Question] --> B{Is the core question when/why/trade-off?}
     B -->|Yes| C[This guide]
     B -->|No| D{Is it service configuration or operations detail?}

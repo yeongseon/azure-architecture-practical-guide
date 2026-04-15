@@ -43,7 +43,7 @@ Managed identity should be the default for app-to-data and app-to-messaging path
 
 <!-- diagram-id: private-internal-app-data-integration -->
 ```mermaid
-flowchart LR
+flowchart TD
     App[Internal application tier]
     MI[Managed identity]
     SQL[Azure SQL Database\nPrivate Endpoint]

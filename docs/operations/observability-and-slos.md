@@ -22,7 +22,7 @@ Observability is the ability to infer system state from telemetry. Service objec
 
 <!-- diagram-id: observability-slo-diagram-1 -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Telemetry signals] --> B[SLIs]
     B --> C[SLOs]
     C --> D[Alerts and escalation]

@@ -20,7 +20,7 @@ Use **App Service Private Endpoint** for private inbound access and **disable pu
 
 <!-- diagram-id: private-internal-app-baseline-architecture -->
 ```mermaid
-flowchart LR
+flowchart TD
     Users[Employees and managed clients]
     Conn[ExpressRoute, VPN, or private access]
     PE[App Service Private Endpoint]

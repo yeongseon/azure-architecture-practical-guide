@@ -18,7 +18,7 @@ Clear team boundaries are essential for operating Azure architectures at scale. 
 
 <!-- diagram-id: team-responsibilities-diagram-1 -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[Platform team] --> B[Shared foundations and guardrails]
     C[Application team] --> D[Workload design and runtime behavior]
     B --> E[Shared operating model]

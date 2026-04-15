@@ -45,7 +45,7 @@ Operational expectations:
 
 <!-- diagram-id: private-internal-app-observability-loop -->
 ```mermaid
-flowchart LR
+flowchart TD
     A[User workflows and synthetic tests] --> B[Application and dependency telemetry]
     B --> C[DNS, network, and identity diagnostics]
     C --> D[Runbook actions and failover decisions]
