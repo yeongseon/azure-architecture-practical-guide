@@ -5,6 +5,31 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/reliability/overview
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: 'Document covers Resilience Targets: RTO and RPO aligned with Azure architecture
+      guidance'
+    source: https://learn.microsoft.com/en-us/azure/reliability/overview
+    verified: false
+  - claim: 'Document includes Microsoft Learn-traceable guidance for Resilience Targets:
+      RTO and RPO'
+    source: https://learn.microsoft.com/en-us/azure/well-architected/reliability/
+    verified: false
+  - claim: 'Document addresses Suggested targets by workload tier for Resilience Targets:
+      RTO and RPO'
+    source: https://learn.microsoft.com/en-us/azure/reliability/overview
+    verified: false
+  - claim: 'Document addresses Azure service SLA orientation for Resilience Targets:
+      RTO and RPO'
+    source: https://learn.microsoft.com/en-us/azure/well-architected/reliability/
+    verified: false
+  - claim: 'Document addresses Single-region vs multi-region RTO comparison for Resilience
+      Targets: RTO and RPO'
+    source: https://learn.microsoft.com/en-us/azure/reliability/overview
+    verified: false
 ---
 # Resilience Targets: RTO and RPO
 

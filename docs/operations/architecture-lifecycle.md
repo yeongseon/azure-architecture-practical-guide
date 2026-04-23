@@ -5,6 +5,27 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Architecture Lifecycle aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Architecture Lifecycle
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/govern/
+    verified: false
+  - claim: Document addresses Lifecycle phases for Architecture Lifecycle
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/
+    verified: false
+  - claim: Document addresses Lifecycle loop for Architecture Lifecycle
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/govern/
+    verified: false
+  - claim: Document addresses What changes over time for Architecture Lifecycle
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/
+    verified: false
 ---
 # Architecture Lifecycle
 

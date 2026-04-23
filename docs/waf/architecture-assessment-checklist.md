@@ -5,6 +5,28 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/well-architected/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Architecture Assessment Checklist aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Architecture Assessment
+      Checklist
+    source: https://learn.microsoft.com/en-us/assessments/azure-architecture-review/
+    verified: false
+  - claim: Document addresses Review workflow for Architecture Assessment Checklist
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document addresses Scoring approach for Architecture Assessment Checklist
+    source: https://learn.microsoft.com/en-us/assessments/azure-architecture-review/
+    verified: false
+  - claim: Document addresses Core review inputs for Architecture Assessment Checklist
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
 ---
 # Architecture Assessment Checklist
 

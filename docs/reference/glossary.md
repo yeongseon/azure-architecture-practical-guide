@@ -11,6 +11,26 @@ content_sources:
         - https://learn.microsoft.com/en-us/azure/architecture/patterns/
         - https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
         - https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/control-plane-and-data-plane
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Glossary aligned with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Glossary
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document addresses Architecture terms for Glossary
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/
+    verified: false
+  - claim: Document addresses Usage notes for Glossary
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
+    verified: false
+  - claim: Document addresses Microsoft Learn references for Glossary
+    source: https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/control-plane-and-data-plane
+    verified: false
 ---
 # Glossary
 

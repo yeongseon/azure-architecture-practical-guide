@@ -5,6 +5,28 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Service Selection Patterns aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Service Selection
+      Patterns
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/
+    verified: false
+  - claim: Document addresses Decision question for Service Selection Patterns
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/
+    verified: false
+  - claim: Document addresses Decision framework for Service Selection Patterns
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/
+    verified: false
+  - claim: Document addresses Requirements first for Service Selection Patterns
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/
+    verified: false
 ---
 # Service Selection Patterns
 

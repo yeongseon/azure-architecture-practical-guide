@@ -5,6 +5,28 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/well-architected/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Well-Architected Framework aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Well-Architected
+      Framework
+    source: https://learn.microsoft.com/en-us/azure/well-architected/pillars
+    verified: false
+  - claim: Document addresses How to use this section for Well-Architected Framework
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document addresses Pillars at a glance for Well-Architected Framework
+    source: https://learn.microsoft.com/en-us/azure/well-architected/pillars
+    verified: false
+  - claim: Document addresses Guide workflow for Well-Architected Framework
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
 ---
 # Well-Architected Framework
 

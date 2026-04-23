@@ -8,6 +8,26 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/architecture/
         - https://learn.microsoft.com/en-us/azure/well-architected/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Design Labs aligned with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Design Labs
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document addresses What makes a good architecture lab for Design Labs
+    source: https://learn.microsoft.com/en-us/azure/architecture/
+    verified: false
+  - claim: Document addresses How to use labs with workload guides for Design Labs
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document addresses Lab workflow for Design Labs
+    source: https://learn.microsoft.com/en-us/azure/architecture/
+    verified: false
 ---
 # Design Labs
 

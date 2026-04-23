@@ -157,6 +157,18 @@ def generate_dashboard(guides: list[dict[str, Any]], today: date) -> str:
         by_family.setdefault(family, []).append(g)
 
     lines: list[str] = []
+
+    lines.append("---")
+    lines.append("content_sources:")
+    lines.append("  diagrams:")
+    lines.append("    - id: validation-status-pie")
+    lines.append("      type: pie")
+    lines.append("      source: self-generated")
+    lines.append('      justification: "Auto-generated pie chart from validation frontmatter across workload guides."')
+    lines.append("      based_on:")
+    lines.append("        - https://learn.microsoft.com/en-us/azure/well-architected/")
+    lines.append("---")
+    lines.append("")
     lines.append("# Workload Guide Validation Status")
     lines.append("")
     lines.append(
@@ -181,6 +193,7 @@ def generate_dashboard(guides: list[dict[str, Any]], today: date) -> str:
     lines.append("")
 
     # Mermaid pie chart
+    lines.append("<!-- diagram-id: validation-status-pie -->")
     lines.append("```mermaid")
     lines.append("pie title Workload Guide Validation Status")
     if validated > 0:
@@ -302,6 +315,11 @@ def generate_dashboard(guides: list[dict[str, Any]], today: date) -> str:
     lines.append("- [Workload Guides](../workload-guides/index.md)")
     lines.append("- [Design Labs](../design-labs/index.md)")
     lines.append("- [Architecture Decision Matrix](architecture-decision-matrix.md)")
+    lines.append("")
+    lines.append("## Sources")
+    lines.append("")
+    lines.append("- [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)")
+    lines.append("- [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/)")
     lines.append("")
 
     return "\n".join(lines) + "\n"

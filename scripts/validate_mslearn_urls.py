@@ -59,35 +59,60 @@ def extract_mslearn_urls(frontmatter: dict) -> List[str]:
     urls = set()
 
     content_sources = frontmatter.get("content_sources", {})
-    diagrams = content_sources.get("diagrams", [])
 
-    for diagram in diagrams:
-        if isinstance(diagram, dict):
-            # Direct mslearn_url
-            if "mslearn_url" in diagram:
-                url = diagram["mslearn_url"]
+    if isinstance(content_sources, dict):
+        entries = []
+        for key in content_sources:
+            val = content_sources[key]
+            if isinstance(val, list):
+                entries.extend(val)
+    elif isinstance(content_sources, list):
+        entries = content_sources
+    else:
+        return []
+
+    for entry in entries:
+        if not isinstance(entry, dict):
+            continue
+
+        if "mslearn_url" in entry:
+            url = entry["mslearn_url"]
+            if url and "learn.microsoft.com" in url:
+                urls.add(url)
+
+        if "url" in entry:
+            url = entry["url"]
+            if url and "learn.microsoft.com" in url:
+                urls.add(url)
+
+        based_on = entry.get("based_on", [])
+        if isinstance(based_on, list):
+            for url in based_on:
                 if url and "learn.microsoft.com" in url:
                     urls.add(url)
 
-            # based_on list
-            based_on = diagram.get("based_on", [])
-            if isinstance(based_on, list):
-                for url in based_on:
-                    if url and "learn.microsoft.com" in url:
-                        urls.add(url)
+    content_validation = frontmatter.get("content_validation", {})
+    if isinstance(content_validation, dict):
+        for claim in content_validation.get("core_claims", []):
+            if isinstance(claim, dict):
+                source = claim.get("source", "")
+                if source and "learn.microsoft.com" in source:
+                    urls.add(source)
 
     return list(urls)
 
 
 def extract_source_section_urls(content: str) -> List[str]:
-    """Extract MSLearn URLs from ## Sources section."""
+    """Extract MSLearn URLs from Sources section and its accepted aliases."""
     urls = set()
 
-    # Find Sources section
-    sources_match = re.search(
-        r"^## Sources\s*\n(.*?)(?=^## |\Z)", content, re.MULTILINE | re.DOTALL
+    # AGENTS.md accepted headings: ## Sources, ## Microsoft Learn references,
+    # ## Microsoft Learn reference, ## Microsoft Learn anchors
+    heading_pattern = (
+        r"^## (?:Sources|Microsoft Learn references?|Microsoft Learn anchors)"
+        r"\s*\n(.*?)(?=^## |\Z)"
     )
-    if sources_match:
+    for sources_match in re.finditer(heading_pattern, content, re.MULTILINE | re.DOTALL):
         sources_text = sources_match.group(1)
         # Find all learn.microsoft.com URLs
         url_pattern = r'https://learn\.microsoft\.com/[^\s\)>\]"\']*'
@@ -245,6 +270,23 @@ def validate_project(
     return results
 
 
+def fix_redirects(results: Dict, project_path: Path) -> int:
+    """Replace redirected URLs with their canonical versions in source files."""
+    fixed_count = 0
+    for redirect in results.get("redirects", []):
+        old_url = redirect["original"]
+        new_url = redirect["canonical"]
+        for rel_file in redirect["files"]:
+            file_path = project_path / rel_file
+            content = file_path.read_text(encoding="utf-8")
+            if old_url in content:
+                content = content.replace(old_url, new_url)
+                file_path.write_text(content, encoding="utf-8")
+                print(f"    Fixed {old_url} -> {new_url} in {rel_file}")
+                fixed_count += 1
+    return fixed_count
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Validate MSLearn URLs in documentation"
@@ -260,7 +302,7 @@ def main():
     if args.project:
         projects = [github_dir / args.project]
     else:
-        projects = sorted(github_dir.glob("azure-*-practical-guide"))
+        projects = [Path(__file__).parent.parent]
 
     all_results = {}
     total_errors = 0
@@ -292,6 +334,10 @@ def main():
         total_errors += len(results["errors"])
         total_redirects += len(results["redirects"])
 
+        if args.fix and results.get("redirects"):
+            fixed = fix_redirects(results, project_path)
+            print(f"    Auto-fixed {fixed} redirect(s)")
+
     # Final summary
     print(f"\n{'=' * 60}")
     print("FINAL SUMMARY")
@@ -304,8 +350,10 @@ def main():
         print("\nBroken URLs require manual fixing!")
         sys.exit(1)
     elif total_redirects > 0:
-        print("\nRedirected URLs should be updated to canonical versions.")
         if args.fix:
+            print("\nRedirected URLs have been auto-fixed.")
+        else:
+            print("\nRedirected URLs should be updated to canonical versions.")
             print("Run with --fix to auto-update redirected URLs.")
         sys.exit(0)
     else:

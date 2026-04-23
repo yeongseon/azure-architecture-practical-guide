@@ -8,6 +8,30 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview
         - https://learn.microsoft.com/en-us/azure/architecture/patterns/cache-aside
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Public Web and API Data and State aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Public Web and
+      API Data and State
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/cache-aside
+    verified: false
+  - claim: Document addresses Database selection for Public Web and API Data and State
+    source: https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/cache-overview
+    verified: false
+  - claim: Document addresses Session state management for Public Web and API Data
+      and State
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/storage-options
+    verified: false
+  - claim: Document addresses File storage patterns for Public Web and API Data and
+      State
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview
+    verified: false
 ---
 # Public Web and API Data and State
 

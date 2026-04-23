@@ -5,6 +5,26 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/well-architected/security/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Security aligned with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/well-architected/security/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Security
+    source: https://learn.microsoft.com/en-us/azure/security/fundamentals/best-practices-and-patterns
+    verified: false
+  - claim: Document addresses Design principles for Security
+    source: https://learn.microsoft.com/en-us/azure/well-architected/security/
+    verified: false
+  - claim: Document addresses Security decision areas for Security
+    source: https://learn.microsoft.com/en-us/azure/security/fundamentals/best-practices-and-patterns
+    verified: false
+  - claim: Document addresses Security control model for Security
+    source: https://learn.microsoft.com/en-us/azure/well-architected/security/
+    verified: false
 ---
 # Security
 

@@ -8,6 +8,26 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/architecture/
         - https://learn.microsoft.com/en-us/azure/well-architected/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Start Here aligned with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Start Here
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document addresses What you will find here for Start Here
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/
+    verified: false
+  - claim: Document addresses Recommended entry points for Start Here
+    source: https://learn.microsoft.com/en-us/azure/architecture/
+    verified: false
+  - claim: Document addresses Orientation map for Start Here
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
 ---
 # Start Here
 

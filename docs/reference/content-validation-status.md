@@ -1,57 +1,162 @@
 ---
 content_sources:
   diagrams:
-    - id: content-validation-lifecycle
-      type: flowchart
+    - id: content-validation-pie
+      type: pie
       source: self-generated
-      justification: "Validation workflow synthesized from repository quality gates and Microsoft Learn-first documentation policy."
+      justification: "Auto-generated pie chart from content_validation frontmatter across docs."
       based_on:
         - https://learn.microsoft.com/en-us/azure/architecture/
-        - https://learn.microsoft.com/en-us/azure/well-architected/
 ---
+
 # Content Validation Status
 
-This page tracks whether major documentation areas have been reviewed for source integrity, diagram metadata, evidence quality, and internal consistency.
+Auto-generated dashboard — do not edit manually.
+Run `python3 scripts/generate_content_validation_status.py` to regenerate.
 
-## Validation methodology
+## Summary
 
-Each content area is checked for:
-
-1. Microsoft Learn traceability. [Documented]
-2. Mermaid diagram presence with `diagram-id` metadata. [Validated]
-3. Evidence tags used where claims require strength labeling. [Validated]
-4. Alignment with the repository information architecture. [Observed]
-
-## Current status
-
-| Section | Source coverage | Diagram metadata | Evidence tagging | Validation status |
-|---|---|---|---|---|
-| Start Here | Complete | Complete | In review | Ready for review |
-| Platform | Complete | Complete | In review | Ready for review |
-| WAF | Complete | Complete | In review | Ready for review |
-| Patterns | Partial (13 pattern pages plus index) | Complete | In review | In review |
-| Workload Guides | Partial (5 of 8 planned workload families published) | Complete for published guides | In review | In review |
-| Operations | Complete | Complete | In review | Ready for review |
-| Design Labs | Partial (3 of 8 planned labs published) | Complete for published labs | In review | In review |
-| Reference | Complete | Complete | In review | Ready for review |
-
-<!-- diagram-id: content-validation-lifecycle -->
+<!-- diagram-id: content-validation-pie -->
 ```mermaid
-flowchart TD
-    A[Draft content] --> B[Source check]
-    B --> C[Diagram metadata check]
-    C --> D[Evidence tagging review]
-    D --> E[Publish or rework]
+pie title Content Validation Status
+    "🔍 Pending Review" : 116
 ```
 
-## Interpretation notes
+| Status | Count |
+|--------|-------|
+| ✅ Verified | 0 |
+| 🔍 Pending Review | 116 |
+| ❓ Unverified | 0 |
 
-- **Complete** means the criterion is present and reviewable, not that every technical claim has production proof. [Correlated]
-- **Ready for review** means the page can enter a stricter architecture or editorial review loop. [Observed]
-- **In review** means content exists and is structurally reviewable, but the section is still incomplete or only partially populated against the intended scope. [Observed]
-- **Pending** means content is absent or lacks enough structure to evaluate. [Unknown]
+**Total documents with content_validation**: 116
 
-## Microsoft Learn references
+## Detail
 
-- https://learn.microsoft.com/en-us/azure/architecture/
-- https://learn.microsoft.com/en-us/azure/well-architected/
+| Document | Status | Claims | Last Reviewed |
+|----------|--------|--------|---------------|
+| `about.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `architecture-reviews/index.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `architecture-reviews/playbooks/data-platform-review.md` | 🔍 Pending Review | 3 | 2026-04-22 |
+| `architecture-reviews/playbooks/event-driven-review.md` | 🔍 Pending Review | 3 | 2026-04-22 |
+| `architecture-reviews/playbooks/index.md` | 🔍 Pending Review | 3 | 2026-04-22 |
+| `architecture-reviews/playbooks/microservices-review.md` | 🔍 Pending Review | 3 | 2026-04-22 |
+| `architecture-reviews/playbooks/private-internal-app-review.md` | 🔍 Pending Review | 3 | 2026-04-22 |
+| `architecture-reviews/playbooks/public-web-api-review.md` | 🔍 Pending Review | 3 | 2026-04-22 |
+| `contributing/index.md` | 🔍 Pending Review | 2 | 2026-04-23 |
+| `design-labs/index.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `design-labs/lab-01-public-web-baseline.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `design-labs/lab-02-private-internal-app.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `design-labs/lab-03-event-driven-orders.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `design-labs/methodology.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `index.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `operations/adr-process.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `operations/architecture-lifecycle.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `operations/business-continuity-and-drills.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `operations/cost-management-and-finops.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `operations/index.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `operations/infrastructure-as-code-and-environment-promotion.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `operations/observability-and-slos.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `operations/platform-team-vs-app-team-responsibilities.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `operations/policy-and-governance-guardrails.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `patterns/data/cache-aside-cqrs-and-materialized-view.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `patterns/data/consistency-partitioning-and-replication.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `patterns/data/multi-tenant-data-isolation.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `patterns/decomposition/bounded-contexts-and-data-ownership.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `patterns/decomposition/modular-monolith-vs-microservices.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `patterns/decomposition/strangler-fig-migration.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `patterns/deployment/blue-green-canary-and-stamp-patterns.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `patterns/deployment/environment-promotion-and-release-guardrails.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `patterns/index.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `patterns/integration/event-driven-architecture.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `patterns/integration/queue-based-load-leveling-and-competing-consumers.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `patterns/integration/saga-idempotency-and-outbox.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `patterns/integration/synchronous-vs-asynchronous.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `patterns/networking/hub-spoke-vs-virtual-wan.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `patterns/networking/private-connectivity-patterns.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `patterns/resilience/health-endpoints-graceful-degradation-and-backpressure.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `patterns/resilience/multi-region-active-passive-vs-active-active.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `patterns/resilience/retry-circuit-breaker-and-bulkhead.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `patterns/security/identity-first-and-secrets-flow.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `patterns/security/zero-trust-at-workload-level.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `patterns/service-selection-patterns.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `platform/azure-architecture-on-azure.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `platform/compute-selection-basics.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `platform/cost-model-basics.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `platform/data-selection-basics.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `platform/identity-and-governance-foundations.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `platform/index.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `platform/integration-selection-basics.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `platform/landing-zones-basics.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `platform/network-topology-basics.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `platform/observability-foundations.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `platform/resilience-and-region-strategy.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `platform/resource-organization.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `reference/architecture-decision-matrix.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `reference/compute-selection-cheatsheet.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `reference/data-selection-cheatsheet.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `reference/glossary.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `reference/index.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `reference/messaging-selection-cheatsheet.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `reference/network-topology-cheatsheet.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `reference/resilience-targets-rto-rpo.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `reference/security-control-mapping.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `reference/source-index.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `reference/waf-pillar-to-pattern-map.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `start-here/architecture-vs-service-guides.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `start-here/how-to-use-this-guide.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `start-here/index.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `start-here/learning-paths.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `start-here/overview.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `start-here/repository-map.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `waf/architecture-assessment-checklist.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `waf/cost-optimization.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `waf/index.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `waf/operational-excellence.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `waf/performance-efficiency.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `waf/pillar-trade-offs.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `waf/reliability.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `waf/security.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `waf/using-waf-in-this-guide.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/event-driven-integration/baseline.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/event-driven-integration/cost-and-anti-patterns.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/event-driven-integration/index.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/event-driven-integration/messaging-and-consistency.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/event-driven-integration/operations-and-reliability.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/index.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/landing-zone-shared-services/baseline.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/landing-zone-shared-services/cost-and-anti-patterns.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/landing-zone-shared-services/governance-and-network-topology.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/landing-zone-shared-services/index.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/landing-zone-shared-services/platform-operations.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/microservices-platform/baseline.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/microservices-platform/cost-and-anti-patterns.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/microservices-platform/data-observability-and-reliability.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/microservices-platform/index.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/microservices-platform/networking-identity-and-service-communication.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/private-internal-app/baseline.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/private-internal-app/cost-and-anti-patterns.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/private-internal-app/data-and-integration.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/private-internal-app/index.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/private-internal-app/network-and-access.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/private-internal-app/operations-and-reliability.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/public-web-api/baseline.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/public-web-api/cost-and-anti-patterns.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/public-web-api/data-and-state.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/public-web-api/index.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/public-web-api/network-edge-and-identity.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/public-web-api/operations-and-reliability.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/serverless-processing/baseline.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/serverless-processing/cost-and-anti-patterns.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/serverless-processing/index.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/serverless-processing/operations-and-reliability.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `workload-guides/serverless-processing/triggers-state-and-storage.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+
+## See Also
+
+- [Validation Status](validation-status.md)
+- [Content Validation (AGENTS.md)](https://github.com/yeongseon/azure-architecture-practical-guide/blob/main/AGENTS.md)
+
+## Sources
+
+- [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/)
+- [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)

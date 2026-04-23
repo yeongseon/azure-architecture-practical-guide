@@ -9,6 +9,29 @@ content_sources:
         - https://learn.microsoft.com/en-us/azure/azure-monitor/overview
         - https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview
         - https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/diagnostic-settings
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Observability Foundations aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/azure-monitor/overview
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Observability
+      Foundations
+    source: https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview
+    verified: false
+  - claim: Document addresses Core services for Observability Foundations
+    source: https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/diagnostic-settings
+    verified: false
+  - claim: Document addresses Signal model for Observability Foundations
+    source: https://learn.microsoft.com/en-us/azure/azure-monitor/overview
+    verified: false
+  - claim: Document addresses Metrics versus logs versus traces for Observability
+      Foundations
+    source: https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview
+    verified: false
 ---
 # Observability Foundations
 

@@ -5,6 +5,30 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/architecture/framework/mission-critical/mission-critical-deployment-testing
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Environment Promotion and Release Guardrails aligned with
+      Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/framework/mission-critical/mission-critical-deployment-testing
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Environment Promotion
+      and Release Guardrails
+    source: https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/safe-deployments
+    verified: false
+  - claim: Document addresses Fundamentals for Environment Promotion and Release Guardrails
+    source: https://learn.microsoft.com/en-us/azure/architecture/framework/mission-critical/mission-critical-deployment-testing
+    verified: false
+  - claim: Document addresses Why teams adopt environment promotion and release guardrails
+      for Environment Promotion and Release Guardrails
+    source: https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/safe-deployments
+    verified: false
+  - claim: Document addresses Azure service selection for Environment Promotion and
+      Release Guardrails
+    source: https://learn.microsoft.com/en-us/azure/architecture/framework/mission-critical/mission-critical-deployment-testing
+    verified: false
 ---
 # Environment Promotion and Release Guardrails
 

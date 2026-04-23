@@ -7,6 +7,36 @@ content_sources:
       mslearn_url: https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
       based_on:
         - https://learn.microsoft.com/en-us/azure/app-service/overview-vnet-integration
+validation:
+  az_cli:
+    last_tested: null
+    cli_version: null
+    result: not_tested
+  bicep:
+    last_tested: null
+    result: not_tested
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: 'Document covers Lab 02: Private Internal App aligned with Azure architecture
+      guidance'
+    source: https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
+    verified: false
+  - claim: 'Document includes Microsoft Learn-traceable guidance for Lab 02: Private
+      Internal App'
+    source: https://learn.microsoft.com/en-us/azure/app-service/overview-vnet-integration
+    verified: false
+  - claim: 'Document addresses Decision Question for Lab 02: Private Internal App'
+    source: https://learn.microsoft.com/en-us/azure/architecture/networking/architecture/hub-spoke
+    verified: false
+  - claim: 'Document addresses Business Context for Lab 02: Private Internal App'
+    source: https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
+    verified: false
+  - claim: 'Document addresses Scope and Non-Goals for Lab 02: Private Internal App'
+    source: https://learn.microsoft.com/en-us/azure/app-service/overview-vnet-integration
+    verified: false
 ---
 # Lab 02: Private Internal App
 

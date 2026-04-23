@@ -8,6 +8,29 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
         - https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Landing Zone and Shared Services aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Landing Zone and
+      Shared Services
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/
+    verified: false
+  - claim: Document addresses When to use this workload type for Landing Zone and
+      Shared Services
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/manage/
+    verified: false
+  - claim: Document addresses Audience for Landing Zone and Shared Services
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
+    verified: false
+  - claim: Document addresses Prerequisites for Landing Zone and Shared Services
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/
+    verified: false
 ---
 # Landing Zone and Shared Services
 

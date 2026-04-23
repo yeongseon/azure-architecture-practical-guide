@@ -10,6 +10,29 @@ content_sources:
         - https://learn.microsoft.com/en-us/entra/fundamentals/whatis
         - https://learn.microsoft.com/en-us/azure/governance/policy/overview
         - https://learn.microsoft.com/en-us/entra/id-governance/privileged-identity-management/pim-configure
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Identity and Governance Foundations aligned with Azure
+      architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/role-based-access-control/overview
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Identity and Governance
+      Foundations
+    source: https://learn.microsoft.com/en-us/entra/fundamentals/whatis
+    verified: false
+  - claim: Document addresses Microsoft Entra ID for architects for Identity and Governance
+      Foundations
+    source: https://learn.microsoft.com/en-us/azure/governance/policy/overview
+    verified: false
+  - claim: Document addresses Access control stack for Identity and Governance Foundations
+    source: https://learn.microsoft.com/en-us/entra/id-governance/privileged-identity-management/pim-configure
+    verified: false
+  - claim: Document addresses Azure RBAC for Identity and Governance Foundations
+    source: https://learn.microsoft.com/en-us/azure/governance/blueprints/overview
+    verified: false
 ---
 # Identity and Governance Foundations
 

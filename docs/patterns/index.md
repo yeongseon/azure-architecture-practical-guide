@@ -9,6 +9,26 @@ content_sources:
         - https://learn.microsoft.com/en-us/azure/architecture/
         - https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/
         - https://learn.microsoft.com/en-us/azure/architecture/microservices/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Architecture Patterns aligned with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Architecture Patterns
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/
+    verified: false
+  - claim: Document addresses What this section covers for Architecture Patterns
+    source: https://learn.microsoft.com/en-us/azure/architecture/microservices/
+    verified: false
+  - claim: Document addresses How to use these pattern guides for Architecture Patterns
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document addresses Pattern categories in this guide for Architecture Patterns
+    source: https://learn.microsoft.com/en-us/azure/architecture/
+    verified: false
 ---
 # Architecture Patterns
 

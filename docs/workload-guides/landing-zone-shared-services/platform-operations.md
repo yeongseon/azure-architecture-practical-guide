@@ -8,6 +8,31 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/manage/
         - https://learn.microsoft.com/en-us/azure/azure-monitor/overview
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Landing Zone and Shared Services Platform Operations aligned
+      with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/manage/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Landing Zone and
+      Shared Services Platform Operations
+    source: https://learn.microsoft.com/en-us/azure/azure-monitor/overview
+    verified: false
+  - claim: Document addresses Centralized monitoring strategy for Landing Zone and
+      Shared Services Platform Operations
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/govern/
+    verified: false
+  - claim: Document addresses Identity management at scale for Landing Zone and Shared
+      Services Platform Operations
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/manage/
+    verified: false
+  - claim: Document addresses SOC integration for Landing Zone and Shared Services
+      Platform Operations
+    source: https://learn.microsoft.com/en-us/azure/azure-monitor/overview
+    verified: false
 ---
 # Landing Zone and Shared Services Platform Operations
 

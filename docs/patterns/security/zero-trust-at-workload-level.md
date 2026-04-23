@@ -5,6 +5,29 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/security/fundamentals/zero-trust
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Zero Trust at Workload Level aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/security/fundamentals/zero-trust
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Zero Trust at
+      Workload Level
+    source: https://learn.microsoft.com/en-us/security/zero-trust/azure-infrastructure-overview
+    verified: false
+  - claim: Document addresses Fundamentals for Zero Trust at Workload Level
+    source: https://learn.microsoft.com/en-us/azure/security/fundamentals/zero-trust
+    verified: false
+  - claim: Document addresses Why teams adopt workload-level Zero Trust for Zero Trust
+      at Workload Level
+    source: https://learn.microsoft.com/en-us/security/zero-trust/azure-infrastructure-overview
+    verified: false
+  - claim: Document addresses Azure service selection for Zero Trust at Workload Level
+    source: https://learn.microsoft.com/en-us/azure/security/fundamentals/zero-trust
+    verified: false
 ---
 # Zero Trust at Workload Level
 

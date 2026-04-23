@@ -5,6 +5,28 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/well-architected/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Using WAF in This Guide aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Using WAF in This
+      Guide
+    source: https://learn.microsoft.com/en-us/assessments/azure-architecture-review/
+    verified: false
+  - claim: Document addresses Integration model for Using WAF in This Guide
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document addresses Assessment approach for Using WAF in This Guide
+    source: https://learn.microsoft.com/en-us/assessments/azure-architecture-review/
+    verified: false
+  - claim: Document addresses Assessment flow for Using WAF in This Guide
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
 ---
 # Using WAF in This Guide
 

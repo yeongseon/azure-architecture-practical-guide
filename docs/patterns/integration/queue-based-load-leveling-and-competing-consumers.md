@@ -5,6 +5,31 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/architecture/patterns/queue-based-load-leveling
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Queue-Based Load Leveling and Competing Consumers aligned
+      with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/queue-based-load-leveling
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Queue-Based Load
+      Leveling and Competing Consumers
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/queue-based-load-leveling
+    verified: false
+  - claim: Document addresses Pattern intent for Queue-Based Load Leveling and Competing
+      Consumers
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/queue-based-load-leveling
+    verified: false
+  - claim: Document addresses Queue-Based Load Leveling for Queue-Based Load Leveling
+      and Competing Consumers
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/queue-based-load-leveling
+    verified: false
+  - claim: Document addresses Competing Consumers for Queue-Based Load Leveling and
+      Competing Consumers
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/queue-based-load-leveling
+    verified: false
 ---
 # Queue-Based Load Leveling and Competing Consumers
 

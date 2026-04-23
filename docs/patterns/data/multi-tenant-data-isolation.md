@@ -5,6 +5,29 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/overview
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Multi-Tenant Data Isolation aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/overview
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Multi-Tenant Data
+      Isolation
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/approaches/storage-data
+    verified: false
+  - claim: Document addresses Fundamentals for Multi-Tenant Data Isolation
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/overview
+    verified: false
+  - claim: Document addresses Why teams adopt multi-tenant data isolation patterns
+      for Multi-Tenant Data Isolation
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/approaches/storage-data
+    verified: false
+  - claim: Document addresses Azure service selection for Multi-Tenant Data Isolation
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/overview
+    verified: false
 ---
 # Multi-Tenant Data Isolation
 

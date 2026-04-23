@@ -8,6 +8,31 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/
         - https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Private Internal App Cost and Anti-Patterns aligned with
+      Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Private Internal
+      App Cost and Anti-Patterns
+    source: https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
+    verified: false
+  - claim: Document addresses Cost factors to watch for Private Internal App Cost
+      and Anti-Patterns
+    source: https://learn.microsoft.com/en-us/azure/architecture/framework/cost/overview
+    verified: false
+  - claim: Document addresses Cost optimization guidance for Private Internal App
+      Cost and Anti-Patterns
+    source: https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/
+    verified: false
+  - claim: Document addresses Common anti-patterns for Private Internal App Cost and
+      Anti-Patterns
+    source: https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
+    verified: false
 ---
 # Private Internal App Cost and Anti-Patterns
 

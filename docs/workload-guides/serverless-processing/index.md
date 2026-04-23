@@ -5,6 +5,26 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/serverless/web-app
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Serverless Processing aligned with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/serverless/web-app
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Serverless Processing
+    source: https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview
+    verified: false
+  - claim: Document addresses When to use this workload type for Serverless Processing
+    source: https://learn.microsoft.com/en-us/azure/logic-apps/logic-apps-overview
+    verified: false
+  - claim: Document addresses Audience for Serverless Processing
+    source: https://learn.microsoft.com/en-us/azure/azure-functions/functions-scale
+    verified: false
+  - claim: Document addresses Prerequisites for Serverless Processing
+    source: https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/serverless/web-app
+    verified: false
 ---
 # Serverless Processing
 

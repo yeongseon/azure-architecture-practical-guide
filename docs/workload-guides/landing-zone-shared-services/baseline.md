@@ -5,6 +5,31 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Landing Zone and Shared Services Baseline aligned with
+      Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Landing Zone and
+      Shared Services Baseline
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-areas
+    verified: false
+  - claim: Document addresses Recommended baseline for Landing Zone and Shared Services
+      Baseline
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/
+    verified: false
+  - claim: Document addresses Canonical reference architecture for Landing Zone and
+      Shared Services Baseline
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
+    verified: false
+  - claim: Document addresses Core composition for Landing Zone and Shared Services
+      Baseline
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-areas
+    verified: false
 ---
 # Landing Zone and Shared Services Baseline
 

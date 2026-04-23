@@ -9,6 +9,26 @@ content_sources:
         - https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources
         - https://learn.microsoft.com/en-us/azure/governance/management-groups/overview
         - https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Resource Organization aligned with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Resource Organization
+    source: https://learn.microsoft.com/en-us/azure/governance/management-groups/overview
+    verified: false
+  - claim: Document addresses Core hierarchy for Resource Organization
+    source: https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview
+    verified: false
+  - claim: Document addresses Hierarchy map for Resource Organization
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources
+    verified: false
+  - claim: Document addresses When to split subscriptions for Resource Organization
+    source: https://learn.microsoft.com/en-us/azure/governance/management-groups/overview
+    verified: false
 ---
 # Resource Organization
 

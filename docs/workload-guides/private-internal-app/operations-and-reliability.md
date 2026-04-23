@@ -8,6 +8,31 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/azure-monitor/overview
         - https://learn.microsoft.com/en-us/azure/reliability/reliability-app-service
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Private Internal App Operations and Reliability aligned
+      with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/azure-monitor/overview
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Private Internal
+      App Operations and Reliability
+    source: https://learn.microsoft.com/en-us/azure/reliability/reliability-app-service
+    verified: false
+  - claim: Document addresses SLO guidance for Private Internal App Operations and
+      Reliability
+    source: https://learn.microsoft.com/en-us/azure/architecture/framework/resiliency/overview
+    verified: false
+  - claim: Document addresses Monitoring without public endpoints for Private Internal
+      App Operations and Reliability
+    source: https://learn.microsoft.com/en-us/azure/azure-monitor/overview
+    verified: false
+  - claim: Document addresses Private endpoint health monitoring for Private Internal
+      App Operations and Reliability
+    source: https://learn.microsoft.com/en-us/azure/reliability/reliability-app-service
+    verified: false
 ---
 # Private Internal App Operations and Reliability
 

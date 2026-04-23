@@ -5,6 +5,29 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/organize/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Platform Team vs App Team Responsibilities aligned with
+      Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/organize/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Platform Team
+      vs App Team Responsibilities
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/
+    verified: false
+  - claim: Document addresses Team topology goals for Platform Team vs App Team Responsibilities
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/organize/
+    verified: false
+  - claim: Document addresses Responsibility model for Platform Team vs App Team Responsibilities
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/
+    verified: false
+  - claim: Document addresses Typical responsibility split for Platform Team vs App
+      Team Responsibilities
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/organize/
+    verified: false
 ---
 # Platform Team vs App Team Responsibilities
 

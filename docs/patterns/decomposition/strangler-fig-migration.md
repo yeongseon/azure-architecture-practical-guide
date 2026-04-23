@@ -5,6 +5,29 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/architecture/patterns/strangler-fig
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Strangler Fig Migration aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/strangler-fig
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Strangler Fig
+      Migration
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/strangler-fig
+    verified: false
+  - claim: Document addresses Core idea for Strangler Fig Migration
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/strangler-fig
+    verified: false
+  - claim: Document addresses When to use Strangler Fig for Strangler Fig Migration
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/strangler-fig
+    verified: false
+  - claim: Document addresses When to prefer a big-bang rewrite for Strangler Fig
+      Migration
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/strangler-fig
+    verified: false
 ---
 # Strangler Fig Migration
 

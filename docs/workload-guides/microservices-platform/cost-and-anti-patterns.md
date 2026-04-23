@@ -8,6 +8,30 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/
         - https://learn.microsoft.com/en-us/azure/architecture/microservices/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Microservices Platform Cost and Anti-Patterns aligned with
+      Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Microservices
+      Platform Cost and Anti-Patterns
+    source: https://learn.microsoft.com/en-us/azure/architecture/microservices/
+    verified: false
+  - claim: Document addresses Main cost drivers for Microservices Platform Cost and
+      Anti-Patterns
+    source: https://learn.microsoft.com/en-us/azure/architecture/framework/cost/overview
+    verified: false
+  - claim: Document addresses Anti-patterns for Microservices Platform Cost and Anti-Patterns
+    source: https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/
+    verified: false
+  - claim: Document addresses Distributed monolith for Microservices Platform Cost
+      and Anti-Patterns
+    source: https://learn.microsoft.com/en-us/azure/architecture/microservices/
+    verified: false
 ---
 # Microservices Platform Cost and Anti-Patterns
 

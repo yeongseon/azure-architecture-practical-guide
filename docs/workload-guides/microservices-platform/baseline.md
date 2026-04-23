@@ -5,6 +5,29 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/architecture/microservices/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Microservices Platform Baseline aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/microservices/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Microservices
+      Platform Baseline
+    source: https://learn.microsoft.com/en-us/azure/architecture/microservices/design/interservice-communication
+    verified: false
+  - claim: Document addresses Recommended baseline for Microservices Platform Baseline
+    source: https://learn.microsoft.com/en-us/azure/architecture/microservices/design/data-considerations
+    verified: false
+  - claim: Document addresses Canonical reference architecture for Microservices Platform
+      Baseline
+    source: https://learn.microsoft.com/en-us/azure/aks/what-is-aks
+    verified: false
+  - claim: Document addresses Service composition for Microservices Platform Baseline
+    source: https://learn.microsoft.com/en-us/azure/container-apps/overview
+    verified: false
 ---
 # Microservices Platform Baseline
 

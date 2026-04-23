@@ -5,6 +5,31 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/architecture/patterns/health-endpoint-monitoring
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Health Endpoints, Graceful Degradation, and Backpressure
+      aligned with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/health-endpoint-monitoring
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Health Endpoints,
+      Graceful Degradation, and Backpressure
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/health-endpoint-monitoring
+    verified: false
+  - claim: Document addresses Health endpoint monitoring for Health Endpoints, Graceful
+      Degradation, and Backpressure
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/health-endpoint-monitoring
+    verified: false
+  - claim: Document addresses Graceful degradation for Health Endpoints, Graceful
+      Degradation, and Backpressure
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/health-endpoint-monitoring
+    verified: false
+  - claim: Document addresses Backpressure and throttling for Health Endpoints, Graceful
+      Degradation, and Backpressure
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/health-endpoint-monitoring
+    verified: false
 ---
 # Health Endpoints, Graceful Degradation, and Backpressure
 

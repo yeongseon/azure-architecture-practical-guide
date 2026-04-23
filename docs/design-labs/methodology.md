@@ -5,6 +5,27 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/architecture/patterns/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Design Lab Methodology aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Design Lab Methodology
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document addresses ADVR lifecycle for Design Lab Methodology
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/
+    verified: false
+  - claim: Document addresses The 16 ADVR sections for Design Lab Methodology
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document addresses Evidence levels for architecture for Design Lab Methodology
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/
+    verified: false
 ---
 # Design Lab Methodology
 

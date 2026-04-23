@@ -5,6 +5,29 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/messaging
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Messaging Selection Cheatsheet aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/messaging
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Messaging Selection
+      Cheatsheet
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven
+    verified: false
+  - claim: Document addresses Quick guidance for Messaging Selection Cheatsheet
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/messaging
+    verified: false
+  - claim: Document addresses Microsoft Learn references for Messaging Selection Cheatsheet
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven
+    verified: false
+  - claim: Messaging Selection Cheatsheet includes guidance on use this page to decide
+      which Azure messaging service best matches the interaction pattern
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/messaging
+    verified: false
 ---
 # Messaging Selection Cheatsheet
 

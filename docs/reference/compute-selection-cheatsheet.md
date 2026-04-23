@@ -5,6 +5,29 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Compute Selection Cheatsheet aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Compute Selection
+      Cheatsheet
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/
+    verified: false
+  - claim: Document addresses Decision guidance for Compute Selection Cheatsheet
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree
+    verified: false
+  - claim: Document addresses Microsoft Learn references for Compute Selection Cheatsheet
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/
+    verified: false
+  - claim: Compute Selection Cheatsheet includes guidance on use this page to compare
+      Azure compute services quickly during early architecture workshops
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree
+    verified: false
 ---
 # Compute Selection Cheatsheet
 

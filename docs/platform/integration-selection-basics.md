@@ -10,6 +10,28 @@ content_sources:
         - https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview
         - https://learn.microsoft.com/en-us/azure/event-grid/overview
         - https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-about
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Integration Selection Basics aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/messaging
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Integration Selection
+      Basics
+    source: https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview
+    verified: false
+  - claim: Document addresses Decision tree for Integration Selection Basics
+    source: https://learn.microsoft.com/en-us/azure/event-grid/overview
+    verified: false
+  - claim: Document addresses Service family summary for Integration Selection Basics
+    source: https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-about
+    verified: false
+  - claim: Document addresses Selection criteria for Integration Selection Basics
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/messaging
+    verified: false
 ---
 # Integration Selection Basics
 

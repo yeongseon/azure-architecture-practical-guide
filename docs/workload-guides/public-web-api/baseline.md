@@ -5,6 +5,29 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Public Web and API Baseline aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Public Web and
+      API Baseline
+    source: https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview
+    verified: false
+  - claim: Document addresses Decision question for Public Web and API Baseline
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview
+    verified: false
+  - claim: Document addresses Recommended baseline for Public Web and API Baseline
+    source: https://learn.microsoft.com/en-us/azure/container-apps/overview
+    verified: false
+  - claim: Document addresses Canonical reference architecture for Public Web and
+      API Baseline
+    source: https://learn.microsoft.com/en-us/azure/container-apps/compare-options
+    verified: false
 ---
 # Public Web and API Baseline
 

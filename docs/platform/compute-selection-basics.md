@@ -8,6 +8,28 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree
         - https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-overview
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Compute Selection Basics aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Compute Selection
+      Basics
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-overview
+    verified: false
+  - claim: Document addresses Decision tree for Compute Selection Basics
+    source: https://learn.microsoft.com/en-us/azure/app-service/
+    verified: false
+  - claim: Document addresses Selection criteria for Compute Selection Basics
+    source: https://learn.microsoft.com/en-us/azure/aks/
+    verified: false
+  - claim: Document addresses Option summaries for Compute Selection Basics
+    source: https://learn.microsoft.com/en-us/azure/aks/what-is-aks
+    verified: false
 ---
 # Compute Selection Basics
 

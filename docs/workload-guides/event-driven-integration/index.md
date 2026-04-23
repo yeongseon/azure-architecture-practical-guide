@@ -8,6 +8,27 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven
         - https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Event-Driven Integration aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Event-Driven Integration
+    source: https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview
+    verified: false
+  - claim: Document addresses When to use this workload type for Event-Driven Integration
+    source: https://learn.microsoft.com/en-us/azure/azure-functions/functions-scale
+    verified: false
+  - claim: Document addresses Audience for Event-Driven Integration
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven
+    verified: false
+  - claim: Document addresses Prerequisites for Event-Driven Integration
+    source: https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview
+    verified: false
 ---
 # Event-Driven Integration
 

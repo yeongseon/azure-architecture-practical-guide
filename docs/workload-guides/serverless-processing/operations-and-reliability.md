@@ -5,6 +5,31 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/azure-functions/functions-scale
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Serverless Processing Operations and Reliability aligned
+      with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/azure-functions/functions-scale
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Serverless Processing
+      Operations and Reliability
+    source: https://learn.microsoft.com/en-us/azure/azure-monitor/overview
+    verified: false
+  - claim: Document addresses Cold start and execution readiness for Serverless Processing
+      Operations and Reliability
+    source: https://learn.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-overview
+    verified: false
+  - claim: Document addresses Scaling guidance for Serverless Processing Operations
+      and Reliability
+    source: https://learn.microsoft.com/en-us/azure/azure-functions/functions-scale
+    verified: false
+  - claim: Document addresses Monitoring expectations for Serverless Processing Operations
+      and Reliability
+    source: https://learn.microsoft.com/en-us/azure/azure-monitor/overview
+    verified: false
 ---
 # Serverless Processing Operations and Reliability
 

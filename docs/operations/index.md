@@ -5,6 +5,26 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Operations aligned with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Operations
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document addresses What this section is for for Operations
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/
+    verified: false
+  - claim: Document addresses Operating architecture lifecycle for Operations
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document addresses Themes in this section for Operations
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/
+    verified: false
 ---
 # Operations
 

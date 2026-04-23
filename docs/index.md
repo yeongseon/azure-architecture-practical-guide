@@ -8,6 +8,30 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/well-architected/
         - https://learn.microsoft.com/en-us/azure/architecture/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Azure Architecture Practical Guide aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Azure Architecture
+      Practical Guide
+    source: https://learn.microsoft.com/en-us/azure/architecture/
+    verified: false
+  - claim: Document addresses Navigate the Guide for Azure Architecture Practical
+      Guide
+    source: https://learn.microsoft.com/en-us/azure/architecture/
+    verified: false
+  - claim: Document addresses Learning flow for Azure Architecture Practical Guide
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document addresses Scope and disclaimer for Azure Architecture Practical
+      Guide
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
 ---
 # Azure Architecture Practical Guide
 
@@ -79,4 +103,4 @@ Architecture Reviews are planned for Phase 2. In the current published Phase 1 s
 
 This is an independent community project. Not affiliated with or endorsed by Microsoft.
 
-Primary references: [Azure Architecture Center](https://learn.microsoft.com/azure/architecture/) and [Azure Well-Architected Framework](https://learn.microsoft.com/azure/well-architected/).
+Primary references: [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/) and [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/).

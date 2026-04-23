@@ -5,6 +5,28 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/architecture/networking/architecture/hub-spoke
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Hub-Spoke vs Virtual WAN aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/networking/architecture/hub-spoke
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Hub-Spoke vs Virtual
+      WAN
+    source: https://learn.microsoft.com/en-us/azure/architecture/networking/architecture/hub-spoke
+    verified: false
+  - claim: Document addresses Hub-spoke topology for Hub-Spoke vs Virtual WAN
+    source: https://learn.microsoft.com/en-us/azure/architecture/networking/architecture/hub-spoke
+    verified: false
+  - claim: Document addresses Strengths for Hub-Spoke vs Virtual WAN
+    source: https://learn.microsoft.com/en-us/azure/architecture/networking/architecture/hub-spoke
+    verified: false
+  - claim: Document addresses Challenges for Hub-Spoke vs Virtual WAN
+    source: https://learn.microsoft.com/en-us/azure/architecture/networking/architecture/hub-spoke
+    verified: false
 ---
 # Hub-Spoke vs Virtual WAN
 

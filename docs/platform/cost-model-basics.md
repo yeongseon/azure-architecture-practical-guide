@@ -9,6 +9,26 @@ content_sources:
         - https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/overview-cost-management
         - https://learn.microsoft.com/en-us/azure/cost-management-billing/reservations/save-compute-costs-reservations
         - https://learn.microsoft.com/en-us/azure/virtual-machines/spot-vms
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Cost Model Basics aligned with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/overview-cost-management
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Cost Model Basics
+    source: https://learn.microsoft.com/en-us/azure/cost-management-billing/reservations/save-compute-costs-reservations
+    verified: false
+  - claim: Document addresses Core pricing modes for Cost Model Basics
+    source: https://learn.microsoft.com/en-us/azure/virtual-machines/spot-vms
+    verified: false
+  - claim: Document addresses Cost model map for Cost Model Basics
+    source: https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/overview-cost-management
+    verified: false
+  - claim: Document addresses FinOps fundamentals for architects for Cost Model Basics
+    source: https://learn.microsoft.com/en-us/azure/cost-management-billing/reservations/save-compute-costs-reservations
+    verified: false
 ---
 # Cost Model Basics
 

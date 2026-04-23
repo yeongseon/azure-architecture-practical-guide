@@ -5,6 +5,28 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/azure-monitor/overview
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Observability and SLOs aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/azure-monitor/overview
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Observability
+      and SLOs
+    source: https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/observability
+    verified: false
+  - claim: Document addresses Definitions for Observability and SLOs
+    source: https://learn.microsoft.com/en-us/azure/azure-monitor/overview
+    verified: false
+  - claim: Document addresses Observability model for Observability and SLOs
+    source: https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/observability
+    verified: false
+  - claim: Document addresses Signal categories for Observability and SLOs
+    source: https://learn.microsoft.com/en-us/azure/azure-monitor/overview
+    verified: false
 ---
 # Observability and SLOs
 

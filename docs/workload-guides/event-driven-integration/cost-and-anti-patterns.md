@@ -8,6 +8,31 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/
         - https://learn.microsoft.com/en-us/azure/event-grid/compare-messaging-services
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Event-Driven Integration Cost and Anti-Patterns aligned
+      with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Event-Driven Integration
+      Cost and Anti-Patterns
+    source: https://learn.microsoft.com/en-us/azure/event-grid/compare-messaging-services
+    verified: false
+  - claim: Document addresses Main cost drivers for Event-Driven Integration Cost
+      and Anti-Patterns
+    source: https://learn.microsoft.com/en-us/azure/azure-functions/functions-scale
+    verified: false
+  - claim: Document addresses Anti-patterns for Event-Driven Integration Cost and
+      Anti-Patterns
+    source: https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/
+    verified: false
+  - claim: Document addresses Over-engineering simple integration for Event-Driven
+      Integration Cost and Anti-Patterns
+    source: https://learn.microsoft.com/en-us/azure/event-grid/compare-messaging-services
+    verified: false
 ---
 # Event-Driven Integration Cost and Anti-Patterns
 

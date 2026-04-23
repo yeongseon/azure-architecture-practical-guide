@@ -7,6 +7,29 @@ content_sources:
       mslearn_url: https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
       based_on:
         - https://learn.microsoft.com/en-us/azure/app-service/overview-vnet-integration
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Private Internal App Baseline aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Private Internal
+      App Baseline
+    source: https://learn.microsoft.com/en-us/azure/app-service/overview-vnet-integration
+    verified: false
+  - claim: Document addresses Recommended baseline for Private Internal App Baseline
+    source: https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant
+    verified: false
+  - claim: Document addresses Canonical reference architecture for Private Internal
+      App Baseline
+    source: https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
+    verified: false
+  - claim: Document addresses Service composition for Private Internal App Baseline
+    source: https://learn.microsoft.com/en-us/azure/app-service/overview-vnet-integration
+    verified: false
 ---
 # Private Internal App Baseline
 

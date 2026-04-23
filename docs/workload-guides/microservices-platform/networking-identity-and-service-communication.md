@@ -8,6 +8,31 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/architecture/microservices/design/interservice-communication
         - https://learn.microsoft.com/en-us/azure/architecture/patterns/gateway-routing
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Microservices Platform Networking, Identity, and Service
+      Communication aligned with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/microservices/design/interservice-communication
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Microservices
+      Platform Networking, Identity, and Service Communication
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/gateway-routing
+    verified: false
+  - claim: Document addresses North-south versus east-west communication for Microservices
+      Platform Networking, Identity, and Service Communication
+    source: https://learn.microsoft.com/en-us/azure/architecture/web-apps/api-management/architectures/protect-apis
+    verified: false
+  - claim: Document addresses HTTP, gRPC, and messaging for Microservices Platform
+      Networking, Identity, and Service Communication
+    source: https://learn.microsoft.com/en-us/azure/architecture/microservices/design/interservice-communication
+    verified: false
+  - claim: Document addresses Identity and trust for Microservices Platform Networking,
+      Identity, and Service Communication
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/gateway-routing
+    verified: false
 ---
 # Microservices Platform Networking, Identity, and Service Communication
 

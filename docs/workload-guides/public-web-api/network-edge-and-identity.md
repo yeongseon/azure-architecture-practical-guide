@@ -8,6 +8,31 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview
         - https://learn.microsoft.com/en-us/azure/app-service/overview-authentication-authorization
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Public Web and API Network, Edge, and Identity aligned
+      with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Public Web and
+      API Network, Edge, and Identity
+    source: https://learn.microsoft.com/en-us/azure/app-service/overview-authentication-authorization
+    verified: false
+  - claim: Document addresses Decision goals for Public Web and API Network, Edge,
+      and Identity
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/considerations/identity
+    verified: false
+  - claim: Document addresses Edge decision matrix for Public Web and API Network,
+      Edge, and Identity
+    source: https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview
+    verified: false
+  - claim: Document addresses Custom domains and TLS termination for Public Web and
+      API Network, Edge, and Identity
+    source: https://learn.microsoft.com/en-us/azure/app-service/overview-authentication-authorization
+    verified: false
 ---
 # Public Web and API Network, Edge, and Identity
 

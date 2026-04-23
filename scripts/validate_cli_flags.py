@@ -113,6 +113,12 @@ def validate_file(
             active_command_parts[-1] = active_command_parts[-1][:-1].rstrip()
             continue
 
+        # Skip intentional anti-pattern examples marked with ❌ or "Don't"
+        if "\u274c" in command_text or "Don't" in command_text or "don't" in command_text:
+            active_command_line = None
+            active_command_parts = []
+            continue
+
         for flag in extract_flag_matches(command_text):
             errors.append(
                 ValidationError(

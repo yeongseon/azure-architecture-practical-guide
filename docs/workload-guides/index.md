@@ -8,6 +8,26 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/architecture/
         - https://learn.microsoft.com/en-us/azure/well-architected/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Workload Guides aligned with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Workload Guides
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document addresses What these guides cover for Workload Guides
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree
+    verified: false
+  - claim: Document addresses Workload family comparison for Workload Guides
+    source: https://learn.microsoft.com/en-us/azure/architecture/
+    verified: false
+  - claim: Document addresses Decision guide for Workload Guides
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
 ---
 # Workload Guides
 

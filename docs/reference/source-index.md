@@ -11,6 +11,26 @@ content_sources:
         - https://learn.microsoft.com/en-us/azure/architecture/patterns/
         - https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
         - https://learn.microsoft.com/en-us/azure/azure-monitor/overview
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Source Index aligned with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Source Index
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document addresses Major Microsoft Learn URLs for Source Index
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/
+    verified: false
+  - claim: Document addresses Index notes for Source Index
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
+    verified: false
+  - claim: Document addresses Microsoft Learn references for Source Index
+    source: https://learn.microsoft.com/en-us/azure/azure-monitor/overview
+    verified: false
 ---
 # Source Index
 

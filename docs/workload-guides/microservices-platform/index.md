@@ -8,6 +8,28 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/architecture/microservices/
         - https://learn.microsoft.com/en-us/azure/architecture/microservices/design/interservice-communication
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Microservices Platform aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/microservices/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Microservices
+      Platform
+    source: https://learn.microsoft.com/en-us/azure/architecture/microservices/design/interservice-communication
+    verified: false
+  - claim: Document addresses When to use this workload type for Microservices Platform
+    source: https://learn.microsoft.com/en-us/azure/architecture/microservices/design/data-considerations
+    verified: false
+  - claim: Document addresses Audience for Microservices Platform
+    source: https://learn.microsoft.com/en-us/azure/architecture/microservices/
+    verified: false
+  - claim: Document addresses Prerequisites for Microservices Platform
+    source: https://learn.microsoft.com/en-us/azure/architecture/microservices/design/interservice-communication
+    verified: false
 ---
 # Microservices Platform
 

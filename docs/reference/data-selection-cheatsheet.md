@@ -5,6 +5,29 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Data Selection Cheatsheet aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Data Selection
+      Cheatsheet
+    source: https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/cache-overview
+    verified: false
+  - claim: Document addresses Selection notes for Data Selection Cheatsheet
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/
+    verified: false
+  - claim: Document addresses Microsoft Learn references for Data Selection Cheatsheet
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview
+    verified: false
+  - claim: Data Selection Cheatsheet includes guidance on use this page to narrow
+      the primary Azure data store for a workload
+    source: https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/cache-overview
+    verified: false
 ---
 # Data Selection Cheatsheet
 

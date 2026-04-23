@@ -9,6 +9,31 @@ content_sources:
         - https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
         - https://learn.microsoft.com/en-us/azure/app-service/overview-vnet-integration
         - https://learn.microsoft.com/en-us/azure/dns/private-dns-privatednszone
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Private Internal App Network and Access aligned with Azure
+      architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Private Internal
+      App Network and Access
+    source: https://learn.microsoft.com/en-us/azure/app-service/overview-vnet-integration
+    verified: false
+  - claim: Document addresses Preferred network posture for Private Internal App Network
+      and Access
+    source: https://learn.microsoft.com/en-us/azure/dns/private-dns-privatednszone
+    verified: false
+  - claim: Document addresses Private DNS design for Private Internal App Network
+      and Access
+    source: https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
+    verified: false
+  - claim: Document addresses On-premises connectivity choices for Private Internal
+      App Network and Access
+    source: https://learn.microsoft.com/en-us/azure/app-service/overview-vnet-integration
+    verified: false
 ---
 # Private Internal App Network and Access
 

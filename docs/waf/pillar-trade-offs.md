@@ -5,6 +5,26 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/well-architected/pillars
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Pillar Trade-offs aligned with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/well-architected/pillars
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Pillar Trade-offs
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document addresses Why trade-offs matter for Pillar Trade-offs
+    source: https://learn.microsoft.com/en-us/azure/well-architected/pillars
+    verified: false
+  - claim: Document addresses Tension map for Pillar Trade-offs
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document addresses Cost versus reliability for Pillar Trade-offs
+    source: https://learn.microsoft.com/en-us/azure/well-architected/pillars
+    verified: false
 ---
 # Pillar Trade-offs
 

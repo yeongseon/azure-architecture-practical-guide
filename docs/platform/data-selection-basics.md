@@ -8,6 +8,27 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview
         - https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-decision-tree
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Data Selection Basics aligned with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Data Selection
+      Basics
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-decision-tree
+    verified: false
+  - claim: Document addresses Decision tree for Data Selection Basics
+    source: https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/cache-overview
+    verified: false
+  - claim: Document addresses Main categories for Data Selection Basics
+    source: https://learn.microsoft.com/en-us/azure/cosmos-db/
+    verified: false
+  - claim: Document addresses Selection criteria for Data Selection Basics
+    source: https://learn.microsoft.com/en-us/azure/storage/
+    verified: false
 ---
 # Data Selection Basics
 

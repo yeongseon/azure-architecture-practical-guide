@@ -5,6 +5,30 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/architecture/guide/aks/blue-green-deployment-for-aks
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Blue-Green, Canary, and Stamp Patterns aligned with Azure
+      architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/aks/blue-green-deployment-for-aks
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Blue-Green, Canary,
+      and Stamp Patterns
+    source: https://learn.microsoft.com/en-us/azure/architecture/framework/mission-critical/mission-critical-deployment-testing
+    verified: false
+  - claim: Document addresses Fundamentals for Blue-Green, Canary, and Stamp Patterns
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/aks/blue-green-deployment-for-aks
+    verified: false
+  - claim: Document addresses Why teams adopt blue-green, canary, and stamp patterns
+      for Blue-Green, Canary, and Stamp Patterns
+    source: https://learn.microsoft.com/en-us/azure/architecture/framework/mission-critical/mission-critical-deployment-testing
+    verified: false
+  - claim: Document addresses Azure service selection for Blue-Green, Canary, and
+      Stamp Patterns
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/aks/blue-green-deployment-for-aks
+    verified: false
 ---
 # Blue-Green, Canary, and Stamp Patterns
 

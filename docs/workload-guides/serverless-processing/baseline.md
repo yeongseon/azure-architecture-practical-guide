@@ -5,6 +5,29 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/serverless/web-app
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Serverless Processing Baseline aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/serverless/web-app
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Serverless Processing
+      Baseline
+    source: https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview
+    verified: false
+  - claim: Document addresses Decision question for Serverless Processing Baseline
+    source: https://learn.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings
+    verified: false
+  - claim: Document addresses Recommended baseline for Serverless Processing Baseline
+    source: https://learn.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-overview
+    verified: false
+  - claim: Document addresses Canonical reference architecture for Serverless Processing
+      Baseline
+    source: https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/serverless/web-app
+    verified: false
 ---
 # Serverless Processing Baseline
 

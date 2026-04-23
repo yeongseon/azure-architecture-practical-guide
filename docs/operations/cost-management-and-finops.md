@@ -5,6 +5,29 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/cost-management-billing/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Cost Management and FinOps aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/cost-management-billing/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Cost Management
+      and FinOps
+    source: https://learn.microsoft.com/en-us/azure/cost-management-billing/finops/
+    verified: false
+  - claim: Document addresses FinOps principles for Azure for Cost Management and
+      FinOps
+    source: https://learn.microsoft.com/en-us/azure/cost-management-billing/
+    verified: false
+  - claim: Document addresses FinOps loop for Cost Management and FinOps
+    source: https://learn.microsoft.com/en-us/azure/cost-management-billing/finops/
+    verified: false
+  - claim: Document addresses Cost allocation with tags for Cost Management and FinOps
+    source: https://learn.microsoft.com/en-us/azure/cost-management-billing/
+    verified: false
 ---
 # Cost Management and FinOps
 

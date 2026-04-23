@@ -51,3 +51,4 @@ labs/*/artifacts/
 .env
 .env.local
 *.pem
+.sisyphus/

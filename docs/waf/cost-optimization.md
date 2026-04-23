@@ -5,6 +5,26 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Cost Optimization aligned with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Cost Optimization
+    source: https://learn.microsoft.com/en-us/azure/cost-management-billing/
+    verified: false
+  - claim: Document addresses Design principles for Cost Optimization
+    source: https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/
+    verified: false
+  - claim: Document addresses Decision areas for Cost Optimization
+    source: https://learn.microsoft.com/en-us/azure/cost-management-billing/
+    verified: false
+  - claim: Document addresses Cost architecture loop for Cost Optimization
+    source: https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/
+    verified: false
 ---
 # Cost Optimization
 

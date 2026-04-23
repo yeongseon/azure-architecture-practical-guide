@@ -5,6 +5,36 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven
+validation:
+  az_cli:
+    last_tested: null
+    cli_version: null
+    result: not_tested
+  bicep:
+    last_tested: null
+    result: not_tested
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: 'Document covers Lab 03: Event-Driven Orders aligned with Azure architecture
+      guidance'
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven
+    verified: false
+  - claim: 'Document includes Microsoft Learn-traceable guidance for Lab 03: Event-Driven
+      Orders'
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/messaging
+    verified: false
+  - claim: 'Document addresses Decision Question for Lab 03: Event-Driven Orders'
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven
+    verified: false
+  - claim: 'Document addresses Business Context for Lab 03: Event-Driven Orders'
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/messaging
+    verified: false
+  - claim: 'Document addresses Scope and Non-Goals for Lab 03: Event-Driven Orders'
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven
+    verified: false
 ---
 # Lab 03: Event-Driven Orders
 

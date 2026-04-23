@@ -5,6 +5,28 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/reliability/business-continuity-management-program
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Business Continuity and Drills aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/reliability/business-continuity-management-program
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Business Continuity
+      and Drills
+    source: https://learn.microsoft.com/en-us/azure/reliability/overview
+    verified: false
+  - claim: Document addresses Core concepts for Business Continuity and Drills
+    source: https://learn.microsoft.com/en-us/azure/reliability/business-continuity-management-program
+    verified: false
+  - claim: Document addresses Continuity drill loop for Business Continuity and Drills
+    source: https://learn.microsoft.com/en-us/azure/reliability/overview
+    verified: false
+  - claim: Document addresses Planning elements for Business Continuity and Drills
+    source: https://learn.microsoft.com/en-us/azure/reliability/business-continuity-management-program
+    verified: false
 ---
 # Business Continuity and Drills
 

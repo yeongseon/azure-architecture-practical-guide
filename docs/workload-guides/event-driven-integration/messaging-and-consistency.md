@@ -8,6 +8,31 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/architecture/patterns/saga
         - https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Event-Driven Integration Messaging and Consistency aligned
+      with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/saga
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Event-Driven Integration
+      Messaging and Consistency
+    source: https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview
+    verified: false
+  - claim: Document addresses Service Bus, Event Grid, and Event Hubs for Event-Driven
+      Integration Messaging and Consistency
+    source: https://learn.microsoft.com/en-us/azure/event-grid/compare-messaging-services
+    verified: false
+  - claim: Document addresses Idempotency is mandatory for Event-Driven Integration
+      Messaging and Consistency
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/saga
+    verified: false
+  - claim: Document addresses Exactly-once semantics for Event-Driven Integration
+      Messaging and Consistency
+    source: https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview
+    verified: false
 ---
 # Event-Driven Integration Messaging and Consistency
 

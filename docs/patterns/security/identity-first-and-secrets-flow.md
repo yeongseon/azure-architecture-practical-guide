@@ -5,6 +5,30 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Identity-First and Secrets Flow aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Identity-First
+      and Secrets Flow
+    source: https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview
+    verified: false
+  - claim: Document addresses Core principle for Identity-First and Secrets Flow
+    source: https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview
+    verified: false
+  - claim: Document addresses Managed Identity as default for Identity-First and Secrets
+      Flow
+    source: https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview
+    verified: false
+  - claim: Document addresses Key Vault integration patterns for Identity-First and
+      Secrets Flow
+    source: https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview
+    verified: false
 ---
 # Identity-First and Secrets Flow
 

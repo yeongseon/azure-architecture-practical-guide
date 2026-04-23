@@ -8,6 +8,29 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/architecture/
         - https://learn.microsoft.com/en-us/azure/architecture/guide/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Architecture vs Service Guides aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Architecture vs
+      Service Guides
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/
+    verified: false
+  - claim: Document addresses The boundary in one sentence for Architecture vs Service
+      Guides
+    source: https://learn.microsoft.com/en-us/azure/app-service/
+    verified: false
+  - claim: Document addresses Decision handoff model for Architecture vs Service Guides
+    source: https://learn.microsoft.com/en-us/azure/architecture/
+    verified: false
+  - claim: Document addresses Comparison table for Architecture vs Service Guides
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/
+    verified: false
 ---
 # Architecture vs Service Guides
 

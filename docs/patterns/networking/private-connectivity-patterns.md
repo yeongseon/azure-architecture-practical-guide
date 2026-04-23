@@ -5,6 +5,29 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Private Connectivity Patterns aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Private Connectivity
+      Patterns
+    source: https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
+    verified: false
+  - claim: Document addresses Private Endpoints vs Service Endpoints for Private Connectivity
+      Patterns
+    source: https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
+    verified: false
+  - claim: Document addresses Private Endpoints for Private Connectivity Patterns
+    source: https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
+    verified: false
+  - claim: Document addresses Service Endpoints for Private Connectivity Patterns
+    source: https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
+    verified: false
 ---
 # Private Connectivity Patterns
 

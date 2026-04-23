@@ -5,6 +5,31 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/well-architected/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers WAF Pillar to Pattern Map aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for WAF Pillar to
+      Pattern Map
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/
+    verified: false
+  - claim: Document addresses Pattern usage notes for WAF Pillar to Pattern Map
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document addresses Microsoft Learn references for WAF Pillar to Pattern
+      Map
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/
+    verified: false
+  - claim: WAF Pillar to Pattern Map includes guidance on this matrix connects Well-Architected
+      Framework concerns to common architecture patterns so teams can pick patterns
+      intentionally instead of
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
 ---
 # WAF Pillar to Pattern Map
 

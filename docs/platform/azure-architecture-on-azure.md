@@ -9,6 +9,30 @@ content_sources:
         - https://learn.microsoft.com/en-us/azure/architecture/guide/
         - https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview
         - https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/control-plane-and-data-plane
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Azure Architecture on Azure aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Azure Architecture
+      on Azure
+    source: https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview
+    verified: false
+  - claim: Document addresses Global infrastructure model for Azure Architecture on
+      Azure
+    source: https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/control-plane-and-data-plane
+    verified: false
+  - claim: Document addresses Resource control model for Azure Architecture on Azure
+    source: https://learn.microsoft.com/en-us/azure/reliability/regions-list
+    verified: false
+  - claim: Document addresses Control plane versus data plane for Azure Architecture
+      on Azure
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/
+    verified: false
 ---
 # Azure Architecture on Azure
 

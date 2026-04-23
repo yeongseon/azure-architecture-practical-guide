@@ -8,6 +8,31 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/
         - https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Landing Zone and Shared Services Governance and Network
+      Topology aligned with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Landing Zone and
+      Shared Services Governance and Network Topology
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity
+    verified: false
+  - claim: Document addresses Policy-driven governance for Landing Zone and Shared
+      Services Governance and Network Topology
+    source: https://learn.microsoft.com/en-us/azure/firewall/overview
+    verified: false
+  - claim: Document addresses Hub-spoke versus Virtual WAN for Landing Zone and Shared
+      Services Governance and Network Topology
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/
+    verified: false
+  - claim: Document addresses Centralized DNS and firewall for Landing Zone and Shared
+      Services Governance and Network Topology
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity
+    verified: false
 ---
 # Landing Zone and Shared Services Governance and Network Topology
 

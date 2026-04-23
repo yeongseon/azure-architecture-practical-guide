@@ -197,6 +197,17 @@ Every document ends with these tail sections (in this order):
 | `## See Also` | Internal cross-links within this repository | Links to other pages in this guide |
 | `## Sources` | External authoritative references | Links to Microsoft Learn (primary) |
 
+The following alternative names are accepted equivalents:
+
+| Alternative | Equivalent to |
+|---|---|
+| `## Microsoft Learn references` | `## Sources` |
+| `## Microsoft Learn reference` | `## Sources` |
+| `## Microsoft Learn anchors` | `## Sources` |
+| `## Related decisions` | `## See Also` |
+
+ADVR-style documents (design labs, architecture reviews) may use `## Takeaway` as the final content section before the Sources equivalent. Index pages that serve as navigation hubs are exempt from the tail section requirement.
+
 ### Canonical Document Templates
 
 Every document follows one of 5 templates based on its section. Do not invent new structures.

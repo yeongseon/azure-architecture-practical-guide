@@ -8,6 +8,30 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/reliability/reliability-app-service
         - https://learn.microsoft.com/en-us/azure/azure-monitor/overview
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Public Web and API Operations and Reliability aligned with
+      Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/reliability/reliability-app-service
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Public Web and
+      API Operations and Reliability
+    source: https://learn.microsoft.com/en-us/azure/azure-monitor/overview
+    verified: false
+  - claim: Document addresses SLO targets for Public Web and API Operations and Reliability
+    source: https://learn.microsoft.com/en-us/azure/well-architected/reliability/disaster-recovery
+    verified: false
+  - claim: Document addresses Health checks and autoscaling for Public Web and API
+      Operations and Reliability
+    source: https://learn.microsoft.com/en-us/azure/reliability/reliability-app-service
+    verified: false
+  - claim: Document addresses Deployment safety for Public Web and API Operations
+      and Reliability
+    source: https://learn.microsoft.com/en-us/azure/azure-monitor/overview
+    verified: false
 ---
 # Public Web and API Operations and Reliability
 

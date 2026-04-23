@@ -7,6 +7,26 @@ content_sources:
       justification: "Repository structure map synthesized from the current MkDocs navigation and repository layout."
       based_on:
         - https://learn.microsoft.com/en-us/azure/architecture/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Repository Map aligned with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Repository Map
+    source: https://learn.microsoft.com/en-us/azure/architecture/
+    verified: false
+  - claim: Document addresses High-level structure for Repository Map
+    source: https://learn.microsoft.com/en-us/azure/architecture/
+    verified: false
+  - claim: Document addresses Current section counts for Repository Map
+    source: https://learn.microsoft.com/en-us/azure/architecture/
+    verified: false
+  - claim: Document addresses How to navigate efficiently for Repository Map
+    source: https://learn.microsoft.com/en-us/azure/architecture/
+    verified: false
 ---
 # Repository Map
 

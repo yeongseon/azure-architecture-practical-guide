@@ -8,6 +8,28 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
         - https://learn.microsoft.com/en-us/azure/app-service/overview-vnet-integration
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Private Internal App aligned with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Private Internal
+      App
+    source: https://learn.microsoft.com/en-us/azure/app-service/overview-vnet-integration
+    verified: false
+  - claim: Document addresses When to use this workload type for Private Internal
+      App
+    source: https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant
+    verified: false
+  - claim: Document addresses Audience for Private Internal App
+    source: https://learn.microsoft.com/en-us/azure/azure-monitor/overview
+    verified: false
+  - claim: Document addresses Prerequisites for Private Internal App
+    source: https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
+    verified: false
 ---
 # Private Internal App
 

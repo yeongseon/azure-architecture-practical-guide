@@ -5,6 +5,36 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant
+validation:
+  az_cli:
+    last_tested: null
+    cli_version: null
+    result: not_tested
+  bicep:
+    last_tested: null
+    result: not_tested
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: 'Document covers Lab 01: Public Web Baseline aligned with Azure architecture
+      guidance'
+    source: https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant
+    verified: false
+  - claim: 'Document includes Microsoft Learn-traceable guidance for Lab 01: Public
+      Web Baseline'
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: 'Document addresses Decision Question for Lab 01: Public Web Baseline'
+    source: https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant
+    verified: false
+  - claim: 'Document addresses Business Context for Lab 01: Public Web Baseline'
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: 'Document addresses Scope and Non-Goals for Lab 01: Public Web Baseline'
+    source: https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant
+    verified: false
 ---
 # Lab 01: Public Web Baseline
 

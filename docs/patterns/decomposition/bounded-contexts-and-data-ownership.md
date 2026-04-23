@@ -5,6 +5,30 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/architecture/microservices/model/domain-analysis
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Bounded Contexts and Data Ownership aligned with Azure
+      architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/microservices/model/domain-analysis
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Bounded Contexts
+      and Data Ownership
+    source: https://learn.microsoft.com/en-us/azure/architecture/microservices/model/domain-analysis
+    verified: false
+  - claim: Document addresses Core decision for Bounded Contexts and Data Ownership
+    source: https://learn.microsoft.com/en-us/azure/architecture/microservices/model/domain-analysis
+    verified: false
+  - claim: Document addresses Why bounded contexts matter for Bounded Contexts and
+      Data Ownership
+    source: https://learn.microsoft.com/en-us/azure/architecture/microservices/model/domain-analysis
+    verified: false
+  - claim: Document addresses Data ownership principle for Bounded Contexts and Data
+      Ownership
+    source: https://learn.microsoft.com/en-us/azure/architecture/microservices/model/domain-analysis
+    verified: false
 ---
 # Bounded Contexts and Data Ownership
 

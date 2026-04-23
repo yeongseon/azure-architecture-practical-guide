@@ -8,6 +8,26 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/architecture/patterns/
         - https://learn.microsoft.com/en-us/azure/well-architected/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers ADR Process aligned with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for ADR Process
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document addresses Why ADRs matter for ADR Process
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/
+    verified: false
+  - claim: Document addresses ADR workflow for ADR Process
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document addresses The 16-section ADVR methodology for ADR Process
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/
+    verified: false
 ---
 # ADR Process
 

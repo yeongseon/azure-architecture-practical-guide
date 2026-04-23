@@ -8,6 +8,31 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dead-letter-queues
         - https://learn.microsoft.com/en-us/azure/azure-monitor/overview
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Event-Driven Integration Operations and Reliability aligned
+      with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dead-letter-queues
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Event-Driven Integration
+      Operations and Reliability
+    source: https://learn.microsoft.com/en-us/azure/azure-monitor/overview
+    verified: false
+  - claim: Document addresses Monitoring backlog and lag for Event-Driven Integration
+      Operations and Reliability
+    source: https://learn.microsoft.com/en-us/azure/azure-functions/performance-reliability
+    verified: false
+  - claim: Document addresses Scaling consumers for Event-Driven Integration Operations
+      and Reliability
+    source: https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dead-letter-queues
+    verified: false
+  - claim: Document addresses Handling poison messages for Event-Driven Integration
+      Operations and Reliability
+    source: https://learn.microsoft.com/en-us/azure/azure-monitor/overview
+    verified: false
 ---
 # Event-Driven Integration Operations and Reliability
 

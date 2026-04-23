@@ -5,6 +5,31 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-overview
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Serverless Processing Triggers, State, and Storage aligned
+      with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-overview
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Serverless Processing
+      Triggers, State, and Storage
+    source: https://learn.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings
+    verified: false
+  - claim: Document addresses Trigger selection guidance for Serverless Processing
+      Triggers, State, and Storage
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview
+    verified: false
+  - claim: Document addresses Trigger design principles for Serverless Processing
+      Triggers, State, and Storage
+    source: https://learn.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-overview
+    verified: false
+  - claim: Document addresses Durable Functions guidance for Serverless Processing
+      Triggers, State, and Storage
+    source: https://learn.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings
+    verified: false
 ---
 # Serverless Processing Triggers, State, and Storage
 

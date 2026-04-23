@@ -9,6 +9,29 @@ content_sources:
         - https://learn.microsoft.com/en-us/azure/reliability/overview
         - https://learn.microsoft.com/en-us/azure/reliability/regions-list
         - https://learn.microsoft.com/en-us/azure/availability-zones/az-overview
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Resilience and Region Strategy aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/reliability/overview
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Resilience and
+      Region Strategy
+    source: https://learn.microsoft.com/en-us/azure/reliability/regions-list
+    verified: false
+  - claim: Document addresses Core concepts for Resilience and Region Strategy
+    source: https://learn.microsoft.com/en-us/azure/availability-zones/az-overview
+    verified: false
+  - claim: Document addresses Decision model for Resilience and Region Strategy
+    source: https://learn.microsoft.com/en-us/azure/reliability/overview
+    verified: false
+  - claim: Document addresses Single-region versus multi-region for Resilience and
+      Region Strategy
+    source: https://learn.microsoft.com/en-us/azure/reliability/regions-list
+    verified: false
 ---
 # Resilience and Region Strategy
 

@@ -5,6 +5,29 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Architecture Decision Matrix aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Architecture Decision
+      Matrix
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree
+    verified: false
+  - claim: Document addresses Selection notes for Architecture Decision Matrix
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/
+    verified: false
+  - claim: Document addresses Microsoft Learn references for Architecture Decision
+      Matrix
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree
+    verified: false
+  - claim: Architecture Decision Matrix
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/
+    verified: false
 ---
 # Architecture Decision Matrix
 

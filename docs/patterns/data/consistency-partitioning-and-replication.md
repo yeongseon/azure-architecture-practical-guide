@@ -5,6 +5,30 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/architecture/best-practices/data-partitioning
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Consistency, Partitioning, and Replication aligned with
+      Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/best-practices/data-partitioning
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Consistency, Partitioning,
+      and Replication
+    source: https://learn.microsoft.com/en-us/azure/cosmos-db/consistency-levels
+    verified: false
+  - claim: Document addresses Fundamentals for Consistency, Partitioning, and Replication
+    source: https://learn.microsoft.com/en-us/azure/architecture/best-practices/data-partitioning
+    verified: false
+  - claim: Document addresses Why teams adopt consistency, partitioning, and replication
+      patterns for Consistency, Partitioning, and Replication
+    source: https://learn.microsoft.com/en-us/azure/cosmos-db/consistency-levels
+    verified: false
+  - claim: Document addresses Azure service selection for Consistency, Partitioning,
+      and Replication
+    source: https://learn.microsoft.com/en-us/azure/architecture/best-practices/data-partitioning
+    verified: false
 ---
 # Consistency, Partitioning, and Replication
 

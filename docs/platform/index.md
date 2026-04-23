@@ -8,6 +8,26 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/architecture/guide/
         - https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Platform aligned with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Platform
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
+    verified: false
+  - claim: Document addresses Why platform decisions come first for Platform
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document addresses Topics covered for Platform
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/
+    verified: false
+  - claim: Document addresses Concept map for Platform
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
+    verified: false
 ---
 # Platform
 

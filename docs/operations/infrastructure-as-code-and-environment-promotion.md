@@ -5,6 +5,31 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Infrastructure as Code and Environment Promotion aligned
+      with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Infrastructure
+      as Code and Environment Promotion
+    source: https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview
+    verified: false
+  - claim: Document addresses Why it matters for Infrastructure as Code and Environment
+      Promotion
+    source: https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview
+    verified: false
+  - claim: Document addresses Core design principles for Infrastructure as Code and
+      Environment Promotion
+    source: https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview
+    verified: false
+  - claim: Document addresses Promotion model for Infrastructure as Code and Environment
+      Promotion
+    source: https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview
+    verified: false
 ---
 # Infrastructure as Code and Environment Promotion
 

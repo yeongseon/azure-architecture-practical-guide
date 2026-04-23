@@ -8,6 +8,31 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/
         - https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Landing Zone and Shared Services Cost and Anti-Patterns
+      aligned with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Landing Zone and
+      Shared Services Cost and Anti-Patterns
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
+    verified: false
+  - claim: Document addresses Cost allocation model for Landing Zone and Shared Services
+      Cost and Anti-Patterns
+    source: https://learn.microsoft.com/en-us/azure/architecture/framework/cost/overview
+    verified: false
+  - claim: Document addresses Common anti-patterns for Landing Zone and Shared Services
+      Cost and Anti-Patterns
+    source: https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/
+    verified: false
+  - claim: Document addresses Over-centralization for Landing Zone and Shared Services
+      Cost and Anti-Patterns
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
+    verified: false
 ---
 # Landing Zone and Shared Services Cost and Anti-Patterns
 

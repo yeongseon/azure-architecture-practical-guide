@@ -8,6 +8,31 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/architecture/microservices/design/data-considerations
         - https://learn.microsoft.com/en-us/azure/azure-monitor/app/distributed-tracing-telemetry-correlation
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Microservices Platform Data, Observability, and Reliability
+      aligned with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/microservices/design/data-considerations
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Microservices
+      Platform Data, Observability, and Reliability
+    source: https://learn.microsoft.com/en-us/azure/azure-monitor/app/distributed-tracing-telemetry-correlation
+    verified: false
+  - claim: Document addresses Database per service for Microservices Platform Data,
+      Observability, and Reliability
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker
+    verified: false
+  - claim: Document addresses Distributed tracing with Application Insights for Microservices
+      Platform Data, Observability, and Reliability
+    source: https://learn.microsoft.com/en-us/azure/architecture/microservices/design/data-considerations
+    verified: false
+  - claim: Document addresses Reliability patterns for Microservices Platform Data,
+      Observability, and Reliability
+    source: https://learn.microsoft.com/en-us/azure/azure-monitor/app/distributed-tracing-telemetry-correlation
+    verified: false
 ---
 # Microservices Platform Data, Observability, and Reliability
 

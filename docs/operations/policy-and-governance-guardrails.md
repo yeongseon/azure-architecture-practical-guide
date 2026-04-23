@@ -5,6 +5,30 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/governance/policy/overview
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Policy and Governance Guardrails aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/governance/policy/overview
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Policy and Governance
+      Guardrails
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/govern/
+    verified: false
+  - claim: Document addresses What guardrails should do for Policy and Governance
+      Guardrails
+    source: https://learn.microsoft.com/en-us/azure/governance/policy/overview
+    verified: false
+  - claim: Document addresses Guardrail model for Policy and Governance Guardrails
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/govern/
+    verified: false
+  - claim: Document addresses Built-in versus custom policies for Policy and Governance
+      Guardrails
+    source: https://learn.microsoft.com/en-us/azure/governance/policy/overview
+    verified: false
 ---
 # Policy and Governance Guardrails
 

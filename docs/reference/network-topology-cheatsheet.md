@@ -5,6 +5,29 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/architecture/networking/architecture/hub-spoke
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Network Topology Cheatsheet aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/networking/architecture/hub-spoke
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Network Topology
+      Cheatsheet
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/
+    verified: false
+  - claim: Document addresses Topology decision table for Network Topology Cheatsheet
+    source: https://learn.microsoft.com/en-us/azure/architecture/networking/architecture/hub-spoke
+    verified: false
+  - claim: Document addresses Private Endpoint vs Service Endpoint for Network Topology
+      Cheatsheet
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/
+    verified: false
+  - claim: Document addresses Microsoft Learn references for Network Topology Cheatsheet
+    source: https://learn.microsoft.com/en-us/azure/architecture/networking/architecture/hub-spoke
+    verified: false
 ---
 # Network Topology Cheatsheet
 

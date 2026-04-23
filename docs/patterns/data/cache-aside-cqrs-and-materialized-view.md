@@ -5,6 +5,31 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/architecture/patterns/cache-aside
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Cache-Aside, CQRS, and Materialized View aligned with Azure
+      architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/cache-aside
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Cache-Aside, CQRS,
+      and Materialized View
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs
+    verified: false
+  - claim: Document addresses Fundamentals for Cache-Aside, CQRS, and Materialized
+      View
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/cache-aside
+    verified: false
+  - claim: Document addresses Why teams adopt cache-aside, CQRS, and materialized
+      view for Cache-Aside, CQRS, and Materialized View
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs
+    verified: false
+  - claim: Document addresses Azure service selection for Cache-Aside, CQRS, and Materialized
+      View
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/cache-aside
+    verified: false
 ---
 # Cache-Aside, CQRS, and Materialized View
 

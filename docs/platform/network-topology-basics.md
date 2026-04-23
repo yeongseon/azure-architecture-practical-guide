@@ -10,6 +10,28 @@ content_sources:
         - https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/hub-spoke
         - https://learn.microsoft.com/en-us/azure/virtual-wan/virtual-wan-about
         - https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Network Topology Basics aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/networking/guide/private-link-hub-spoke-network
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Network Topology
+      Basics
+    source: https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/hub-spoke
+    verified: false
+  - claim: Document addresses Core building blocks for Network Topology Basics
+    source: https://learn.microsoft.com/en-us/azure/virtual-wan/virtual-wan-about
+    verified: false
+  - claim: Document addresses Topology overview for Network Topology Basics
+    source: https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
+    verified: false
+  - claim: Document addresses Hub-spoke versus Virtual WAN for Network Topology Basics
+    source: https://learn.microsoft.com/en-us/azure/architecture/networking/
+    verified: false
 ---
 # Network Topology Basics
 

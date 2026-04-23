@@ -5,6 +5,30 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/architecture/patterns/async-request-reply
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Synchronous vs Asynchronous Integration aligned with Azure
+      architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/async-request-reply
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Synchronous vs
+      Asynchronous Integration
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/async-request-reply
+    verified: false
+  - claim: Document addresses Core question for Synchronous vs Asynchronous Integration
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/async-request-reply
+    verified: false
+  - claim: Document addresses When synchronous integration fits for Synchronous vs
+      Asynchronous Integration
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/async-request-reply
+    verified: false
+  - claim: Document addresses When asynchronous integration fits for Synchronous vs
+      Asynchronous Integration
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/async-request-reply
+    verified: false
 ---
 # Synchronous vs Asynchronous Integration
 

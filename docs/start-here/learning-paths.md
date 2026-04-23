@@ -9,6 +9,26 @@ content_sources:
         - https://learn.microsoft.com/en-us/azure/well-architected/
         - https://learn.microsoft.com/en-us/training/azure/
         - https://learn.microsoft.com/en-us/azure/architecture/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Learning Paths aligned with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Learning Paths
+    source: https://learn.microsoft.com/en-us/training/azure/
+    verified: false
+  - claim: Document addresses Path selection principle for Learning Paths
+    source: https://learn.microsoft.com/en-us/azure/architecture/
+    verified: false
+  - claim: Document addresses Beginner path for Learning Paths
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document addresses Intermediate path for Learning Paths
+    source: https://learn.microsoft.com/en-us/training/azure/
+    verified: false
 ---
 # Learning Paths
 

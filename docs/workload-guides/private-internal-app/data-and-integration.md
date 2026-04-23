@@ -8,6 +8,31 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview
         - https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Private Internal App Data and Integration aligned with
+      Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Private Internal
+      App Data and Integration
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview
+    verified: false
+  - claim: Document addresses Database access over private endpoints for Private Internal
+      App Data and Integration
+    source: https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview
+    verified: false
+  - claim: Document addresses Service Bus and Event Grid for internal integration
+      for Private Internal App Data and Integration
+    source: https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview
+    verified: false
+  - claim: Document addresses Managed identity for all connections for Private Internal
+      App Data and Integration
+    source: https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview
+    verified: false
 ---
 # Private Internal App Data and Integration
 

@@ -5,6 +5,29 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/architecture/patterns/retry
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Retry, Circuit Breaker, and Bulkhead aligned with Azure
+      architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/retry
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Retry, Circuit
+      Breaker, and Bulkhead
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/retry
+    verified: false
+  - claim: Document addresses Retry pattern for Retry, Circuit Breaker, and Bulkhead
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/retry
+    verified: false
+  - claim: Document addresses Circuit Breaker pattern for Retry, Circuit Breaker,
+      and Bulkhead
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/retry
+    verified: false
+  - claim: Document addresses Bulkhead pattern for Retry, Circuit Breaker, and Bulkhead
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/retry
+    verified: false
 ---
 # Retry, Circuit Breaker, and Bulkhead
 

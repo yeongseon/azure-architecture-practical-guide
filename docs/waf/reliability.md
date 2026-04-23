@@ -5,6 +5,26 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/well-architected/reliability/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Reliability aligned with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/well-architected/reliability/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Reliability
+    source: https://learn.microsoft.com/en-us/azure/reliability/overview
+    verified: false
+  - claim: Document addresses Design principles for Reliability
+    source: https://learn.microsoft.com/en-us/azure/well-architected/reliability/
+    verified: false
+  - claim: Document addresses Reliability dimensions for Reliability
+    source: https://learn.microsoft.com/en-us/azure/reliability/overview
+    verified: false
+  - claim: Document addresses Reliability loop for Reliability
+    source: https://learn.microsoft.com/en-us/azure/well-architected/reliability/
+    verified: false
 ---
 # Reliability
 

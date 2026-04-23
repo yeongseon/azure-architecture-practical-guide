@@ -1,8 +1,42 @@
+---
+content_sources:
+  diagrams:
+    - id: contributing-workflow
+      type: flowchart
+      source: self-generated
+      justification: "Contribution workflow synthesized from repository standards and GitHub PR process."
+      based_on:
+        - https://learn.microsoft.com/en-us/contribute/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-23'
+  reviewer: agent
+  core_claims:
+    - claim: All content must be traceable to official Microsoft Learn documentation
+      source: https://learn.microsoft.com/en-us/contribute/
+      verified: false
+    - claim: MkDocs Material is used for documentation build and preview
+      source: https://learn.microsoft.com/en-us/contribute/content/how-to-write-docs-auth-pack
+      verified: false
+---
 # Contributing
 
 Thank you for your interest in contributing to Azure Architecture Practical Guide!
 
 ## Quick Start
+
+<!-- diagram-id: contributing-workflow -->
+```mermaid
+flowchart TD
+    A[Fork repository] --> B[Clone locally]
+    B --> C[Install dependencies]
+    C --> D[Create feature branch]
+    D --> E[Make changes]
+    E --> F[Validate with mkdocs build --strict]
+    F --> G[Submit Pull Request]
+    G --> H[CI checks and review]
+    H --> I[Merge and deploy]
+```
 
 1. Fork the repository
 2. Clone: `git clone https://github.com/yeongseon/azure-architecture-practical-guide.git`
@@ -218,3 +252,8 @@ Please read our [Code of Conduct](https://github.com/yeongseon/azure-architectur
 
 - [Repository Map](../start-here/repository-map.md)
 - [Learning Paths](../start-here/learning-paths.md)
+
+## Sources
+
+- [Microsoft Learn contributor guide](https://learn.microsoft.com/en-us/contribute/)
+- [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/)

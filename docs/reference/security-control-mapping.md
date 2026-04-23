@@ -14,6 +14,28 @@ content_sources:
         - https://learn.microsoft.com/en-us/azure/key-vault/general/overview
         - https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction
         - https://learn.microsoft.com/en-us/azure/sentinel/overview
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Security Control Mapping aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/well-architected/security/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Security Control
+      Mapping
+    source: https://learn.microsoft.com/en-us/azure/role-based-access-control/overview
+    verified: false
+  - claim: Document addresses Control mapping table for Security Control Mapping
+    source: https://learn.microsoft.com/en-us/entra/id-governance/privileged-identity-management/pim-configure
+    verified: false
+  - claim: Document addresses Control usage notes for Security Control Mapping
+    source: https://learn.microsoft.com/en-us/azure/firewall/overview
+    verified: false
+  - claim: Document addresses Microsoft Learn references for Security Control Mapping
+    source: https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
+    verified: false
 ---
 # Security Control Mapping
 

@@ -140,10 +140,11 @@ def validate_file(file_path: Path, verbose: bool = False) -> List[ValidationErro
 
     rel_path = str(file_path)
 
-    # Skip example code blocks in validation status pages
-    if "content-validation-status" in rel_path or "validation-status" in rel_path:
-        # These may contain example mermaid blocks in code fences
-        pass
+    # Skip auto-generated status pages (no frontmatter by design)
+    auto_generated_pages: list[str] = []
+    normalized = rel_path.replace("\\", "/")
+    if any(normalized.endswith(p) for p in auto_generated_pages):
+        return []
 
     # Check for frontmatter
     frontmatter, fm_end_line = extract_frontmatter(content)
@@ -160,7 +161,37 @@ def validate_file(file_path: Path, verbose: bool = False) -> List[ValidationErro
         )
         return errors
 
-    diagrams = content_sources.get("diagrams", [])
+    # content_sources schema is dual: dict with 'diagrams' key (per-diagram
+    # metadata) OR list of page-level sources without diagram metadata.
+    # See AGENTS.md "Diagram Source Documentation" section.
+    if isinstance(content_sources, dict):
+        diagrams = content_sources.get("diagrams", [])
+    elif isinstance(content_sources, list):
+        # List form has page-level provenance only, no per-diagram metadata.
+        # Still validate that every mermaid block has a diagram-id comment.
+        diagram_id_comments = find_diagram_id_comments(content)
+        for block_line, block_content in mermaid_blocks:
+            found_comment = False
+            for check_line in range(block_line - 3, block_line):
+                if check_line in diagram_id_comments:
+                    found_comment = True
+                    break
+            if not found_comment:
+                errors.append(
+                    ValidationError(
+                        rel_path, f"Mermaid block missing diagram-id comment", block_line
+                    )
+                )
+        return errors
+    else:
+        errors.append(
+            ValidationError(
+                rel_path,
+                f"content_sources must be a dict or list, got {type(content_sources).__name__}",
+            )
+        )
+        return errors
+
     if not diagrams:
         errors.append(ValidationError(rel_path, "content_sources.diagrams is empty"))
         return errors

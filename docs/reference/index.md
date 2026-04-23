@@ -7,6 +7,26 @@ content_sources:
       justification: "Reference section navigation map synthesized from the repository information architecture and Azure Architecture Center guidance."
       based_on:
         - https://learn.microsoft.com/en-us/azure/architecture/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Reference aligned with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Reference
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document addresses Quick links for Reference
+    source: https://learn.microsoft.com/en-us/azure/architecture/
+    verified: false
+  - claim: Document addresses How to use the reference set for Reference
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: false
+  - claim: Document addresses Microsoft Learn references for Reference
+    source: https://learn.microsoft.com/en-us/azure/architecture/
+    verified: false
 ---
 # Reference
 

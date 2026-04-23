@@ -5,6 +5,29 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/architecture/microservices/
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Modular Monolith vs Microservices aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/microservices/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Modular Monolith
+      vs Microservices
+    source: https://learn.microsoft.com/en-us/azure/architecture/microservices/
+    verified: false
+  - claim: Document addresses Core decision for Modular Monolith vs Microservices
+    source: https://learn.microsoft.com/en-us/azure/architecture/microservices/
+    verified: false
+  - claim: Document addresses When a monolith is better for Modular Monolith vs Microservices
+    source: https://learn.microsoft.com/en-us/azure/architecture/microservices/
+    verified: false
+  - claim: Document addresses Why modular monolith is a strong intermediate state
+      for Modular Monolith vs Microservices
+    source: https://learn.microsoft.com/en-us/azure/architecture/microservices/
+    verified: false
 ---
 # Modular Monolith vs Microservices
 

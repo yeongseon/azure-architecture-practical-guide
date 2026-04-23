@@ -8,6 +8,30 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/
         - https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Public Web and API Cost and Anti-Patterns aligned with
+      Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Public Web and
+      API Cost and Anti-Patterns
+    source: https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant
+    verified: false
+  - claim: Document addresses Main cost drivers for Public Web and API Cost and Anti-Patterns
+    source: https://learn.microsoft.com/en-us/azure/architecture/framework/cost/overview
+    verified: false
+  - claim: Document addresses Cost optimization guidance for Public Web and API Cost
+      and Anti-Patterns
+    source: https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/
+    verified: false
+  - claim: Document addresses Common anti-patterns for Public Web and API Cost and
+      Anti-Patterns
+    source: https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant
+    verified: false
 ---
 # Public Web and API Cost and Anti-Patterns
 

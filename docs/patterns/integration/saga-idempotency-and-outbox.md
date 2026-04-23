@@ -5,6 +5,29 @@ content_sources:
       type: flowchart
       source: mslearn-adapted
       mslearn_url: https://learn.microsoft.com/en-us/azure/architecture/patterns/saga
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Saga, Idempotency, and Outbox aligned with Azure architecture
+      guidance
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/saga
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Saga, Idempotency,
+      and Outbox
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/compensating-transaction
+    verified: false
+  - claim: Document addresses Fundamentals for Saga, Idempotency, and Outbox
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/saga
+    verified: false
+  - claim: Document addresses Why teams adopt saga, idempotency, and outbox for Saga,
+      Idempotency, and Outbox
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/compensating-transaction
+    verified: false
+  - claim: Document addresses Azure service selection for Saga, Idempotency, and Outbox
+    source: https://learn.microsoft.com/en-us/azure/architecture/patterns/saga
+    verified: false
 ---
 # Saga, Idempotency, and Outbox
 

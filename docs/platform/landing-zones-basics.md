@@ -8,6 +8,28 @@ content_sources:
       based_on:
         - https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
         - https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-areas
+content_validation:
+  status: pending_review
+  last_reviewed: '2026-04-22'
+  reviewer: agent
+  core_claims:
+  - claim: Document covers Landing Zones Basics aligned with Azure architecture guidance
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
+    verified: false
+  - claim: Document includes Microsoft Learn-traceable guidance for Landing Zones
+      Basics
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-areas
+    verified: false
+  - claim: Document addresses Why landing zones matter for Landing Zones Basics
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
+    verified: false
+  - claim: Document addresses Conceptual shape for Landing Zones Basics
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-areas
+    verified: false
+  - claim: Document addresses Platform versus application landing zones for Landing
+      Zones Basics
+    source: https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
+    verified: false
 ---
 # Landing Zones Basics
 
