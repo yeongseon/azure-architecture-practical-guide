@@ -40,10 +40,18 @@ if [ -z "$front_door_host_name" ]; then
     printf 'FAIL: No Azure Front Door endpoint was found in resource group %s\n' "$RG" >&2
     failure_count=$((failure_count + 1))
 else
-    front_door_status_code="$(curl --silent --show-error --output /dev/null --write-out '%{http_code}' "https://${front_door_host_name}")"
-    if [ "$front_door_status_code" = '200' ]; then
-        printf 'PASS: Azure Front Door endpoint %s returned HTTP 200\n' "$front_door_host_name"
-    else
+    front_door_status_code=''
+    for attempt in $(seq 1 30); do
+        front_door_status_code="$(curl --silent --show-error --output /dev/null --write-out '%{http_code}' "https://${front_door_host_name}" || true)"
+        if [ "$front_door_status_code" = '200' ]; then
+            printf 'PASS: Azure Front Door endpoint %s returned HTTP 200\n' "$front_door_host_name"
+            break
+        fi
+        printf 'Waiting for Azure Front Door endpoint readiness. Attempt %s/30, status=%s\n' "$attempt" "$front_door_status_code"
+        sleep 20
+    done
+
+    if [ "$front_door_status_code" != '200' ]; then
         printf 'FAIL: Azure Front Door endpoint %s returned HTTP %s\n' "$front_door_host_name" "$front_door_status_code" >&2
         failure_count=$((failure_count + 1))
     fi

@@ -26,10 +26,18 @@ autoscale_name="${AUTOSCALE_SETTINGS_NAME:-$(az monitor autoscale list --resourc
 
 printf 'Front Door smoke target: https://%s\n' "$endpoint_host"
 
-home_status="$(curl --silent --show-error --output /dev/null --write-out '%{http_code}' "https://${endpoint_host}")"
-if [ "$home_status" = '200' ]; then
-    printf 'PASS: Front Door endpoint returned HTTP 200\n'
-else
+home_status=''
+for attempt in $(seq 1 30); do
+    home_status="$(curl --silent --show-error --output /dev/null --write-out '%{http_code}' "https://${endpoint_host}" || true)"
+    if [ "$home_status" = '200' ]; then
+        printf 'PASS: Front Door endpoint returned HTTP 200\n'
+        break
+    fi
+    printf 'Waiting for Front Door endpoint readiness. Attempt %s/30, status=%s\n' "$attempt" "$home_status"
+    sleep 20
+done
+
+if [ "$home_status" != '200' ]; then
     printf 'FAIL: Front Door endpoint returned HTTP %s\n' "$home_status" >&2
     failure_count=$((failure_count + 1))
 fi

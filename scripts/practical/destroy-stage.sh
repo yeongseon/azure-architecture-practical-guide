@@ -18,10 +18,10 @@ RG="$(generate_rg_name)"
 printf 'Deleting resource group %s\n' "$RG"
 az group delete --name "$RG" --yes --no-wait
 
-for attempt in 1 2 3 4 5 6 7 8 9 10 11 12; do
+for attempt in $(seq 1 60); do
     if az group show --name "$RG" >/dev/null 2>&1; then
-        printf 'Deletion still in progress for %s (attempt %s/12)\n' "$RG" "$attempt"
-        sleep 10
+        printf 'Deletion still in progress for %s (attempt %s/60)\n' "$RG" "$attempt"
+        sleep 15
         continue
     fi
 

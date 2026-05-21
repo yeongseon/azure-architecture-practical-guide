@@ -5,6 +5,11 @@ set -euo pipefail
 LOCATION="${LOCATION:-koreacentral}"
 
 generate_rg_name() {
+    if [ -n "${RG:-}" ]; then
+        printf '%s\n' "$RG"
+        return
+    fi
+
     local stage_name="${STAGE:?STAGE must be set before calling generate_rg_name}"
     local region_name="${LOCATION:-koreacentral}"
     printf 'rg-practical-%s-%s\n' "$stage_name" "$region_name"
