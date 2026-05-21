@@ -1,0 +1,23 @@
+@frontDoorUrl = https://your-front-door-endpoint.z01.azurefd.net
+@primaryWebAppUrl = https://your-primary-web-app.azurewebsites.net
+@secondaryWebAppUrl = https://your-secondary-web-app.azurewebsites.net
+
+### Front Door home page
+GET {{frontDoorUrl}}/
+Accept: text/html
+
+### Front Door operations info
+GET {{frontDoorUrl}}/ops/info
+Accept: application/json
+
+### Front Door health endpoint
+GET {{frontDoorUrl}}/healthz
+Accept: application/json
+
+### Primary web app operations info
+GET {{primaryWebAppUrl}}/ops/info
+Accept: application/json
+
+### Secondary web app operations info
+GET {{secondaryWebAppUrl}}/ops/info
+Accept: application/json

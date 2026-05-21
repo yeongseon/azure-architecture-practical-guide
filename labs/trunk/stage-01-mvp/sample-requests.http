@@ -1,0 +1,11 @@
+### Home page
+GET https://{{webAppName}}.azurewebsites.net/
+
+### Health check
+GET https://{{webAppName}}.azurewebsites.net/healthz
+
+### Operations info
+GET https://{{webAppName}}.azurewebsites.net/ops/info
+
+### Operations version
+GET https://{{webAppName}}.azurewebsites.net/ops/version

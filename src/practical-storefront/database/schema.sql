@@ -1,0 +1,28 @@
+CREATE TABLE Products (
+    Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+    Name NVARCHAR(120) NOT NULL,
+    Description NVARCHAR(600) NOT NULL,
+    Price DECIMAL(18,2) NOT NULL,
+    ImageUrl NVARCHAR(500) NOT NULL,
+    IsAvailable BIT NOT NULL
+);
+
+CREATE TABLE Orders (
+    Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+    CustomerName NVARCHAR(120) NOT NULL,
+    CustomerEmail NVARCHAR(200) NOT NULL,
+    CreatedAt DATETIME2 NOT NULL,
+    TotalAmount DECIMAL(18,2) NOT NULL
+);
+
+CREATE TABLE OrderItems (
+    Id INT IDENTITY(1,1) NOT NULL PRIMARY KEY,
+    OrderId INT NOT NULL,
+    ProductId INT NOT NULL,
+    ProductName NVARCHAR(120) NOT NULL,
+    Quantity INT NOT NULL,
+    UnitPrice DECIMAL(18,2) NOT NULL,
+    CONSTRAINT FK_OrderItems_Orders FOREIGN KEY (OrderId) REFERENCES Orders (Id) ON DELETE CASCADE
+);
+
+CREATE INDEX IX_OrderItems_OrderId ON OrderItems (OrderId);

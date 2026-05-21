@@ -79,7 +79,7 @@ markdown_extensions:
 
 validation:
   nav:
-    omitted_files: warn
+    omitted_files: ignore
   links:
     not_found: warn
     anchors: warn
@@ -93,6 +93,17 @@ extra:
 
 nav:
   - Home: index.md
+  - Practical Journey:
+    - practical-journey/index.md
+    - practical-journey/getting-started.md
+    - practical-journey/cost-and-time-model.md
+    - practical-journey/module-map.md
+    - practical-journey/verify-and-destroy.md
+    - practical-journey/stage-01-mvp.md
+    - practical-journey/stage-02-production-baseline.md
+    - practical-journey/stage-03-scale-edge.md
+    - practical-journey/stage-04-network-isolation.md
+    - practical-journey/stage-05-resilience.md
   - Start Here:
     - start-here/index.md
     - start-here/overview.md

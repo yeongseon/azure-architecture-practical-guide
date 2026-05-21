@@ -1,0 +1,73 @@
+@model Practical.Storefront.Web.Models.OrderFormViewModel
+
+@{
+    ViewData["Title"] = "Place an order";
+}
+
+<div class="row g-4">
+    <div class="col-lg-7">
+        <div class="card shadow-sm border-0">
+            <div class="card-body p-4">
+                <h1 class="h3 mb-3">Place an order</h1>
+                <p class="text-secondary">Use this form to create a sample order against the seeded catalog.</p>
+
+                <form asp-action="Create" method="post" novalidate>
+                    <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                    <div class="mb-3">
+                        <label asp-for="CustomerName" class="form-label"></label>
+                        <input asp-for="CustomerName" class="form-control" />
+                        <span asp-validation-for="CustomerName" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="CustomerEmail" class="form-label"></label>
+                        <input asp-for="CustomerEmail" class="form-control" />
+                        <span asp-validation-for="CustomerEmail" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="ProductId" class="form-label"></label>
+                        <select asp-for="ProductId" class="form-select" asp-items="ViewBag.ProductOptions"></select>
+                        <span asp-validation-for="ProductId" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-4">
+                        <label asp-for="Quantity" class="form-label"></label>
+                        <input asp-for="Quantity" class="form-control" />
+                        <span asp-validation-for="Quantity" class="text-danger"></span>
+                    </div>
+
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-primary">Submit order</button>
+                        <a asp-controller="Home" asp-action="Index" class="btn btn-outline-secondary">Back to catalog</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-5">
+        <div class="card shadow-sm border-0 order-summary-card">
+            <div class="card-body p-4">
+                <h2 class="h5 mb-3">Available products</h2>
+                <div class="list-group list-group-flush">
+                    @foreach (var product in Model.AvailableProducts)
+                    {
+                        <div class="list-group-item px-0 d-flex justify-content-between align-items-start gap-3">
+                            <div>
+                                <div class="fw-semibold">@product.Name</div>
+                                <div class="small text-secondary">@product.Description</div>
+                            </div>
+                            <span class="text-nowrap">@product.Price.ToString("C")</span>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

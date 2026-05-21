@@ -1,0 +1,72 @@
+@model IReadOnlyList<Practical.Storefront.Web.Models.Order>
+
+@{
+    ViewData["Title"] = "Recent orders";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+    <div>
+        <h1 class="h3 mb-1">Recent orders</h1>
+        <p class="text-secondary mb-0">Latest storefront orders stored in the application database.</p>
+    </div>
+    <a class="btn btn-primary" asp-action="Create">New order</a>
+</div>
+
+@if (TempData["OrderMessage"] is string message)
+{
+    <div class="alert alert-success" role="alert">@message</div>
+}
+
+@if (!Model.Any())
+{
+    <div class="alert alert-info" role="alert">No orders yet. Create one from the catalog or order page.</div>
+}
+else
+{
+    <div class="row g-4">
+        @foreach (var order in Model)
+        {
+            <div class="col-12">
+                <div class="card shadow-sm border-0">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between align-items-start flex-wrap gap-3 mb-3">
+                            <div>
+                                <h2 class="h5 mb-1">Order #@order.Id</h2>
+                                <div class="text-secondary">@order.CustomerName &lt;@MaskEmail(order.CustomerEmail)&gt;</div>
+                            </div>
+                            <div class="text-end">
+                                <div class="fw-semibold">@order.TotalAmount.ToString("C")</div>
+                                <div class="text-secondary small">@order.CreatedAt.ToString("u")</div>
+                            </div>
+                        </div>
+
+                        <ul class="list-group list-group-flush">
+                            @foreach (var item in order.Items)
+                            {
+                                <li class="list-group-item px-0 d-flex justify-content-between align-items-center">
+                                    <span>@item.ProductName × @item.Quantity</span>
+                                    <span>@((item.UnitPrice * item.Quantity).ToString("C"))</span>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@functions {
+    private static string MaskEmail(string email)
+    {
+        var parts = email.Split('@');
+        if (parts.Length != 2 || string.IsNullOrWhiteSpace(parts[0]))
+        {
+            return "hidden@example.com";
+        }
+
+        var localPart = parts[0];
+        var visiblePrefix = localPart[..1];
+        return $"{visiblePrefix}***@{parts[1]}";
+    }
+}

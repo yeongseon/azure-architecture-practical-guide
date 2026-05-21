@@ -29,6 +29,7 @@ bin/
 obj/
 *.user
 *.suo
+*.db
 
 # IDE
 .idea/
@@ -43,6 +44,9 @@ Thumbs.db
 
 # Azure
 .azure/
+
+# Generated Bicep output
+infra/bicep/stages/**/main.json
 
 # Lab artifacts (raw data, charts - generated locally)
 labs/*/artifacts/

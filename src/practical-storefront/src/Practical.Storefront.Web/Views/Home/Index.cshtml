@@ -1,0 +1,39 @@
+@model IReadOnlyList<Practical.Storefront.Web.Models.Product>
+
+@{
+    ViewData["Title"] = "Practical Storefront";
+}
+
+<section class="py-4">
+    <div class="row align-items-center g-4 mb-4">
+        <div class="col-lg-8">
+            <h1 class="display-5 fw-bold mb-3">Practical Storefront</h1>
+            <p class="lead text-secondary mb-0">A simple ASP.NET Core MVC sample for the Azure Architecture Practical Guide.</p>
+        </div>
+        <div class="col-lg-4 text-lg-end">
+            <a class="btn btn-primary btn-lg" asp-controller="Orders" asp-action="Create">Place an order</a>
+        </div>
+    </div>
+
+    <div class="row g-4">
+        @foreach (var product in Model)
+        {
+            <div class="col-md-6 col-xl-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <img src="@product.ImageUrl" class="card-img-top storefront-image" alt="@product.Name" />
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-start mb-2 gap-3">
+                            <h2 class="h5 mb-0">@product.Name</h2>
+                            <span class="badge text-bg-success">@product.Price.ToString("C")</span>
+                        </div>
+                        <p class="text-secondary flex-grow-1">@product.Description</p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="small text-success">@(product.IsAvailable ? "Available" : "Unavailable")</span>
+                            <a class="btn btn-outline-primary" asp-controller="Orders" asp-action="Create" asp-route-productId="@product.Id">Order</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</section>

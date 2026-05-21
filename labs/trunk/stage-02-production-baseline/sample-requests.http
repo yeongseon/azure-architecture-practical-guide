@@ -1,0 +1,26 @@
+@webAppUrl = https://yourappname-web.azurewebsites.net
+@stagingSlotUrl = https://yourappname-web-staging.azurewebsites.net
+
+### Production home page
+GET {{webAppUrl}}/
+Accept: text/html
+
+### Production health endpoint
+GET {{webAppUrl}}/healthz
+Accept: application/json
+
+### Production operations info
+GET {{webAppUrl}}/ops/info
+Accept: application/json
+
+### Staging home page
+GET {{stagingSlotUrl}}/
+Accept: text/html
+
+### Staging health endpoint
+GET {{stagingSlotUrl}}/healthz
+Accept: application/json
+
+### Staging operations info
+GET {{stagingSlotUrl}}/ops/info
+Accept: application/json
