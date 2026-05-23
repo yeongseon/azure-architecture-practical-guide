@@ -119,3 +119,15 @@ The right question is whether spend is aligned to business value, risk posture, 
 [Inferred] Cost is a first-order architecture property because topology, scaling, redundancy, and telemetry choices all become billable behavior.
 
 Design for cost transparency, not just cost minimization.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/overview-cost-management)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/cost-management-billing/reservations/save-compute-costs-reservations)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/virtual-machines/spot-vms)

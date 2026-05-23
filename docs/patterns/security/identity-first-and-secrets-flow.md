@@ -137,3 +137,20 @@ Examples where identity-first often works well include Azure SQL Database, Stora
 ## Takeaway
 
 In Azure, identity-first means treating Managed Identity as the default access path and Key Vault as the controlled exception path. The architectural win is not merely secret storage, but shrinking the entire secrets flow.
+
+## Review Matrix
+
+| Review area | Page-specific check |
+|---|---|
+| Scope | Confirm the guidance applies to Identity-First and Secrets Flow. |
+| Source basis | Validate the recommendation against the Microsoft Learn sources in this page. |
+| Evidence | Capture command output, portal state, metrics, logs, or screenshots before treating the result as proven. |
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview)

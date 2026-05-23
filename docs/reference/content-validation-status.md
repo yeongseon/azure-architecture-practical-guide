@@ -1,14 +1,32 @@
 ---
 content_sources:
   diagrams:
-    - id: content-validation-pie
-      type: pie
-      source: self-generated
-      justification: "Auto-generated pie chart from content_validation frontmatter across docs."
-      based_on:
-        - https://learn.microsoft.com/en-us/azure/architecture/
+  - id: content-validation-pie
+    type: pie
+    source: self-generated
+    justification: Auto-generated pie chart from content_validation frontmatter across
+      docs.
+    based_on:
+    - https://learn.microsoft.com/en-us/azure/architecture/
+  - id: content-validation-status-pie
+    type: pie
+    source: self-generated
+    justification: Auto-generated dashboard chart from repository validation metadata.
+    based_on:
+    - https://learn.microsoft.com/en-us/azure/well-architected/
+  sources:
+  - type: mslearn-adapted
+    url: https://learn.microsoft.com/en-us/azure/well-architected/
+content_validation:
+  status: verified
+  last_reviewed: '2026-05-23'
+  reviewer: agent
+  core_claims:
+  - claim: This generated dashboard summarizes repository validation metadata and
+      links back to Microsoft Learn as the source basis for Azure content checks.
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: true
 ---
-
 # Content Validation Status
 
 Auto-generated dashboard — do not edit manually.
@@ -19,16 +37,17 @@ Run `python3 scripts/generate_content_validation_status.py` to regenerate.
 <!-- diagram-id: content-validation-pie -->
 ```mermaid
 pie title Content Validation Status
-    "🔍 Pending Review" : 116
+    "✅ Verified" : 6
+    "🔍 Pending Review" : 121
 ```
 
 | Status | Count |
 |--------|-------|
-| ✅ Verified | 0 |
-| 🔍 Pending Review | 116 |
+| ✅ Verified | 6 |
+| 🔍 Pending Review | 121 |
 | ❓ Unverified | 0 |
 
-**Total documents with content_validation**: 116
+**Total documents with content_validation**: 127
 
 ## Detail
 
@@ -91,6 +110,16 @@ pie title Content Validation Status
 | `platform/observability-foundations.md` | 🔍 Pending Review | 5 | 2026-04-22 |
 | `platform/resilience-and-region-strategy.md` | 🔍 Pending Review | 5 | 2026-04-22 |
 | `platform/resource-organization.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `practical-journey/cost-and-time-model.md` | 🔍 Pending Review | 3 | 2026-04-25 |
+| `practical-journey/getting-started.md` | ✅ Verified | 2 | 2026-04-25 |
+| `practical-journey/index.md` | ✅ Verified | 1 | 2026-04-25 |
+| `practical-journey/module-map.md` | ✅ Verified | 1 | 2026-04-25 |
+| `practical-journey/stage-01-mvp.md` | 🔍 Pending Review | 4 | 2026-04-24 |
+| `practical-journey/stage-02-production-baseline.md` | 🔍 Pending Review | 4 | 2026-04-24 |
+| `practical-journey/stage-03-scale-edge.md` | 🔍 Pending Review | 4 | 2026-04-24 |
+| `practical-journey/stage-04-network-isolation.md` | 🔍 Pending Review | 3 | 2026-04-24 |
+| `practical-journey/stage-05-resilience.md` | ✅ Verified | 4 | 2026-04-24 |
+| `practical-journey/verify-and-destroy.md` | ✅ Verified | 2 | 2026-04-25 |
 | `reference/architecture-decision-matrix.md` | 🔍 Pending Review | 5 | 2026-04-22 |
 | `reference/compute-selection-cheatsheet.md` | 🔍 Pending Review | 5 | 2026-04-22 |
 | `reference/data-selection-cheatsheet.md` | 🔍 Pending Review | 5 | 2026-04-22 |
@@ -101,6 +130,7 @@ pie title Content Validation Status
 | `reference/resilience-targets-rto-rpo.md` | 🔍 Pending Review | 5 | 2026-04-22 |
 | `reference/security-control-mapping.md` | 🔍 Pending Review | 5 | 2026-04-22 |
 | `reference/source-index.md` | 🔍 Pending Review | 5 | 2026-04-22 |
+| `reference/validation-status.md` | ✅ Verified | 1 | 2026-05-23 |
 | `reference/waf-pillar-to-pattern-map.md` | 🔍 Pending Review | 5 | 2026-04-22 |
 | `start-here/architecture-vs-service-guides.md` | 🔍 Pending Review | 5 | 2026-04-22 |
 | `start-here/how-to-use-this-guide.md` | 🔍 Pending Review | 5 | 2026-04-22 |

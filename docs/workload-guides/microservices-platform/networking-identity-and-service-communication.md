@@ -123,3 +123,15 @@ Communication architecture should minimize accidental coupling while keeping tru
 - [Interservice communication in a microservices architecture](https://learn.microsoft.com/en-us/azure/architecture/microservices/design/interservice-communication)
 - [Gateway Routing pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/gateway-routing)
 - [Protect APIs with Application Gateway and API Management](https://learn.microsoft.com/en-us/azure/architecture/web-apps/api-management/architectures/protect-apis)
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Section index](index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/microservices/design/interservice-communication)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/architecture/patterns/gateway-routing)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/architecture/web-apps/api-management/architectures/protect-apis)

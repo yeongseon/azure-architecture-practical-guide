@@ -123,3 +123,12 @@ flowchart TD
 ## Takeaway
 
 Private connectivity is effective only when network path, DNS resolution, identity, and hybrid routing are designed together. On Azure, Private Endpoints are the stronger isolation pattern, but they are not the cheaper or simpler default in every workload.
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview)

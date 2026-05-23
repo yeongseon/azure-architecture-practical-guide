@@ -125,3 +125,15 @@ Baseline landing zones should be opinionated enough to prevent drift but modular
 - [Cloud Adoption Framework landing zones](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/)
 - [Azure landing zone conceptual architecture](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-areas)
 - [Azure best practices and recommendations](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/)
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Section index](index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-areas)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/)

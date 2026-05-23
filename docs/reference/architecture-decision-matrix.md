@@ -66,3 +66,14 @@ flowchart TD
 
 - https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/
 - https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree)

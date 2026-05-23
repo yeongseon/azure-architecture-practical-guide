@@ -133,3 +133,13 @@ flowchart TD
 ## Takeaway
 
 Use saga, idempotency, and outbox together when one business workflow spans multiple services and any retry or partial failure must remain safe. On Azure, Service Bus plus a durable application store gives a practical foundation for this pattern combination.
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/patterns/saga)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/architecture/patterns/compensating-transaction)

@@ -139,3 +139,12 @@ flowchart TD
 ## Takeaway
 
 Use hub-spoke when you need customer-controlled shared network services and explicit landing-zone segmentation. Use Virtual WAN when connectivity scale and transit operations are the real problem to solve.
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/networking/architecture/hub-spoke)

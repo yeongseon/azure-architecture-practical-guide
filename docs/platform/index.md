@@ -109,3 +109,14 @@ It does not try to cover:
 [Inferred] Strong workload architecture usually starts with boring platform clarity.
 
 Use this section to establish the shared Azure decisions that every later pattern and workload baseline will inherit.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/guide/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/well-architected/)

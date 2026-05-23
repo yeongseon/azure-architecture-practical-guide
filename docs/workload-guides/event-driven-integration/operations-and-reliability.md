@@ -123,3 +123,15 @@ Reliable event-driven operations depend on visible backlog economics and discipl
 - [Overview of Service Bus dead-letter queues](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dead-letter-queues)
 - [Azure Monitor overview](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
 - [Reliability in Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/performance-reliability)
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Section index](index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dead-letter-queues)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/azure-functions/performance-reliability)

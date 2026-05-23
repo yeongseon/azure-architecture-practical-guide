@@ -126,3 +126,16 @@ Good web workload state design keeps compute disposable and makes durable state 
 - [Choose a data store for an application](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview)
 - [Cache-Aside pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/cache-aside)
 - [Azure Blob Storage architecture center guidance](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/storage-options)
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Section index](index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/architecture/patterns/cache-aside)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/cache-overview)
+- [Microsoft Learn source 4](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/storage-options)

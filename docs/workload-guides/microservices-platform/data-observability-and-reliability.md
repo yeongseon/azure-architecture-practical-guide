@@ -128,3 +128,15 @@ Observability and data ownership are the control mechanisms that keep a microser
 - [Data considerations for microservices](https://learn.microsoft.com/en-us/azure/architecture/microservices/design/data-considerations)
 - [Telemetry correlation in Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/distributed-tracing-telemetry-correlation)
 - [Circuit Breaker pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker)
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Section index](index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/microservices/design/data-considerations)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/azure-monitor/app/distributed-tracing-telemetry-correlation)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker)

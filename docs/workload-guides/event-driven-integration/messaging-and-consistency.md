@@ -132,3 +132,15 @@ Messaging consistency is a system property built from broker semantics, consumer
 - [Saga distributed transactions pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/saga)
 - [Service Bus messaging overview](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview)
 - [Choose a messaging service in Azure](https://learn.microsoft.com/en-us/azure/event-grid/compare-messaging-services)
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Section index](index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/patterns/saga)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/event-grid/compare-messaging-services)

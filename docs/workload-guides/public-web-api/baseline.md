@@ -126,3 +126,17 @@ Most public web applications are operational systems, not analytical platforms. 
 ## Next decisions
 
 Continue with [Network, edge, and identity](network-edge-and-identity.md) and [Data and state](data-and-state.md) to refine ingress, authentication, and persistence choices.
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Section index](index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview)
+- [Microsoft Learn source 4](https://learn.microsoft.com/en-us/azure/container-apps/overview)
+- [Microsoft Learn source 5](https://learn.microsoft.com/en-us/azure/container-apps/compare-options)

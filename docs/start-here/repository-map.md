@@ -123,3 +123,13 @@ Signals that a page likely belongs elsewhere:
 [Inferred] The published Phase 1 repository is organized to move readers from fundamentals to patterns, workloads, operations, and design labs.
 
 When in doubt, ask where the page sits in that flow: orientation, foundation, decision pattern, workload application, operation, design lab, or planned future review content.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/)

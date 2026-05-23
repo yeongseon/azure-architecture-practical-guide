@@ -134,3 +134,13 @@ flowchart TD
 ## Takeaway
 
 Choose multi-tenant data isolation by matching the tenant risk profile to the minimum viable boundary that stays operable at scale. On Azure, successful designs treat tenant context, restoreability, and noisy-neighbor controls as part of the data architecture from day one.
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/overview)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/approaches/storage-data)

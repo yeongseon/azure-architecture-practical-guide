@@ -140,3 +140,13 @@ flowchart TD
 ## Takeaway
 
 Choose blue-green, canary, and stamp patterns based on how much rollout isolation, traffic control, and repeatable scale your workload needs. On Azure, the pattern only pays off when observability, compatibility, and rollback automation are treated as release prerequisites.
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/guide/aks/blue-green-deployment-for-aks)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/architecture/framework/mission-critical/mission-critical-deployment-testing)

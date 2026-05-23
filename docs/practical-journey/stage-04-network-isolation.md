@@ -177,6 +177,14 @@ az group delete \
 - [Design Lab 02: Private Internal App](../design-labs/lab-02-private-internal-app.md)
 - [Private Internal App Review Playbook](../architecture-reviews/playbooks/private-internal-app-review.md)
 
+## Review Matrix
+
+| Review area | Page-specific check |
+|---|---|
+| Scope | Confirm the guidance applies to Stage 4 — Network Isolation: Private Data Path. |
+| Source basis | Validate the recommendation against the Microsoft Learn sources in this page. |
+| Evidence | Capture command output, portal state, metrics, logs, or screenshots before treating the result as proven. |
+
 ## See Also
 
 - [Architecture Assessment Checklist](../waf/architecture-assessment-checklist.md)

@@ -112,3 +112,14 @@ Use clear interfaces:
 ## Takeaway
 
 [Validated] High-performing Azure organizations do not choose between platform control and app autonomy. They define interfaces, guardrails, and escalation paths so both can move with clarity.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/organize/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/)

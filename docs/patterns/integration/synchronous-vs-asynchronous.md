@@ -133,3 +133,12 @@ flowchart TD
 ## Takeaway
 
 Use synchronous integration for short, user-blocking interactions. Use asynchronous integration when independence, buffering, and failure isolation are more valuable than immediate completion.
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/patterns/async-request-reply)

@@ -117,3 +117,14 @@ Validate through access reviews, secret rotation drills, policy compliance check
 ## Takeaway
 
 [Validated] Secure Azure architectures start with identity, limit trust everywhere else, and pair preventive controls with realistic detection and response ownership.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/well-architected/security/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/security/fundamentals/best-practices-and-patterns)

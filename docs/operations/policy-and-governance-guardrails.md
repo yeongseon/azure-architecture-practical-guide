@@ -114,3 +114,14 @@ flowchart TD
 ## Takeaway
 
 [Validated] Strong guardrails are clear, versioned, reviewable, and paired with an exception process that keeps governance from becoming theater.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/governance/policy/overview)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/govern/)

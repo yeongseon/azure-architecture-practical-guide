@@ -123,3 +123,20 @@ flowchart TD
 ## Takeaway
 
 Health endpoints tell Azure where traffic should go, graceful degradation preserves essential value, and backpressure prevents overload from turning a partial problem into a full outage.
+
+## Review Matrix
+
+| Review area | Page-specific check |
+|---|---|
+| Scope | Confirm the guidance applies to Health Endpoints, Graceful Degradation, and Backpressure. |
+| Source basis | Validate the recommendation against the Microsoft Learn sources in this page. |
+| Evidence | Capture command output, portal state, metrics, logs, or screenshots before treating the result as proven. |
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/patterns/health-endpoint-monitoring)

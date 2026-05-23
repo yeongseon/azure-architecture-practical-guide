@@ -128,3 +128,14 @@ Ask whether the architecture can degrade gracefully in cost as well as scale gra
 ## Takeaway
 
 [Validated] A cost-optimized Azure architecture is one where spend follows value, waste is visible, and expensive reliability or performance choices are deliberate rather than accidental.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/cost-management-billing/)

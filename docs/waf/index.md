@@ -116,3 +116,13 @@ Architectures should leave this section with explicit validation paths:
 ## Takeaway
 
 [Inferred] Treat WAF as a repeatable architecture review language. The goal is not a perfect score in every pillar; the goal is a design whose trade-offs are explicit, owned, and validated.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/well-architected/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/well-architected/pillars)

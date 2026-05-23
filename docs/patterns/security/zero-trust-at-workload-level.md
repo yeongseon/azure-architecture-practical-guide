@@ -127,3 +127,13 @@ flowchart TD
 ## Takeaway
 
 Apply Zero Trust at workload level by making every identity, network path, and privileged action earn trust continuously. On Azure, the pattern succeeds when least privilege, policy enforcement, and telemetry are built into normal platform operations instead of added after incidents.
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/security/fundamentals/zero-trust)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/security/zero-trust/azure-infrastructure-overview)

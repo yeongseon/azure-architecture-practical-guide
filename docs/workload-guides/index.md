@@ -123,3 +123,14 @@ Landing zones answer platform questions such as subscription hierarchy, guardrai
 ## Next step
 
 Start with the family that best matches your workload shape, then use the baseline guide to anchor architecture decisions and review trade-offs.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/well-architected/)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree)

@@ -121,3 +121,14 @@ Ownership should become easier to explain. [Observed]
 - [Baseline architecture](baseline.md)
 - [Networking, identity, and service communication](networking-identity-and-service-communication.md)
 - [Data, observability, and reliability](data-observability-and-reliability.md)
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/microservices/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/architecture/microservices/design/interservice-communication)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/architecture/microservices/design/data-considerations)

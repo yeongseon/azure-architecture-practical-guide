@@ -119,3 +119,15 @@ Examples:
 [Inferred] This guide should answer architecture questions that remain valid even if Microsoft changes a portal workflow or CLI parameter.
 
 If the page starts teaching service setup, it is in the wrong place.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/architecture/guide/)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/app-service/)

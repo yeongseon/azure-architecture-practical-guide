@@ -123,3 +123,15 @@ That keeps hidden consumer cost visible. [Observed]
 - [Azure Well-Architected Framework cost optimization](https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/)
 - [Compare messaging services in Azure](https://learn.microsoft.com/en-us/azure/event-grid/compare-messaging-services)
 - [Azure Functions scale and hosting](https://learn.microsoft.com/en-us/azure/azure-functions/functions-scale)
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Section index](index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/event-grid/compare-messaging-services)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/azure-functions/functions-scale)

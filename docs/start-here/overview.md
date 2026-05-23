@@ -138,3 +138,14 @@ flowchart TD
 [Inferred] Read this repository as a decision system.
 
 Use Microsoft Learn for authoritative product detail, and use this guide for the practical question that teams usually ask first: "which Azure architecture choice should we make, and how will we know it was the right one?"
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/well-architected/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/architecture/)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/architecture/guide/)

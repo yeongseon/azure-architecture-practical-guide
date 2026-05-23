@@ -132,3 +132,17 @@ Design questions include:
 [Inferred] Network topology should be selected for operational clarity and failure containment, not just for diagram elegance.
 
 If DNS, routing, and ownership are unclear, the topology is not finished.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/networking/guide/private-link-hub-spoke-network)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/hub-spoke)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/virtual-wan/virtual-wan-about)
+- [Microsoft Learn source 4](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview)
+- [Microsoft Learn source 5](https://learn.microsoft.com/en-us/azure/architecture/networking/)

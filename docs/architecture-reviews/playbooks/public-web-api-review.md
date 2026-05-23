@@ -141,6 +141,14 @@ Public workloads often underinvest in dependency isolation because application r
 
 Review public web and API architectures by tracing customer-critical journeys through edge, runtime, and dependency layers, then demanding evidence for failure handling, operational readiness, and measured performance. A good review outcome is not just a service choice; it is a credible explanation of how the workload behaves during bad traffic days, bad release days, and bad dependency days.
 
+## Review Matrix
+
+| Review area | Page-specific check |
+|---|---|
+| Scope | Confirm the guidance applies to Public Web and API Review Playbook. |
+| Source basis | Validate the recommendation against the Microsoft Learn sources in this page. |
+| Evidence | Capture command output, portal state, metrics, logs, or screenshots before treating the result as proven. |
+
 ## See Also
 
 - [Architecture Reviews](../index.md)
@@ -154,3 +162,11 @@ Review public web and API architectures by tracing customer-critical journeys th
 - https://learn.microsoft.com/en-us/azure/reliability/reliability-app-service
 - https://learn.microsoft.com/en-us/azure/well-architected/
 - https://learn.microsoft.com/en-us/assessments/azure-architecture-review/
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/well-architected/)
+- [Microsoft Learn source 4](https://learn.microsoft.com/en-us/azure/reliability/reliability-app-service)
+- [Microsoft Learn source 5](https://learn.microsoft.com/en-us/assessments/azure-architecture-review/)

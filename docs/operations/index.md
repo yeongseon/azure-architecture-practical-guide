@@ -99,3 +99,13 @@ Read the section in operating order rather than alphabetical order. Start with l
 ## Takeaway
 
 [Validated] Strong Azure operations are not an afterthought to architecture. They are the control system that keeps architecture decisions correct as teams, scale, and constraints change.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/well-architected/)

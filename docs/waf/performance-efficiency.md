@@ -120,3 +120,14 @@ Use scenario-based validation: launch spikes, batch overlap, tenant skew, degrad
 ## Takeaway
 
 [Validated] Efficient performance comes from choosing the right topology and data boundaries first, then tuning service tiers second.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/well-architected/performance-efficiency/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/architecture/)

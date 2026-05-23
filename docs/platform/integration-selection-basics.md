@@ -111,3 +111,16 @@ flowchart TD
 [Inferred] Pick the integration service that matches the interaction contract, not the service your team used last time.
 
 Messaging, eventing, and streaming are adjacent patterns, not interchangeable ones.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/messaging)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/event-grid/overview)
+- [Microsoft Learn source 4](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-about)

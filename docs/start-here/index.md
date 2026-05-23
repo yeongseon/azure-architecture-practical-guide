@@ -106,3 +106,14 @@ This section should not spend most of its space on:
 [Inferred] Treat Start Here as the map, not the destination.
 
 Read this section to establish scope and vocabulary, then move into [Platform](../platform/index.md) for foundational Azure architecture decisions.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Start here](overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/well-architected/)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/architecture/guide/)

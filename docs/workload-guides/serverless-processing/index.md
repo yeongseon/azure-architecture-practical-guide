@@ -139,3 +139,15 @@ This family fits when event-driven execution, managed scaling, and explicit work
 - [Baseline architecture](baseline.md)
 - [Triggers, state, and storage](triggers-state-and-storage.md)
 - [Operations and reliability](operations-and-reliability.md)
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/serverless/web-app)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/logic-apps/logic-apps-overview)
+- [Microsoft Learn source 4](https://learn.microsoft.com/en-us/azure/azure-functions/functions-scale)

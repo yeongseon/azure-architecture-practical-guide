@@ -104,3 +104,12 @@ Architecture Reviews are planned for Phase 2. In the current published Phase 1 s
 This is an independent community project. Not affiliated with or endorsed by Microsoft.
 
 Primary references: [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/) and [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/).
+
+## See Also
+
+- [Start here](start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/well-architected/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/architecture/)

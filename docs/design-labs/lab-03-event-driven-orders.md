@@ -150,3 +150,22 @@ For event-driven order processing on Azure, Service Bus plus Functions, Cosmos D
 
 - https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven
 - https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/messaging
+
+## Review Matrix
+
+| Review area | Page-specific check |
+|---|---|
+| Scope | Confirm the guidance applies to Lab 03: Event-Driven Orders. |
+| Source basis | Validate the recommendation against the Microsoft Learn sources in this page. |
+| Evidence | Capture command output, portal state, metrics, logs, or screenshots before treating the result as proven. |
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/messaging)

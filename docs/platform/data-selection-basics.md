@@ -113,3 +113,17 @@ flowchart TD
 [Inferred] Pick the data store that matches the truth model of the workload.
 
 The cheapest or most familiar service is rarely the right answer if consistency, partitioning, and lifecycle are poorly matched.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-decision-tree)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/cache-overview)
+- [Microsoft Learn source 4](https://learn.microsoft.com/en-us/azure/cosmos-db/)
+- [Microsoft Learn source 5](https://learn.microsoft.com/en-us/azure/storage/)

@@ -133,3 +133,17 @@ Architectural implications:
 [Inferred] Identity and governance foundations are architecture, not administration.
 
 If access boundaries, privilege flow, and policy inheritance are unclear, the rest of the platform remains unstable.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/role-based-access-control/overview)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/entra/fundamentals/whatis)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/governance/policy/overview)
+- [Microsoft Learn source 4](https://learn.microsoft.com/en-us/entra/id-governance/privileged-identity-management/pim-configure)
+- [Microsoft Learn source 5](https://learn.microsoft.com/en-us/azure/governance/blueprints/overview)

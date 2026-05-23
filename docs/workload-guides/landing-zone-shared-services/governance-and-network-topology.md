@@ -124,3 +124,15 @@ It also clarifies shared accountability. [Correlated]
 - [Azure best practices and recommendations](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/)
 - [Network topology and connectivity design area](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity)
 - [What is Azure Firewall?](https://learn.microsoft.com/en-us/azure/firewall/overview)
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Section index](index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/firewall/overview)

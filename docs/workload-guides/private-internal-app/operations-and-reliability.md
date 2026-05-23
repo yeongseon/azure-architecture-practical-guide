@@ -125,3 +125,15 @@ Reliable internal applications require an operating model that treats connectivi
 - [Azure Monitor overview](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
 - [Azure App Service reliability](https://learn.microsoft.com/en-us/azure/reliability/reliability-app-service)
 - [Business continuity and disaster recovery guidance](https://learn.microsoft.com/en-us/azure/architecture/framework/resiliency/overview)
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Section index](index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/reliability/reliability-app-service)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/architecture/framework/resiliency/overview)

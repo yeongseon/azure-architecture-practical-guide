@@ -93,3 +93,20 @@ flowchart TD
 - https://learn.microsoft.com/en-us/azure/role-based-access-control/overview
 - https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
 - https://learn.microsoft.com/en-us/azure/key-vault/general/overview
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/well-architected/security/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/role-based-access-control/overview)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/entra/id-governance/privileged-identity-management/pim-configure)
+- [Microsoft Learn source 4](https://learn.microsoft.com/en-us/azure/firewall/overview)
+- [Microsoft Learn source 5](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview)
+- [Microsoft Learn source 6](https://learn.microsoft.com/en-us/azure/key-vault/general/overview)
+- [Microsoft Learn source 7](https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction)
+- [Microsoft Learn source 8](https://learn.microsoft.com/en-us/azure/sentinel/overview)

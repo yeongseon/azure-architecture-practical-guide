@@ -121,3 +121,14 @@ Choose Option B because ...
 
 - https://learn.microsoft.com/en-us/azure/architecture/patterns/
 - https://learn.microsoft.com/en-us/azure/well-architected/
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/patterns/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/well-architected/)

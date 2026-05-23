@@ -120,3 +120,14 @@ That sequencing lowers integration risk. [Inferred]
 - [Baseline architecture](baseline.md)
 - [Messaging and consistency decisions](messaging-and-consistency.md)
 - [Operations and reliability](operations-and-reliability.md)
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/azure-functions/functions-scale)

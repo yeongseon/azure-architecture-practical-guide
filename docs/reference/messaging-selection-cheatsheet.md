@@ -63,3 +63,14 @@ flowchart TD
 
 - https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/messaging
 - https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/messaging)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven)

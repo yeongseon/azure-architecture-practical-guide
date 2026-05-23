@@ -128,3 +128,14 @@ This is an independent community project and is not affiliated with or endorsed 
 [Inferred] The project exists to make Azure architecture choices easier to discuss, review, and validate.
 
 If Microsoft Learn tells you what Azure can do, this guide is meant to help you decide what your team should do next.
+
+## See Also
+
+- [Guide home](index.md)
+- [Section index](index.md)
+- [Start here](start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/well-architected/)

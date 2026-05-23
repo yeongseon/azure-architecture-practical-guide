@@ -130,3 +130,20 @@ flowchart TD
 ## Takeaway
 
 Use retries to survive transient faults, circuit breakers to fail fast when a dependency is unhealthy, and bulkheads to protect the rest of the workload from localized failure. Azure SDK defaults help, but architecture ownership still belongs to the application design.
+
+## Review Matrix
+
+| Review area | Page-specific check |
+|---|---|
+| Scope | Confirm the guidance applies to Retry, Circuit Breaker, and Bulkhead. |
+| Source basis | Validate the recommendation against the Microsoft Learn sources in this page. |
+| Evidence | Capture command output, portal state, metrics, logs, or screenshots before treating the result as proven. |
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/patterns/retry)

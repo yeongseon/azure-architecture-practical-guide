@@ -136,3 +136,16 @@ Ask these before moving into workload design:
 [Inferred] Good Azure architecture begins with control boundaries and failure domains, not with a service catalog.
 
 Understand the platform shape first, then choose workload services inside that shape.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/guide/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/control-plane-and-data-plane)
+- [Microsoft Learn source 4](https://learn.microsoft.com/en-us/azure/reliability/regions-list)

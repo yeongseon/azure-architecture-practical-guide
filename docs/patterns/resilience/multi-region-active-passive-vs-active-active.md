@@ -134,3 +134,12 @@ flowchart TD
 ## Takeaway
 
 Choose active-passive when you need regional resilience with simpler operations. Choose active-active only when latency, continuity, and traffic distribution benefits clearly outweigh the higher consistency and operating complexity.
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/guide/networking/global-web-applications/overview)

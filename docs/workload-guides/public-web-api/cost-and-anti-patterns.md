@@ -126,3 +126,15 @@ The best public web cost optimizations usually remove unused complexity before t
 - [Azure Well-Architected Framework cost optimization](https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/)
 - [Baseline highly available zone-redundant web application](https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)
 - [Azure Architecture Center cost guidance](https://learn.microsoft.com/en-us/azure/architecture/framework/cost/overview)
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Section index](index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/architecture/framework/cost/overview)

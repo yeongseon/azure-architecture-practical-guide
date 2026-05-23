@@ -123,3 +123,15 @@ The platform operations model is sustainable only when central teams can enable 
 - [Manage cloud adoption at scale](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/manage/)
 - [Azure Monitor overview](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
 - [Cloud Adoption Framework governance and management](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/govern/)
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Section index](index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/manage/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/govern/)

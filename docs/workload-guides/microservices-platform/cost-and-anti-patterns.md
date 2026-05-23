@@ -122,3 +122,15 @@ Review cost alongside architecture review outcomes so service sprawl is challeng
 - [Azure Well-Architected Framework cost optimization](https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/)
 - [Architect microservices on Azure](https://learn.microsoft.com/en-us/azure/architecture/microservices/)
 - [Cost optimization in the Azure Architecture Framework](https://learn.microsoft.com/en-us/azure/architecture/framework/cost/overview)
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Section index](index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/architecture/microservices/)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/architecture/framework/cost/overview)

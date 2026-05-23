@@ -118,3 +118,14 @@ Plan drills that move beyond control-plane success:
 ## Takeaway
 
 [Validated] Continuity is proven by drills, not by architecture diagrams. Recovery plans must include technology, people, ownership, and measured outcomes.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/reliability/business-continuity-management-program)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/reliability/overview)

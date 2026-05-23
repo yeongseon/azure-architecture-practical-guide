@@ -69,3 +69,15 @@ flowchart TD
 
 - https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview
 - https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/cache-overview)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/)

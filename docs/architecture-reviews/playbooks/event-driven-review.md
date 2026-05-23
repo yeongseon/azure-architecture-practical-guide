@@ -141,6 +141,14 @@ Loose coupling is valuable, but it moves complexity into contracts, operations, 
 
 Review event-driven architectures by forcing clarity on ownership, semantics, and operational recovery rather than focusing only on queue or topic configuration. A strong event-driven review proves the team can explain delayed processing, duplicate handling, and replay outcomes in business terms as well as technical terms.
 
+## Review Matrix
+
+| Review area | Page-specific check |
+|---|---|
+| Scope | Confirm the guidance applies to Event-Driven Review Playbook. |
+| Source basis | Validate the recommendation against the Microsoft Learn sources in this page. |
+| Evidence | Capture command output, portal state, metrics, logs, or screenshots before treating the result as proven. |
+
 ## See Also
 
 - [Architecture Reviews](../index.md)
@@ -153,3 +161,10 @@ Review event-driven architectures by forcing clarity on ownership, semantics, an
 - https://learn.microsoft.com/en-us/azure/event-grid/compare-messaging-services
 - https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview
 - https://learn.microsoft.com/en-us/azure/azure-functions/functions-scale
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/event-grid/compare-messaging-services)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview)
+- [Microsoft Learn source 4](https://learn.microsoft.com/en-us/azure/azure-functions/functions-scale)

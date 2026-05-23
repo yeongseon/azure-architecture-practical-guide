@@ -61,3 +61,14 @@ flowchart TD
 
 - https://learn.microsoft.com/en-us/azure/well-architected/
 - https://learn.microsoft.com/en-us/azure/architecture/patterns/
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/well-architected/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/architecture/patterns/)

@@ -139,3 +139,15 @@ Public edge and identity design should concentrate control at the boundary while
 - [Azure Front Door overview](https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview)
 - [Authentication and authorization in Azure App Service](https://learn.microsoft.com/en-us/azure/app-service/overview-authentication-authorization)
 - [Microsoft Entra architecture guidance](https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/considerations/identity)
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Section index](index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/app-service/overview-authentication-authorization)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/considerations/identity)

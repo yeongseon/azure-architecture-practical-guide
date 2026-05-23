@@ -131,3 +131,15 @@ Good serverless designs separate trigger semantics, orchestration mechanics, and
 - [Azure Functions triggers and bindings](https://learn.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings)
 - [Durable Functions overview](https://learn.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-overview)
 - [Choose a data store for an application](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview)
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Section index](index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-overview)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview)

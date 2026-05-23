@@ -153,3 +153,23 @@ For a private internal Azure application, App Service Private Endpoint for ingre
 - https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
 - https://learn.microsoft.com/en-us/azure/app-service/overview-vnet-integration
 - https://learn.microsoft.com/en-us/azure/architecture/networking/architecture/hub-spoke
+
+## Review Matrix
+
+| Review area | Page-specific check |
+|---|---|
+| Scope | Confirm the guidance applies to Lab 02: Private Internal App. |
+| Source basis | Validate the recommendation against the Microsoft Learn sources in this page. |
+| Evidence | Capture command output, portal state, metrics, logs, or screenshots before treating the result as proven. |
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/app-service/overview-vnet-integration)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/architecture/networking/architecture/hub-spoke)

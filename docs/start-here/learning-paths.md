@@ -143,3 +143,15 @@ flowchart TD
 [Inferred] The correct learning path is the one that reduces your next architecture mistake.
 
 For most readers, that means: Platform first, Well-Architected second, workload context third.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/well-architected/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/training/azure/)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/architecture/)

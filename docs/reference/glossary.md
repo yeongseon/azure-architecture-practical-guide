@@ -112,3 +112,17 @@ flowchart TD
 - https://learn.microsoft.com/en-us/azure/well-architected/
 - https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
 - https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/control-plane-and-data-plane
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/well-architected/)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/architecture/patterns/)
+- [Microsoft Learn source 4](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/)
+- [Microsoft Learn source 5](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/control-plane-and-data-plane)

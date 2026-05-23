@@ -122,3 +122,14 @@ Avoid vanity SLOs that are easy to meet but weakly tied to actual user impact.
 ## Takeaway
 
 [Validated] A workload is only as operable as its observability model. Good SLOs express user commitments, and good telemetry reveals when the architecture is no longer meeting them.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/observability)

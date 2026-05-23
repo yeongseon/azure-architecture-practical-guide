@@ -219,6 +219,14 @@ az group delete \
 
 Continue to [Stage 3 — Scale and Edge](https://github.com/yeongseon/azure-architecture-practical-guide/blob/main/.sisyphus/plans/progressive-architecture-blueprint.md#stage-3--scale--edge) when the workload needs managed edge protection and simple scale-out controls.
 
+## Review Matrix
+
+| Review area | Page-specific check |
+|---|---|
+| Scope | Confirm the guidance applies to Stage 2 — Production Baseline: Identity, Secrets, and Release Safety. |
+| Source basis | Validate the recommendation against the Microsoft Learn sources in this page. |
+| Evidence | Capture command output, portal state, metrics, logs, or screenshots before treating the result as proven. |
+
 ## See Also
 
 - [Identity and Governance Foundations](../platform/identity-and-governance-foundations.md)

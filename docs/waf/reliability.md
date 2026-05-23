@@ -118,3 +118,14 @@ Run tabletop reviews, backup restorations, zonal failure simulations, dependency
 ## Takeaway
 
 [Validated] Reliable Azure architectures are explicit about failure, realistic about recovery, and measured against RTO and RPO commitments rather than optimistic diagrams.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/well-architected/reliability/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/reliability/overview)

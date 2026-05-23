@@ -142,6 +142,14 @@ Centralizing data can improve reuse while increasing blast radius for governance
 
 Review a data platform as a chain of trust from source ingestion to consumer decision, not as a collection of analytics services. The best review outcome proves that ownership, quality, lineage, and operational recovery are as mature as the platform's compute and storage choices.
 
+## Review Matrix
+
+| Review area | Page-specific check |
+|---|---|
+| Scope | Confirm the guidance applies to Data Platform Review Playbook. |
+| Source basis | Validate the recommendation against the Microsoft Learn sources in this page. |
+| Evidence | Capture command output, portal state, metrics, logs, or screenshots before treating the result as proven. |
+
 ## See Also
 
 - [Architecture Reviews](../index.md)
@@ -155,3 +163,11 @@ Review a data platform as a chain of trust from source ingestion to consumer dec
 - https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction
 - https://learn.microsoft.com/en-us/azure/synapse-analytics/overview-what-is
 - https://learn.microsoft.com/en-us/azure/databricks/introduction/
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-decision-tree)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/synapse-analytics/overview-what-is)
+- [Microsoft Learn source 4](https://learn.microsoft.com/en-us/azure/databricks/introduction/)
+- [Microsoft Learn source 5](https://learn.microsoft.com/en-us/azure/storage/blobs/data-lake-storage-introduction)

@@ -145,3 +145,12 @@ flowchart TD
 ## Takeaway
 
 Choose microservices only when business boundaries, scaling asymmetry, and operational maturity all justify distributed complexity. Otherwise, a modular monolith is often the more Azure-practical design.
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/microservices/)

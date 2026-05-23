@@ -104,3 +104,20 @@ flowchart TD
 - https://learn.microsoft.com/en-us/azure/well-architected/
 - https://learn.microsoft.com/en-us/azure/architecture/patterns/
 - https://learn.microsoft.com/en-us/azure/azure-monitor/overview
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/well-architected/)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/architecture/patterns/)
+- [Microsoft Learn source 4](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/)
+- [Microsoft Learn source 5](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
+- [Microsoft Learn source 6](https://learn.microsoft.com/en-us/azure/architecture/guide/)
+- [Microsoft Learn source 7](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/)
+- [Microsoft Learn source 8](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree)

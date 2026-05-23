@@ -138,3 +138,12 @@ flowchart TD
 ## Takeaway
 
 Bounded contexts are valuable only when they change ownership, contracts, and data access in practice. On Azure, the most important proof of a real boundary is owned data plus controlled integration, not separate code repositories alone.
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/microservices/model/domain-analysis)

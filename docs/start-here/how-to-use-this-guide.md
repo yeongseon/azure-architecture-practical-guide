@@ -149,3 +149,15 @@ At that point, use Microsoft Learn for the product facts, then return to this gu
 [Inferred] The best use of this guide is iterative.
 
 Use it to frame a decision, move to Microsoft Learn for authoritative detail, then come back to assess trade-offs, ownership, and validation.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/architecture/guide/)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/well-architected/)

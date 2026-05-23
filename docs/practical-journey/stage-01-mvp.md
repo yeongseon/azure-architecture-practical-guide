@@ -186,6 +186,14 @@ az group delete --name rg-practical-stage-01-mvp-koreacentral --yes --no-wait
 
 The next planned step is [Stage 2 — Production Baseline](https://github.com/yeongseon/azure-architecture-practical-guide/blob/main/.sisyphus/plans/progressive-architecture-blueprint.md#stage-2--production-baseline), where the journey adds secret custody, identity hygiene, deployment slots, and alerting.
 
+## Review Matrix
+
+| Review area | Page-specific check |
+|---|---|
+| Scope | Confirm the guidance applies to Stage 1 — MVP: Your First Azure Web App. |
+| Source basis | Validate the recommendation against the Microsoft Learn sources in this page. |
+| Evidence | Capture command output, portal state, metrics, logs, or screenshots before treating the result as proven. |
+
 ## See Also
 
 - [Architecture Assessment Checklist](../waf/architecture-assessment-checklist.md)

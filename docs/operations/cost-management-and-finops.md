@@ -121,3 +121,22 @@ These commitment models are valuable when demand is stable enough. The architect
 ## Takeaway
 
 [Validated] FinOps is effective when architecture, operations, and finance share the same cost signals and can act on them before waste becomes structural.
+
+## Review Matrix
+
+| Review area | Page-specific check |
+|---|---|
+| Scope | Confirm the guidance applies to Cost Management and FinOps. |
+| Source basis | Validate the recommendation against the Microsoft Learn sources in this page. |
+| Evidence | Capture command output, portal state, metrics, logs, or screenshots before treating the result as proven. |
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/cost-management-billing/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/cost-management-billing/finops/)

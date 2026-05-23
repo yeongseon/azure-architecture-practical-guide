@@ -144,3 +144,15 @@ When applying any pattern in this guide, collect evidence beyond diagrams:
 - Use [service-selection-patterns.md](service-selection-patterns.md) to frame architecture choices.
 - Use the subfolders in this section to evaluate specific pattern families.
 - Use workload guides to combine patterns into a deployable Azure baseline.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/architecture/microservices/)
+- [Microsoft Learn source 4](https://learn.microsoft.com/en-us/azure/well-architected/)

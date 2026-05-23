@@ -142,6 +142,14 @@ Microservices can improve local autonomy while making system-wide diagnosis hard
 
 Review microservices platforms by asking whether the organization has earned the right to keep the complexity it operates. The best review outcome is a clear answer on service ownership, platform guardrails, and where decomposition creates real value versus distributed overhead.
 
+## Review Matrix
+
+| Review area | Page-specific check |
+|---|---|
+| Scope | Confirm the guidance applies to Microservices Review Playbook. |
+| Source basis | Validate the recommendation against the Microsoft Learn sources in this page. |
+| Evidence | Capture command output, portal state, metrics, logs, or screenshots before treating the result as proven. |
+
 ## See Also
 
 - [Architecture Reviews](../index.md)
@@ -154,3 +162,10 @@ Review microservices platforms by asking whether the organization has earned the
 - https://learn.microsoft.com/en-us/azure/architecture/microservices/design/interservice-communication
 - https://learn.microsoft.com/en-us/azure/architecture/microservices/design/data-considerations
 - https://learn.microsoft.com/en-us/azure/aks/what-is-aks
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/microservices/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/architecture/microservices/design/interservice-communication)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/architecture/microservices/design/data-considerations)
+- [Microsoft Learn source 4](https://learn.microsoft.com/en-us/azure/aks/what-is-aks)

@@ -115,3 +115,15 @@ flowchart TD
 [Inferred] Observability architecture is successful when it shortens diagnosis without overwhelming operators with unowned data.
 
 Collect only what you can explain, route, retain, and act on.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/diagnostic-settings)

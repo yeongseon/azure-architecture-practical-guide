@@ -127,3 +127,18 @@ This baseline works when the platform provides consistent paved roads while leav
 - [Azure Kubernetes Service (AKS) overview](https://learn.microsoft.com/en-us/azure/aks/what-is-aks)
 - [Azure Container Apps overview](https://learn.microsoft.com/en-us/azure/container-apps/overview)
 - [Choose between Azure Container Apps, AKS, and App Service](https://learn.microsoft.com/en-us/azure/container-apps/compare-options)
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Section index](index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/microservices/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/architecture/microservices/design/interservice-communication)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/architecture/microservices/design/data-considerations)
+- [Microsoft Learn source 4](https://learn.microsoft.com/en-us/azure/aks/what-is-aks)
+- [Microsoft Learn source 5](https://learn.microsoft.com/en-us/azure/container-apps/overview)
+- [Microsoft Learn source 6](https://learn.microsoft.com/en-us/azure/container-apps/compare-options)

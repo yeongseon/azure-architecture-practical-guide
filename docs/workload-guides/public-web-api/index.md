@@ -136,3 +136,16 @@ This family fits when public ingress, managed web operations, and predictable AP
 - [Baseline architecture](baseline.md)
 - [Network, edge, and identity decisions](network-edge-and-identity.md)
 - [Data and state decisions](data-and-state.md)
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/reliability/reliability-app-service)
+- [Microsoft Learn source 4](https://learn.microsoft.com/en-us/azure/container-apps/overview)
+- [Microsoft Learn source 5](https://learn.microsoft.com/en-us/azure/container-apps/compare-options)

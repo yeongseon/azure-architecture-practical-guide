@@ -121,3 +121,14 @@ Validate operational excellence through release simulations, drift detection, in
 ## Takeaway
 
 [Validated] Operational excellence is the architecture pillar that proves whether a design can survive real-world change. Good operations are designed, versioned, and exercised.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)

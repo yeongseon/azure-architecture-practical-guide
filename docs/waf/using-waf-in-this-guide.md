@@ -138,3 +138,14 @@ Review at least on initial design, pre-production readiness, post-incident, and 
 ## Takeaway
 
 [Validated] The guide is strongest when WAF is used continuously: design with it, review with it, operate with it, and revisit decisions when evidence changes.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/well-architected/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/assessments/azure-architecture-review/)

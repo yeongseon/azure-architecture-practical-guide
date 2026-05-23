@@ -178,6 +178,14 @@ az group delete \
 - [Resilience Targets: RTO/RPO](../reference/resilience-targets-rto-rpo.md)
 - [Azure Well-Architected Framework — Pillar Trade-offs](../waf/pillar-trade-offs.md)
 
+## Review Matrix
+
+| Review area | Page-specific check |
+|---|---|
+| Scope | Confirm the guidance applies to Stage 5 — Resilience: Multi-Region Active-Passive. |
+| Source basis | Validate the recommendation against the Microsoft Learn sources in this page. |
+| Evidence | Capture command output, portal state, metrics, logs, or screenshots before treating the result as proven. |
+
 ## See Also
 
 - [Resilience and Region Strategy](../platform/resilience-and-region-strategy.md)

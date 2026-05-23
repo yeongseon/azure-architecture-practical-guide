@@ -139,3 +139,12 @@ flowchart TD
 ## Takeaway
 
 Strangler Fig is the default modernization pattern when risk, continuity, and learning matter more than architectural purity. In Azure, Front Door and API Management make incremental redirection practical, but domain slicing and data ownership still determine success.
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/patterns/strangler-fig)

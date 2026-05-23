@@ -119,3 +119,14 @@ flowchart TD
 [Inferred] A landing zone is valuable when it standardizes the hard parts of Azure ownership without smothering workload autonomy.
 
 Design it as an operating model, not as a diagram alone.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-areas)

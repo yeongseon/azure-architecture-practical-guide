@@ -132,3 +132,13 @@ flowchart TD
 ## Takeaway
 
 Treat consistency, partitioning, and replication as linked architecture decisions rather than isolated database settings. On Azure, the right design starts with business correctness boundaries, then chooses partition and replication strategies that scale without hiding failure modes.
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/best-practices/data-partitioning)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/cosmos-db/consistency-levels)

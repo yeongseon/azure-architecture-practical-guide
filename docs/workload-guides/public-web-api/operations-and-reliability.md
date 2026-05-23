@@ -130,3 +130,15 @@ Reliable public workloads combine edge health, safe deployment mechanics, and de
 - [Azure App Service reliability](https://learn.microsoft.com/en-us/azure/reliability/reliability-app-service)
 - [Azure Monitor overview](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
 - [Disaster recovery strategies](https://learn.microsoft.com/en-us/azure/well-architected/reliability/disaster-recovery)
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Section index](index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/reliability/reliability-app-service)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/well-architected/reliability/disaster-recovery)

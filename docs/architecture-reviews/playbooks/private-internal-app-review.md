@@ -141,6 +141,14 @@ Private-only exposure reduces attack surface but often increases operational cou
 
 Review private internal applications by testing the full path from user trust boundary to private dependency, with special attention to DNS, identity, and hybrid connectivity as first-class architecture components. The strongest review finding is often not about a single Azure service choice; it is about whether the operating model can keep private access dependable under real enterprise conditions.
 
+## Review Matrix
+
+| Review area | Page-specific check |
+|---|---|
+| Scope | Confirm the guidance applies to Private Internal App Review Playbook. |
+| Source basis | Validate the recommendation against the Microsoft Learn sources in this page. |
+| Evidence | Capture command output, portal state, metrics, logs, or screenshots before treating the result as proven. |
+
 ## See Also
 
 - [Architecture Reviews](../index.md)
@@ -153,3 +161,10 @@ Review private internal applications by testing the full path from user trust bo
 - https://learn.microsoft.com/en-us/azure/app-service/overview-vnet-integration
 - https://learn.microsoft.com/en-us/azure/azure-monitor/overview
 - https://learn.microsoft.com/en-us/azure/well-architected/
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/app-service/overview-vnet-integration)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
+- [Microsoft Learn source 4](https://learn.microsoft.com/en-us/azure/well-architected/)

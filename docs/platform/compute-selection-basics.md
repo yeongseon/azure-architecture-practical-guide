@@ -125,3 +125,19 @@ flowchart TD
 [Inferred] Compute selection is a staffing and operations decision disguised as a runtime decision.
 
 Prefer the most managed service that still clears the workload's non-negotiable constraints.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-overview)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/app-service/)
+- [Microsoft Learn source 4](https://learn.microsoft.com/en-us/azure/aks/)
+- [Microsoft Learn source 5](https://learn.microsoft.com/en-us/azure/aks/what-is-aks)
+- [Microsoft Learn source 6](https://learn.microsoft.com/en-us/azure/container-apps/overview)
+- [Microsoft Learn source 7](https://learn.microsoft.com/en-us/azure/container-apps/compare-options)

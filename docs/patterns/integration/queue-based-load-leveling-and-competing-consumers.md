@@ -134,3 +134,12 @@ flowchart TD
 ## Takeaway
 
 Queue-Based Load Leveling absorbs burst pressure; Competing Consumers turn buffered work into scalable throughput. In Azure, Service Bus is the default when reliability semantics matter, and Storage Queues are useful when simplicity is enough.
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/patterns/queue-based-load-leveling)

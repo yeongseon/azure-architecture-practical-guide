@@ -154,3 +154,13 @@ flowchart TD
 ## Takeaway
 
 The best Azure service is the one that fits the architectural role with the clearest evidence, smallest avoidable complexity, and strongest alignment to the team's real operating model.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/)

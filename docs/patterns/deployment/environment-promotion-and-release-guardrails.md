@@ -129,3 +129,13 @@ flowchart TD
 ## Takeaway
 
 Use environment promotion and release guardrails to turn deployment progression into an evidence-based operating decision. On Azure, effective promotion combines automated checks, policy enforcement, and post-release verification so production change becomes predictable instead of hopeful.
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/framework/mission-critical/mission-critical-deployment-testing)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/safe-deployments)

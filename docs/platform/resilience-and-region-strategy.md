@@ -112,3 +112,15 @@ Architectural consequences include:
 [Inferred] Resilience architecture is credible only when recovery targets, topology, and drills agree with each other.
 
 Design for the failure domain you can explain and validate.
+
+## See Also
+
+- [Guide home](../index.md)
+- [Section index](index.md)
+- [Start here](../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/reliability/overview)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/reliability/regions-list)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/availability-zones/az-overview)

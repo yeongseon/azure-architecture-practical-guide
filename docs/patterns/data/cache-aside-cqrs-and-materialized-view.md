@@ -138,3 +138,13 @@ flowchart TD
 ## Takeaway
 
 Adopt cache-aside, CQRS, and materialized views when one authoritative write path must serve many fast, specialized read experiences. On Azure, the pattern works best when teams define freshness, replay, and invalidation rules before optimizing for speed.
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/patterns/cache-aside)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs)

@@ -135,3 +135,12 @@ flowchart TD
 ## Takeaway
 
 Choose event-driven architecture when business reactions should be decoupled in time and ownership. On Azure, select Event Grid, Service Bus, or Event Hubs based on semantics first, then throughput and operations second.
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven)

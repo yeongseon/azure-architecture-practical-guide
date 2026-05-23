@@ -130,3 +130,15 @@ Serverless reliability comes from disciplined backlog management, idempotent exe
 - [Azure Functions scale and hosting](https://learn.microsoft.com/en-us/azure/azure-functions/functions-scale)
 - [Azure Monitor overview](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
 - [Durable Functions overview](https://learn.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-overview)
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Section index](index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/azure-functions/functions-scale)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-overview)

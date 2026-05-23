@@ -73,3 +73,9 @@ flowchart TD
 - https://learn.microsoft.com/en-us/azure/well-architected/
 - https://learn.microsoft.com/en-us/azure/architecture/framework/
 - https://learn.microsoft.com/en-us/assessments/azure-architecture-review/
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/well-architected/)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/architecture/framework/)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/assessments/azure-architecture-review/)

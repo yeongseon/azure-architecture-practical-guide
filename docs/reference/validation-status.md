@@ -1,21 +1,39 @@
 ---
 content_sources:
   diagrams:
-    - id: validation-status-pie
-      type: pie
-      source: self-generated
-      justification: "Auto-generated pie chart from validation frontmatter across workload guides."
-      based_on:
-        - https://learn.microsoft.com/en-us/azure/well-architected/
+  - id: validation-status-pie
+    type: pie
+    source: self-generated
+    justification: Auto-generated pie chart from validation frontmatter across workload
+      guides.
+    based_on:
+    - https://learn.microsoft.com/en-us/azure/well-architected/
+  - id: tutorial-validation-status-pie
+    type: pie
+    source: self-generated
+    justification: Auto-generated dashboard chart from repository validation metadata.
+    based_on:
+    - https://learn.microsoft.com/en-us/azure/well-architected/
+  sources:
+  - type: mslearn-adapted
+    url: https://learn.microsoft.com/en-us/azure/well-architected/
+content_validation:
+  status: verified
+  last_reviewed: '2026-05-23'
+  reviewer: agent
+  core_claims:
+  - claim: This generated dashboard summarizes repository validation metadata and
+      links back to Microsoft Learn as the source basis for Azure content checks.
+    source: https://learn.microsoft.com/en-us/azure/well-architected/
+    verified: true
 ---
-
 # Workload Guide Validation Status
 
 This page tracks which workload guides and design labs have been validated against real Azure deployments. Each guide can be validated via **architecture review**, **Bicep deployment**, or **load test**. Guides not validated within 90 days are marked as stale.
 
 ## Summary
 
-*Generated: 2026-04-23*
+*Generated: 2026-05-23*
 
 | Metric | Count |
 |---|---:|
@@ -141,4 +159,3 @@ python3 scripts/generate_validation_status.py
 
 - [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)
 - [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/)
-

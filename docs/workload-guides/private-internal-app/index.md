@@ -126,3 +126,15 @@ Internal application baselines are most effective when application, network, and
 - [Baseline architecture](baseline.md)
 - [Network and access decisions](network-and-access.md)
 - [Data and integration decisions](data-and-integration.md)
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/app-service/overview-vnet-integration)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)
+- [Microsoft Learn source 4](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)

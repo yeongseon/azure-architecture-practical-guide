@@ -130,3 +130,16 @@ Teams can start with simple handlers and add Durable Functions, richer messaging
 ## Next decisions
 
 Continue with [Triggers, state, and storage](triggers-state-and-storage.md) and [Operations and reliability](operations-and-reliability.md) to refine trigger semantics, persistence, and operating controls.
+
+## See Also
+
+- [Guide home](../../index.md)
+- [Section index](index.md)
+- [Start here](../../start-here/overview.md)
+
+## Sources
+
+- [Microsoft Learn source 1](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/serverless/web-app)
+- [Microsoft Learn source 2](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview)
+- [Microsoft Learn source 3](https://learn.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings)
+- [Microsoft Learn source 4](https://learn.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-overview)
