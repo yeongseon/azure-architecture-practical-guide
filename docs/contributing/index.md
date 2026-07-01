@@ -127,7 +127,9 @@ Brief introduction
 ```bash
 # ALWAYS use long flags for readability
 az group create --name $RG --location $LOCATION
+```
 
+```text
 # NEVER use short flags in documentation
 az group create -n $RG -l $LOCATION  # ❌ Don't do this
 ```

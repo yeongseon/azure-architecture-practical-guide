@@ -1,15 +1,18 @@
 ---
 content_sources:
-  - type: self-generated
-    justification: "Navigation index for the Architecture Reviews section, synthesized from Azure Well-Architected Framework review guidance and Azure Architecture Center methodology."
-    based_on:
-      - https://learn.microsoft.com/en-us/azure/well-architected/
-      - https://learn.microsoft.com/en-us/azure/architecture/framework/
-      - https://learn.microsoft.com/en-us/assessments/azure-architecture-review/
+  diagrams:
+    - id: architecture-reviews-methodology
+      type: flowchart
+      source: self-generated
+      justification: "Navigation index for the Architecture Reviews section, synthesized from Azure Well-Architected Framework review guidance and Azure Architecture Center methodology."
+      based_on:
+        - https://learn.microsoft.com/en-us/azure/well-architected/
+        - https://learn.microsoft.com/en-us/azure/architecture/framework/
+        - https://learn.microsoft.com/en-us/assessments/azure-architecture-review/
 ---
 # Architecture Reviews
 
-Architecture Reviews provide a structured methodology for evaluating Azure workloads against the Well-Architected Framework pillars. This section covers decision trees, evidence-based review playbooks, common anti-patterns, and migration strategies.
+[Documented] Architecture Reviews provide a structured methodology for evaluating Azure workloads against the Well-Architected Framework pillars, grounded in Microsoft Learn Well-Architected guidance and Azure Architecture Center methodology. This section covers decision trees, evidence-based review playbooks, common anti-patterns, and migration strategies.
 
 ## Sections
 
