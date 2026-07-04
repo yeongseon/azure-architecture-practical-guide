@@ -6,17 +6,19 @@ Comprehensive guide for designing, reviewing, and operating Azure architectures 
 
 ## What's Inside
 
-| Section | Description |
-|---------|-------------|
-| [Start Here](https://yeongseon.github.io/azure-architecture-practical-guide/) | Overview, learning paths, repository map, and how to use the guide |
-| [Platform](https://yeongseon.github.io/azure-architecture-practical-guide/platform/) | Azure architecture foundations including landing zones, identity, networking, compute, data, and resilience |
-| [Well-Architected Framework](https://yeongseon.github.io/azure-architecture-practical-guide/waf/) | Reliability, Security, Cost Optimization, Operational Excellence, and Performance Efficiency guidance |
-| [Architecture Patterns](https://yeongseon.github.io/azure-architecture-practical-guide/patterns/) | Proven decomposition, integration, data, resilience, networking, security, and deployment patterns |
-| [Workload Guides](https://yeongseon.github.io/azure-architecture-practical-guide/workload-guides/) | Practical blueprints for public web, internal apps, integration, serverless, microservices, data, and AI workloads |
-| [Operations](https://yeongseon.github.io/azure-architecture-practical-guide/operations/) | ADRs, IaC, governance guardrails, observability, FinOps, and continuity practices |
-| [Architecture Reviews](https://yeongseon.github.io/azure-architecture-practical-guide/architecture-reviews/) | Decision tree, evidence map, first-60-minutes reviews, anti-patterns, and migration playbooks |
-| [Design Labs](https://yeongseon.github.io/azure-architecture-practical-guide/design-labs/) | Guided design exercises for common Azure workload scenarios |
-| [Reference](https://yeongseon.github.io/azure-architecture-practical-guide/reference/) | Decision matrices, service selection cheatsheets, mappings, glossary, and validation status |
+| Section | Description | Status |
+|---------|-------------|--------|
+| [Start Here](https://yeongseon.github.io/azure-architecture-practical-guide/) | Overview, learning paths, repository map, and how to use the guide | Comprehensive |
+| [Platform](https://yeongseon.github.io/azure-architecture-practical-guide/platform/) | Azure architecture foundations including landing zones, identity, networking, compute, data, and resilience | Comprehensive |
+| [Well-Architected Framework](https://yeongseon.github.io/azure-architecture-practical-guide/waf/) | Reliability, Security, Cost Optimization, Operational Excellence, and Performance Efficiency guidance | Comprehensive |
+| [Architecture Patterns](https://yeongseon.github.io/azure-architecture-practical-guide/patterns/) | Proven decomposition, integration, data, resilience, networking, security, and deployment patterns | Comprehensive |
+| [Workload Guides](https://yeongseon.github.io/azure-architecture-practical-guide/workload-guides/) | Practical blueprints for public web, internal apps, integration, serverless, microservices, data, and AI workloads | Comprehensive |
+| [Operations](https://yeongseon.github.io/azure-architecture-practical-guide/operations/) | ADRs, IaC, governance guardrails, observability, FinOps, and continuity practices | Comprehensive |
+| [Architecture Reviews](https://yeongseon.github.io/azure-architecture-practical-guide/architecture-reviews/) | Decision tree, evidence map, first-60-minutes reviews, anti-patterns, and migration playbooks | In progress |
+| [Design Labs](https://yeongseon.github.io/azure-architecture-practical-guide/design-labs/) | Guided design exercises for common Azure workload scenarios | Published |
+| [Reference](https://yeongseon.github.io/azure-architecture-practical-guide/reference/) | Decision matrices, service selection cheatsheets, mappings, glossary, and validation status | Comprehensive |
+
+**Status legend**: **Lab-validated** = Comprehensive + reproducible labs prove the guidance · **Comprehensive** = Full section, MSLearn-verified, production-ready · **Published** = Core content in place, still expanding · **In progress** = Partial content, active development · **Planned** = Placeholder, content not yet started
 
 ## Quick Start
 
