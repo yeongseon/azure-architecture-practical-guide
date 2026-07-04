@@ -97,6 +97,7 @@ nav:
     - start-here/index.md
     - start-here/overview.md
     - start-here/learning-paths.md
+    - start-here/scenario-router.md
     - start-here/how-to-use-this-guide.md
     - start-here/architecture-vs-service-guides.md
     - start-here/repository-map.md

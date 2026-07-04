@@ -252,6 +252,7 @@ What to focus on:
 ## See Also
 
 - [Overview](overview.md)
+- [Scenario Router](scenario-router.md) — situation-to-destination index across Design, Build, Operate, and Review
 - [How to Use This Guide](how-to-use-this-guide.md)
 - [Architecture vs Service Guides](architecture-vs-service-guides.md)
 - [Repository Map](repository-map.md)

@@ -98,6 +98,14 @@ Signals that a page likely belongs elsewhere:
 
 - [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/)
 
+## See Also
+
+- [Overview](overview.md) — what this guide is and who it's for
+- [Learning Paths](learning-paths.md) — role-based reading order
+- [Scenario Router](scenario-router.md) — situation-to-destination index across Design, Build, Operate, and Review
+- [Architecture vs Service Guides](architecture-vs-service-guides.md) — scope positioning
+- [How to Use This Guide](how-to-use-this-guide.md) — reader navigation guidance
+
 ## Takeaway
 
 [Inferred] The published Phase 1 repository is organized to move readers from fundamentals to patterns, workloads, operations, and design labs.

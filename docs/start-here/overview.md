@@ -113,6 +113,15 @@ flowchart TD
 - [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/)
 - [Architecture Center guides](https://learn.microsoft.com/en-us/azure/architecture/guide/)
 
+## See Also
+
+- [Learning Paths](learning-paths.md) — role-based reading order
+- [Scenario Router](scenario-router.md) — situation-to-destination index across Design, Build, Operate, and Review
+- [Architecture vs Service Guides](architecture-vs-service-guides.md) — scope positioning
+- [Repository Map](repository-map.md) — full section map
+- [Platform Hub](../platform/index.md) — Azure architecture foundations
+- [Well-Architected Framework Hub](../waf/index.md) — pillar-based evaluation
+
 ## Takeaway
 
 [Inferred] Read this repository as a decision system.

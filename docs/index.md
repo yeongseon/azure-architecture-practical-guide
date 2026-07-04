@@ -75,6 +75,16 @@ flowchart TD
 
 Architecture Reviews are planned for Phase 2. In the current published Phase 1 site, the practical path runs from Start Here through Platform, Well-Architected Framework, Patterns, Workload Guides, Operations, Design Labs, and Reference.
 
+## See Also
+
+- [Overview](start-here/overview.md) — what this guide is and who it's for
+- [Learning Paths](start-here/learning-paths.md) — role-based reading order
+- [Scenario Router](start-here/scenario-router.md) — situation-to-destination index across Design, Build, Operate, and Review
+- [Architecture vs Service Guides](start-here/architecture-vs-service-guides.md) — scope positioning
+- [Repository Map](start-here/repository-map.md) — full section map
+- [Platform Hub](platform/index.md) — Azure architecture foundations
+- [Well-Architected Framework Hub](waf/index.md) — pillar-based evaluation
+
 ## Scope and disclaimer
 
 This is an independent community project. Not affiliated with or endorsed by Microsoft.
