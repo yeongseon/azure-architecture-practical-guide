@@ -23,6 +23,7 @@ Use this section for fast comparisons, selection aids, and validation tracking. 
 | [Network Topology Cheatsheet](network-topology-cheatsheet.md) | Compare hub-spoke, Virtual WAN, and flat VNet models. |
 | [Resilience Targets: RTO/RPO](resilience-targets-rto-rpo.md) | Align recovery targets to workload tier. |
 | [WAF Pillar to Pattern Map](waf-pillar-to-pattern-map.md) | Connect Well-Architected priorities to patterns. |
+| [Series Portal](series-portal.md) | Route from architecture decisions to sibling deep-guide repositories. |
 | [Content Validation Status](content-validation-status.md) | Track content evidence and review state. |
 | [Validation Status](validation-status.md) | Track tutorial and lab test status. |
 
