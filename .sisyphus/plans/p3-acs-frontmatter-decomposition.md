@@ -1,6 +1,21 @@
 # P3-ACS: Canonical content_sources.diagrams Migration + Validator Enablement — Decomposition Plan
 
-**Status**: DRAFT — Migration plan approved. Awaiting wave execution.
+**Status**: COMPLETE (2026-07-05). All 8 waves shipped; strict CI enforcement live on ACS.
+**Tracker**: [yeongseon/azure-communication-services-practical-guide#15](https://github.com/yeongseon/azure-communication-services-practical-guide/issues/15) (closed)
+**Final validator state**: 0 errors across 56 mermaid-bearing pages
+**Wave commits (on `yeongseon/azure-communication-services-practical-guide` main)**:
+
+| Wave | Section | Files | Commit |
+|---|---|---|---|
+| 0 | Validator bootstrap | 5 (scripts + workflow) | `9825dee` |
+| 1 | Platform | 9 | `2a2115b` |
+| 2 | Best Practices | 8 | `ae53710` |
+| 3 | Operations | 9 | `071b5c9` |
+| 4 | Troubleshooting | 6 | `834e81f` |
+| 5 | SDK Guides | 9 | `c18de34` |
+| 6 | Leftovers | 11 | `7fd704b` |
+| 7 | Strict CI flip | 1 | `2a59d1e` |
+
 **Scope**: Single repo (ACS = azure-communication-services-practical-guide). Frontmatter `content_sources` provenance schema migration + validator bootstrap.
 **Author**: Sisyphus (agent) with Oracle consultation
 **Predecessor audit**: [P2-1 (#36, closed)](https://github.com/yeongseon/azure-architecture-practical-guide/issues/36) — [`p2-frontmatter-audit.md`](https://github.com/yeongseon/azure-architecture-practical-guide/blob/main/.sisyphus/plans/p2-frontmatter-audit.md)
