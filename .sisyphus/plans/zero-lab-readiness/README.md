@@ -95,16 +95,16 @@ after first lab lands or after two repos complete P4."*
 
 ## Followup Issue Inventory
 
-All P4-ZLR issue slugs across the wave:
+All 19 P4-ZLR issues registered on 2026-07-05 at architecture commit `58e5929`:
 
-| Repo | Slug | Issue count |
-|---|---|---|
-| virtual-machine | `vm` | 4 issues (01-04) |
-| networking | `networking` | 4 issues (01-04) |
-| storage | `storage` | 4 issues (01-04) |
-| monitoring | `monitoring` | 4 issues (01-04) |
+| Repo | Slug | Parent | Children |
+|---|---|---|---|
+| virtual-machine | `vm` | [#22](https://github.com/yeongseon/azure-virtual-machine-practical-guide/issues/22) | [#23](https://github.com/yeongseon/azure-virtual-machine-practical-guide/issues/23), [#24](https://github.com/yeongseon/azure-virtual-machine-practical-guide/issues/24), [#25](https://github.com/yeongseon/azure-virtual-machine-practical-guide/issues/25), [#26](https://github.com/yeongseon/azure-virtual-machine-practical-guide/issues/26) |
+| networking | `networking` | [#21](https://github.com/yeongseon/azure-networking-practical-guide/issues/21) | [#22](https://github.com/yeongseon/azure-networking-practical-guide/issues/22), [#23](https://github.com/yeongseon/azure-networking-practical-guide/issues/23), [#24](https://github.com/yeongseon/azure-networking-practical-guide/issues/24) |
+| storage | `storage` | [#20](https://github.com/yeongseon/azure-storage-practical-guide/issues/20) | [#21](https://github.com/yeongseon/azure-storage-practical-guide/issues/21), [#22](https://github.com/yeongseon/azure-storage-practical-guide/issues/22), [#23](https://github.com/yeongseon/azure-storage-practical-guide/issues/23), [#24](https://github.com/yeongseon/azure-storage-practical-guide/issues/24) |
+| monitoring | `monitoring` | [#13](https://github.com/yeongseon/azure-monitoring-practical-guide/issues/13) | [#14](https://github.com/yeongseon/azure-monitoring-practical-guide/issues/14), [#15](https://github.com/yeongseon/azure-monitoring-practical-guide/issues/15), [#16](https://github.com/yeongseon/azure-monitoring-practical-guide/issues/16), [#17](https://github.com/yeongseon/azure-monitoring-practical-guide/issues/17) |
 
-Total: 4 parent issues + 16 child issues = 20 GitHub issues to open across 4 repos.
+Total: 4 parent issues + 15 child issues = 19 GitHub issues across 4 repos.
 
 Naming convention (frozen at wave start):
 
@@ -116,10 +116,10 @@ Naming convention (frozen at wave start):
 | File | Purpose | Line count |
 |---|---|---|
 | `README.md` | This coordinator synthesis (you are here) | — |
-| `azure-virtual-machine-practical-guide.md` | VM audit plan | 330 |
-| `azure-networking-practical-guide.md` | Networking audit plan | 270 |
-| `azure-storage-practical-guide.md` | Storage audit plan | 222 |
-| `azure-monitoring-practical-guide.md` | Monitoring audit plan | 271 |
+| `azure-virtual-machine-practical-guide.md` | VM audit plan | 378 |
+| `azure-networking-practical-guide.md` | Networking audit plan | 305 |
+| `azure-storage-practical-guide.md` | Storage audit plan | 270 |
+| `azure-monitoring-practical-guide.md` | Monitoring audit plan | 319 |
 | `azure-app-service-practical-guide.md` | Exclusion note (not zero-lab) | 66 |
 
 ## Wave Methodology
