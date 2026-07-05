@@ -116,6 +116,10 @@ If orders are accepted through a thin API and durably queued in Service Bus befo
 
 For event-driven order processing on Azure, Service Bus plus Functions, Cosmos DB, and Event Grid is a practical baseline when durable intake, decoupled scale, and resilient downstream integration matter more than immediate cross-system consistency. Prove idempotency and backlog behavior before production rollout.
 
+## Clean Up
+
+No cleanup is required. This design lab is a paper exercise; no Azure resources were provisioned.
+
 ## Microsoft Learn references
 
 - https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven

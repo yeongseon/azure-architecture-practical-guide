@@ -116,6 +116,10 @@ If the workload uses Front Door for edge protection and routing, App Service for
 
 For a public-facing Azure web application, Front Door plus zone-redundant App Service, Azure SQL, Key Vault, and Azure Monitor is the recommended starting point when the goal is strong security and reliability with manageable operational overhead. Validate it with load, cost, and failure testing before standardizing.
 
+## Clean Up
+
+No cleanup is required. This design lab is a paper exercise; no Azure resources were provisioned.
+
 ## Microsoft Learn references
 
 - https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant

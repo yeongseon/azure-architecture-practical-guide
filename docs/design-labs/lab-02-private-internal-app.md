@@ -118,6 +118,10 @@ If ingress uses an App Service Private Endpoint, platform dependencies are reach
 
 For a private internal Azure application, App Service Private Endpoint for ingress plus outbound VNet integration and private data dependencies provides a strong baseline when the goal is to remove internet exposure without adopting a heavier compute platform. Validate DNS, routing, and operational ownership early.
 
+## Clean Up
+
+No cleanup is required. This design lab is a paper exercise; no Azure resources were provisioned.
+
 ## Microsoft Learn references
 
 - https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
