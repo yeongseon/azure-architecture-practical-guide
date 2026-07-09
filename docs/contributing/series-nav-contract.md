@@ -74,7 +74,7 @@ Adds these SHOULD elements on top of the MUST tier:
 | D3 | **Operations** | Fifth | Day-2 execution procedures. Series-wide standard section. |
 | D4 | **Troubleshooting** | Sixth (immediately after Operations) | Symptom-based diagnosis and playbooks. Positioned adjacent to Operations because the two sections are cross-linked heavily. |
 
-Approved 문서형 extensions (MAY sit between D3 and D4 or after D4, at the repo owner's discretion):
+Approved 문서형 extensions (MAY sit between D2 and D3, between D3 and D4, or after D4, at the repo owner's discretion):
 
 - `Tutorials` — hands-on labs or reproducible walkthroughs (used by networking, storage).
 - `Well-Architected Framework` — WAF pillar guidance (used by architecture).
