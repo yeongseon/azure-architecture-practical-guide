@@ -4,7 +4,7 @@
 **Date**: 2026-07-09
 **Coordinator**: Sisyphus
 **Meta-tracker**: [azure-architecture-practical-guide#42](https://github.com/yeongseon/azure-architecture-practical-guide/issues/42)
-**Oracle strategic call**: Phase 3.11 (session `ses_0c9fa347cffeQv11ROULLRjMNp`)
+**Oracle strategic calls**: Phase 3.11 (initial GO/GO/GO on all 3 artifacts) + Phase 3.12 (Artifact 01 canonical-URL correction) — SYNC session `ses_0c9fa347cffeQv11ROULLRjMNp`
 
 ## Purpose
 
@@ -25,11 +25,11 @@ These 3 artifacts are approved (GO / GO / GO) design work that unblocks fast exe
 
 ## Artifacts
 
-| # | Artifact | Scope | Blocked on |
-|---:|---|---|---|
-| 01 | [Duplicate-cleanup redirect maps](01-duplicate-cleanup-redirect-maps.md) | VM, Networking, Functions — file consolidation + inbound reference updates | P5 merge for those 3 repos |
-| 02 | [Functions 2A generalization edit plan](02-functions-2a-generalization-plan.md) | Functions `cross-guide-baseline.md` — remove Functions-specific bits before Architecture promotion | P5 Functions merge, plus this artifact must land before Subwave 2B |
-| 03 | [Nav remediation outlines (#111, #18)](03-nav-remediation-outlines.md) | App Service and ACS — concrete implementation sketch for each of the 3 options in each issue | P5 merge for app-service and ACS |
+| # | Artifact | Scope | Blocked on | Oracle history |
+|---:|---|---|---|---|
+| 01 | [Duplicate-cleanup redirect maps](01-duplicate-cleanup-redirect-maps.md) | VM, Networking, Functions — file consolidation + inbound reference updates | P5 merge for those 3 repos | Phase 3.11 GO → Phase 3.12 IA + link-gravity correction applied for VM/Networking (commit `86f6d26`) |
+| 02 | [Functions 2A generalization edit plan](02-functions-2a-generalization-plan.md) | Functions `cross-guide-baseline.md` — remove Functions-specific bits before Architecture promotion | P5 Functions merge, plus this artifact must land before Subwave 2B | Phase 3.11 GO → Phase 3.12 GO (Example-block strategy affirmed) |
+| 03 | [Nav remediation outlines (#111, #18)](03-nav-remediation-outlines.md) | App Service and ACS — concrete implementation sketch for each of the 3 options in each issue | P5 merge for app-service and ACS | Phase 3.11 GO → Phase 3.12 GO (Option B default; Option C only if >12 children) |
 
 ## Guardrails observed
 
@@ -60,6 +60,6 @@ Per Oracle Phase 3.11 discipline directive:
 ## References
 
 - Wave 2 meta: [azure-architecture-practical-guide#42](https://github.com/yeongseon/azure-architecture-practical-guide/issues/42)
-- Oracle session: `ses_0c9fa347cffeQv11ROULLRjMNp` (Phase 3.11, 37s SYNC)
+- Oracle session: `ses_0c9fa347cffeQv11ROULLRjMNp` (Phase 3.11 initial approval 37s SYNC + Phase 3.12 correction review 2m 0s SYNC, both same session)
 - Series Nav Contract v1.1: [`docs/contributing/series-nav-contract.md`](../../../docs/contributing/series-nav-contract.md)
 - Series Lab Contract v1: [`docs/contributing/series-lab-contract.md`](../../../docs/contributing/series-lab-contract.md)

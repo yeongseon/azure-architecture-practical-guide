@@ -1,4 +1,4 @@
-# Series Navigation Contract v1
+# Series Navigation Contract v1.1
 
 Series-wide contract defining what the top-level `mkdocs.yml` navigation MUST, SHOULD, and MAY contain across the Azure Practical Guide series, plus two structural archetypes (documentation-first and code-first) that keep archetype-appropriate depth without forcing identical navigation.
 
