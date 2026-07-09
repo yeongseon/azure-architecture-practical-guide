@@ -2,7 +2,7 @@
 
 Series-wide contract defining what the top-level `mkdocs.yml` navigation MUST, SHOULD, and MAY contain across the Azure Practical Guide series, plus two structural archetypes (documentation-first and code-first) that keep archetype-appropriate depth without forcing identical navigation.
 
-**Status**: v1 — approved via Oracle strategic review 2026-07-09 (Wave 2 Phase 3.7 of the cross-repo standardization program).
+**Status**: v1.1 — approved via Oracle strategic review 2026-07-09 (Wave 2 Phase 3.7). Amended 2026-07-09 to (a) allow archetype extensions to sit between D2 and D3 (Wave 2 Phase 3.10) and (b) relax the direct-children-per-section budget from MUST to SHOULD while adding a >12 outlier MUST guardrail (Wave 2 Phase 3.11).
 **Scope**: 10 sibling `azure-*-practical-guide` repos.
 **Predecessors**:
 
@@ -30,7 +30,7 @@ Top-level `mkdocs.yml` navigation across the series is asymmetric in size and in
 
 The 문서형 repos organize around service concepts, operations, and troubleshooting playbooks. The 코드형 repos add per-language or per-plan tutorial matrices that expand the nav by 100-350 lines. Section vocabulary drifts: some repos use `Tutorials`, others `Language Guides`, others `SDK Guides`, others `Workload Guides`. Ordering drifts too — `Contributing` sometimes precedes `Reference`, `Troubleshooting` sometimes precedes `Operations`.
 
-**What this contract IS.** A short, testable definition of the four navigation elements every repo MUST have, plus two archetype-specific SHOULD tiers (문서형 and 코드형) that keep archetype-appropriate depth without forcing identical navigation. It bounds nav budget (6-9 top-level items, 5-8 children) and pins ordering so a reader moving between repos always knows where `Start Here`, `Reference`, and `Contributing` will be.
+**What this contract IS.** A short, testable definition of the four navigation elements every repo MUST have, plus two archetype-specific SHOULD tiers (문서형 and 코드형) that keep archetype-appropriate depth without forcing identical navigation. It bounds nav budget (6-9 top-level items MUST, 5-8 children SHOULD with a >12 outlier MUST guardrail) and pins ordering so a reader moving between repos always knows where `Start Here`, `Reference`, and `Contributing` will be.
 
 **What this contract IS NOT.** It is not a mandate that every repo MUST use the same section names or the same section count. Archetype variation is expected. Repo-specific sections (`Well-Architected Framework`, `Architecture Reviews`, `Design Labs`, `Language Guides`, `SDK Guides`, `Workload Guides`, `Service Guides`) remain the repo owner's choice within the archetype's SHOULD tier.
 
@@ -38,7 +38,7 @@ The 문서형 repos organize around service concepts, operations, and troublesho
 
 1. **Archetype-based, not identical.** Do NOT copy Container Apps' 534-line nav or Networking's 185-line nav as a series-wide template. The 코드형 repos need the language/plan matrix; the 문서형 repos do not. Both archetypes are compliant when they satisfy the MUST tier and their archetype's SHOULD tier.
 2. **MUST / SHOULD / MAY** — not P0/P1/P2. These are contract tiers, not issue priorities. MUST is enforceable in review; SHOULD is expected unless justified in the PR description; MAY is optional depth.
-3. **Nav budget is enforceable.** 6-9 top-level items, 5-8 children per section, matching the recommendation documented in `azure-container-apps-practical-guide/AGENTS.md` § Navigation Budget. Repos exceeding the budget MUST document the exception in this contract's Per-Repo Applicability table (§ 7) OR in the repo's `AGENTS.md`.
+3. **Nav budget is enforceable.** Top-level sections MUST stay between 6 and 9 items (MUST 5). Direct children per top-level section SHOULD stay between 5 and 8, with a hard MUST guardrail at more than 12 direct children (MUST 6). This matches the recommendation documented in `azure-container-apps-practical-guide/AGENTS.md` § Navigation Budget for the base range, tightened at the extreme-outlier case to prevent nav explosion. Repos exceeding the top-level budget or triggering the outlier guardrail MUST document the exception in § 7 or in the repo's `AGENTS.md`.
 4. **Deep inventory belongs on hub pages, not in `mkdocs.yml`.** Playbook catalogs, KQL query packs, lab guides, tutorial matrices, and per-language recipes SHOULD be listed on index pages inside `docs/`, not fully expanded in `mkdocs.yml`. A reader should be able to skim `mkdocs.yml` and understand the site's shape in under a minute.
 5. **Ordering is pinned, section vocabulary is not.** Start Here always follows Home. Reference always precedes Contributing. Troubleshooting always follows Operations. Repo owners choose section names within these anchors (e.g., `Tutorials` vs `Language Guides` vs `SDK Guides`).
 6. **Adoption is not obligation.** Adopting this contract does not require a repo to add or remove sections beyond the MUST tier. Adopting means: *if* the repo edits its `mkdocs.yml` nav, the change will follow this contract.
@@ -54,10 +54,12 @@ Every repo's `mkdocs.yml` nav MUST contain the following elements. Element names
 | 2 | **Start Here** | Second (immediately after Home) | Nav entry named `Start Here` containing at minimum `overview.md`, `learning-paths.md`, `repository-map.md` per the series Start Here Rules. |
 | 3 | **Reference** | Second-to-last (before Contributing, or last if no Contributing) | Nav entry named `Reference` containing at minimum a landing page (`reference/index.md`) and a validation dashboard (`reference/validation-status.md` or `reference/content-validation-status.md`). |
 | 4 | **Contributing** | Last (if present) | Nav entry named `Contributing` containing at minimum `contributing/index.md`. Optional — repos MAY omit it, but if present it MUST be last. |
-| 5 | **Nav budget** | — | Top-level sections between 6 and 9 items. Direct children under a top-level section between 5 and 8 items. Exceptions MUST be documented in § 7 or in the repo's `AGENTS.md`. |
-| 6 | **Deep inventory on hub pages** | — | No single top-level section fully expands a collection of >8 items in `mkdocs.yml`. Playbook catalogs, lab guides, KQL packs, and tutorial matrices MUST live on index pages under `docs/`, not as inline nav children. |
+| 5 | **Nav budget (top-level)** | — | Top-level sections between 6 and 9 items. Exceptions MUST be documented in § 7 or in the repo's `AGENTS.md`. |
+| 6 | **Deep inventory on hub pages + extreme-outlier guardrail** | — | Playbook catalogs, lab guides, KQL packs, per-language recipe matrices, and other deep inventories MUST live on index pages under `docs/`, not as inline nav children. Any top-level section with **more than 12 direct children** in `mkdocs.yml` MUST document justification in the repo's `AGENTS.md` or in § 7 of this contract. |
 
 Elements 1-4 are position-enforcing. Elements 5-6 are budget-enforcing. All six are MUST — a repo failing any of them fails the contract.
+
+**SHOULD tier — Direct children per section:** Each top-level section SHOULD contain between 5 and 8 direct children in `mkdocs.yml`. Sections with 9-12 direct children are permitted without formal justification but SHOULD document the rationale in `mkdocs.yml` (comment near the section) or in the repo's `AGENTS.md`. Sections with more than 12 direct children trigger the MUST 6 outlier guardrail and require explicit justification. This SHOULD reflects the recommendation documented in `azure-container-apps-practical-guide/AGENTS.md` § Navigation Budget; the >12 outlier case is tightened to MUST at the series level to prevent nav explosion (empirically, 9 of 10 sibling repos have at least one section over the 5-8 SHOULD range, so the SHOULD relaxation is calibrated to observed baseline practice).
 
 ## 4. Archetype 문서형 — Documentation-First Repos
 
@@ -140,10 +142,10 @@ Explicit anti-patterns:
 | storage | 문서형 | Fully compliant | Standard 문서형 shape. |
 | monitoring | 문서형 | Fully compliant | Uses `Service Guides` extension (approved in § 4). |
 | aks | 문서형 | Fully compliant | Standard 문서형 shape. |
-| architecture | 문서형 | Compliant with pre-approved +2 exception | Uses `Well-Architected Framework`, `Architecture Patterns`, `Workload Guides`, `Architecture Reviews`, `Design Labs` extensions together. 11 top-level sections, 231 nav lines. Pre-approved. |
+| architecture | 문서형 | Compliant with pre-approved +2 exception and one MUST 6 outlier | Uses `Well-Architected Framework`, `Architecture Patterns`, `Workload Guides`, `Architecture Reviews`, `Design Labs` extensions together. 11 top-level sections, 231 nav lines. Pre-approved. Reference section has 14 direct children — pre-approved MUST 6 outlier (see § 3); Reference is a quick-lookup surface where hub-page collapse would harm discoverability. |
 | communication-services | 코드형 | Fully compliant | Uses `SDK Guides` variant of C3. |
 | app-service | 코드형 | Fully compliant | Standard 코드형 shape. |
-| container-apps | 코드형 | Compliant with pre-approved +2 exception | 534-line nav from language × recipe expansion. Pre-approved. Container Apps' `AGENTS.md` § Navigation Budget documents the local hub-page preference. Container Apps SHOULD progressively move the language-guide recipe children onto `docs/language-guides/*/index.md` hub tables as opportunity arises. |
+| container-apps | 코드형 | Compliant with pre-approved +2 exception and three MUST 6 outliers | 534-line nav from language × recipe expansion. Pre-approved. Container Apps' `AGENTS.md` § Navigation Budget documents the local hub-page preference. Platform section has 13 direct children, Best Practices has 19, Operations has 15 — pre-approved MUST 6 outliers (see § 3). Container Apps SHOULD progressively collapse these onto hub pages under `docs/*/index.md` as opportunity arises; the § Navigation Budget section in the repo's `AGENTS.md` is the local governing document for that migration. |
 | functions | 코드형 | Compliant with pre-approved +2 exception | 447-line nav from 4-language × 4-plan × 7-step tutorial matrix. Pre-approved. Functions SHOULD progressively collapse the plan-dimension children onto a hub matrix table on `docs/language-guides/index.md` as opportunity arises. |
 
 Any repo that adds a new top-level section beyond its archetype's SHOULD tier MUST update this table in the same PR.
