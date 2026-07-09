@@ -159,7 +159,7 @@ Any repo that adds a new top-level section beyond its archetype's SHOULD tier MU
 ## 9. Governance
 
 - **Meta-tracker location**: This repository (`azure-architecture-practical-guide`) as the neutral series governance hub.
-- **Per-repo trackers**: Each of the 10 sibling repos carries a `Series Standardization Tracker` issue.
+- **Per-repo trackers**: Affected sibling repos may carry per-repo child issues under the current series meta tracker as needed. There is no requirement that every sibling repo maintain a standing tracker; trackers are opened by exception when a repo has active series-wide work in flight.
 - **Amendment process**: Changes to this contract require a PR against this file. Container Apps' `AGENTS.md` may extend the contract locally without amendment; other repos may not.
 - **Enforcement**: Nav-budget compliance is verified by human review at PR time. There is no automated `mkdocs.yml` linter in this contract's scope. If a repo owner wants automated enforcement, they SHOULD add it in a follow-up per-repo issue.
 
