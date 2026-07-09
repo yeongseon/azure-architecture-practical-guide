@@ -15,7 +15,7 @@
 
 ## Executive summary
 
-Three sibling repositories carry duplicate documentation pairs where a **richer canonical page** coexists with a **thinner stub page** covering the same topic. Both pages are wired into `mkdocs.yml`; both are reachable via search; both attract inbound cross-links from operations, platform, and troubleshooting hub pages. This creates three real problems for readers:
+Three sibling repositories carry duplicate documentation pairs where **two pages cover the same topic** — for VM and Networking, one at a categorized subpath URL and one at a flat URL; for Functions, a modern superset alongside an older superseded file. In all three pairs both pages are wired into `mkdocs.yml`; both are reachable via search; both attract inbound cross-links from operations, platform, and troubleshooting hub pages. This creates three real problems for readers:
 
 1. **Split authority** — Two pages appearing side-by-side in search results (e.g., `disk-performance-issues` and `performance/disk-performance-issues`) force the reader to guess which is authoritative.
 2. **Inconsistent evidence** — Fixes and revisions applied to one page are not applied to the other; over time the pages drift factually.
@@ -48,9 +48,9 @@ Every sibling repo builds from a two-plugin base (`mkdocs-material` and `mkdocs-
 
 | Repo | Recommended path | Justification |
 |---|---|---|
-| VM | Path A (add plugin) | 8 inbound refs to the loser URL and Google Search indexing has been stable for ≥6 months on the current URL. Reader impact of a 404 is meaningful. |
-| Networking | Path A (add plugin) | 12 inbound refs to the loser URL. Same Google Search stability. Highest inbound-ref count of the three. |
-| Functions | Path B (fallback) | Only 3 inbound refs; content-validation dashboard already lists both pages so the migration is visible; low external inbound-link exposure. |
+| VM | Path A (add plugin) | External Google Search indexing on the flat (loser) URL has been stable for ≥6 months; Path A preserves those external inbound links via `<meta http-equiv=refresh>`. Internal inbound refs are already 8-of-9 on the canonical subpath URL, so the internal rewrite is minimal (1 ref). |
+| Networking | Path A (add plugin) | Highest external inbound-link exposure of the three pairs — long-standing Google Search indexing on the flat (loser) URL; DNS troubleshooting content is a popular external landing target. Path A preserves those external inbound links. Internal inbound refs are already 12-of-14 on the canonical subpath URL, so the internal rewrite is minimal (2 refs). |
+| Functions | Path B (fallback) | Only 3 internal refs; content-validation dashboard already lists both pages so the migration is visible; low external inbound-link exposure. |
 
 Repo owners MAY choose Path B for VM and Networking too — the plugin add is an optional quality-of-service upgrade, not a MUST.
 
@@ -65,7 +65,8 @@ plugins:
   - redirects:
       redirect_maps:
         # <loser-relative-path>: <canonical-relative-path>
-        'troubleshooting/playbooks/performance/disk-performance-issues.md': 'troubleshooting/playbooks/disk-performance-issues.md'
+        # For VM: flat URL redirects to the categorized subpath URL
+        'troubleshooting/playbooks/disk-performance-issues.md': 'troubleshooting/playbooks/performance/disk-performance-issues.md'
 ```
 
 ```txt
@@ -81,16 +82,24 @@ mkdocs-redirects>=1.2.1
 
 ## Repo 1 of 3 — VM `disk-performance-issues`
 
+### Canonical-URL selection rationale (Oracle Phase 3.12 correction)
+
+Oracle Phase 3.12 verdict: canonical-URL choice for VM must be driven by **intended information architecture + current link gravity**, NOT by file size. Applied to this pair:
+
+- **Link gravity**: 8 of the 9 inbound refs already point at the categorized subpath URL (`performance/disk-performance-issues.md`). Keeping the subpath URL preserves 8 refs; keeping the flat URL requires rewriting 8 refs.
+- **Information architecture**: The subpath URL sits inside `playbooks/performance/` — a topic-taxonomy folder that groups performance playbooks together. The flat URL sits at the top of `playbooks/` — no topical grouping. The subpath URL is IA-correct.
+- **Conclusion**: Keep the **subpath URL as canonical**. Move the richer content INTO the subpath file. Delete the flat file. Redirect the flat URL → subpath URL for external inbound stability.
+
 ### Files
 
 | Role | Path | Size | Structure |
 |---|---|---:|---|
-| **Canonical (keep)** | `docs/troubleshooting/playbooks/disk-performance-issues.md` | 11,618 B | Full playbook: symptom → diagnosis (Portal + KQL) → resolution → prevention → sources |
-| **Stub (delete)** | `docs/troubleshooting/playbooks/performance/disk-performance-issues.md` | 4,128 B, 112 lines with diagram | Shorter playbook variant, includes one mermaid diagram not present on canonical |
+| **Canonical (keep — receives richer content)** | `docs/troubleshooting/playbooks/performance/disk-performance-issues.md` | 4,128 B (before merge) → ~12 KB (after merge) | Currently a thinner playbook variant with one mermaid diagram; will receive the full symptom → diagnosis → resolution → prevention content merged in from the flat-URL file |
+| **Loser (delete after content port)** | `docs/troubleshooting/playbooks/disk-performance-issues.md` | 11,618 B | Currently the richer playbook; content ports into the canonical, then this file is deleted |
 
 ### Inbound reference audit (2026-07-09)
 
-**8 references point at the STUB URL** (`performance/disk-performance-issues.md`):
+**8 references already point at the canonical URL** (`performance/disk-performance-issues.md`) — NO rewrite needed:
 
 | File | Line | Current link text |
 |---|---:|---|
@@ -103,57 +112,72 @@ mkdocs-redirects>=1.2.1
 | `docs/troubleshooting/decision-tree.md` | 47, 66 | Decision tree branches (2 refs in this file) |
 | `docs/troubleshooting/first-10-minutes/performance.md` | 46 | First-10-minutes step |
 
-**1 reference points at the CANONICAL URL** (bare `disk-performance-issues.md`):
+**1 reference points at the loser URL** (bare `disk-performance-issues.md`) — MUST rewrite to subpath URL:
 
-| File | Line | Current link text |
+| File | Line | Rewrite target |
 |---|---:|---|
-| `docs/troubleshooting/playbooks/index.md` | 36 | Playbook index entry (top-level) |
+| `docs/troubleshooting/playbooks/index.md` | 36 | Rewrite from `disk-performance-issues.md` → `performance/disk-performance-issues.md`. Then verify against the existing line 53 entry — they may become duplicate rows on the rendered playbook index; if so, remove one. |
 
-> **Note the inversion**: the stub URL is more widely linked (8 refs) than the canonical content URL (1 ref). This is the strongest signal that the current `mkdocs.yml` nav evolved AFTER most of the cross-linking work, and the "canonical" was picked based on file size, not on inbound-reference weight. This artifact keeps the larger, more complete file as canonical — but the PR MUST rewrite the 8 stub-URL references, not just the 1 canonical-URL reference.
+Total inbound-ref rewrites in this PR: **1** (previous file-size-driven approach would have required 8 rewrites).
 
-### Content-merge check
+### Content port (loser → canonical, before delete)
 
-Before deleting the stub, verify:
+The loser file is 3x larger and carries the mature playbook content. Every meaningful section MUST port into the canonical:
 
-- [ ] Is the stub's mermaid diagram present on the canonical? If not, port it as part of the same PR (with `<!-- diagram-id: -->` comment per AGENTS.md).
-- [ ] Does the stub cite any MSLearn URL the canonical omits? If yes, merge into canonical's `## Sources`.
-- [ ] Does the stub tag any KQL query the canonical omits? If yes, port the KQL block.
+- [ ] **Symptom section** — port whole section into canonical (canonical's current symptom section is a stub).
+- [ ] **Diagnosis Steps** — port Portal + KQL diagnosis blocks into canonical.
+- [ ] **Resolution** — port resolution steps into canonical.
+- [ ] **Prevention** — port prevention section into canonical.
+- [ ] **Sources** — merge loser's `## Sources` into canonical's `## Sources` (dedupe).
+- [ ] **Existing canonical mermaid diagram** — PRESERVE. Do not overwrite with loser's content if loser lacks the diagram.
+- [ ] **Existing canonical `## See Also`** — merge loser's `## See Also` into it (dedupe).
 
-Any merged content MUST be attributed in the PR description ("port from stub before delete").
+After port, the canonical file becomes the sole authoritative playbook. The `## See Also` and diagram-id conventions per repo AGENTS.md MUST hold in the final file.
 
 ### PR execution steps
 
-1. Branch: `wave2/consolidate-disk-performance-playbook`.
-2. Optional Path A: add `mkdocs-redirects` to `requirements-docs.txt` and configure `redirect_maps` in `mkdocs.yml`.
-3. Merge missing content from stub → canonical (see content-merge checklist above).
-4. Delete `docs/troubleshooting/playbooks/performance/disk-performance-issues.md`.
-5. Rewrite the 8 stub-URL references + verify the 1 canonical-URL reference remains valid.
-6. Remove the loser entry from `mkdocs.yml` nav.
-7. Add a one-line `!!! note` at the top of the canonical page: `Consolidated with `troubleshooting/playbooks/performance/disk-performance-issues.md` on 2026-07-09.`
+1. Branch: `wave2/consolidate-disk-performance-playbook-onto-subpath`.
+2. **Path A recommended** (VM has 6+ months of stable Google Search indexing on the flat URL): add `mkdocs-redirects` to `requirements-docs.txt`, configure `redirect_maps` in `mkdocs.yml` — flat URL `troubleshooting/playbooks/disk-performance-issues.md` → subpath URL `troubleshooting/playbooks/performance/disk-performance-issues.md`.
+3. Port richer content from loser (`playbooks/disk-performance-issues.md`) into canonical (`playbooks/performance/disk-performance-issues.md`) per content-port checklist above.
+4. Delete `docs/troubleshooting/playbooks/disk-performance-issues.md`.
+5. Rewrite the single loser-URL reference in `playbooks/index.md:36` to the canonical subpath URL.
+6. Remove the loser entry from `mkdocs.yml` nav (the flat-URL entry).
+7. Add a one-line `!!! note` at the top of the canonical page: `Merged with the flat-URL variant `troubleshooting/playbooks/disk-performance-issues.md` on 2026-07-09. Content sourced from both files; the subpath URL is now the sole home for this playbook.`
 8. Run `mkdocs build --strict` — MUST pass with zero warnings.
-9. Manually verify by `grep -rn "performance/disk-performance-issues" docs/` returning zero results.
+9. Manually verify with `grep -rn "playbooks/disk-performance-issues" docs/ | grep -v "performance/disk"` returning zero results.
+10. Manually browse both URLs on the built site — subpath URL renders the full playbook; flat URL returns the redirect meta-refresh page.
 
 ### Success criteria
 
-- [ ] Only one `disk-performance-issues.md` file exists in `docs/`.
-- [ ] All 9 inbound references resolve to the canonical URL.
+- [ ] Only one `disk-performance-issues.md` file exists in `docs/` (at the subpath location).
+- [ ] All 9 inbound references resolve to the canonical subpath URL.
+- [ ] Full playbook content (symptom → diagnosis → resolution → prevention) is present on the canonical.
 - [ ] `mkdocs build --strict` passes.
-- [ ] If Path A chosen: HTTP GET on the loser URL returns a `<meta http-equiv=refresh>` page redirecting to the canonical.
+- [ ] HTTP GET on the flat URL returns the `<meta http-equiv=refresh>` redirect to the subpath URL.
 
 ---
 
 ## Repo 2 of 3 — Networking `dns-resolution`
 
+### Canonical-URL selection rationale (Oracle Phase 3.12 correction)
+
+Same principle as VM: **IA + link gravity > file size.** Applied to Networking:
+
+- **Link gravity**: 12 of the 14 inbound refs already point at the categorized subpath URL (`dns/dns-resolution-failures.md`). Keeping the subpath URL preserves 12 refs; keeping the flat URL requires rewriting 12 refs.
+- **Information architecture**: The subpath URL sits inside `playbooks/dns/` — the topic-taxonomy folder for DNS playbooks. The flat URL sits at the top of `playbooks/` — no topical grouping. The subpath URL is IA-correct.
+- **Filename choice**: The subpath filename is `dns-resolution-failures.md`; the flat filename is `dns-resolution-issues.md`. Oracle Phase 3.12 flagged unified filenames as "worth considering" but the correction directive weighs **link stability over filename aesthetics**. Renaming the subpath file to `-issues.md` would force 12 additional ref rewrites; keeping `-failures.md` requires 0 filename rewrites. **Recommendation: keep the existing `dns-resolution-failures.md` filename**. A future editorial pass MAY unify the filename to `-issues.md` for peer-repo consistency; that is out of scope for this consolidation PR.
+- **Conclusion**: Keep the **subpath URL as canonical**. Port the richer content from the flat file INTO the subpath file. Delete the flat file. Redirect the flat URL → subpath URL.
+
 ### Files
 
 | Role | Path | Size |
 |---|---|---:|
-| **Canonical (keep)** | `docs/troubleshooting/playbooks/dns-resolution-issues.md` | 11,698 B |
-| **Stub (delete)** | `docs/troubleshooting/playbooks/dns/dns-resolution-failures.md` | 3,734 B |
+| **Canonical (keep — receives richer content)** | `docs/troubleshooting/playbooks/dns/dns-resolution-failures.md` | 3,734 B (before merge) → ~12 KB (after merge) |
+| **Loser (delete after content port)** | `docs/troubleshooting/playbooks/dns-resolution-issues.md` | 11,698 B |
 
 ### Inbound reference audit (2026-07-09)
 
-**12 references point at the STUB URL** (`dns/dns-resolution-failures.md`):
+**12 references already point at the canonical URL** (`dns/dns-resolution-failures.md`) — NO rewrite needed:
 
 | File | Line |
 |---|---:|
@@ -170,45 +194,57 @@ Any merged content MUST be attributed in the PR description ("port from stub bef
 | `docs/troubleshooting/playbooks/connectivity/cannot-reach-private-endpoint.md` | 84 |
 | `docs/troubleshooting/playbooks/connectivity/outbound-connectivity-issues.md` | 85 |
 
-> **Important edge case**: `playbooks/dns-resolution-issues.md:314` — the canonical page itself links to the stub. This is a stale self-reference from when the stub was believed to be a "detailed sibling"; it MUST be removed or repointed to a sensible anchor within the canonical itself.
+> **Important edge case**: `playbooks/dns-resolution-issues.md:314` — the LOSER file has a link to the canonical. This link is INSIDE the file being deleted, so the reference disappears when the file is deleted. NO separate rewrite needed. (In the previous file-size-driven design this was a "self-reference" edge case; under the corrected IA-driven design it becomes a non-issue.)
 
-**2 references point at the CANONICAL URL**:
+**2 references point at the loser URL** (`dns-resolution-issues.md`) — MUST rewrite to canonical subpath URL:
 
-| File | Line |
-|---|---:|
-| `docs/tutorials/lab-guides/lab-02-private-endpoints.md` | 240 |
-| `docs/troubleshooting/playbooks/index.md` | 41 |
+| File | Line | Rewrite target |
+|---|---:|---|
+| `docs/tutorials/lab-guides/lab-02-private-endpoints.md` | 240 | Rewrite from `../../troubleshooting/playbooks/dns-resolution-issues.md` → `../../troubleshooting/playbooks/dns/dns-resolution-failures.md` |
+| `docs/troubleshooting/playbooks/index.md` | 41 | Rewrite from `dns-resolution-issues.md` → `dns/dns-resolution-failures.md`. Then verify against line 59 (existing subpath entry) — merge the two rows if they become duplicates on the rendered playbook index. |
+
+Total inbound-ref rewrites in this PR: **2** (previous file-size-driven approach would have required 12 rewrites).
 
 ### Playbook index edge case
 
-`docs/troubleshooting/playbooks/index.md` lists BOTH files:
+`docs/troubleshooting/playbooks/index.md` currently lists BOTH files:
 
-- Line 41 → canonical (`dns-resolution-issues.md`)
-- Line 59 → stub (`dns/dns-resolution-failures.md`)
+- Line 41 → LOSER (`dns-resolution-issues.md`) — rewrite to canonical URL per audit table above, then check whether the resulting row duplicates line 59.
+- Line 59 → CANONICAL (`dns/dns-resolution-failures.md`) — keep.
 
-Both entries currently appear on the rendered playbook index. The PR MUST remove line 59.
+If the rewrite at line 41 makes it duplicate line 59, delete line 41 (keep the categorized-section placement at line 59).
 
-### Content-merge check
+### Content port (loser → canonical, before delete)
 
-Same checklist as VM (mermaid diagrams, MSLearn URLs, KQL queries). Note that the stub carries the substring `-failures` in its filename while the canonical uses `-issues` — no reason to preserve the "failures" naming, canonical `-issues` naming aligns with peer repos.
+Same checklist shape as VM: port symptom, diagnosis, resolution, prevention, sources, see-also from loser into canonical. Preserve any diagram/content already in canonical.
+
+Post-port content check:
+
+- [ ] Canonical file title reads sensibly (may want to change H1 from `# DNS Resolution Failures` → `# DNS Resolution Issues` for peer-repo consistency; H1 change does NOT require a filename change, does NOT break inbound refs).
+- [ ] No mention of the flat-URL filename remains inside the canonical text.
 
 ### PR execution steps
 
-1. Branch: `wave2/consolidate-dns-playbook`.
-2. Optional Path A: add `mkdocs-redirects`.
-3. Merge missing content from stub → canonical.
-4. Delete `docs/troubleshooting/playbooks/dns/dns-resolution-failures.md`.
-5. Rewrite the 12 stub-URL references (including the self-reference at canonical L314).
-6. Verify the 2 canonical-URL references remain valid.
-7. Remove line 59 of `playbooks/index.md`.
+1. Branch: `wave2/consolidate-dns-playbook-onto-subpath`.
+2. **Path A recommended** (highest inbound-ref count of the three pairs, strongest Google Search exposure): add `mkdocs-redirects` to `requirements-docs.txt`, configure `redirect_maps` — flat URL `troubleshooting/playbooks/dns-resolution-issues.md` → subpath URL `troubleshooting/playbooks/dns/dns-resolution-failures.md`.
+3. Port richer content from loser into canonical per content-port checklist.
+4. Optionally update canonical H1 to `# DNS Resolution Issues` for peer-repo consistency (H1 only, not filename).
+5. Delete `docs/troubleshooting/playbooks/dns-resolution-issues.md`.
+6. Rewrite the 2 loser-URL references per audit table above.
+7. Merge/dedupe `playbooks/index.md` lines 41 and 59 as needed.
 8. Remove the loser entry from `mkdocs.yml` nav.
 9. Add consolidation `!!! note` at top of canonical.
 10. `mkdocs build --strict` — MUST pass.
-11. Verify `grep -rn "dns/dns-resolution-failures" docs/` returns zero results.
+11. Verify with `grep -rn "playbooks/dns-resolution-issues" docs/ | grep -v "dns/dns-resolution-failures"` returning zero results.
+12. Manually browse both URLs on built site — subpath renders full playbook; flat URL returns redirect meta-refresh.
 
 ### Success criteria
 
-Same 4 criteria as VM.
+- [ ] Only one `dns-resolution*.md` playbook file exists in `docs/troubleshooting/playbooks/` (at the `dns/` subpath location).
+- [ ] All 14 inbound references resolve to the canonical subpath URL.
+- [ ] Full playbook content is present on canonical (symptom → diagnosis → resolution → prevention).
+- [ ] `mkdocs build --strict` passes.
+- [ ] HTTP GET on the flat URL returns the `<meta http-equiv=refresh>` redirect to the subpath URL.
 
 ---
 
