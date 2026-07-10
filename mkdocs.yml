@@ -228,5 +228,6 @@ nav:
     - reference/validation-status.md
   - Contributing:
     - contributing/index.md
+    - contributing/language-guide-baseline.md
     - contributing/series-lab-contract.md
     - contributing/series-nav-contract.md
