@@ -49,17 +49,21 @@ This repository is not a single Azure service guide. It uses an architecture-spe
 
 `Well-Architected Framework`, `Architecture Patterns`, and `Workload Guides` collectively replace the role that `Best Practices` plays in service-specific repositories.
 
-Approved top-level sections:
+`Architecture Reviews` (with its `anti-patterns/`, `playbooks/`, and `migration-playbooks/` subsections) replaces the role that `Troubleshooting` plays in service-specific repositories. This repository does not diagnose runtime failures of a single Azure service; instead, it diagnoses architectural failure modes and misalignments. Symptom-based service troubleshooting belongs in the individual service guides (for example `azure-container-apps-practical-guide`, `azure-app-service-practical-guide`).
 
-- `Start Here`
-- `Platform`
-- `Well-Architected Framework`
-- `Architecture Patterns`
-- `Workload Guides`
-- `Operations`
-- `Architecture Reviews`
-- `Design Labs`
-- `Reference`
+Approved top-level sections (with source directories):
+
+| Section | Directory |
+|---|---|
+| `Start Here` | `docs/start-here/` |
+| `Platform` | `docs/platform/` |
+| `Well-Architected Framework` | `docs/waf/` |
+| `Architecture Patterns` | `docs/patterns/` |
+| `Workload Guides` | `docs/workload-guides/` |
+| `Operations` | `docs/operations/` |
+| `Architecture Reviews` | `docs/architecture-reviews/` |
+| `Design Labs` | `docs/design-labs/` |
+| `Reference` | `docs/reference/` |
 
 Do not force this repository into the service-guide core section model where it would reduce clarity.
 
