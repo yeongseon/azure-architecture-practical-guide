@@ -120,6 +120,12 @@ For event-driven order processing on Azure, Service Bus plus Functions, Cosmos D
 
 No cleanup is required. This design lab is a paper exercise; no Azure resources were provisioned.
 
+## See Also
+
+- [Event-Driven Integration workload guide](../workload-guides/event-driven-integration/index.md) — the paired implementation blueprint for this decision
+- [Event-Driven messaging and consistency](../workload-guides/event-driven-integration/messaging-and-consistency.md) — delivery guarantees, idempotency, and consistency detail
+- [Integration Selection Basics](../platform/integration-selection-basics.md) — choosing between messaging, eventing, and streaming
+
 ## Microsoft Learn references
 
 - https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven

@@ -63,6 +63,12 @@ Use the evidence tags consistently:
 - **Assumed** when validation is still pending.
 - **Unknown** when evidence is missing.
 
+## See Also
+
+- [Design Lab Methodology](methodology.md) — the ADVR structure every lab follows
+- [Workload Guides](../workload-guides/index.md) — the implementation blueprints each lab pairs with
+- [Patterns](../patterns/index.md) — reusable design patterns referenced across the labs
+
 ## Microsoft Learn references
 
 - https://learn.microsoft.com/en-us/azure/architecture/
