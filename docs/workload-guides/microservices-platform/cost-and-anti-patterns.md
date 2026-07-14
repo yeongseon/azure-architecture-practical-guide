@@ -93,6 +93,12 @@ Microservices are economically sound only when organizational speed, fault isola
 
 Review cost alongside architecture review outcomes so service sprawl is challenged with the same rigor as availability or security drift. [Validated]
 
+## See Also
+
+- [Microservices platform overview](index.md)
+- [Baseline architecture](baseline.md)
+- [Modular monolith vs microservices](../../patterns/decomposition/modular-monolith-vs-microservices.md)
+
 ## Microsoft Learn references
 
 - [Azure Well-Architected Framework cost optimization](https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/)

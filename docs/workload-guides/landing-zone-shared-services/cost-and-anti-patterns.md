@@ -93,6 +93,12 @@ Cost discipline improves when shared services publish both consumption guidance 
 
 That supports better chargeback conversations. [Correlated]
 
+## See Also
+
+- [Landing zone shared services overview](index.md)
+- [Baseline architecture](baseline.md)
+- [Landing zones basics](../../platform/landing-zones-basics.md)
+
 ## Microsoft Learn references
 
 - [Azure Well-Architected Framework cost optimization](https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/)
