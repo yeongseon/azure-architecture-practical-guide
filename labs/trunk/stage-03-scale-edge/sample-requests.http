@@ -1,0 +1,28 @@
+@frontDoorUrl = https://REPLACE-WITH-YOUR-ENDPOINT.z01.azurefd.net
+@webAppUrl = https://REPLACE-WITH-YOUR-WEBAPP.azurewebsites.net
+
+### Front Door home page (expect 200 after propagation, HTML)
+GET {{frontDoorUrl}}/
+Accept: text/html
+
+### Front Door health check (expect 200, {"status":"Healthy"})
+GET {{frontDoorUrl}}/healthz
+Accept: application/json
+
+### Front Door ops info (expect 200, JSON with version and region)
+GET {{frontDoorUrl}}/ops/info
+Accept: application/json
+
+### Origin health check bypassing Front Door (expect 200)
+GET {{webAppUrl}}/healthz
+Accept: application/json
+
+### WAF smoke — obvious SQL-injection pattern (expect 403 when WAF blocks)
+GET {{frontDoorUrl}}/?id=1%20OR%201=1--
+Accept: text/html
+
+### Create an order through the edge (expect 302 redirect on success)
+POST {{frontDoorUrl}}/Home/Create
+Content-Type: application/x-www-form-urlencoded
+
+ProductId=1&Quantity=2&CustomerName=Demo+User
