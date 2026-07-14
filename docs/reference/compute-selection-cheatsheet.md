@@ -1,4 +1,5 @@
 ---
+description: Compare Azure compute services — VMs, App Service, Functions, Container Apps, and AKS — by use case, scaling, cost, skill, and control during early architecture workshops.
 content_sources:
   diagrams:
     - id: compute-selection-map
@@ -40,7 +41,15 @@ flowchart TD
     H -->|No| J[Azure Container Apps]
 ```
 
-## Microsoft Learn references
+## See Also
+
+- [Architecture Decision Matrix](architecture-decision-matrix.md) — workload-to-service selection and sibling deep-guide entry points
+- [Series Portal](series-portal.md) — route to a sibling deep-guide once the service is chosen
+- [Data Selection Cheatsheet](data-selection-cheatsheet.md) — narrow data platform options
+- [Messaging Selection Cheatsheet](messaging-selection-cheatsheet.md) — narrow messaging primitives
+- [Network Topology Cheatsheet](network-topology-cheatsheet.md) — narrow networking topology
+
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree
 - https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/

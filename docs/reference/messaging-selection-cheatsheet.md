@@ -1,4 +1,5 @@
 ---
+description: Compare Azure messaging services — Service Bus, Event Grid, Event Hubs, and Queue Storage — by pattern, ordering, throughput, and delivery to match the interaction style.
 content_sources:
   diagrams:
     - id: messaging-selection-map
@@ -36,7 +37,15 @@ flowchart TD
     G -->|Yes| H[Azure Queue Storage]
 ```
 
-## Microsoft Learn references
+## See Also
+
+- [Architecture Decision Matrix](architecture-decision-matrix.md) — workload-to-service selection and sibling deep-guide entry points
+- [Series Portal](series-portal.md) — route to a sibling deep-guide once the service is chosen
+- [Compute Selection Cheatsheet](compute-selection-cheatsheet.md) — narrow compute options
+- [Data Selection Cheatsheet](data-selection-cheatsheet.md) — narrow data platform options
+- [Network Topology Cheatsheet](network-topology-cheatsheet.md) — narrow networking topology
+
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/messaging
 - https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven

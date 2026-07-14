@@ -16,6 +16,9 @@ Once an architecture decision has narrowed the workload to a specific Azure serv
 
 Each entry links to a companion practical guide that follows the same core structure documented in the [Series Lab Contract](../contributing/series-lab-contract.md): Start Here → Platform → Best Practices → Operations → Troubleshooting → Reference.
 
+!!! tip "Still choosing a service? Start with the matrix"
+    This portal assumes the service is already chosen. If you are still deciding *which* Azure service fits the workload, start with the [Architecture Decision Matrix](architecture-decision-matrix.md) — it maps workload types to service combinations and hands off to the same sibling deep-guides listed below.
+
 ## When to use this portal
 
 - You already know which Azure service the workload will run on. [Documented]

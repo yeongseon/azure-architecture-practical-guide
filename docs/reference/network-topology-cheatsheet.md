@@ -1,4 +1,5 @@
 ---
+description: Compare Azure network topologies — hub-spoke, Virtual WAN, and flat VNet — plus the Private Endpoint vs Service Endpoint choice for enterprise connectivity design.
 content_sources:
   diagrams:
     - id: network-topology-map
@@ -37,7 +38,15 @@ flowchart TD
     E -->|No| G[Service Endpoint]
 ```
 
-## Microsoft Learn references
+## See Also
+
+- [Architecture Decision Matrix](architecture-decision-matrix.md) — workload-to-service selection and sibling deep-guide entry points
+- [Series Portal](series-portal.md) — route to a sibling deep-guide once the service is chosen
+- [Compute Selection Cheatsheet](compute-selection-cheatsheet.md) — narrow compute options
+- [Data Selection Cheatsheet](data-selection-cheatsheet.md) — narrow data platform options
+- [Messaging Selection Cheatsheet](messaging-selection-cheatsheet.md) — narrow messaging primitives
+
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/architecture/networking/architecture/hub-spoke
 - https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/
