@@ -17,7 +17,7 @@ This directory deploys the Stage 2 baseline for the **Practical Storefront** jou
 | SQL Entra admin | inline (`administrators`) | ActiveDirectory | Foundation for passwordless SQL |
 | Action Group | `foundation/action-group.bicep` | Email receiver | Alert notification target |
 | Metric alerts | `foundation/metric-alerts.bicep` | Http5xx, HttpResponseTime | Tied to the action group |
-| Key Vault role assignments | `foundation/role-assignment.bicep` | Key Vault Secrets User | Granted to app and slot identities |
+| Key Vault role assignments | `foundation/key-vault-role-assignment.bicep` | Key Vault Secrets User | Granted to app and slot identities, scoped to the vault |
 
 Estimated cost: **~$0.14–$0.20/hour**. Deploy time: **25–40 minutes**.
 
@@ -60,8 +60,19 @@ scripts/practical/destroy-stage.sh stage-02
 
 ## Operator prerequisites
 
-- To read the Key Vault secret yourself (`az keyvault secret show`), your principal needs the **Key Vault Secrets User** (or Officer) role on the vault. The deploying identity does not receive it automatically.
+- To read the Key Vault secret yourself (`az keyvault secret show`), your principal needs the **Key Vault Secrets User** (or Officer) role on the vault. The deploying identity does not receive it automatically. The `identity-smoke.sh` verification treats an unreadable secret as a **warning**, not a failure, because it reflects the operator's data-plane access rather than deployment correctness.
 - The Entra admin object ID must belong to a user, group, or service principal in the same tenant.
+
+## Key Vault reference propagation
+
+The web app and staging slot read the SQL connection string through a Key Vault reference (`@Microsoft.KeyVault(...)`) that resolves using the app's managed identity and the **Key Vault Secrets User** role assignment created by this template. Azure RBAC role assignments can take a few minutes to propagate. On the very first deploy, a Key Vault reference may briefly show as unresolved until propagation completes. If the app cannot read the connection string immediately after deployment, restart the app (or slot) to force the reference to re-resolve:
+
+```bash
+az webapp restart --name "$WEBAPP_NAME" --resource-group "$RG"
+```
+
+This is expected first-deploy behavior, not a misconfiguration.
+
 
 ## Outputs
 

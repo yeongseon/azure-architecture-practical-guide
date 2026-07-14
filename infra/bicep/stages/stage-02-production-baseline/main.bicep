@@ -223,18 +223,38 @@ module stagingSlot '../../modules/web/web-app-slot.bicep' = {
   }
 }
 
-module webAppKeyVaultRole '../../modules/foundation/role-assignment.bicep' = {
+resource webAppExisting 'Microsoft.Web/sites@2023-12-01' existing = {
+  name: webAppName
+}
+
+resource slotConfigNames 'Microsoft.Web/sites/config@2023-12-01' = {
+  parent: webAppExisting
+  name: 'slotConfigNames'
+  properties: {
+    appSettingNames: [
+      'ASPNETCORE_ENVIRONMENT'
+    ]
+  }
+  dependsOn: [
+    webApp
+    stagingSlot
+  ]
+}
+
+module webAppKeyVaultRole '../../modules/foundation/key-vault-role-assignment.bicep' = {
   name: 'stage02-webapp-kv-role'
   params: {
+    keyVaultName: keyVaultName
     principalId: webApp.outputs.principalId
     roleDefinitionId: keyVaultSecretsUserRoleId
     principalType: 'ServicePrincipal'
   }
 }
 
-module slotKeyVaultRole '../../modules/foundation/role-assignment.bicep' = {
+module slotKeyVaultRole '../../modules/foundation/key-vault-role-assignment.bicep' = {
   name: 'stage02-slot-kv-role'
   params: {
+    keyVaultName: keyVaultName
     principalId: stagingSlot.outputs.principalId
     roleDefinitionId: keyVaultSecretsUserRoleId
     principalType: 'ServicePrincipal'

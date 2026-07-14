@@ -20,11 +20,13 @@ else
 fi
 
 kv_name="$(az keyvault list --resource-group "$RG" --query "[0].name" --output tsv 2>/dev/null || true)"
-if [[ -n "$kv_name" ]] && az keyvault secret show --vault-name "$kv_name" --name SqlConnectionString >/dev/null 2>&1; then
+if [[ -z "$kv_name" ]]; then
+  echo "[fail] no Key Vault found in resource group '${RG}'." >&2
+  fail=$((fail + 1))
+elif az keyvault secret show --vault-name "$kv_name" --name SqlConnectionString >/dev/null 2>&1; then
   echo "[ ok ] Key Vault '${kv_name}' holds the SqlConnectionString secret."
 else
-  echo "[fail] SqlConnectionString secret not readable in Key Vault (vault: ${kv_name:-none})." >&2
-  fail=$((fail + 1))
+  echo "[warn] SqlConnectionString secret not readable in Key Vault '${kv_name}'. This checks the operator's data-plane access (Key Vault Secrets User/Officer), not deployment correctness; the app identity may still be authorized." >&2
 fi
 
 sql_server="$(az sql server list --resource-group "$RG" --query "[0].name" --output tsv 2>/dev/null || true)"
