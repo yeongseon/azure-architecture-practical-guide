@@ -88,6 +88,12 @@ The right question is whether spend is aligned to business value, risk posture, 
 3. Which SKUs were selected for a measured reason versus inherited default?
 4. What is the plan for budget visibility and anomaly detection?
 
+## See Also
+
+- [Compute Selection Basics](compute-selection-basics.md) — how scaling model and idle capacity drive spend
+- [Resource Organization](resource-organization.md) — subscription boundaries as billing and cost-allocation units
+- [Observability Foundations](observability-foundations.md) — telemetry retention as a recurring cost lever
+
 ## Microsoft Learn anchors
 
 - [Cost Management and Billing overview](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/overview-cost-management)
