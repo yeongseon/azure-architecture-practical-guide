@@ -557,39 +557,20 @@ content_sources:
 
 ### Text Content Validation
 
-Every non-tutorial document should include a `content_validation` block in frontmatter to track the verification status of its core claims.
+This repository does **not** use per-file `content_validation` frontmatter blocks. Provenance and factual traceability are enforced through a lighter model:
 
-```yaml
----
-content_sources:
-  - type: mslearn-adapted
-    url: https://learn.microsoft.com/azure/architecture/...
-content_validation:
-  status: verified  # verified | pending_review | unverified
-  last_reviewed: 2026-04-12
-  reviewer: agent  # agent | human
-  core_claims:
-    - claim: "{example claim}"
-      source: https://learn.microsoft.com/azure/architecture/...
-      verified: true
----
-```
+1. **Per-diagram / per-page provenance** via `content_sources` frontmatter (see [Diagram Source Documentation](#diagram-source-documentation)), enforced by `scripts/validate_content_sources.py`.
+2. **Microsoft Learn URL health** enforced by `scripts/validate_mslearn_urls.py`.
+3. **Section-level review tracking** via the manually maintained [Content Validation Status](docs/reference/content-validation-status.md) dashboard, which records source coverage, diagram metadata, and evidence tagging status per major section.
 
-#### Validation Status Values
+!!! note "Cross-repo divergence"
+    The sibling **container-apps** guide DOES enforce a per-file `content_validation` core-claims policy with a generator script. This architecture repository deliberately does not, because its section-level dashboard plus `content_sources`/`validate_mslearn_urls` gates already provide sufficient, low-maintenance provenance for a solo-maintained series. Do not add per-file `content_validation` blocks or a `generate_content_validation_status.py` generator here without first raising a policy issue — a repo whose `docs/` currently contains zero such blocks should stay that way.
 
-| Status | Description |
-|--------|-------------|
-| `verified` | All core claims have been traced to Microsoft Learn sources |
-| `pending_review` | Document exists but claims need source verification |
-| `unverified` | New document, no validation performed |
+#### Agent Rules for Content Provenance
 
-#### Agent Rules for Content Validation
-
-1. When creating or modifying Platform, Best Practices, or Operations documents, add `content_validation` frontmatter.
-2. List 2-5 core claims that are factual assertions (not opinions or procedures).
-3. Each claim must have a Microsoft Learn source URL.
-4. Set `status: verified` only when ALL core claims have verified sources.
-5. Run `python3 scripts/generate_content_validation_status.py` after updates.
+1. When creating or modifying Platform, WAF, Patterns, Workload Guides, or Operations documents, ensure `content_sources` frontmatter is present and each Microsoft Learn URL materially supports the page or its diagrams.
+2. Run `python3 scripts/validate_content_sources.py` and `python3 scripts/validate_mslearn_urls.py` after updates; both must pass.
+3. When a section's coverage or review posture changes materially, update the section row in `docs/reference/content-validation-status.md` by hand. It is intentionally not auto-generated.
 
 ## Quality Gates & Verification
 
