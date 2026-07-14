@@ -94,6 +94,12 @@ That implies:
 - pages should be scoped tightly enough to stay current
 - build and link validation should be part of contribution hygiene
 
+## See Also
+
+- [Start here: overview](start-here/overview.md)
+- [Platform concepts](platform/index.md)
+- [Design labs](design-labs/index.md)
+
 ## Microsoft Learn anchors
 
 - [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/)
