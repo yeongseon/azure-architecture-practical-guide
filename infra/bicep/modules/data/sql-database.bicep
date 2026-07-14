@@ -19,11 +19,11 @@ param maxSizeBytes int = 268435456000
 @description('Resource tags.')
 param tags object = {}
 
-resource sqlServer 'Microsoft.Sql/servers@2023-08-01-preview' existing = {
+resource sqlServer 'Microsoft.Sql/servers@2021-11-01' existing = {
   name: sqlServerName
 }
 
-resource database 'Microsoft.Sql/servers/databases@2023-08-01-preview' = {
+resource database 'Microsoft.Sql/servers/databases@2021-11-01' = {
   parent: sqlServer
   name: name
   location: location

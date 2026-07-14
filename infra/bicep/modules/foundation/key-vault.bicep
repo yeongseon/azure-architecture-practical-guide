@@ -16,6 +16,13 @@ param softDeleteRetentionInDays int = 90
 @description('Enable purge protection to prevent permanent deletion during the retention period.')
 param enablePurgeProtection bool = true
 
+@description('Allow public network access to the vault. Defaults to Disabled for a secure baseline.')
+@allowed([
+  'Enabled'
+  'Disabled'
+])
+param publicNetworkAccess string = 'Disabled'
+
 @description('Resource tags.')
 param tags object = {}
 
@@ -33,6 +40,7 @@ resource keyVault 'Microsoft.KeyVault/vaults@2023-07-01' = {
     enableSoftDelete: true
     softDeleteRetentionInDays: softDeleteRetentionInDays
     enablePurgeProtection: enablePurgeProtection ? true : null
+    publicNetworkAccess: publicNetworkAccess
   }
 }
 

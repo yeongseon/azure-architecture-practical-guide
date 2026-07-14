@@ -28,6 +28,7 @@ resource slot 'Microsoft.Web/sites/slots@2023-12-01' = {
   name: slotName
   location: location
   tags: tags
+  kind: 'app,linux'
   identity: {
     type: 'SystemAssigned'
   }

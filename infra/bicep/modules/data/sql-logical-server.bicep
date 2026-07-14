@@ -21,7 +21,7 @@ param publicNetworkAccess string = 'Disabled'
 @description('Resource tags.')
 param tags object = {}
 
-resource sqlServer 'Microsoft.Sql/servers@2023-08-01-preview' = {
+resource sqlServer 'Microsoft.Sql/servers@2021-11-01' = {
   name: name
   location: location
   tags: tags

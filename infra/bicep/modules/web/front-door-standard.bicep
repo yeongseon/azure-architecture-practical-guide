@@ -66,6 +66,31 @@ resource wafPolicy 'Microsoft.Network/FrontDoorWebApplicationFirewallPolicies@20
   }
 }
 
+resource securityPolicy 'Microsoft.Cdn/profiles/securityPolicies@2023-05-01' = {
+  parent: profile
+  name: '${name}-security-policy'
+  properties: {
+    parameters: {
+      type: 'WebApplicationFirewall'
+      wafPolicy: {
+        id: wafPolicy.id
+      }
+      associations: [
+        {
+          domains: [
+            {
+              id: endpoint.id
+            }
+          ]
+          patternsToMatch: [
+            '/*'
+          ]
+        }
+      ]
+    }
+  }
+}
+
 @description('Resource ID of the Front Door profile.')
 output profileId string = profile.id
 

@@ -41,6 +41,7 @@ resource webApp 'Microsoft.Web/sites@2023-12-01' = {
   name: name
   location: location
   tags: tags
+  kind: 'app,linux'
   identity: {
     type: 'SystemAssigned'
   }

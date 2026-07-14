@@ -13,11 +13,11 @@ param databaseIds array
 @description('Grace period in minutes before automatic failover with data loss.')
 param gracePeriodMinutes int = 60
 
-resource primaryServer 'Microsoft.Sql/servers@2023-08-01-preview' existing = {
+resource primaryServer 'Microsoft.Sql/servers@2021-11-01' existing = {
   name: primaryServerName
 }
 
-resource failoverGroup 'Microsoft.Sql/servers/failoverGroups@2023-08-01-preview' = {
+resource failoverGroup 'Microsoft.Sql/servers/failoverGroups@2021-11-01' = {
   parent: primaryServer
   name: name
   properties: {
