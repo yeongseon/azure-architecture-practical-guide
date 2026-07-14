@@ -13,7 +13,7 @@ content_sources:
 
 Stage 2 made the app safe to operate. Stage 3 makes it safe to expose and ready to grow: Azure Front Door becomes the global entry point, a Web Application Firewall blocks common attacks at the edge before they reach application code, and an autoscale rule adds and removes instances as CPU demand changes.
 
-This stage reuses the [Stage 2](stage-02-production-baseline.md) resources and composes additional [foundation Bicep modules](https://github.com/yeongseon/azure-architecture-practical-guide/tree/main/infra/bicep/modules) through [`stages/stage-03-scale-edge/main.bicep`](https://github.com/yeongseon/azure-architecture-practical-guide/tree/main/infra/bicep/stages/stage-03-scale-edge).
+This stage carries forward the [Stage 2](stage-02-production-baseline.md) architecture and redeploys the full cumulative stack, then composes additional [foundation Bicep modules](https://github.com/yeongseon/azure-architecture-practical-guide/tree/main/infra/bicep/modules) through [`stages/stage-03-scale-edge/main.bicep`](https://github.com/yeongseon/azure-architecture-practical-guide/tree/main/infra/bicep/stages/stage-03-scale-edge).
 
 ## Before you start
 
