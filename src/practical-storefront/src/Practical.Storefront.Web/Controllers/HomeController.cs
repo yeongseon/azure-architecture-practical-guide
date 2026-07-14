@@ -35,26 +35,32 @@ public class HomeController : Controller
     public async Task<IActionResult> Create()
     {
         ViewBag.Products = await _db.Products.OrderBy(p => p.Name).ToListAsync();
-        return View(new Order());
+        return View(new CreateOrderRequest());
     }
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create(Order order)
+    public async Task<IActionResult> Create(CreateOrderRequest request)
     {
-        var productExists = await _db.Products.AnyAsync(p => p.Id == order.ProductId);
+        var productExists = await _db.Products.AnyAsync(p => p.Id == request.ProductId);
         if (!productExists)
         {
-            ModelState.AddModelError(nameof(order.ProductId), "Selected product does not exist.");
+            ModelState.AddModelError(nameof(request.ProductId), "Selected product does not exist.");
         }
 
         if (!ModelState.IsValid)
         {
             ViewBag.Products = await _db.Products.OrderBy(p => p.Name).ToListAsync();
-            return View(order);
+            return View(request);
         }
 
-        order.CreatedAt = DateTime.UtcNow;
+        var order = new Order
+        {
+            CustomerName = request.CustomerName,
+            ProductId = request.ProductId,
+            Quantity = request.Quantity,
+            CreatedAt = DateTime.UtcNow
+        };
         _db.Orders.Add(order);
         await _db.SaveChangesAsync();
         return RedirectToAction(nameof(Orders));

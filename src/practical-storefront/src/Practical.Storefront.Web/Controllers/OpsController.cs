@@ -8,7 +8,11 @@ namespace Practical.Storefront.Web.Controllers;
 public class OpsController : ControllerBase
 {
     private static string Version =>
-        Assembly.GetExecutingAssembly().GetName().Version?.ToString() ?? "0.0.0";
+        Environment.GetEnvironmentVariable("APP_VERSION")
+        ?? Assembly.GetExecutingAssembly()
+            .GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion
+        ?? Assembly.GetExecutingAssembly().GetName().Version?.ToString()
+        ?? "0.0.0";
 
     private static string Region =>
         Environment.GetEnvironmentVariable("REGION") ?? "local";

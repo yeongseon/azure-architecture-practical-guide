@@ -23,7 +23,7 @@ practical-storefront/
 | `/` | Product catalog | HTML table of products from the database |
 | `/Home/Create` | Order form | Submit a new order |
 | `/Home/Orders` | Recent orders | Last 20 orders, newest first |
-| `/healthz` | Liveness + SQL connectivity | `{"status":"Healthy"}` |
+| `/healthz` | Readiness — catalog reachable and seeded | `{"status":"Healthy"}` |
 | `/ops/info` | Build metadata | `{"version":"...","region":"..."}` |
 | `/ops/version` | Build version | `{"version":"..."}` |
 
@@ -66,8 +66,10 @@ dotnet test
 
 ## Verify endpoints
 
+The default `http` launch profile listens on `http://localhost:5084` (the `https` profile adds `https://localhost:7290`). Use the port printed by `dotnet run`:
+
 ```bash
-curl -s http://localhost:5000/healthz
-curl -s http://localhost:5000/ops/info
-curl -s http://localhost:5000/ops/version
+curl -s http://localhost:5084/healthz
+curl -s http://localhost:5084/ops/info
+curl -s http://localhost:5084/ops/version
 ```

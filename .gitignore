@@ -28,6 +28,10 @@ target/
 bin/
 obj/
 *.user
+
+# Sample app frontend libraries (scaffolded, must ship for a working clone;
+# overrides the broad Python dist/ rule above).
+!src/practical-storefront/**/wwwroot/lib/**
 *.suo
 
 # IDE

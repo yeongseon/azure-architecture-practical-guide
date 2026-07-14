@@ -22,7 +22,7 @@ builder.Services.AddDbContext<StorefrontDbContext>(options =>
 });
 
 builder.Services.AddHealthChecks()
-    .AddDbContextCheck<StorefrontDbContext>("sql");
+    .AddCheck<StorefrontReadinessCheck>("catalog");
 
 var app = builder.Build();
 
