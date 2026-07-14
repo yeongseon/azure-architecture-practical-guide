@@ -75,6 +75,10 @@ Because SQL public network access is `Disabled`, the deploy host can no longer r
 
 Confirming that the app resolves the SQL FQDN to a `10.x.x.x` address requires running `nslookup` from inside the App Service (Kudu/SSH), which is a runtime check performed against a live deployment rather than a control-plane smoke test.
 
+The **staging slot** also joins the integration subnet (`Microsoft.Web/sites/slots/networkConfig`) with `WEBSITE_VNET_ROUTE_ALL=1`, so pre-production releases exercise the same private data path as production rather than failing against the now-private SQL tier.
+
+As in earlier stages, the web app and slot are created with a Key Vault reference before their managed identities receive the **Key Vault Secrets User** role. The reference resolves once RBAC finishes propagating (usually under a minute); a transient secret-resolution failure immediately after deployment is expected, not a defect.
+
 ## Outputs
 
 | Output | Purpose |

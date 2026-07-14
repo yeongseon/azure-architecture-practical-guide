@@ -302,9 +302,30 @@ module stagingSlot '../../modules/web/web-app-slot.bicep' = {
         name: 'ASPNETCORE_ENVIRONMENT'
         value: 'Staging'
       }
+      {
+        name: 'WEBSITE_VNET_ROUTE_ALL'
+        value: '1'
+      }
     ]
     tags: tags
   }
+}
+
+resource stagingSlotExisting 'Microsoft.Web/sites/slots@2023-12-01' existing = {
+  parent: webAppExisting
+  name: slotName
+}
+
+resource slotVnetIntegration 'Microsoft.Web/sites/slots/networkConfig@2023-12-01' = {
+  parent: stagingSlotExisting
+  name: 'virtualNetwork'
+  properties: {
+    subnetResourceId: network.outputs.subnetIds[0]
+    swiftSupported: true
+  }
+  dependsOn: [
+    stagingSlot
+  ]
 }
 
 resource slotConfigNames 'Microsoft.Web/sites/config@2023-12-01' = {
