@@ -1,8 +1,8 @@
-# Series Navigation Contract v1.1
+# Series Navigation Contract v1.2
 
 Series-wide contract defining what the top-level `mkdocs.yml` navigation MUST, SHOULD, and MAY contain across the Azure Practical Guide series, plus two structural archetypes (documentation-first and code-first) that keep archetype-appropriate depth without forcing identical navigation.
 
-**Status**: v1.1 — approved via Oracle strategic review 2026-07-09 (Wave 2 Phase 3.7). Amended 2026-07-09 to (a) allow archetype extensions to sit between D2 and D3 (Wave 2 Phase 3.10) and (b) relax the direct-children-per-section budget from MUST to SHOULD while adding a >12 outlier MUST guardrail (Wave 2 Phase 3.11).
+**Status**: v1.2 — approved via Oracle strategic review 2026-07-09 (Wave 2 Phase 3.7). Amended 2026-07-09 to (a) allow archetype extensions to sit between D2 and D3 (Wave 2 Phase 3.10) and (b) relax the direct-children-per-section budget from MUST to SHOULD while adding a >12 outlier MUST guardrail (Wave 2 Phase 3.11). Amended 2026-07-14 to add § 3.1 (Start Here canonical entry + one service-positioning page SHOULD conventions) from the 10-repo structural review.
 **Scope**: 10 sibling `azure-*-practical-guide` repos.
 **Predecessors**:
 
@@ -60,6 +60,17 @@ Every repo's `mkdocs.yml` nav MUST contain the following elements. Element names
 Elements 1-4 are position-enforcing. Elements 5-6 are budget-enforcing. All six are MUST — a repo failing any of them fails the contract.
 
 **SHOULD tier — Direct children per section:** Each top-level section SHOULD contain between 5 and 8 direct children in `mkdocs.yml`. Sections with 9-12 direct children are permitted without formal justification but SHOULD document the rationale in `mkdocs.yml` (comment near the section) or in the repo's `AGENTS.md`. Sections with more than 12 direct children trigger the MUST 6 outlier guardrail and require explicit justification. This SHOULD reflects the recommendation documented in `azure-container-apps-practical-guide/AGENTS.md` § Navigation Budget; the >12 outlier case is tightened to MUST at the series level to prevent nav explosion (empirically, 9 of 10 sibling repos have at least one section over the 5-8 SHOULD range, so the SHOULD relaxation is calibrated to observed baseline practice).
+
+### 3.1 Start Here canonical entry and positioning page (SHOULD)
+
+A 2026-07-14 structural review across the 10 sibling repos found two cosmetic `Start Here` inconsistencies that are not contract violations but SHOULD be pinned to prevent drift. Both are documentation conventions — **no repo needs to rename or move an existing file to comply.**
+
+| # | Convention | Rule |
+|---:|---|---|
+| S1 | **Canonical Start Here entry** | `overview.md` is the canonical `Start Here` entry page for every repo (the `Start Here` nav root SHOULD resolve to `overview.md`). A `start-here/index.md` file is OPTIONAL; if present it MUST point to or summarize `overview.md` rather than duplicate orientation content. Do NOT add `index.md` to repos that already use `overview.md` as the root purely for uniformity — the split is cosmetic and `overview.md` is authoritative either way. |
+| S2 | **One service-positioning page** | Each service repo SHOULD have exactly **one** service-positioning page under `Start Here` (the "when to use this / how it compares to neighboring services" page). The filename MAY follow any approved pattern — `when-to-use-<service>.md`, `<service>-vs-other-compute.md`, or a domain-appropriate name such as `hosting-options.md` or `<service>-at-a-glance.md`. Existing filenames are grandfathered; **no mass renames.** |
+
+Observed baseline at review time (informational, not a compliance target): 6 repos carry a `start-here/index.md`, 4 rely on `overview.md` alone; positioning-page filenames vary per repo (`vm-vs-other-compute.md`, `networking-vs-connectivity.md`, `storage-services-at-a-glance.md`, `when-to-use-container-apps.md`, `aks-vs-other-compute.md`, `hosting-options.md`, `architecture-vs-service-guides.md`). Both variants are compliant under S1/S2.
 
 ## 4. Archetype 문서형 — Documentation-First Repos
 
@@ -153,7 +164,7 @@ Any repo that adds a new top-level section beyond its archetype's SHOULD tier MU
 ## 8. Non-Goals
 
 - Not requiring identical section vocabulary across the series (`Tutorials` vs `Language Guides` vs `SDK Guides` remains repo-specific within the archetype's SHOULD tier).
-- Not requiring identical `Start Here` sub-navigation. The MUST criterion is only that Start Here contains `overview.md`, `learning-paths.md`, `repository-map.md`; additional pages are repo-specific per the series Start Here Rules.
+- Not requiring identical `Start Here` sub-navigation. The MUST criterion is only that Start Here contains `overview.md`, `learning-paths.md`, `repository-map.md`; additional pages are repo-specific per the series Start Here Rules. See § 3.1 for the SHOULD conventions on the canonical entry page and the single service-positioning page.
 - Not deprecating Container Apps' or Functions' oversized navigation. Both are pre-approved exceptions and the contract commits to progressive hub-page migration, not immediate collapse.
 - Not standardizing sidebar theming, breadcrumb configuration, or Material for MkDocs plugin selection. Those are repo-specific.
 - Not selecting a single spelling for section names in non-English locales. Repo owners MAY translate section names in localized README variants; the English `mkdocs.yml` nav strings remain authoritative for review purposes.
