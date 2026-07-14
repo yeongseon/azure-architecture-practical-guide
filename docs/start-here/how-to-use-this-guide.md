@@ -121,6 +121,13 @@ At that point, use Microsoft Learn for the product facts, then return to this gu
 - [Architecture guide](https://learn.microsoft.com/en-us/azure/architecture/guide/)
 - [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)
 
+## See Also
+
+- [Overview](overview.md) — scope, audience, and the evidence model
+- [Learning Paths](learning-paths.md) — role-based reading order
+- [Repository Map](repository-map.md) — full section map
+- [Platform Hub](../platform/index.md) — the foundational decisions to read first
+
 ## Takeaway
 
 [Inferred] The best use of this guide is iterative.

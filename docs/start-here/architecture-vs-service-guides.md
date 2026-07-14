@@ -91,6 +91,12 @@ Examples:
 - [Architecture guide](https://learn.microsoft.com/en-us/azure/architecture/guide/)
 - [App Service documentation](https://learn.microsoft.com/en-us/azure/app-service/)
 
+## See Also
+
+- [Overview](overview.md) — what this guide is for and how it differs from Microsoft Learn
+- [How to Use This Guide](how-to-use-this-guide.md) — pairing architecture decisions with service configuration sources
+- [Platform Hub](../platform/index.md) — the architecture-first foundations this guide prioritizes
+
 ## Takeaway
 
 [Inferred] This guide should answer architecture questions that remain valid even if Microsoft changes a portal workflow or CLI parameter.

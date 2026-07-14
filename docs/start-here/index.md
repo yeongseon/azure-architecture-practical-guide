@@ -81,6 +81,14 @@ This section should not spend most of its space on:
 - [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)
 - [Azure Architecture Guide](https://learn.microsoft.com/en-us/azure/architecture/guide/)
 
+## See Also
+
+- [Overview](overview.md) — scope, audience, and the evidence model used throughout
+- [Learning Paths](learning-paths.md) — role-based reading order
+- [How to Use This Guide](how-to-use-this-guide.md) — how the sections connect and pair with Microsoft Learn
+- [Repository Map](repository-map.md) — full documentation structure
+- [Platform Hub](../platform/index.md) — the recommended first destination after this section
+
 ## Takeaway
 
 [Inferred] Treat Start Here as the map, not the destination.
