@@ -32,6 +32,12 @@ flowchart TD
     C --> D[Validate with lab or review]
 ```
 
+## See Also
+
+- [Well-Architected Framework](../waf/index.md)
+- [Design patterns](../patterns/index.md)
+- [Design labs methodology](../design-labs/methodology.md)
+
 ## Microsoft Learn references
 
 - https://learn.microsoft.com/en-us/azure/well-architected/
