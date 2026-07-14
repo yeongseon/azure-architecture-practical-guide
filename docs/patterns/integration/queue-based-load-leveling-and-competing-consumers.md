@@ -102,6 +102,12 @@ flowchart TD
 - Every message requires global ordering.
 - The team lacks message observability and remediation processes.
 
+## See Also
+
+- [Design patterns](../index.md)
+- [Event-driven architecture](event-driven-architecture.md)
+- [Synchronous vs asynchronous](synchronous-vs-asynchronous.md)
+
 ## Microsoft Learn reference
 
 - https://learn.microsoft.com/en-us/azure/architecture/patterns/queue-based-load-leveling

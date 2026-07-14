@@ -102,6 +102,12 @@ flowchart TD
 - Can the caller tolerate duplicate delivery or out-of-order processing?
 - Who monitors stuck, dead-lettered, or replayed work?
 
+## See Also
+
+- [Design patterns](../index.md)
+- [Event-driven architecture](event-driven-architecture.md)
+- [Queue-based load leveling and competing consumers](queue-based-load-leveling-and-competing-consumers.md)
+
 ## Microsoft Learn reference
 
 - https://learn.microsoft.com/en-us/azure/architecture/patterns/async-request-reply
