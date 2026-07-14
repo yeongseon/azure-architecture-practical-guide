@@ -1,4 +1,5 @@
 ---
+description: Compare Azure data stores — SQL, Cosmos DB, PostgreSQL, Storage, and Managed Redis — by data model, consistency, scale, and cost to pick a workload's primary store.
 content_sources:
   diagrams:
     - id: data-selection-map
@@ -42,7 +43,15 @@ flowchart TD
     H -->|Cache| J[Azure Managed Redis]
 ```
 
-## Microsoft Learn references
+## See Also
+
+- [Architecture Decision Matrix](architecture-decision-matrix.md) — workload-to-service selection and sibling deep-guide entry points
+- [Series Portal](series-portal.md) — route to a sibling deep-guide once the service is chosen
+- [Compute Selection Cheatsheet](compute-selection-cheatsheet.md) — narrow compute options
+- [Messaging Selection Cheatsheet](messaging-selection-cheatsheet.md) — narrow messaging primitives
+- [Network Topology Cheatsheet](network-topology-cheatsheet.md) — narrow networking topology
+
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview
 - https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/
