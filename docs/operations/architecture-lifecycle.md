@@ -82,6 +82,12 @@ flowchart TD
 - Has the workload outgrown its original scaling, security, or team model?
 - What decisions are becoming expensive to reverse?
 
+## See Also
+
+- [ADR process](adr-process.md)
+- [Design labs methodology](../design-labs/methodology.md)
+- [Observability and SLOs](observability-and-slos.md)
+
 ## Microsoft Learn references
 
 - [Cloud Adoption Framework](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/)
