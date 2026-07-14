@@ -34,14 +34,26 @@ else
   fail=$((fail + 1))
 fi
 
-primary_server="$(az sql server list --resource-group "$RG" --query "[0].name" --output tsv 2>/dev/null || true)"
+primary_server=""
 fog_name=""
 fog_role=""
+# A failover group is visible from both member servers, but only the current
+# read-write member reports replicationRole=Primary. Scan all servers and keep
+# the Primary so verification does not depend on 'az sql server list' ordering.
 for server in $(az sql server list --resource-group "$RG" --query "[].name" --output tsv 2>/dev/null || true); do
   candidate="$(az sql failover-group list --server "$server" --resource-group "$RG" --query "[0].name" --output tsv 2>/dev/null || true)"
-  if [[ -n "$candidate" && "$candidate" != "null" ]]; then
+  if [[ -z "$candidate" || "$candidate" == "null" ]]; then
+    continue
+  fi
+  candidate_role="$(az sql failover-group show --name "$candidate" --server "$server" --resource-group "$RG" --query "replicationRole" --output tsv 2>/dev/null || true)"
+  if [[ -z "$fog_name" ]]; then
     fog_name="$candidate"
-    fog_role="$(az sql failover-group show --name "$fog_name" --server "$server" --resource-group "$RG" --query "replicationRole" --output tsv 2>/dev/null || true)"
+    fog_role="$candidate_role"
+    primary_server="$server"
+  fi
+  if [[ "$candidate_role" == "Primary" ]]; then
+    fog_name="$candidate"
+    fog_role="$candidate_role"
     primary_server="$server"
     break
   fi
@@ -80,7 +92,7 @@ if [[ -n "$profile" && "$profile" != "null" ]]; then
   fi
 
   priorities="$(az afd origin list --profile-name "$profile" --resource-group "$RG" --origin-group-name "$og_name" --query "[].priority" --output tsv 2>/dev/null | sort -u | tr '\n' ' ' || true)"
-  if [[ "$priorities" == *"1"* && "$priorities" == *"2"* ]]; then
+  if [[ " $priorities" == *" 1 "* && " $priorities" == *" 2 "* ]]; then
     echo "[ ok ] origins use distinct priorities (${priorities%% }) for active-passive routing."
   else
     echo "[fail] origins do not use priority 1 and priority 2 (found: ${priorities:-none})." >&2

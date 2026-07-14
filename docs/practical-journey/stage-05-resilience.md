@@ -128,11 +128,11 @@ curl -s "https://${FRONTDOOR}/ops/info"
 
 az webapp stop --name <primaryWebApp> --resource-group "$RG"
 
-sleep 60
+sleep 120
 curl -s "https://${FRONTDOOR}/ops/info"
 ```
 
-After the primary stops and Front Door's health probe fails it out of rotation, `/ops/info` reports `"region": "secondary"` — user traffic has failed over at the **app tier** while the database read-write role is still in the primary region. To fail the **data tier** over as well:
+After the primary stops and Front Door's health probe (30s interval, 3 of 4 samples) fails it out of rotation — typically within 1–2 minutes — `/ops/info` reports `"region": "secondary"` — user traffic has failed over at the **app tier** while the database read-write role is still in the primary region. To fail the **data tier** over as well:
 
 ```bash
 az sql failover-group set-primary --name <failoverGroup> --server <secondarySqlServer> --resource-group "$RG"

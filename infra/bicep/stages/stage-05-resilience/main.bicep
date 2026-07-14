@@ -406,7 +406,7 @@ module secondaryWebApp '../../modules/web/web-app.bicep' = {
 module webAppKeyVaultRole '../../modules/foundation/key-vault-role-assignment.bicep' = {
   name: 'stage05-webapp-kv-role'
   params: {
-    keyVaultName: keyVaultName
+    keyVaultName: keyVault.outputs.name
     principalId: webApp.outputs.principalId
     roleDefinitionId: keyVaultSecretsUserRoleId
     principalType: 'ServicePrincipal'
@@ -416,7 +416,7 @@ module webAppKeyVaultRole '../../modules/foundation/key-vault-role-assignment.bi
 module slotKeyVaultRole '../../modules/foundation/key-vault-role-assignment.bicep' = {
   name: 'stage05-slot-kv-role'
   params: {
-    keyVaultName: keyVaultName
+    keyVaultName: keyVault.outputs.name
     principalId: stagingSlot.outputs.principalId
     roleDefinitionId: keyVaultSecretsUserRoleId
     principalType: 'ServicePrincipal'
@@ -426,7 +426,7 @@ module slotKeyVaultRole '../../modules/foundation/key-vault-role-assignment.bice
 module secondaryWebAppKeyVaultRole '../../modules/foundation/key-vault-role-assignment.bicep' = {
   name: 'stage05-secondary-webapp-kv-role'
   params: {
-    keyVaultName: keyVaultName
+    keyVaultName: keyVault.outputs.name
     principalId: secondaryWebApp.outputs.principalId
     roleDefinitionId: keyVaultSecretsUserRoleId
     principalType: 'ServicePrincipal'
@@ -541,7 +541,7 @@ resource originGroup 'Microsoft.Cdn/profiles/originGroups@2023-05-01' = {
       probePath: '/healthz'
       probeRequestType: 'GET'
       probeProtocol: 'Https'
-      probeIntervalInSeconds: 100
+      probeIntervalInSeconds: 30
     }
   }
   dependsOn: [

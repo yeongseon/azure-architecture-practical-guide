@@ -69,7 +69,7 @@ App-tier and data-tier failover are independent. Stopping the primary web app sh
 
 ```bash
 az webapp stop --name <primaryWebApp> --resource-group rg-practical-storefront-stage05
-# wait ~60 seconds for the origin health probe to fail over
+# wait ~1-2 minutes for the origin health probe to fail over
 curl -s https://<frontDoorEndpoint>/ops/info
 ```
 

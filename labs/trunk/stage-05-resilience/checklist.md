@@ -32,7 +32,7 @@ Use this checklist to deploy, verify, run a failover drill on, and tear down the
 ## Failover drill
 
 - [ ] `az webapp stop --name <primaryWebApp> --resource-group rg-practical-storefront-stage05` exits `0`.
-- [ ] After ~60 seconds, `curl https://<frontDoorEndpoint>/ops/info` reports `"region": "secondary"` (app-tier failover).
+- [ ] After ~1–2 minutes, `curl https://<frontDoorEndpoint>/ops/info` reports `"region": "secondary"` (app-tier failover).
 - [ ] `az sql failover-group set-primary --name <failoverGroup> --server <secondarySqlServer> --resource-group rg-practical-storefront-stage05` exits `0`.
 - [ ] `az sql failover-group show --name <failoverGroup> --server <secondarySqlServer> --query replicationRole` reports `Primary` (data-tier failover).
 
