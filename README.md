@@ -4,6 +4,10 @@
 
 📘 Documentation site: <https://yeongseon.github.io/azure-architecture-practical-guide/>
 
+[![Docs](https://github.com/yeongseon/azure-architecture-practical-guide/actions/workflows/docs.yml/badge.svg)](https://github.com/yeongseon/azure-architecture-practical-guide/actions/workflows/docs.yml)
+[![CI](https://github.com/yeongseon/azure-architecture-practical-guide/actions/workflows/quality-gates.yml/badge.svg)](https://github.com/yeongseon/azure-architecture-practical-guide/actions/workflows/quality-gates.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 Comprehensive guide for designing, reviewing, and operating Azure architectures — from foundational decisions and Well-Architected trade-offs to workload blueprints and architecture reviews.
 
 ## What's Inside
