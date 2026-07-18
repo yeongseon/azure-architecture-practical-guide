@@ -92,6 +92,12 @@ Choose this family when private reachability and controlled enterprise access ar
 
 Internal application baselines are most effective when application, network, and identity teams agree on one service ownership model before implementation begins. [Correlated]
 
+## See Also
+
+- [Baseline architecture](baseline.md)
+- [Network and access](network-and-access.md)
+- [Private connectivity patterns](../../patterns/networking/private-connectivity-patterns.md)
+
 ## Microsoft Learn references
 
 - [Private Endpoint overview](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview)

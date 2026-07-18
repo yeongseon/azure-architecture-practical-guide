@@ -125,6 +125,12 @@ flowchart TD
 - [Observed] Team support capability, incident history, and operational complexity.
 - [Unknown] Assumptions not yet tested in a proof of concept.
 
+## See Also
+
+- [Design patterns](index.md)
+- [Architecture decision matrix](../reference/architecture-decision-matrix.md)
+- [Platform concepts](../platform/index.md)
+
 ## Microsoft Learn reference
 
 - https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/

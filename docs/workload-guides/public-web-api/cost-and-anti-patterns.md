@@ -97,6 +97,12 @@ Public web cost discipline comes from linking each major spending area to a user
 
 The best public web cost optimizations usually remove unused complexity before they reduce runtime scale. [Observed]
 
+## See Also
+
+- [Public web API overview](index.md)
+- [Baseline architecture](baseline.md)
+- [Synchronous vs asynchronous](../../patterns/integration/synchronous-vs-asynchronous.md)
+
 ## Microsoft Learn references
 
 - [Azure Well-Architected Framework cost optimization](https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/)

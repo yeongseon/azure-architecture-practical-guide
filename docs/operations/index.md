@@ -64,7 +64,7 @@ This section intentionally stays architectural. It explains how to choose operat
 
 Read the section in operating order rather than alphabetical order. Start with lifecycle and ADRs to understand how decisions are recorded, then move into IaC, policy, and observability to see how those decisions are enforced. Finish with continuity, FinOps, and team-topology guidance to confirm the architecture can survive failure, growth, and organizational change.
 
-## Related pages
+## See Also
 
 - [Architecture lifecycle](architecture-lifecycle.md)
 - [ADR process](adr-process.md)

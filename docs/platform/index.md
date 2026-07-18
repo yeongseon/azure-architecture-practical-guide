@@ -78,6 +78,13 @@ It does not try to cover:
 - runtime tuning detail for specific SKUs
 - feature matrices better maintained in product documentation
 
+## See Also
+
+- [Start Here](../start-here/index.md) — orientation and reading paths before diving into platform fundamentals
+- [Well-Architected](../waf/index.md) — how the five pillars build on these platform foundations
+- [Patterns](../patterns/index.md) — reusable design patterns that assume the platform decisions in this section
+- [Workload Guides](../workload-guides/index.md) — workload baselines that inherit these platform choices
+
 ## Microsoft Learn anchors
 
 - [Azure Architecture Guide](https://learn.microsoft.com/en-us/azure/architecture/guide/)

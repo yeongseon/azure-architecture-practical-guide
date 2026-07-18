@@ -111,6 +111,12 @@ Private Endpoints let teams keep managed services while avoiding the false choic
 
 The baseline works best when the application team accepts that network, DNS, and identity are co-equal parts of the architecture. [Validated]
 
+## See Also
+
+- [Private internal app overview](index.md)
+- [Network and access](network-and-access.md)
+- [Private connectivity patterns](../../patterns/networking/private-connectivity-patterns.md)
+
 ## Microsoft Learn references
 
 - [Baseline highly available zone-redundant web application](https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)

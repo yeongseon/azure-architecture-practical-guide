@@ -93,6 +93,12 @@ flowchart TD
 - The team lacks DNS and network operations maturity.
 - A public endpoint with strong identity and access controls already meets the risk profile.
 
+## See Also
+
+- [Design patterns](../index.md)
+- [Hub-spoke vs Virtual WAN](hub-spoke-vs-virtual-wan.md)
+- [Zero trust at workload level](../security/zero-trust-at-workload-level.md)
+
 ## Microsoft Learn reference
 
 - https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview

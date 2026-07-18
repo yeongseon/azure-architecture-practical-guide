@@ -113,6 +113,12 @@ When applying any pattern in this guide, collect evidence beyond diagrams:
 - [Correlated] Signals that link architecture choices to production pain points.
 - [Unknown] Explicit gaps that still need tests or drills.
 
+## See Also
+
+- [Service selection patterns](service-selection-patterns.md)
+- [Well-Architected Framework](../waf/index.md)
+- [WAF pillar to pattern map](../reference/waf-pillar-to-pattern-map.md)
+
 ## Microsoft Learn references
 
 - https://learn.microsoft.com/en-us/azure/architecture/

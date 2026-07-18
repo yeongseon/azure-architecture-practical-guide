@@ -96,6 +96,12 @@ Choose Option B because ...
 - Link the lab to the matching workload guide and infrastructure path when available.
 - Mark unresolved points as [Assumed] or [Unknown] instead of hiding uncertainty.
 
+## See Also
+
+- [Design Labs](index.md) — the labs that apply this ADVR method
+- [Well-Architected](../waf/index.md) — the quality-attribute pillars that drive ADVR priority ranking
+- [Patterns](../patterns/index.md) — candidate options and trade-offs expressed as reusable patterns
+
 ## Microsoft Learn references
 
 - https://learn.microsoft.com/en-us/azure/architecture/patterns/

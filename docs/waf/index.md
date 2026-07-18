@@ -86,6 +86,12 @@ Architectures should leave this section with explicit validation paths:
 - [Pillar trade-offs](pillar-trade-offs.md)
 - [Architecture assessment checklist](architecture-assessment-checklist.md)
 
+## See Also
+
+- [Using WAF in this guide](using-waf-in-this-guide.md)
+- [WAF pillar to pattern map](../reference/waf-pillar-to-pattern-map.md)
+- [Design patterns](../patterns/index.md)
+
 ## Microsoft Learn references
 
 - [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)

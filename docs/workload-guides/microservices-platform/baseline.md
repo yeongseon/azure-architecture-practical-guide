@@ -96,6 +96,12 @@ Shared databases often turn microservices into a distributed monolith. Database 
 
 This baseline works when the platform provides consistent paved roads while leaving service teams accountable for their own code, contracts, and data. [Validated]
 
+## See Also
+
+- [Microservices platform overview](index.md)
+- [Networking, identity, and service communication](networking-identity-and-service-communication.md)
+- [Modular monolith vs microservices](../../patterns/decomposition/modular-monolith-vs-microservices.md)
+
 ## Microsoft Learn references
 
 - [Architect microservices on Azure](https://learn.microsoft.com/en-us/azure/architecture/microservices/)

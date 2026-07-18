@@ -81,6 +81,12 @@ Use clear interfaces:
 - [Correlated] Platform roadmap changes respond to recurring app-team friction.
 - [Inferred] Shared responsibility reduces ambiguity without diluting accountability.
 
+## See Also
+
+- [Architecture lifecycle](architecture-lifecycle.md)
+- [Policy and governance guardrails](policy-and-governance-guardrails.md)
+- [ADR process](adr-process.md)
+
 ## Microsoft Learn references
 
 - [Cloud Adoption Framework organize guidance](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/organize/)

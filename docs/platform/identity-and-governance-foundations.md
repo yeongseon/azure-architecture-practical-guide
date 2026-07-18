@@ -97,6 +97,12 @@ Architectural implications:
 3. How do workloads authenticate to Azure services without embedding secrets broadly?
 4. Who approves and revisits governance exceptions?
 
+## See Also
+
+- [Resource Organization](resource-organization.md) — the scopes that RBAC and policy assignments bind to
+- [Landing Zones Basics](landing-zones-basics.md) — how the governance baseline is packaged into the platform layer
+- [Azure Architecture on Azure](azure-architecture-on-azure.md) — control-plane versus data-plane authorization boundaries
+
 ## Microsoft Learn anchors
 
 - [Azure RBAC overview](https://learn.microsoft.com/en-us/azure/role-based-access-control/overview)
