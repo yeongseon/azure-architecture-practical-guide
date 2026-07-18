@@ -86,6 +86,12 @@ flowchart TD
     E --> E2[Strangler Fig]
 ```
 
+## See Also
+
+- [Platform concepts](../platform/index.md)
+- [Design patterns](../patterns/index.md)
+- [WAF pillar to pattern map](waf-pillar-to-pattern-map.md)
+
 ## Microsoft Learn references
 
 - https://learn.microsoft.com/en-us/azure/architecture/
