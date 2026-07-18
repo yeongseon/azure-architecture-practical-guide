@@ -296,17 +296,12 @@ def generate_dashboard(guides: list[dict[str, Any]], today: date) -> str:
     )
     lines.append("")
 
+    # See Also
     lines.append("## See Also")
     lines.append("")
     lines.append("- [Workload Guides](../workload-guides/index.md)")
     lines.append("- [Design Labs](../design-labs/index.md)")
     lines.append("- [Architecture Decision Matrix](architecture-decision-matrix.md)")
-    lines.append("")
-
-    lines.append("## Sources")
-    lines.append("")
-    lines.append("- https://learn.microsoft.com/en-us/azure/architecture/")
-    lines.append("- https://learn.microsoft.com/en-us/azure/reliability/overview")
     lines.append("")
 
     return "\n".join(lines) + "\n"

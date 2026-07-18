@@ -18,6 +18,13 @@ from pathlib import Path
 
 DOCS_ROOT = Path(__file__).resolve().parents[1] / "docs"
 
+# Generator-owned dashboards whose tail heading the generator controls; excluded
+# so the normalizer does not fight regeneration. Relative to DOCS_ROOT.
+EXCLUDED_RELPATHS = {
+    "reference/validation-status.md",
+    "reference/content-validation-status.md",
+}
+
 # Headings that should become ## Sources
 SOURCE_ALIASES = {
     "Microsoft Learn references",
@@ -272,7 +279,8 @@ def normalize_file(path: Path) -> str | None:
 
 
 def collect_markdown_files() -> list[Path]:
-    return sorted(DOCS_ROOT.rglob("*.md"))
+    excluded = {DOCS_ROOT / rel for rel in EXCLUDED_RELPATHS}
+    return sorted(p for p in DOCS_ROOT.rglob("*.md") if p not in excluded)
 
 
 def main() -> int:
