@@ -54,6 +54,9 @@ Use this page to choose a reading path based on your current architecture expert
 | **Intermediate Architect** | Improve trade-off judgment across patterns and operations | 6-10 hours | Beginner path, then [Patterns Hub](../patterns/index.md) |
 | **Advanced Architect** | Lead reviews, design labs, and portfolio-wide standards | 10-15 hours + ongoing | Intermediate path, then [Design Labs](../design-labs/index.md) |
 
+!!! tip "Want a hands-on companion?"
+    Follow the [Practical Journey](../practical-journey/index.md) for a staged deploy → verify → destroy path that turns the architecture concepts into concrete Azure baselines.
+
 ## Recommended Sequence
 
 <!-- diagram-id: arch-learning-paths-overview -->

@@ -221,6 +221,11 @@ nav:
     - design-labs/lab-02-private-internal-app.md
     - design-labs/lab-03-event-driven-orders.md
   - Practical Journey:
+    - practical-journey/index.md
+    - practical-journey/getting-started.md
+    - practical-journey/cost-and-time-model.md
+    - practical-journey/module-map.md
+    - practical-journey/verify-and-destroy.md
     - practical-journey/stage-01-mvp.md
     - practical-journey/stage-02-production-baseline.md
     - practical-journey/stage-03-scale-edge.md
