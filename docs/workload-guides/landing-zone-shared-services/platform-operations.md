@@ -93,6 +93,12 @@ Platform operations should standardize visibility and control while preserving t
 
 The platform operations model is sustainable only when central teams can enable workload teams instead of becoming the only people who can interpret platform telemetry. [Validated]
 
+## See Also
+
+- [Landing zone shared services overview](index.md)
+- [Cost and anti-patterns](cost-and-anti-patterns.md)
+- [Landing zones basics](../../platform/landing-zones-basics.md)
+
 ## Microsoft Learn references
 
 - [Manage cloud adoption at scale](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/manage/)

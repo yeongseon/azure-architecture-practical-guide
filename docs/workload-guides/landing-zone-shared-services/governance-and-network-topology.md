@@ -94,6 +94,12 @@ This reduces unmanaged drift. [Observed]
 
 It also clarifies shared accountability. [Correlated]
 
+## See Also
+
+- [Landing zone shared services overview](index.md)
+- [Platform operations](platform-operations.md)
+- [Landing zones basics](../../platform/landing-zones-basics.md)
+
 ## Microsoft Learn references
 
 - [Azure best practices and recommendations](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/)

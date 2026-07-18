@@ -102,6 +102,12 @@ Do not collapse user and operator paths into the same endpoint. Separate adminis
 
 Strong private access architecture depends on predictable name resolution and clearly governed network paths more than on any single Azure service choice. [Validated]
 
+## See Also
+
+- [Private internal app overview](index.md)
+- [Data and integration](data-and-integration.md)
+- [Private connectivity patterns](../../patterns/networking/private-connectivity-patterns.md)
+
 ## Microsoft Learn references
 
 - [Private Endpoint overview](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview)
