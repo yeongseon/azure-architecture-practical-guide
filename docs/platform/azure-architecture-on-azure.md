@@ -100,21 +100,22 @@ Ask these before moving into workload design:
 3. Are control-plane and data-plane permissions separately reviewed?
 4. Does the selected region support the service capabilities the architecture depends on?
 
+## Takeaway
+
+[Inferred] Good Azure architecture begins with control boundaries and failure domains, not with a service catalog.
+
+Understand the platform shape first, then choose workload services inside that shape.
+
 ## See Also
 
 - [Resource Organization](resource-organization.md) — the management hierarchy that sits on the ARM control plane
 - [Landing Zones Basics](landing-zones-basics.md) — how shared platform services are owned separately from workloads
 - [Resilience and Region Strategy](resilience-and-region-strategy.md) — turning regions and zones into deliberate failure domains
 
-## Microsoft Learn anchors
+## Sources
 
 - [Azure Architecture Guide](https://learn.microsoft.com/en-us/azure/architecture/guide/)
 - [What is Azure Resource Manager?](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview)
 - [Control plane and data plane](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/control-plane-and-data-plane)
 - [Azure geographies](https://learn.microsoft.com/en-us/azure/reliability/regions-list)
 
-## Takeaway
-
-[Inferred] Good Azure architecture begins with control boundaries and failure domains, not with a service catalog.
-
-Understand the platform shape first, then choose workload services inside that shape.

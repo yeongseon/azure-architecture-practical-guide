@@ -115,8 +115,9 @@ Public edge and identity design should concentrate control at the boundary while
 - [Data and state](data-and-state.md)
 - [Synchronous vs asynchronous](../../patterns/integration/synchronous-vs-asynchronous.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Azure Front Door overview](https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview)
 - [Authentication and authorization in Azure App Service](https://learn.microsoft.com/en-us/azure/app-service/overview-authentication-authorization)
 - [Microsoft Entra architecture guidance](https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/considerations/identity)
+

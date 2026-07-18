@@ -461,3 +461,8 @@ Use this checklist when adding or reviewing a language guide:
 - Container Apps: [Language Guides](https://yeongseon.github.io/azure-container-apps-practical-guide/language-guides/) — 4-language reference implementation
 - Functions: [Language Guides](https://yeongseon.github.io/azure-functions-practical-guide/language-guides/) — 4-language × 4-plan matrix
 - App Service: [Language Guides](https://yeongseon.github.io/azure-app-service-practical-guide/language-guides/) — 4-language reference implementation
+
+## Sources
+
+- https://learn.microsoft.com/en-us/azure/architecture/
+

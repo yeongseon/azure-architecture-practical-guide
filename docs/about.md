@@ -94,17 +94,6 @@ That implies:
 - pages should be scoped tightly enough to stay current
 - build and link validation should be part of contribution hygiene
 
-## See Also
-
-- [Start here: overview](start-here/overview.md)
-- [Platform concepts](platform/index.md)
-- [Design labs](design-labs/index.md)
-
-## Microsoft Learn anchors
-
-- [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/)
-- [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)
-
 ## Disclaimer
 
 This is an independent community project and is not affiliated with or endorsed by Microsoft.
@@ -114,3 +103,15 @@ This is an independent community project and is not affiliated with or endorsed 
 [Inferred] The project exists to make Azure architecture choices easier to discuss, review, and validate.
 
 If Microsoft Learn tells you what Azure can do, this guide is meant to help you decide what your team should do next.
+
+## See Also
+
+- [Start here: overview](start-here/overview.md)
+- [Platform concepts](platform/index.md)
+- [Design labs](design-labs/index.md)
+
+## Sources
+
+- [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/)
+- [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)
+

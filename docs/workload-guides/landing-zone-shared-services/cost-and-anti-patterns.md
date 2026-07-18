@@ -99,8 +99,9 @@ That supports better chargeback conversations. [Correlated]
 - [Baseline architecture](baseline.md)
 - [Landing zones basics](../../platform/landing-zones-basics.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Azure Well-Architected Framework cost optimization](https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/)
 - [Cloud Adoption Framework landing zones](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/)
 - [Azure Architecture Framework cost overview](https://learn.microsoft.com/en-us/azure/architecture/framework/cost/overview)
+

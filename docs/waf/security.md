@@ -89,17 +89,18 @@ flowchart TD
 
 Validate through access reviews, secret rotation drills, policy compliance checks, penetration testing where appropriate, and post-incident learning. A control that exists but is not reviewed or exercised remains only partially trusted.
 
+## Takeaway
+
+[Validated] Secure Azure architectures start with identity, limit trust everywhere else, and pair preventive controls with realistic detection and response ownership.
+
 ## See Also
 
 - [Well-Architected Framework](index.md)
 - [Identity and governance foundations](../platform/identity-and-governance-foundations.md)
 - [Identity-first and secrets flow](../patterns/security/identity-first-and-secrets-flow.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Security pillar](https://learn.microsoft.com/en-us/azure/well-architected/security/)
 - [Azure security best practices and patterns](https://learn.microsoft.com/en-us/azure/security/fundamentals/best-practices-and-patterns)
 
-## Takeaway
-
-[Validated] Secure Azure architectures start with identity, limit trust everywhere else, and pair preventive controls with realistic detection and response ownership.

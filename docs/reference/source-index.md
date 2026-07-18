@@ -84,9 +84,10 @@ flowchart TD
 - [Platform concepts](../platform/index.md)
 - [Design patterns](../patterns/index.md)
 
-## Microsoft Learn references
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/architecture/
 - https://learn.microsoft.com/en-us/azure/well-architected/
 - https://learn.microsoft.com/en-us/azure/architecture/patterns/
 - https://learn.microsoft.com/en-us/azure/azure-monitor/overview
+

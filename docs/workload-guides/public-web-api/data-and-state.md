@@ -103,8 +103,9 @@ Good web workload state design keeps compute disposable and makes durable state 
 - [Operations and reliability](operations-and-reliability.md)
 - [Synchronous vs asynchronous](../../patterns/integration/synchronous-vs-asynchronous.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Choose a data store for an application](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview)
 - [Cache-Aside pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/cache-aside)
 - [Azure Blob Storage architecture center guidance](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/storage-options)
+

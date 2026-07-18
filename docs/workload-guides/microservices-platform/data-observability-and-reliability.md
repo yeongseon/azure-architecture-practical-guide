@@ -104,8 +104,9 @@ Observability and data ownership are the control mechanisms that keep a microser
 - [Cost and anti-patterns](cost-and-anti-patterns.md)
 - [Modular monolith vs microservices](../../patterns/decomposition/modular-monolith-vs-microservices.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Data considerations for microservices](https://learn.microsoft.com/en-us/azure/architecture/microservices/design/data-considerations)
 - [Telemetry correlation in Application Insights](https://learn.microsoft.com/en-us/azure/azure-monitor/app/distributed-tracing-telemetry-correlation)
 - [Circuit Breaker pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/circuit-breaker)
+

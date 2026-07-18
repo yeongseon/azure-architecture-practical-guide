@@ -100,17 +100,18 @@ flowchart TD
 - Business stakeholders have not defined which operations truly require strong consistency.
 - The team cannot operate cross-region failover or partition hot-spot mitigation.
 
+## Takeaway
+
+Treat consistency, partitioning, and replication as linked architecture decisions rather than isolated database settings. On Azure, the right design starts with business correctness boundaries, then chooses partition and replication strategies that scale without hiding failure modes.
+
 ## See Also
 
 - [Design patterns](../index.md)
 - [Cache-aside, CQRS, and materialized view](cache-aside-cqrs-and-materialized-view.md)
 - [Multi-tenant data isolation](multi-tenant-data-isolation.md)
 
-## Microsoft Learn reference
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/architecture/best-practices/data-partitioning
 - https://learn.microsoft.com/en-us/azure/cosmos-db/consistency-levels
 
-## Takeaway
-
-Treat consistency, partitioning, and replication as linked architecture decisions rather than isolated database settings. On Azure, the right design starts with business correctness boundaries, then chooses partition and replication strategies that scale without hiding failure modes.

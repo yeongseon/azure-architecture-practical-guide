@@ -102,17 +102,18 @@ Use a simple prioritization sequence:
 - [Inferred] Deferred improvements include explicit revisit triggers.
 - [Unknown] Any unowned trade-off is a governance gap.
 
+## Takeaway
+
+[Validated] Mature Azure architecture decisions do not avoid trade-offs; they expose, justify, and revisit them as evidence changes.
+
 ## See Also
 
 - [Well-Architected Framework](index.md)
 - [WAF pillar to pattern map](../reference/waf-pillar-to-pattern-map.md)
 - [Design labs methodology](../design-labs/methodology.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Well-Architected pillars](https://learn.microsoft.com/en-us/azure/well-architected/pillars)
 - [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)
 
-## Takeaway
-
-[Validated] Mature Azure architecture decisions do not avoid trade-offs; they expose, justify, and revisit them as evidence changes.

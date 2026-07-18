@@ -107,16 +107,17 @@ flowchart TD
 - Add anti-corruption layers where external or legacy models differ.
 - Align identity, secrets, and network access with ownership boundaries.
 
+## Takeaway
+
+Bounded contexts are valuable only when they change ownership, contracts, and data access in practice. On Azure, the most important proof of a real boundary is owned data plus controlled integration, not separate code repositories alone.
+
 ## See Also
 
 - [Design patterns](../index.md)
 - [Modular monolith vs microservices](modular-monolith-vs-microservices.md)
 - [Strangler fig migration](strangler-fig-migration.md)
 
-## Microsoft Learn reference
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/architecture/microservices/model/domain-analysis
 
-## Takeaway
-
-Bounded contexts are valuable only when they change ownership, contracts, and data access in practice. On Azure, the most important proof of a real boundary is owned data plus controlled integration, not separate code repositories alone.

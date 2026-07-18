@@ -99,8 +99,9 @@ Reliable event-driven operations depend on visible backlog economics and discipl
 - [Cost and anti-patterns](cost-and-anti-patterns.md)
 - [Event-driven architecture](../../patterns/integration/event-driven-architecture.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Overview of Service Bus dead-letter queues](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dead-letter-queues)
 - [Azure Monitor overview](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
 - [Reliability in Azure Functions](https://learn.microsoft.com/en-us/azure/azure-functions/performance-reliability)
+

@@ -92,9 +92,10 @@ flowchart TD
 - [Design patterns](../patterns/index.md)
 - [WAF pillar to pattern map](waf-pillar-to-pattern-map.md)
 
-## Microsoft Learn references
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/architecture/
 - https://learn.microsoft.com/en-us/azure/well-architected/
 - https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/
 - https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/control-plane-and-data-plane
+

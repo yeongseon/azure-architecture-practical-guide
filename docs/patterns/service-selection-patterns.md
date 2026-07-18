@@ -125,16 +125,17 @@ flowchart TD
 - [Observed] Team support capability, incident history, and operational complexity.
 - [Unknown] Assumptions not yet tested in a proof of concept.
 
+## Takeaway
+
+The best Azure service is the one that fits the architectural role with the clearest evidence, smallest avoidable complexity, and strongest alignment to the team's real operating model.
+
 ## See Also
 
 - [Design patterns](index.md)
 - [Architecture decision matrix](../reference/architecture-decision-matrix.md)
 - [Platform concepts](../platform/index.md)
 
-## Microsoft Learn reference
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/
 
-## Takeaway
-
-The best Azure service is the one that fits the architectural role with the clearest evidence, smallest avoidable complexity, and strongest alignment to the team's real operating model.

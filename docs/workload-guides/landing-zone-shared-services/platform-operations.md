@@ -99,8 +99,9 @@ The platform operations model is sustainable only when central teams can enable 
 - [Cost and anti-patterns](cost-and-anti-patterns.md)
 - [Landing zones basics](../../platform/landing-zones-basics.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Manage cloud adoption at scale](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/manage/)
 - [Azure Monitor overview](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
 - [Cloud Adoption Framework governance and management](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/govern/)
+

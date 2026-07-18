@@ -102,7 +102,8 @@ Choose Option B because ...
 - [Well-Architected](../waf/index.md) — the quality-attribute pillars that drive ADVR priority ranking
 - [Patterns](../patterns/index.md) — candidate options and trade-offs expressed as reusable patterns
 
-## Microsoft Learn references
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/architecture/patterns/
 - https://learn.microsoft.com/en-us/azure/well-architected/
+

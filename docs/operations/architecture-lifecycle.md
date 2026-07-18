@@ -82,17 +82,18 @@ flowchart TD
 - Has the workload outgrown its original scaling, security, or team model?
 - What decisions are becoming expensive to reverse?
 
+## Takeaway
+
+[Validated] The best architecture lifecycle is a deliberate loop: decide, encode, operate, learn, and revisit before production pressure makes redesign unavoidable.
+
 ## See Also
 
 - [ADR process](adr-process.md)
 - [Design labs methodology](../design-labs/methodology.md)
 - [Observability and SLOs](observability-and-slos.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Cloud Adoption Framework](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/)
 - [Adopt cloud governance at scale](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/govern/)
 
-## Takeaway
-
-[Validated] The best architecture lifecycle is a deliberate loop: decide, encode, operate, learn, and revisit before production pressure makes redesign unavoidable.

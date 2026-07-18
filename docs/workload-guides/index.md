@@ -94,18 +94,19 @@ Landing zones answer platform questions such as subscription hierarchy, guardrai
 - Treat benchmark numbers and cost examples as directional until validated in your tenant and region. [Inferred]
 - Use architecture decision records when deviating from a baseline for compliance, latency, or organizational reasons. [Validated]
 
+## Next step
+
+Start with the family that best matches your workload shape, then use the baseline guide to anchor architecture decisions and review trade-offs.
+
 ## See Also
 
 - [Public web API](public-web-api/index.md)
 - [Design patterns](../patterns/index.md)
 - [Architecture decision matrix](../reference/architecture-decision-matrix.md)
 
-## Related Microsoft Learn references
+## Sources
 
 - [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/)
 - [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)
 - [Choose an Azure compute service](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree)
 
-## Next step
-
-Start with the family that best matches your workload shape, then use the baseline guide to anchor architecture decisions and review trade-offs.

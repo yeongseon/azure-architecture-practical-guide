@@ -75,6 +75,12 @@ flowchart TD
 
 Architecture Reviews are planned for Phase 2. In the current published Phase 1 site, the practical path runs from Start Here through Platform, Well-Architected Framework, Patterns, Workload Guides, Operations, Design Labs, and Reference.
 
+## Scope and disclaimer
+
+This is an independent community project. Not affiliated with or endorsed by Microsoft.
+
+Primary references: [Azure Architecture Center](https://learn.microsoft.com/azure/architecture/) and [Azure Well-Architected Framework](https://learn.microsoft.com/azure/well-architected/).
+
 ## See Also
 
 - [Overview](start-here/overview.md) — what this guide is and who it's for
@@ -85,8 +91,8 @@ Architecture Reviews are planned for Phase 2. In the current published Phase 1 s
 - [Platform Hub](platform/index.md) — Azure architecture foundations
 - [Well-Architected Framework Hub](waf/index.md) — pillar-based evaluation
 
-## Scope and disclaimer
+## Sources
 
-This is an independent community project. Not affiliated with or endorsed by Microsoft.
+- [Azure Architecture Center](https://learn.microsoft.com/azure/architecture/)
+- [Azure Well-Architected Framework](https://learn.microsoft.com/azure/well-architected/)
 
-Primary references: [Azure Architecture Center](https://learn.microsoft.com/azure/architecture/) and [Azure Well-Architected Framework](https://learn.microsoft.com/azure/well-architected/).

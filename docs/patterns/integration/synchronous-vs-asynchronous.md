@@ -102,16 +102,17 @@ flowchart TD
 - Can the caller tolerate duplicate delivery or out-of-order processing?
 - Who monitors stuck, dead-lettered, or replayed work?
 
+## Takeaway
+
+Use synchronous integration for short, user-blocking interactions. Use asynchronous integration when independence, buffering, and failure isolation are more valuable than immediate completion.
+
 ## See Also
 
 - [Design patterns](../index.md)
 - [Event-driven architecture](event-driven-architecture.md)
 - [Queue-based load leveling and competing consumers](queue-based-load-leveling-and-competing-consumers.md)
 
-## Microsoft Learn reference
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/architecture/patterns/async-request-reply
 
-## Takeaway
-
-Use synchronous integration for short, user-blocking interactions. Use asynchronous integration when independence, buffering, and failure isolation are more valuable than immediate completion.

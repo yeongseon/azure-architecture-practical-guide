@@ -108,8 +108,9 @@ Strong private access architecture depends on predictable name resolution and cl
 - [Data and integration](data-and-integration.md)
 - [Private connectivity patterns](../../patterns/networking/private-connectivity-patterns.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Private Endpoint overview](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview)
 - [Azure Private DNS zones overview](https://learn.microsoft.com/en-us/azure/dns/private-dns-privatednszone)
 - [Virtual network integration for App Service](https://learn.microsoft.com/en-us/azure/app-service/overview-vnet-integration)
+

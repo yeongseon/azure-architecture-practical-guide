@@ -97,17 +97,18 @@ flowchart TD
 - Not as a heavyweight process for trivial internal prototypes with no shared production path.
 - Not as a substitute for engineering quality when the pipeline only automates weak checks.
 
+## Takeaway
+
+Use environment promotion and release guardrails to turn deployment progression into an evidence-based operating decision. On Azure, effective promotion combines automated checks, policy enforcement, and post-release verification so production change becomes predictable instead of hopeful.
+
 ## See Also
 
 - [Design patterns](../index.md)
 - [Blue-green, canary, and stamp patterns](blue-green-canary-and-stamp-patterns.md)
 - [Infrastructure as code and environment promotion](../../operations/infrastructure-as-code-and-environment-promotion.md)
 
-## Microsoft Learn reference
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/architecture/framework/mission-critical/mission-critical-deployment-testing
 - https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/safe-deployments
 
-## Takeaway
-
-Use environment promotion and release guardrails to turn deployment progression into an evidence-based operating decision. On Azure, effective promotion combines automated checks, policy enforcement, and post-release verification so production change becomes predictable instead of hopeful.

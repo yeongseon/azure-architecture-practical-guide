@@ -77,21 +77,22 @@ flowchart TD
 3. Is ordering required globally, per entity, or not at all?
 4. Who owns replay, poison-message handling, and consumer lag visibility?
 
+## Takeaway
+
+[Inferred] Pick the integration service that matches the interaction contract, not the service your team used last time.
+
+Messaging, eventing, and streaming are adjacent patterns, not interchangeable ones.
+
 ## See Also
 
 - [Compute Selection Basics](compute-selection-basics.md) — the services that produce and consume these messages
 - [Data Selection Basics](data-selection-basics.md) — where integrated data lands and becomes source of truth
 - [Observability Foundations](observability-foundations.md) — consumer lag, dead-letter, and telemetry for messaging paths
 
-## Microsoft Learn anchors
+## Sources
 
 - [Choose a messaging service](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/messaging)
 - [Service Bus overview](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview)
 - [Event Grid overview](https://learn.microsoft.com/en-us/azure/event-grid/overview)
 - [Event Hubs overview](https://learn.microsoft.com/en-us/azure/event-hubs/event-hubs-about)
 
-## Takeaway
-
-[Inferred] Pick the integration service that matches the interaction contract, not the service your team used last time.
-
-Messaging, eventing, and streaming are adjacent patterns, not interchangeable ones.

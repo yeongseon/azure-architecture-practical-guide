@@ -86,17 +86,18 @@ Architectures should leave this section with explicit validation paths:
 - [Pillar trade-offs](pillar-trade-offs.md)
 - [Architecture assessment checklist](architecture-assessment-checklist.md)
 
+## Takeaway
+
+[Inferred] Treat WAF as a repeatable architecture review language. The goal is not a perfect score in every pillar; the goal is a design whose trade-offs are explicit, owned, and validated.
+
 ## See Also
 
 - [Using WAF in this guide](using-waf-in-this-guide.md)
 - [WAF pillar to pattern map](../reference/waf-pillar-to-pattern-map.md)
 - [Design patterns](../patterns/index.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)
 - [Well-Architected pillars](https://learn.microsoft.com/en-us/azure/well-architected/pillars)
 
-## Takeaway
-
-[Inferred] Treat WAF as a repeatable architecture review language. The goal is not a perfect score in every pillar; the goal is a design whose trade-offs are explicit, owned, and validated.

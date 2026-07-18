@@ -78,6 +78,12 @@ It does not try to cover:
 - runtime tuning detail for specific SKUs
 - feature matrices better maintained in product documentation
 
+## Takeaway
+
+[Inferred] Strong workload architecture usually starts with boring platform clarity.
+
+Use this section to establish the shared Azure decisions that every later pattern and workload baseline will inherit.
+
 ## See Also
 
 - [Start Here](../start-here/index.md) — orientation and reading paths before diving into platform fundamentals
@@ -85,14 +91,9 @@ It does not try to cover:
 - [Patterns](../patterns/index.md) — reusable design patterns that assume the platform decisions in this section
 - [Workload Guides](../workload-guides/index.md) — workload baselines that inherit these platform choices
 
-## Microsoft Learn anchors
+## Sources
 
 - [Azure Architecture Guide](https://learn.microsoft.com/en-us/azure/architecture/guide/)
 - [Cloud Adoption Framework landing zones](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/)
 - [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)
 
-## Takeaway
-
-[Inferred] Strong workload architecture usually starts with boring platform clarity.
-
-Use this section to establish the shared Azure decisions that every later pattern and workload baseline will inherit.

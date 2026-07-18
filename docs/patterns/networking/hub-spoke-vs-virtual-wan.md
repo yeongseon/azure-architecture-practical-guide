@@ -110,16 +110,17 @@ flowchart TD
 - The environment is small and cost-sensitive.
 - Highly customized transit and inspection behaviors are mandatory.
 
+## Takeaway
+
+Use hub-spoke when you need customer-controlled shared network services and explicit landing-zone segmentation. Use Virtual WAN when connectivity scale and transit operations are the real problem to solve.
+
 ## See Also
 
 - [Design patterns](../index.md)
 - [Private connectivity patterns](private-connectivity-patterns.md)
 - [Network topology basics](../../platform/network-topology-basics.md)
 
-## Microsoft Learn reference
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/architecture/networking/architecture/hub-spoke
 
-## Takeaway
-
-Use hub-spoke when you need customer-controlled shared network services and explicit landing-zone segmentation. Use Virtual WAN when connectivity scale and transit operations are the real problem to solve.

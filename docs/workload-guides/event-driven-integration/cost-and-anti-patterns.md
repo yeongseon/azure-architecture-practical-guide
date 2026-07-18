@@ -99,8 +99,9 @@ That keeps hidden consumer cost visible. [Observed]
 - [Baseline architecture](baseline.md)
 - [Event-driven architecture](../../patterns/integration/event-driven-architecture.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Azure Well-Architected Framework cost optimization](https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/)
 - [Compare messaging services in Azure](https://learn.microsoft.com/en-us/azure/event-grid/compare-messaging-services)
 - [Azure Functions scale and hosting](https://learn.microsoft.com/en-us/azure/azure-functions/functions-scale)
+

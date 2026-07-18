@@ -117,8 +117,9 @@ The baseline works best when the application team accepts that network, DNS, and
 - [Network and access](network-and-access.md)
 - [Private connectivity patterns](../../patterns/networking/private-connectivity-patterns.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Baseline highly available zone-redundant web application](https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)
 - [Private Endpoint overview](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview)
 - [Virtual network integration for App Service](https://learn.microsoft.com/en-us/azure/app-service/overview-vnet-integration)
+

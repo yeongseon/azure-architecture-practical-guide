@@ -54,7 +54,8 @@ flowchart TD
 - [WAF reliability pillar](../waf/reliability.md)
 - [Design labs](../design-labs/index.md)
 
-## Microsoft Learn references
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/reliability/overview
 - https://learn.microsoft.com/en-us/azure/well-architected/reliability/
+

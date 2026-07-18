@@ -93,16 +93,17 @@ flowchart TD
 - The team lacks DNS and network operations maturity.
 - A public endpoint with strong identity and access controls already meets the risk profile.
 
+## Takeaway
+
+Private connectivity is effective only when network path, DNS resolution, identity, and hybrid routing are designed together. On Azure, Private Endpoints are the stronger isolation pattern, but they are not the cheaper or simpler default in every workload.
+
 ## See Also
 
 - [Design patterns](../index.md)
 - [Hub-spoke vs Virtual WAN](hub-spoke-vs-virtual-wan.md)
 - [Zero trust at workload level](../security/zero-trust-at-workload-level.md)
 
-## Microsoft Learn reference
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
 
-## Takeaway
-
-Private connectivity is effective only when network path, DNS resolution, identity, and hybrid routing are designed together. On Azure, Private Endpoints are the stronger isolation pattern, but they are not the cheaper or simpler default in every workload.

@@ -107,8 +107,9 @@ Reliable public workloads combine edge health, safe deployment mechanics, and de
 - [Cost and anti-patterns](cost-and-anti-patterns.md)
 - [Synchronous vs asynchronous](../../patterns/integration/synchronous-vs-asynchronous.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Azure App Service reliability](https://learn.microsoft.com/en-us/azure/reliability/reliability-app-service)
 - [Azure Monitor overview](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
 - [Disaster recovery strategies](https://learn.microsoft.com/en-us/azure/well-architected/reliability/disaster-recovery)
+

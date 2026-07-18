@@ -71,9 +71,10 @@ flowchart TD
 - [WAF security pillar](../waf/security.md)
 - [Identity-first and secrets flow](../patterns/security/identity-first-and-secrets-flow.md)
 
-## Microsoft Learn references
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/well-architected/security/
 - https://learn.microsoft.com/en-us/azure/role-based-access-control/overview
 - https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
 - https://learn.microsoft.com/en-us/azure/key-vault/general/overview
+

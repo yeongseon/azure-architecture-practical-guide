@@ -88,13 +88,19 @@ flowchart TD
 3. What is the expected burst pattern and steady-state utilization?
 4. How much platform complexity can the organization sustainably operate?
 
+## Takeaway
+
+[Inferred] Compute selection is a staffing and operations decision disguised as a runtime decision.
+
+Prefer the most managed service that still clears the workload's non-negotiable constraints.
+
 ## See Also
 
 - [Data Selection Basics](data-selection-basics.md) — the paired data-store decision for the same workload
 - [Integration Selection Basics](integration-selection-basics.md) — how components communicate once compute is chosen
 - [Network Topology Basics](network-topology-basics.md) — the connectivity model the chosen compute must fit
 
-## Microsoft Learn anchors
+## Sources
 
 - [Compute decision tree](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree)
 - [Choose a compute service](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-overview)
@@ -104,8 +110,3 @@ flowchart TD
 - [Azure Container Apps overview](https://learn.microsoft.com/en-us/azure/container-apps/overview)
 - [Choose between Azure Container Apps, AKS, and App Service](https://learn.microsoft.com/en-us/azure/container-apps/compare-options)
 
-## Takeaway
-
-[Inferred] Compute selection is a staffing and operations decision disguised as a runtime decision.
-
-Prefer the most managed service that still clears the workload's non-negotiable constraints.

@@ -112,13 +112,13 @@ If the workload uses Front Door for edge protection and routing, App Service for
 - Sustained throughput that pushes App Service plan or Azure SQL sizing beyond target cost bands.
 - New compliance requirements for private ingress or stricter data residency.
 
-## Takeaway
-
-For a public-facing Azure web application, Front Door plus zone-redundant App Service, Azure SQL, Key Vault, and Azure Monitor is the recommended starting point when the goal is strong security and reliability with manageable operational overhead. Validate it with load, cost, and failure testing before standardizing.
-
 ## Clean Up
 
 No cleanup is required. This design lab is a paper exercise; no Azure resources were provisioned.
+
+## Takeaway
+
+For a public-facing Azure web application, Front Door plus zone-redundant App Service, Azure SQL, Key Vault, and Azure Monitor is the recommended starting point when the goal is strong security and reliability with manageable operational overhead. Validate it with load, cost, and failure testing before standardizing.
 
 ## See Also
 
@@ -126,7 +126,8 @@ No cleanup is required. This design lab is a paper exercise; no Azure resources 
 - [Public Web and API baseline](../workload-guides/public-web-api/baseline.md) — detailed baseline architecture and standards
 - [Design Lab Methodology](methodology.md) — the ADVR structure this lab follows
 
-## Microsoft Learn references
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant
 - https://learn.microsoft.com/en-us/azure/well-architected/
+

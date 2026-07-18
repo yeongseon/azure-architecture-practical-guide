@@ -109,16 +109,17 @@ flowchart TD
 - Synchronization complexity exceeds the value of incremental migration.
 - The business requires immediate retirement of the legacy estate.
 
+## Takeaway
+
+Strangler Fig is the default modernization pattern when risk, continuity, and learning matter more than architectural purity. In Azure, Front Door and API Management make incremental redirection practical, but domain slicing and data ownership still determine success.
+
 ## See Also
 
 - [Design patterns](../index.md)
 - [Modular monolith vs microservices](modular-monolith-vs-microservices.md)
 - [Bounded contexts and data ownership](bounded-contexts-and-data-ownership.md)
 
-## Microsoft Learn reference
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/architecture/patterns/strangler-fig
 
-## Takeaway
-
-Strangler Fig is the default modernization pattern when risk, continuity, and learning matter more than architectural purity. In Azure, Front Door and API Management make incremental redirection practical, but domain slicing and data ownership still determine success.

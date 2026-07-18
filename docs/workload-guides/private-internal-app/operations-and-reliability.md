@@ -101,8 +101,9 @@ Reliable internal applications require an operating model that treats connectivi
 - [Cost and anti-patterns](cost-and-anti-patterns.md)
 - [Private connectivity patterns](../../patterns/networking/private-connectivity-patterns.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Azure Monitor overview](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
 - [Azure App Service reliability](https://learn.microsoft.com/en-us/azure/reliability/reliability-app-service)
 - [Business continuity and disaster recovery guidance](https://learn.microsoft.com/en-us/azure/architecture/framework/resiliency/overview)
+

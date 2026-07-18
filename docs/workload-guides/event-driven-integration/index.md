@@ -88,20 +88,21 @@ Start with one well-owned event flow and prove replay, observability, and busine
 
 That sequencing lowers integration risk. [Inferred]
 
+## Next reading
+
+- [Baseline architecture](baseline.md)
+- [Messaging and consistency decisions](messaging-and-consistency.md)
+- [Operations and reliability](operations-and-reliability.md)
+
 ## See Also
 
 - [Baseline architecture](baseline.md)
 - [Messaging and consistency](messaging-and-consistency.md)
 - [Event-driven architecture](../../patterns/integration/event-driven-architecture.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Event-driven architecture style](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven)
 - [Service Bus messaging overview](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview)
 - [Azure Functions event-driven scale guidance](https://learn.microsoft.com/en-us/azure/azure-functions/functions-scale)
 
-## Next reading
-
-- [Baseline architecture](baseline.md)
-- [Messaging and consistency decisions](messaging-and-consistency.md)
-- [Operations and reliability](operations-and-reliability.md)

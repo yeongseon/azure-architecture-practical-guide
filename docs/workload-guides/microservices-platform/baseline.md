@@ -102,7 +102,7 @@ This baseline works when the platform provides consistent paved roads while leav
 - [Networking, identity, and service communication](networking-identity-and-service-communication.md)
 - [Modular monolith vs microservices](../../patterns/decomposition/modular-monolith-vs-microservices.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Architect microservices on Azure](https://learn.microsoft.com/en-us/azure/architecture/microservices/)
 - [Interservice communication in a microservices architecture](https://learn.microsoft.com/en-us/azure/architecture/microservices/design/interservice-communication)
@@ -110,3 +110,4 @@ This baseline works when the platform provides consistent paved roads while leav
 - [Azure Kubernetes Service (AKS) overview](https://learn.microsoft.com/en-us/azure/aks/what-is-aks)
 - [Azure Container Apps overview](https://learn.microsoft.com/en-us/azure/container-apps/overview)
 - [Choose between Azure Container Apps, AKS, and App Service](https://learn.microsoft.com/en-us/azure/container-apps/compare-options)
+

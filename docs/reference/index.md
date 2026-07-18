@@ -49,7 +49,8 @@ flowchart TD
 - [Platform concepts](../platform/index.md)
 - [Design labs](../design-labs/index.md)
 
-## Microsoft Learn references
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/architecture/
 - https://learn.microsoft.com/en-us/azure/well-architected/
+

@@ -100,16 +100,17 @@ flowchart TD
 - The operation is not idempotent and duplicates create business harm.
 - Failure originates from quota exhaustion or persistent misconfiguration.
 
+## Takeaway
+
+Use retries to survive transient faults, circuit breakers to fail fast when a dependency is unhealthy, and bulkheads to protect the rest of the workload from localized failure. Azure SDK defaults help, but architecture ownership still belongs to the application design.
+
 ## See Also
 
 - [Design patterns](../index.md)
 - [Health endpoints, graceful degradation, and backpressure](health-endpoints-graceful-degradation-and-backpressure.md)
 - [WAF reliability pillar](../../waf/reliability.md)
 
-## Microsoft Learn reference
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/architecture/patterns/retry
 
-## Takeaway
-
-Use retries to survive transient faults, circuit breakers to fail fast when a dependency is unhealthy, and bulkheads to protect the rest of the workload from localized failure. Azure SDK defaults help, but architecture ownership still belongs to the application design.

@@ -102,17 +102,18 @@ flowchart TD
 - The team cannot operate asynchronous tracing, compensation, and replay procedures.
 - Business rules cannot tolerate eventual consistency or compensation windows.
 
+## Takeaway
+
+Use saga, idempotency, and outbox together when one business workflow spans multiple services and any retry or partial failure must remain safe. On Azure, Service Bus plus a durable application store gives a practical foundation for this pattern combination.
+
 ## See Also
 
 - [Design patterns](../index.md)
 - [Event-driven architecture](event-driven-architecture.md)
 - [Consistency, partitioning, and replication](../data/consistency-partitioning-and-replication.md)
 
-## Microsoft Learn reference
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/architecture/patterns/saga
 - https://learn.microsoft.com/en-us/azure/architecture/patterns/compensating-transaction
 
-## Takeaway
-
-Use saga, idempotency, and outbox together when one business workflow spans multiple services and any retry or partial failure must remain safe. On Azure, Service Bus plus a durable application store gives a practical foundation for this pattern combination.

@@ -102,8 +102,9 @@ Serverless cost discipline comes from aligning plan choice, retry behavior, and 
 - [Baseline architecture](baseline.md)
 - [Queue-based load leveling and competing consumers](../../patterns/integration/queue-based-load-leveling-and-competing-consumers.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Azure Functions scale and hosting](https://learn.microsoft.com/en-us/azure/azure-functions/functions-scale)
 - [Azure Functions overview](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview)
 - [Azure Well-Architected Framework cost optimization](https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/)
+

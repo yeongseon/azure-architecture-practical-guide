@@ -100,8 +100,9 @@ It also clarifies shared accountability. [Correlated]
 - [Platform operations](platform-operations.md)
 - [Landing zones basics](../../platform/landing-zones-basics.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Azure best practices and recommendations](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/)
 - [Network topology and connectivity design area](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-area/network-topology-and-connectivity)
 - [What is Azure Firewall?](https://learn.microsoft.com/en-us/azure/firewall/overview)
+

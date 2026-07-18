@@ -115,11 +115,11 @@ At that point, use Microsoft Learn for the product facts, then return to this gu
 - [Observed] using one WAF pillar in isolation and missing cross-pillar trade-offs
 - [Observed] copying service patterns without checking ownership and operational maturity
 
-## Microsoft Learn anchors
+## Takeaway
 
-- [Azure Architecture Center overview](https://learn.microsoft.com/en-us/azure/architecture/)
-- [Architecture guide](https://learn.microsoft.com/en-us/azure/architecture/guide/)
-- [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)
+[Inferred] The best use of this guide is iterative.
+
+Use it to frame a decision, move to Microsoft Learn for authoritative detail, then come back to assess trade-offs, ownership, and validation.
 
 ## See Also
 
@@ -128,8 +128,9 @@ At that point, use Microsoft Learn for the product facts, then return to this gu
 - [Repository Map](repository-map.md) — full section map
 - [Platform Hub](../platform/index.md) — the foundational decisions to read first
 
-## Takeaway
+## Sources
 
-[Inferred] The best use of this guide is iterative.
+- [Azure Architecture Center overview](https://learn.microsoft.com/en-us/azure/architecture/)
+- [Architecture guide](https://learn.microsoft.com/en-us/azure/architecture/guide/)
+- [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)
 
-Use it to frame a decision, move to Microsoft Learn for authoritative detail, then come back to assess trade-offs, ownership, and validation.
