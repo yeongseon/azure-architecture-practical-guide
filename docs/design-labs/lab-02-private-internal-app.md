@@ -122,6 +122,12 @@ For a private internal Azure application, App Service Private Endpoint for ingre
 
 No cleanup is required. This design lab is a paper exercise; no Azure resources were provisioned.
 
+## See Also
+
+- [Private Internal App workload guide](../workload-guides/private-internal-app/index.md) — the paired implementation blueprint for this decision
+- [Private Internal App network and access](../workload-guides/private-internal-app/network-and-access.md) — private ingress, endpoints, and DNS detail
+- [Network Topology Basics](../platform/network-topology-basics.md) — the private endpoint and DNS concepts this lab depends on
+
 ## Microsoft Learn references
 
 - https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview
