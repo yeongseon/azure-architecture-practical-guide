@@ -105,6 +105,12 @@ flowchart TD
 - State consistency requirements are strict and cross-region write coordination is unacceptable.
 - The business does not value the additional cost and complexity enough to justify it.
 
+## See Also
+
+- [Design patterns](../index.md)
+- [Resilience and region strategy](../../platform/resilience-and-region-strategy.md)
+- [Retry, circuit breaker, and bulkhead](retry-circuit-breaker-and-bulkhead.md)
+
 ## Microsoft Learn reference
 
 - https://learn.microsoft.com/en-us/azure/architecture/guide/networking/global-web-applications/overview
