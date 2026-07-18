@@ -1,0 +1,27 @@
+@webAppUrl = https://REPLACE-WITH-YOUR-WEBAPP.azurewebsites.net
+
+### Catalog home page (expect 200, HTML)
+GET {{webAppUrl}}/
+Accept: text/html
+
+### Health check (expect 200, {"status":"Healthy"})
+GET {{webAppUrl}}/healthz
+Accept: application/json
+
+### Ops info (expect 200, JSON with version and region)
+GET {{webAppUrl}}/ops/info
+Accept: application/json
+
+### Ops version (expect 200, JSON with version)
+GET {{webAppUrl}}/ops/version
+Accept: application/json
+
+### Recent orders (expect 200, HTML)
+GET {{webAppUrl}}/Home/Orders
+Accept: text/html
+
+### Create an order (expect 302 redirect on success)
+POST {{webAppUrl}}/Home/Create
+Content-Type: application/x-www-form-urlencoded
+
+ProductId=1&Quantity=2&CustomerName=Demo+User

@@ -220,6 +220,8 @@ nav:
     - design-labs/lab-01-public-web-baseline.md
     - design-labs/lab-02-private-internal-app.md
     - design-labs/lab-03-event-driven-orders.md
+  - Practical Journey:
+    - practical-journey/stage-01-mvp.md
   - Reference:
     - reference/index.md
     - reference/architecture-decision-matrix.md
