@@ -96,6 +96,12 @@ flowchart TD
 - Not as a one-time product rollout without ownership for policy, exceptions, and monitoring.
 - Not as a full pattern if critical dependencies still depend on unbounded shared trust and no mitigation exists.
 
+## See Also
+
+- [Design patterns](../index.md)
+- [Identity-first and secrets flow](identity-first-and-secrets-flow.md)
+- [WAF security pillar](../../waf/security.md)
+
 ## Microsoft Learn reference
 
 - https://learn.microsoft.com/en-us/azure/security/fundamentals/zero-trust

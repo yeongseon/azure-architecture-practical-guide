@@ -102,6 +102,12 @@ flowchart TD
 - The team cannot operate asynchronous tracing, compensation, and replay procedures.
 - Business rules cannot tolerate eventual consistency or compensation windows.
 
+## See Also
+
+- [Design patterns](../index.md)
+- [Event-driven architecture](event-driven-architecture.md)
+- [Consistency, partitioning, and replication](../data/consistency-partitioning-and-replication.md)
+
 ## Microsoft Learn reference
 
 - https://learn.microsoft.com/en-us/azure/architecture/patterns/saga

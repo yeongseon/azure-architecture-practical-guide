@@ -115,6 +115,12 @@ flowchart TD
 - Scaling problems are not yet isolated to distinct capabilities.
 - The driver is organizational fashion rather than architecture evidence.
 
+## See Also
+
+- [Design patterns](../index.md)
+- [Bounded contexts and data ownership](bounded-contexts-and-data-ownership.md)
+- [Strangler fig migration](strangler-fig-migration.md)
+
 ## Microsoft Learn reference
 
 - https://learn.microsoft.com/en-us/azure/architecture/microservices/

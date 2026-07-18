@@ -105,6 +105,12 @@ flowchart TD
 - The workload cannot tolerate asynchronous projection lag.
 - The team lacks operational ownership for cache invalidation and projection rebuilds.
 
+## See Also
+
+- [Design patterns](../index.md)
+- [Consistency, partitioning, and replication](consistency-partitioning-and-replication.md)
+- [Data selection basics](../../platform/data-selection-basics.md)
+
 ## Microsoft Learn reference
 
 - https://learn.microsoft.com/en-us/azure/architecture/patterns/cache-aside

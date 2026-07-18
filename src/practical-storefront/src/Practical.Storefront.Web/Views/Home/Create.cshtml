@@ -1,0 +1,33 @@
+@model Practical.Storefront.Web.Models.CreateOrderRequest
+@{
+    ViewData["Title"] = "New Order";
+    var products = ViewBag.Products as IEnumerable<Practical.Storefront.Web.Models.Product>;
+}
+<h1>Place an Order</h1>
+<form asp-controller="Home" asp-action="Create" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="mb-3">
+        <label asp-for="CustomerName" class="form-label"></label>
+        <input asp-for="CustomerName" class="form-control" />
+        <span asp-validation-for="CustomerName" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="ProductId" class="form-label">Product</label>
+        <select asp-for="ProductId" class="form-select">
+            @foreach (var product in products ?? Enumerable.Empty<Practical.Storefront.Web.Models.Product>())
+            {
+                <option value="@product.Id">@product.Name (@product.Price.ToString("C"))</option>
+            }
+        </select>
+        <span asp-validation-for="ProductId" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Quantity" class="form-label"></label>
+        <input asp-for="Quantity" class="form-control" />
+        <span asp-validation-for="Quantity" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+@section Scripts {
+    @await Html.PartialAsync("_ValidationScriptsPartial")
+}

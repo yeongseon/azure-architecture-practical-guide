@@ -99,6 +99,12 @@ The right private architecture cost model includes platform complexity, support 
 
 Private architecture remains economically sound when each additional network control can be traced to a real security, compliance, or continuity outcome. [Observed]
 
+## See Also
+
+- [Private internal app overview](index.md)
+- [Baseline architecture](baseline.md)
+- [Private connectivity patterns](../../patterns/networking/private-connectivity-patterns.md)
+
 ## Microsoft Learn references
 
 - [Azure Well-Architected Framework cost optimization](https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/)

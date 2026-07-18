@@ -88,6 +88,12 @@ flowchart TD
 3. What is the expected burst pattern and steady-state utilization?
 4. How much platform complexity can the organization sustainably operate?
 
+## See Also
+
+- [Data Selection Basics](data-selection-basics.md) — the paired data-store decision for the same workload
+- [Integration Selection Basics](integration-selection-basics.md) — how components communicate once compute is chosen
+- [Network Topology Basics](network-topology-basics.md) — the connectivity model the chosen compute must fit
+
 ## Microsoft Learn anchors
 
 - [Compute decision tree](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/compute-decision-tree)

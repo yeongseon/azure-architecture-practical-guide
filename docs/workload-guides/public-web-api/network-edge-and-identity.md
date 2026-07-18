@@ -109,6 +109,12 @@ sequenceDiagram
 
 Public edge and identity design should concentrate control at the boundary while keeping application code focused on business behavior. [Validated]
 
+## See Also
+
+- [Public web API overview](index.md)
+- [Data and state](data-and-state.md)
+- [Synchronous vs asynchronous](../../patterns/integration/synchronous-vs-asynchronous.md)
+
 ## Microsoft Learn references
 
 - [Azure Front Door overview](https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview)

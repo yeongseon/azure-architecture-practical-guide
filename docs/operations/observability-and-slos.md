@@ -92,6 +92,12 @@ Avoid vanity SLOs that are easy to meet but weakly tied to actual user impact.
 - [Correlated] Telemetry joins application, dependency, and platform signals.
 - [Inferred] Observability backlog exists for blind spots and noisy alerts.
 
+## See Also
+
+- [WAF operational excellence pillar](../waf/operational-excellence.md)
+- [Business continuity and drills](business-continuity-and-drills.md)
+- [Platform concepts](../platform/index.md)
+
 ## Microsoft Learn references
 
 - [Azure Monitor overview](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)

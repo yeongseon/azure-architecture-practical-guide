@@ -97,6 +97,12 @@ flowchart TD
 - Not as a heavyweight process for trivial internal prototypes with no shared production path.
 - Not as a substitute for engineering quality when the pipeline only automates weak checks.
 
+## See Also
+
+- [Design patterns](../index.md)
+- [Blue-green, canary, and stamp patterns](blue-green-canary-and-stamp-patterns.md)
+- [Infrastructure as code and environment promotion](../../operations/infrastructure-as-code-and-environment-promotion.md)
+
 ## Microsoft Learn reference
 
 - https://learn.microsoft.com/en-us/azure/architecture/framework/mission-critical/mission-critical-deployment-testing

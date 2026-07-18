@@ -107,6 +107,12 @@ flowchart TD
 
 This family fits when event-driven execution, managed scaling, and explicit workflow state matter more than owning long-lived servers or a permanent application tier. [Validated]
 
+## See Also
+
+- [Baseline architecture](baseline.md)
+- [Triggers, state, and storage](triggers-state-and-storage.md)
+- [Queue-based load leveling and competing consumers](../../patterns/integration/queue-based-load-leveling-and-competing-consumers.md)
+
 ## Microsoft Learn references
 
 - [Azure Functions overview](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview)

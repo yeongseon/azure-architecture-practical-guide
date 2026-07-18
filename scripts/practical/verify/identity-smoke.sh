@@ -20,7 +20,7 @@ else
 fi
 
 kv_name="$(az keyvault list --resource-group "$RG" --query "[0].name" --output tsv 2>/dev/null || true)"
-if [[ -z "$kv_name" ]]; then
+if [[ -z "$kv_name" || "$kv_name" == "null" ]]; then
   echo "[fail] no Key Vault found in resource group '${RG}'." >&2
   fail=$((fail + 1))
 elif az keyvault secret show --vault-name "$kv_name" --name SqlConnectionString >/dev/null 2>&1; then
@@ -30,7 +30,7 @@ else
 fi
 
 sql_server="$(az sql server list --resource-group "$RG" --query "[0].name" --output tsv 2>/dev/null || true)"
-if [[ -n "$sql_server" ]] && az sql server ad-admin list --server-name "$sql_server" --resource-group "$RG" --query "[0].login" --output tsv 2>/dev/null | grep -q .; then
+if [[ -n "$sql_server" && "$sql_server" != "null" ]] && az sql server ad-admin list --server-name "$sql_server" --resource-group "$RG" --query "[0].login" --output tsv 2>/dev/null | grep -q .; then
   echo "[ ok ] SQL server '${sql_server}' has a Microsoft Entra administrator."
 else
   echo "[fail] SQL server has no Entra administrator (server: ${sql_server:-none})." >&2
