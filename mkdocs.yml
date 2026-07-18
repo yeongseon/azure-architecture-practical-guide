@@ -225,6 +225,7 @@ nav:
     - practical-journey/stage-02-production-baseline.md
     - practical-journey/stage-03-scale-edge.md
     - practical-journey/stage-04-network-isolation.md
+    - practical-journey/stage-05-resilience.md
   - Reference:
     - reference/index.md
     - reference/architecture-decision-matrix.md
