@@ -91,6 +91,12 @@ flowchart TD
 - Degradation paths are not useful when the business action is all-or-nothing.
 - Backpressure logic that operators cannot understand becomes a new reliability risk.
 
+## See Also
+
+- [Design patterns](../index.md)
+- [Retry, circuit breaker, and bulkhead](retry-circuit-breaker-and-bulkhead.md)
+- [Multi-region active-passive vs active-active](multi-region-active-passive-vs-active-active.md)
+
 ## Microsoft Learn reference
 
 - https://learn.microsoft.com/en-us/azure/architecture/patterns/health-endpoint-monitoring

@@ -28,7 +28,7 @@ else
   fail=$((fail + 1))
 fi
 
-if [[ -n "$endpoint_host" ]]; then
+if [[ -n "$endpoint_host" && "$endpoint_host" != "null" ]]; then
   code="$(curl -s -o /dev/null -w '%{http_code}' "https://${endpoint_host}/" 2>/dev/null || echo 000)"
   if [[ "$code" == "200" ]]; then
     echo "[ ok ] GET https://${endpoint_host}/ -> 200."

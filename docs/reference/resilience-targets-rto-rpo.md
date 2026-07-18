@@ -48,6 +48,12 @@ flowchart TD
     E --> G[Failover automation and exercises]
 ```
 
+## See Also
+
+- [Resilience and region strategy](../platform/resilience-and-region-strategy.md)
+- [WAF reliability pillar](../waf/reliability.md)
+- [Design labs](../design-labs/index.md)
+
 ## Microsoft Learn references
 
 - https://learn.microsoft.com/en-us/azure/reliability/overview

@@ -92,6 +92,12 @@ flowchart TD
 
 Validate operational excellence through release simulations, drift detection, incident exercises, and alert reviews. If a team cannot explain how a change moves from source to safe production rollback, the architecture is not yet operationally sound.
 
+## See Also
+
+- [Well-Architected Framework](index.md)
+- [Observability and SLOs](../operations/observability-and-slos.md)
+- [Reliability pillar](reliability.md)
+
 ## Microsoft Learn references
 
 - [Operational Excellence pillar](https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/)

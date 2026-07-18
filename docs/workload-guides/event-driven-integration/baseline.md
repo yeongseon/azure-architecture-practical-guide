@@ -95,6 +95,12 @@ This baseline is strongest when messaging, retries, and asynchronous completion 
 - Add more sophisticated orchestration only after proving simple queue or event patterns are insufficient. [Observed]
 - Keep broker choice aligned with delivery semantics rather than standardizing on one tool for every use case. [Validated]
 
+## See Also
+
+- [Event-driven integration overview](index.md)
+- [Messaging and consistency](messaging-and-consistency.md)
+- [Event-driven architecture](../../patterns/integration/event-driven-architecture.md)
+
 ## Microsoft Learn references
 
 - [Event-driven architecture style](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven)

@@ -108,6 +108,12 @@ flowchart TD
 - The team lacks telemetry needed to decide whether promotion is safe.
 - Shared data changes cannot support version overlap or gradual exposure.
 
+## See Also
+
+- [Design patterns](../index.md)
+- [Environment promotion and release guardrails](environment-promotion-and-release-guardrails.md)
+- [Infrastructure as code and environment promotion](../../operations/infrastructure-as-code-and-environment-promotion.md)
+
 ## Microsoft Learn reference
 
 - https://learn.microsoft.com/en-us/azure/architecture/guide/aks/blue-green-deployment-for-aks

@@ -96,6 +96,12 @@ flowchart TD
 
 Serverless cost discipline comes from aligning plan choice, retry behavior, and state design with real workload shape rather than assuming pay-per-use will optimize itself. [Validated]
 
+## See Also
+
+- [Serverless processing overview](index.md)
+- [Baseline architecture](baseline.md)
+- [Queue-based load leveling and competing consumers](../../patterns/integration/queue-based-load-leveling-and-competing-consumers.md)
+
 ## Microsoft Learn references
 
 - [Azure Functions scale and hosting](https://learn.microsoft.com/en-us/azure/azure-functions/functions-scale)

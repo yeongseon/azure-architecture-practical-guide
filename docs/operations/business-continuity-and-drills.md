@@ -88,6 +88,12 @@ Plan drills that move beyond control-plane success:
 - [Correlated] Incident findings influence continuity architecture.
 - [Unknown] Untested recovery paths are tracked as risk.
 
+## See Also
+
+- [Resilience and region strategy](../platform/resilience-and-region-strategy.md)
+- [Resilience targets (RTO/RPO)](../reference/resilience-targets-rto-rpo.md)
+- [WAF reliability pillar](../waf/reliability.md)
+
 ## Microsoft Learn references
 
 - [Business continuity management program guidance](https://learn.microsoft.com/en-us/azure/reliability/business-continuity-management-program)

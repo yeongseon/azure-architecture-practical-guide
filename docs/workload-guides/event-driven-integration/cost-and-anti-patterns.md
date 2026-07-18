@@ -93,6 +93,12 @@ FinOps reviews for event-driven systems should sample both message paths and dow
 
 That keeps hidden consumer cost visible. [Observed]
 
+## See Also
+
+- [Event-driven integration overview](index.md)
+- [Baseline architecture](baseline.md)
+- [Event-driven architecture](../../patterns/integration/event-driven-architecture.md)
+
 ## Microsoft Learn references
 
 - [Azure Well-Architected Framework cost optimization](https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/)

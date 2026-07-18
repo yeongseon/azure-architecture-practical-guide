@@ -108,6 +108,12 @@ Do not treat the assessment as a standalone approval gate. Pair it with diagrams
 
 Review at least on initial design, pre-production readiness, post-incident, and major scale or regulatory change.
 
+## See Also
+
+- [Well-Architected Framework](index.md)
+- [WAF pillar to pattern map](../reference/waf-pillar-to-pattern-map.md)
+- [Design labs](../design-labs/index.md)
+
 ## Microsoft Learn references
 
 - [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)

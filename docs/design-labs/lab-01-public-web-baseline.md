@@ -120,6 +120,12 @@ For a public-facing Azure web application, Front Door plus zone-redundant App Se
 
 No cleanup is required. This design lab is a paper exercise; no Azure resources were provisioned.
 
+## See Also
+
+- [Public Web and API workload guide](../workload-guides/public-web-api/index.md) — the paired implementation blueprint for this decision
+- [Public Web and API baseline](../workload-guides/public-web-api/baseline.md) — detailed baseline architecture and standards
+- [Design Lab Methodology](methodology.md) — the ADVR structure this lab follows
+
 ## Microsoft Learn references
 
 - https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant

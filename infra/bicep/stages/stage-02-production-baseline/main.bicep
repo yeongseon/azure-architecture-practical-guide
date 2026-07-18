@@ -249,6 +249,9 @@ module webAppKeyVaultRole '../../modules/foundation/key-vault-role-assignment.bi
     roleDefinitionId: keyVaultSecretsUserRoleId
     principalType: 'ServicePrincipal'
   }
+  dependsOn: [
+    keyVault
+  ]
 }
 
 module slotKeyVaultRole '../../modules/foundation/key-vault-role-assignment.bicep' = {
@@ -259,6 +262,9 @@ module slotKeyVaultRole '../../modules/foundation/key-vault-role-assignment.bice
     roleDefinitionId: keyVaultSecretsUserRoleId
     principalType: 'ServicePrincipal'
   }
+  dependsOn: [
+    keyVault
+  ]
 }
 
 module actionGroup '../../modules/foundation/action-group.bicep' = {
