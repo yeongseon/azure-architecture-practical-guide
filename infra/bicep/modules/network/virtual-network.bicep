@@ -28,6 +28,14 @@ resource virtualNetwork 'Microsoft.Network/virtualNetworks@2023-11-01' = {
       properties: {
         addressPrefix: subnet.addressPrefix
         privateEndpointNetworkPolicies: subnet.?privateEndpointNetworkPolicies ?? 'Disabled'
+        delegations: subnet.?delegation != null ? [
+          {
+            name: 'delegation'
+            properties: {
+              serviceName: subnet.delegation
+            }
+          }
+        ] : []
       }
     }]
   }
