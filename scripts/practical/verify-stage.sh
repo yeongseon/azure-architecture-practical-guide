@@ -20,7 +20,7 @@ WEBAPP_NAME="$(deployment_output "$RG" "$DEPLOYMENT_NAME" webAppName)"
 SQL_FQDN="$(deployment_output "$RG" "$DEPLOYMENT_NAME" sqlServerFqdn)"
 SQL_DB="$(deployment_output "$RG" "$DEPLOYMENT_NAME" sqlDatabaseName)"
 
-export WEBAPP_URL WEBAPP_NAME SQL_FQDN SQL_DB RG
+export WEBAPP_URL WEBAPP_NAME SQL_FQDN SQL_DB RG SQL_ADMIN_LOGIN
 
 failures=0
 for smoke in "${VERIFY_SCRIPTS[@]}"; do

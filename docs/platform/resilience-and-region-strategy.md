@@ -78,6 +78,12 @@ Architectural consequences include:
 3. How will traffic, state, secrets, and operational access behave during failover?
 4. When was the last recovery drill and what evidence proved the targets?
 
+## See Also
+
+- [Azure Architecture on Azure](azure-architecture-on-azure.md) — regions, zones, and edge as the underlying failure domains
+- [Network Topology Basics](network-topology-basics.md) — routing and connectivity for multi-region designs
+- [Observability Foundations](observability-foundations.md) — detection and drill evidence that validate recovery targets
+
 ## Microsoft Learn anchors
 
 - [Azure reliability overview](https://learn.microsoft.com/en-us/azure/reliability/overview)

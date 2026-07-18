@@ -65,6 +65,12 @@ flowchart TD
     E --> E2[Microsoft Sentinel]
 ```
 
+## See Also
+
+- [Identity and governance foundations](../platform/identity-and-governance-foundations.md)
+- [WAF security pillar](../waf/security.md)
+- [Identity-first and secrets flow](../patterns/security/identity-first-and-secrets-flow.md)
+
 ## Microsoft Learn references
 
 - https://learn.microsoft.com/en-us/azure/well-architected/security/

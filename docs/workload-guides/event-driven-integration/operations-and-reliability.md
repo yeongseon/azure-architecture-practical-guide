@@ -93,6 +93,12 @@ flowchart TD
 
 Reliable event-driven operations depend on visible backlog economics and disciplined exception handling, not just message acceptance success. [Validated]
 
+## See Also
+
+- [Event-driven integration overview](index.md)
+- [Cost and anti-patterns](cost-and-anti-patterns.md)
+- [Event-driven architecture](../../patterns/integration/event-driven-architecture.md)
+
 ## Microsoft Learn references
 
 - [Overview of Service Bus dead-letter queues](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-dead-letter-queues)

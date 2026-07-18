@@ -102,6 +102,12 @@ flowchart TD
 
 Messaging consistency is a system property built from broker semantics, consumer behavior, and business compensation rules together. [Validated]
 
+## See Also
+
+- [Event-driven integration overview](index.md)
+- [Operations and reliability](operations-and-reliability.md)
+- [Event-driven architecture](../../patterns/integration/event-driven-architecture.md)
+
 ## Microsoft Learn references
 
 - [Saga distributed transactions pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/saga)

@@ -103,6 +103,12 @@ flowchart TD
 - Regulatory demands require physically dedicated environments for every tenant.
 - The team cannot enforce tenant context consistently across synchronous and asynchronous paths.
 
+## See Also
+
+- [Design patterns](../index.md)
+- [Consistency, partitioning, and replication](consistency-partitioning-and-replication.md)
+- [Zero trust at workload level](../security/zero-trust-at-workload-level.md)
+
 ## Microsoft Learn reference
 
 - https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/overview

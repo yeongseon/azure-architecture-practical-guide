@@ -1,0 +1,25 @@
+@model IEnumerable<Practical.Storefront.Web.Models.Product>
+@{
+    ViewData["Title"] = "Catalog";
+}
+<h1>Product Catalog</h1>
+<p><a class="btn btn-primary" asp-controller="Home" asp-action="Create">Place an order</a></p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Name</td>
+                <td>@product.Description</td>
+                <td>@product.Price.ToString("C")</td>
+            </tr>
+        }
+    </tbody>
+</table>

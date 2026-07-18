@@ -1,0 +1,2065 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.43.8.12551",
+      "templateHash": "3814903788305063942"
+    }
+  },
+  "parameters": {
+    "appBaseName": {
+      "type": "string",
+      "minLength": 3,
+      "maxLength": 12,
+      "metadata": {
+        "description": "Base name used to derive all resource names. Lowercase letters and numbers only."
+      }
+    },
+    "location": {
+      "type": "string",
+      "defaultValue": "[resourceGroup().location]",
+      "metadata": {
+        "description": "Azure region for all Stage 2 resources."
+      }
+    },
+    "sqlAdministratorLogin": {
+      "type": "string",
+      "metadata": {
+        "description": "Administrator login for the Azure SQL logical server."
+      }
+    },
+    "sqlAdministratorLoginPassword": {
+      "type": "securestring",
+      "metadata": {
+        "description": "Administrator password for the Azure SQL logical server."
+      }
+    },
+    "sqlEntraAdminLogin": {
+      "type": "string",
+      "metadata": {
+        "description": "Entra ID principal display name to set as the SQL server Microsoft Entra administrator."
+      }
+    },
+    "sqlEntraAdminObjectId": {
+      "type": "string",
+      "metadata": {
+        "description": "Object ID of the Entra ID principal to set as the SQL server Microsoft Entra administrator."
+      }
+    },
+    "alertEmailAddress": {
+      "type": "string",
+      "metadata": {
+        "description": "Email address notified by the action group when an alert fires."
+      }
+    },
+    "tags": {
+      "type": "object",
+      "defaultValue": {
+        "stage": "stage-02-production-baseline",
+        "workload": "practical-storefront"
+      },
+      "metadata": {
+        "description": "Resource tags applied to every resource in the stage."
+      }
+    }
+  },
+  "variables": {
+    "uniqueSuffix": "[uniqueString(resourceGroup().id)]",
+    "logAnalyticsName": "[format('log-{0}-{1}', parameters('appBaseName'), variables('uniqueSuffix'))]",
+    "appInsightsName": "[format('appi-{0}-{1}', parameters('appBaseName'), variables('uniqueSuffix'))]",
+    "appServicePlanName": "[format('plan-{0}-{1}', parameters('appBaseName'), variables('uniqueSuffix'))]",
+    "webAppName": "[format('app-{0}-{1}', parameters('appBaseName'), variables('uniqueSuffix'))]",
+    "slotName": "staging",
+    "keyVaultName": "[format('kv-{0}-{1}', parameters('appBaseName'), variables('uniqueSuffix'))]",
+    "sqlServerName": "[format('sql-{0}-{1}', parameters('appBaseName'), variables('uniqueSuffix'))]",
+    "sqlDatabaseName": "sqldb-storefront",
+    "actionGroupName": "[format('ag-{0}-{1}', parameters('appBaseName'), variables('uniqueSuffix'))]",
+    "sqlSecretName": "SqlConnectionString",
+    "keyVaultSecretsUserRoleId": "[subscriptionResourceId('Microsoft.Authorization/roleDefinitions', '4633458b-17de-408a-b874-0445c86b69e6')]",
+    "sqlConnectionString": "[format('Server=tcp:{0}{1},1433;Initial Catalog={2};Persist Security Info=False;User ID={3};Password={4};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;', variables('sqlServerName'), environment().suffixes.sqlServerHostname, variables('sqlDatabaseName'), parameters('sqlAdministratorLogin'), parameters('sqlAdministratorLoginPassword'))]"
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Sql/servers/firewallRules",
+      "apiVersion": "2021-11-01",
+      "name": "[format('{0}/{1}', variables('sqlServerName'), 'AllowAllWindowsAzureIps')]",
+      "properties": {
+        "startIpAddress": "0.0.0.0",
+        "endIpAddress": "0.0.0.0"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Resources/deployments', 'stage02-sql-server')]"
+      ]
+    },
+    {
+      "type": "Microsoft.Sql/servers/administrators",
+      "apiVersion": "2021-11-01",
+      "name": "[format('{0}/{1}', variables('sqlServerName'), 'ActiveDirectory')]",
+      "properties": {
+        "administratorType": "ActiveDirectory",
+        "login": "[parameters('sqlEntraAdminLogin')]",
+        "sid": "[parameters('sqlEntraAdminObjectId')]",
+        "tenantId": "[subscription().tenantId]"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Resources/deployments', 'stage02-sql-server')]"
+      ]
+    },
+    {
+      "type": "Microsoft.KeyVault/vaults/secrets",
+      "apiVersion": "2023-07-01",
+      "name": "[format('{0}/{1}', variables('keyVaultName'), variables('sqlSecretName'))]",
+      "properties": {
+        "value": "[variables('sqlConnectionString')]"
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Resources/deployments', 'stage02-key-vault')]"
+      ]
+    },
+    {
+      "type": "Microsoft.Web/sites/config",
+      "apiVersion": "2023-12-01",
+      "name": "[format('{0}/{1}', variables('webAppName'), 'slotConfigNames')]",
+      "properties": {
+        "appSettingNames": [
+          "ASPNETCORE_ENVIRONMENT"
+        ]
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Resources/deployments', 'stage02-staging-slot')]",
+        "[resourceId('Microsoft.Resources/deployments', 'stage02-web-app')]"
+      ]
+    },
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2025-04-01",
+      "name": "stage02-log-analytics",
+      "properties": {
+        "expressionEvaluationOptions": {
+          "scope": "inner"
+        },
+        "mode": "Incremental",
+        "parameters": {
+          "name": {
+            "value": "[variables('logAnalyticsName')]"
+          },
+          "location": {
+            "value": "[parameters('location')]"
+          },
+          "retentionInDays": {
+            "value": 30
+          },
+          "tags": {
+            "value": "[parameters('tags')]"
+          }
+        },
+        "template": {
+          "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+          "contentVersion": "1.0.0.0",
+          "metadata": {
+            "_generator": {
+              "name": "bicep",
+              "version": "0.43.8.12551",
+              "templateHash": "14719315837219697628"
+            }
+          },
+          "parameters": {
+            "name": {
+              "type": "string",
+              "metadata": {
+                "description": "Name of the Log Analytics workspace."
+              }
+            },
+            "location": {
+              "type": "string",
+              "defaultValue": "[resourceGroup().location]",
+              "metadata": {
+                "description": "Azure region for the workspace."
+              }
+            },
+            "sku": {
+              "type": "string",
+              "defaultValue": "PerGB2018",
+              "metadata": {
+                "description": "Pricing tier for the workspace."
+              }
+            },
+            "retentionInDays": {
+              "type": "int",
+              "defaultValue": 30,
+              "metadata": {
+                "description": "Data retention in days."
+              }
+            },
+            "tags": {
+              "type": "object",
+              "defaultValue": {},
+              "metadata": {
+                "description": "Resource tags."
+              }
+            }
+          },
+          "resources": [
+            {
+              "type": "Microsoft.OperationalInsights/workspaces",
+              "apiVersion": "2022-10-01",
+              "name": "[parameters('name')]",
+              "location": "[parameters('location')]",
+              "tags": "[parameters('tags')]",
+              "properties": {
+                "sku": {
+                  "name": "[parameters('sku')]"
+                },
+                "retentionInDays": "[parameters('retentionInDays')]",
+                "features": {
+                  "enableLogAccessUsingOnlyResourcePermissions": true
+                }
+              }
+            }
+          ],
+          "outputs": {
+            "id": {
+              "type": "string",
+              "metadata": {
+                "description": "Resource ID of the Log Analytics workspace."
+              },
+              "value": "[resourceId('Microsoft.OperationalInsights/workspaces', parameters('name'))]"
+            },
+            "name": {
+              "type": "string",
+              "metadata": {
+                "description": "Name of the Log Analytics workspace."
+              },
+              "value": "[parameters('name')]"
+            },
+            "customerId": {
+              "type": "string",
+              "metadata": {
+                "description": "Customer (workspace) ID used by data sources."
+              },
+              "value": "[reference(resourceId('Microsoft.OperationalInsights/workspaces', parameters('name')), '2022-10-01').customerId]"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2025-04-01",
+      "name": "stage02-app-insights",
+      "properties": {
+        "expressionEvaluationOptions": {
+          "scope": "inner"
+        },
+        "mode": "Incremental",
+        "parameters": {
+          "name": {
+            "value": "[variables('appInsightsName')]"
+          },
+          "location": {
+            "value": "[parameters('location')]"
+          },
+          "workspaceResourceId": {
+            "value": "[reference(resourceId('Microsoft.Resources/deployments', 'stage02-log-analytics'), '2025-04-01').outputs.id.value]"
+          },
+          "tags": {
+            "value": "[parameters('tags')]"
+          }
+        },
+        "template": {
+          "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+          "contentVersion": "1.0.0.0",
+          "metadata": {
+            "_generator": {
+              "name": "bicep",
+              "version": "0.43.8.12551",
+              "templateHash": "4249924420194605595"
+            }
+          },
+          "parameters": {
+            "name": {
+              "type": "string",
+              "metadata": {
+                "description": "Name of the Application Insights component."
+              }
+            },
+            "location": {
+              "type": "string",
+              "defaultValue": "[resourceGroup().location]",
+              "metadata": {
+                "description": "Azure region for the component."
+              }
+            },
+            "workspaceResourceId": {
+              "type": "string",
+              "metadata": {
+                "description": "Resource ID of the Log Analytics workspace backing this component."
+              }
+            },
+            "applicationType": {
+              "type": "string",
+              "defaultValue": "web",
+              "metadata": {
+                "description": "Application type."
+              }
+            },
+            "tags": {
+              "type": "object",
+              "defaultValue": {},
+              "metadata": {
+                "description": "Resource tags."
+              }
+            }
+          },
+          "resources": [
+            {
+              "type": "Microsoft.Insights/components",
+              "apiVersion": "2020-02-02",
+              "name": "[parameters('name')]",
+              "location": "[parameters('location')]",
+              "tags": "[parameters('tags')]",
+              "kind": "[parameters('applicationType')]",
+              "properties": {
+                "Application_Type": "[parameters('applicationType')]",
+                "WorkspaceResourceId": "[parameters('workspaceResourceId')]",
+                "IngestionMode": "LogAnalytics"
+              }
+            }
+          ],
+          "outputs": {
+            "id": {
+              "type": "string",
+              "metadata": {
+                "description": "Resource ID of the Application Insights component."
+              },
+              "value": "[resourceId('Microsoft.Insights/components', parameters('name'))]"
+            },
+            "name": {
+              "type": "string",
+              "metadata": {
+                "description": "Name of the Application Insights component."
+              },
+              "value": "[parameters('name')]"
+            },
+            "instrumentationKey": {
+              "type": "string",
+              "metadata": {
+                "description": "Instrumentation key for the component."
+              },
+              "value": "[reference(resourceId('Microsoft.Insights/components', parameters('name')), '2020-02-02').InstrumentationKey]"
+            },
+            "connectionString": {
+              "type": "string",
+              "metadata": {
+                "description": "Connection string for the component."
+              },
+              "value": "[reference(resourceId('Microsoft.Insights/components', parameters('name')), '2020-02-02').ConnectionString]"
+            }
+          }
+        }
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Resources/deployments', 'stage02-log-analytics')]"
+      ]
+    },
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2025-04-01",
+      "name": "stage02-app-service-plan",
+      "properties": {
+        "expressionEvaluationOptions": {
+          "scope": "inner"
+        },
+        "mode": "Incremental",
+        "parameters": {
+          "name": {
+            "value": "[variables('appServicePlanName')]"
+          },
+          "location": {
+            "value": "[parameters('location')]"
+          },
+          "skuName": {
+            "value": "S1"
+          },
+          "skuTier": {
+            "value": "Standard"
+          },
+          "linux": {
+            "value": true
+          },
+          "tags": {
+            "value": "[parameters('tags')]"
+          }
+        },
+        "template": {
+          "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+          "contentVersion": "1.0.0.0",
+          "metadata": {
+            "_generator": {
+              "name": "bicep",
+              "version": "0.43.8.12551",
+              "templateHash": "15007887250148083165"
+            }
+          },
+          "parameters": {
+            "name": {
+              "type": "string",
+              "metadata": {
+                "description": "Name of the App Service plan."
+              }
+            },
+            "location": {
+              "type": "string",
+              "defaultValue": "[resourceGroup().location]",
+              "metadata": {
+                "description": "Azure region for the plan."
+              }
+            },
+            "skuName": {
+              "type": "string",
+              "defaultValue": "P1v3",
+              "metadata": {
+                "description": "SKU name for the plan, for example P1v3."
+              }
+            },
+            "skuTier": {
+              "type": "string",
+              "defaultValue": "PremiumV3",
+              "metadata": {
+                "description": "SKU tier for the plan."
+              }
+            },
+            "capacity": {
+              "type": "int",
+              "defaultValue": 1,
+              "metadata": {
+                "description": "Number of worker instances."
+              }
+            },
+            "linux": {
+              "type": "bool",
+              "defaultValue": true,
+              "metadata": {
+                "description": "Host the plan on Linux."
+              }
+            },
+            "tags": {
+              "type": "object",
+              "defaultValue": {},
+              "metadata": {
+                "description": "Resource tags."
+              }
+            }
+          },
+          "resources": [
+            {
+              "type": "Microsoft.Web/serverfarms",
+              "apiVersion": "2023-12-01",
+              "name": "[parameters('name')]",
+              "location": "[parameters('location')]",
+              "tags": "[parameters('tags')]",
+              "sku": {
+                "name": "[parameters('skuName')]",
+                "tier": "[parameters('skuTier')]",
+                "capacity": "[parameters('capacity')]"
+              },
+              "kind": "[if(parameters('linux'), 'linux', 'app')]",
+              "properties": {
+                "reserved": "[parameters('linux')]"
+              }
+            }
+          ],
+          "outputs": {
+            "id": {
+              "type": "string",
+              "metadata": {
+                "description": "Resource ID of the App Service plan."
+              },
+              "value": "[resourceId('Microsoft.Web/serverfarms', parameters('name'))]"
+            },
+            "name": {
+              "type": "string",
+              "metadata": {
+                "description": "Name of the App Service plan."
+              },
+              "value": "[parameters('name')]"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2025-04-01",
+      "name": "stage02-sql-server",
+      "properties": {
+        "expressionEvaluationOptions": {
+          "scope": "inner"
+        },
+        "mode": "Incremental",
+        "parameters": {
+          "name": {
+            "value": "[variables('sqlServerName')]"
+          },
+          "location": {
+            "value": "[parameters('location')]"
+          },
+          "administratorLogin": {
+            "value": "[parameters('sqlAdministratorLogin')]"
+          },
+          "administratorLoginPassword": {
+            "value": "[parameters('sqlAdministratorLoginPassword')]"
+          },
+          "publicNetworkAccess": {
+            "value": "Enabled"
+          },
+          "tags": {
+            "value": "[parameters('tags')]"
+          }
+        },
+        "template": {
+          "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+          "contentVersion": "1.0.0.0",
+          "metadata": {
+            "_generator": {
+              "name": "bicep",
+              "version": "0.43.8.12551",
+              "templateHash": "15473290430548187699"
+            }
+          },
+          "parameters": {
+            "name": {
+              "type": "string",
+              "metadata": {
+                "description": "Name of the SQL logical server."
+              }
+            },
+            "location": {
+              "type": "string",
+              "defaultValue": "[resourceGroup().location]",
+              "metadata": {
+                "description": "Azure region for the server."
+              }
+            },
+            "administratorLogin": {
+              "type": "string",
+              "metadata": {
+                "description": "Administrator login name."
+              }
+            },
+            "administratorLoginPassword": {
+              "type": "securestring",
+              "metadata": {
+                "description": "Administrator login password."
+              }
+            },
+            "publicNetworkAccess": {
+              "type": "string",
+              "defaultValue": "Disabled",
+              "allowedValues": [
+                "Enabled",
+                "Disabled"
+              ],
+              "metadata": {
+                "description": "Allow public network access to the server."
+              }
+            },
+            "tags": {
+              "type": "object",
+              "defaultValue": {},
+              "metadata": {
+                "description": "Resource tags."
+              }
+            }
+          },
+          "resources": [
+            {
+              "type": "Microsoft.Sql/servers",
+              "apiVersion": "2021-11-01",
+              "name": "[parameters('name')]",
+              "location": "[parameters('location')]",
+              "tags": "[parameters('tags')]",
+              "properties": {
+                "administratorLogin": "[parameters('administratorLogin')]",
+                "administratorLoginPassword": "[parameters('administratorLoginPassword')]",
+                "version": "12.0",
+                "minimalTlsVersion": "1.2",
+                "publicNetworkAccess": "[parameters('publicNetworkAccess')]"
+              }
+            }
+          ],
+          "outputs": {
+            "id": {
+              "type": "string",
+              "metadata": {
+                "description": "Resource ID of the SQL logical server."
+              },
+              "value": "[resourceId('Microsoft.Sql/servers', parameters('name'))]"
+            },
+            "name": {
+              "type": "string",
+              "metadata": {
+                "description": "Name of the SQL logical server."
+              },
+              "value": "[parameters('name')]"
+            },
+            "fullyQualifiedDomainName": {
+              "type": "string",
+              "metadata": {
+                "description": "Fully qualified domain name of the server."
+              },
+              "value": "[reference(resourceId('Microsoft.Sql/servers', parameters('name')), '2021-11-01').fullyQualifiedDomainName]"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2025-04-01",
+      "name": "stage02-sql-database",
+      "properties": {
+        "expressionEvaluationOptions": {
+          "scope": "inner"
+        },
+        "mode": "Incremental",
+        "parameters": {
+          "sqlServerName": {
+            "value": "[reference(resourceId('Microsoft.Resources/deployments', 'stage02-sql-server'), '2025-04-01').outputs.name.value]"
+          },
+          "name": {
+            "value": "[variables('sqlDatabaseName')]"
+          },
+          "location": {
+            "value": "[parameters('location')]"
+          },
+          "skuName": {
+            "value": "Basic"
+          },
+          "skuTier": {
+            "value": "Basic"
+          },
+          "maxSizeBytes": {
+            "value": 2147483648
+          },
+          "tags": {
+            "value": "[parameters('tags')]"
+          }
+        },
+        "template": {
+          "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+          "contentVersion": "1.0.0.0",
+          "metadata": {
+            "_generator": {
+              "name": "bicep",
+              "version": "0.43.8.12551",
+              "templateHash": "17855369862609864891"
+            }
+          },
+          "parameters": {
+            "sqlServerName": {
+              "type": "string",
+              "metadata": {
+                "description": "Name of the parent SQL logical server."
+              }
+            },
+            "name": {
+              "type": "string",
+              "metadata": {
+                "description": "Name of the database."
+              }
+            },
+            "location": {
+              "type": "string",
+              "defaultValue": "[resourceGroup().location]",
+              "metadata": {
+                "description": "Azure region for the database."
+              }
+            },
+            "skuName": {
+              "type": "string",
+              "defaultValue": "S0",
+              "metadata": {
+                "description": "SKU name for the database, for example S0."
+              }
+            },
+            "skuTier": {
+              "type": "string",
+              "defaultValue": "Standard",
+              "metadata": {
+                "description": "SKU tier for the database."
+              }
+            },
+            "maxSizeBytes": {
+              "type": "int",
+              "defaultValue": 268435456000,
+              "metadata": {
+                "description": "Maximum database size in bytes."
+              }
+            },
+            "tags": {
+              "type": "object",
+              "defaultValue": {},
+              "metadata": {
+                "description": "Resource tags."
+              }
+            }
+          },
+          "resources": [
+            {
+              "type": "Microsoft.Sql/servers/databases",
+              "apiVersion": "2021-11-01",
+              "name": "[format('{0}/{1}', parameters('sqlServerName'), parameters('name'))]",
+              "location": "[parameters('location')]",
+              "tags": "[parameters('tags')]",
+              "sku": {
+                "name": "[parameters('skuName')]",
+                "tier": "[parameters('skuTier')]"
+              },
+              "properties": {
+                "maxSizeBytes": "[parameters('maxSizeBytes')]"
+              }
+            }
+          ],
+          "outputs": {
+            "id": {
+              "type": "string",
+              "metadata": {
+                "description": "Resource ID of the database."
+              },
+              "value": "[resourceId('Microsoft.Sql/servers/databases', parameters('sqlServerName'), parameters('name'))]"
+            },
+            "name": {
+              "type": "string",
+              "metadata": {
+                "description": "Name of the database."
+              },
+              "value": "[parameters('name')]"
+            }
+          }
+        }
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Resources/deployments', 'stage02-sql-server')]"
+      ]
+    },
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2025-04-01",
+      "name": "stage02-key-vault",
+      "properties": {
+        "expressionEvaluationOptions": {
+          "scope": "inner"
+        },
+        "mode": "Incremental",
+        "parameters": {
+          "name": {
+            "value": "[variables('keyVaultName')]"
+          },
+          "location": {
+            "value": "[parameters('location')]"
+          },
+          "sku": {
+            "value": "standard"
+          },
+          "enableRbacAuthorization": {
+            "value": true
+          },
+          "enablePurgeProtection": {
+            "value": false
+          },
+          "publicNetworkAccess": {
+            "value": "Enabled"
+          },
+          "tags": {
+            "value": "[parameters('tags')]"
+          }
+        },
+        "template": {
+          "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+          "contentVersion": "1.0.0.0",
+          "metadata": {
+            "_generator": {
+              "name": "bicep",
+              "version": "0.43.8.12551",
+              "templateHash": "6546649821436995857"
+            }
+          },
+          "parameters": {
+            "name": {
+              "type": "string",
+              "metadata": {
+                "description": "Name of the key vault."
+              }
+            },
+            "location": {
+              "type": "string",
+              "defaultValue": "[resourceGroup().location]",
+              "metadata": {
+                "description": "Azure region for the key vault."
+              }
+            },
+            "sku": {
+              "type": "string",
+              "defaultValue": "standard",
+              "metadata": {
+                "description": "Pricing tier for the key vault."
+              }
+            },
+            "enableRbacAuthorization": {
+              "type": "bool",
+              "defaultValue": true,
+              "metadata": {
+                "description": "Enable Azure RBAC for data-plane authorization instead of access policies."
+              }
+            },
+            "softDeleteRetentionInDays": {
+              "type": "int",
+              "defaultValue": 90,
+              "metadata": {
+                "description": "Number of days to retain soft-deleted vaults and secrets."
+              }
+            },
+            "enablePurgeProtection": {
+              "type": "bool",
+              "defaultValue": true,
+              "metadata": {
+                "description": "Enable purge protection to prevent permanent deletion during the retention period."
+              }
+            },
+            "publicNetworkAccess": {
+              "type": "string",
+              "defaultValue": "Disabled",
+              "allowedValues": [
+                "Enabled",
+                "Disabled"
+              ],
+              "metadata": {
+                "description": "Allow public network access to the vault. Defaults to Disabled for a secure baseline."
+              }
+            },
+            "tags": {
+              "type": "object",
+              "defaultValue": {},
+              "metadata": {
+                "description": "Resource tags."
+              }
+            }
+          },
+          "resources": [
+            {
+              "type": "Microsoft.KeyVault/vaults",
+              "apiVersion": "2023-07-01",
+              "name": "[parameters('name')]",
+              "location": "[parameters('location')]",
+              "tags": "[parameters('tags')]",
+              "properties": {
+                "sku": {
+                  "family": "A",
+                  "name": "[parameters('sku')]"
+                },
+                "tenantId": "[subscription().tenantId]",
+                "enableRbacAuthorization": "[parameters('enableRbacAuthorization')]",
+                "enableSoftDelete": true,
+                "softDeleteRetentionInDays": "[parameters('softDeleteRetentionInDays')]",
+                "enablePurgeProtection": "[if(parameters('enablePurgeProtection'), true(), null())]",
+                "publicNetworkAccess": "[parameters('publicNetworkAccess')]"
+              }
+            }
+          ],
+          "outputs": {
+            "id": {
+              "type": "string",
+              "metadata": {
+                "description": "Resource ID of the key vault."
+              },
+              "value": "[resourceId('Microsoft.KeyVault/vaults', parameters('name'))]"
+            },
+            "name": {
+              "type": "string",
+              "metadata": {
+                "description": "Name of the key vault."
+              },
+              "value": "[parameters('name')]"
+            },
+            "vaultUri": {
+              "type": "string",
+              "metadata": {
+                "description": "URI of the key vault for data-plane access."
+              },
+              "value": "[reference(resourceId('Microsoft.KeyVault/vaults', parameters('name')), '2023-07-01').vaultUri]"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2025-04-01",
+      "name": "stage02-web-app",
+      "properties": {
+        "expressionEvaluationOptions": {
+          "scope": "inner"
+        },
+        "mode": "Incremental",
+        "parameters": {
+          "name": {
+            "value": "[variables('webAppName')]"
+          },
+          "location": {
+            "value": "[parameters('location')]"
+          },
+          "appServicePlanId": {
+            "value": "[reference(resourceId('Microsoft.Resources/deployments', 'stage02-app-service-plan'), '2025-04-01').outputs.id.value]"
+          },
+          "linuxFxVersion": {
+            "value": "DOTNETCORE|8.0"
+          },
+          "appInsightsConnectionString": {
+            "value": "[reference(resourceId('Microsoft.Resources/deployments', 'stage02-app-insights'), '2025-04-01').outputs.connectionString.value]"
+          },
+          "additionalAppSettings": {
+            "value": [
+              {
+                "name": "ConnectionStrings__StorefrontDb",
+                "value": "[format('@Microsoft.KeyVault(SecretUri={0}secrets/{1})', reference(resourceId('Microsoft.Resources/deployments', 'stage02-key-vault'), '2025-04-01').outputs.vaultUri.value, variables('sqlSecretName'))]"
+              },
+              {
+                "name": "REGION",
+                "value": "[parameters('location')]"
+              },
+              {
+                "name": "ASPNETCORE_ENVIRONMENT",
+                "value": "Production"
+              }
+            ]
+          },
+          "tags": {
+            "value": "[parameters('tags')]"
+          }
+        },
+        "template": {
+          "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+          "contentVersion": "1.0.0.0",
+          "metadata": {
+            "_generator": {
+              "name": "bicep",
+              "version": "0.43.8.12551",
+              "templateHash": "5389440458251614712"
+            }
+          },
+          "parameters": {
+            "name": {
+              "type": "string",
+              "metadata": {
+                "description": "Name of the web app."
+              }
+            },
+            "location": {
+              "type": "string",
+              "defaultValue": "[resourceGroup().location]",
+              "metadata": {
+                "description": "Azure region for the web app."
+              }
+            },
+            "appServicePlanId": {
+              "type": "string",
+              "metadata": {
+                "description": "Resource ID of the App Service plan hosting this app."
+              }
+            },
+            "linuxFxVersion": {
+              "type": "string",
+              "defaultValue": "DOTNETCORE|8.0",
+              "metadata": {
+                "description": "Linux runtime stack, for example DOTNETCORE|8.0 or NODE|20-lts."
+              }
+            },
+            "appInsightsConnectionString": {
+              "type": "string",
+              "defaultValue": "",
+              "metadata": {
+                "description": "Application Insights connection string. Empty omits the setting."
+              }
+            },
+            "appInsightsInstrumentationKey": {
+              "type": "string",
+              "defaultValue": "",
+              "metadata": {
+                "description": "Application Insights instrumentation key. Empty omits the setting."
+              }
+            },
+            "additionalAppSettings": {
+              "type": "array",
+              "defaultValue": [],
+              "metadata": {
+                "description": "Additional application settings as name/value pairs."
+              }
+            },
+            "tags": {
+              "type": "object",
+              "defaultValue": {},
+              "metadata": {
+                "description": "Resource tags."
+              }
+            }
+          },
+          "variables": {
+            "appInsightsSettings": "[concat(if(empty(parameters('appInsightsConnectionString')), createArray(), createArray(createObject('name', 'APPLICATIONINSIGHTS_CONNECTION_STRING', 'value', parameters('appInsightsConnectionString')))), if(empty(parameters('appInsightsInstrumentationKey')), createArray(), createArray(createObject('name', 'APPINSIGHTS_INSTRUMENTATIONKEY', 'value', parameters('appInsightsInstrumentationKey')))))]"
+          },
+          "resources": [
+            {
+              "type": "Microsoft.Web/sites",
+              "apiVersion": "2023-12-01",
+              "name": "[parameters('name')]",
+              "location": "[parameters('location')]",
+              "tags": "[parameters('tags')]",
+              "kind": "app,linux",
+              "identity": {
+                "type": "SystemAssigned"
+              },
+              "properties": {
+                "serverFarmId": "[parameters('appServicePlanId')]",
+                "httpsOnly": true,
+                "siteConfig": {
+                  "linuxFxVersion": "[parameters('linuxFxVersion')]",
+                  "ftpsState": "Disabled",
+                  "minTlsVersion": "1.2",
+                  "appSettings": "[concat(variables('appInsightsSettings'), parameters('additionalAppSettings'))]"
+                }
+              }
+            }
+          ],
+          "outputs": {
+            "id": {
+              "type": "string",
+              "metadata": {
+                "description": "Resource ID of the web app."
+              },
+              "value": "[resourceId('Microsoft.Web/sites', parameters('name'))]"
+            },
+            "name": {
+              "type": "string",
+              "metadata": {
+                "description": "Name of the web app."
+              },
+              "value": "[parameters('name')]"
+            },
+            "defaultHostName": {
+              "type": "string",
+              "metadata": {
+                "description": "Default host name of the web app."
+              },
+              "value": "[reference(resourceId('Microsoft.Web/sites', parameters('name')), '2023-12-01').defaultHostName]"
+            },
+            "principalId": {
+              "type": "string",
+              "metadata": {
+                "description": "Principal ID of the system-assigned managed identity."
+              },
+              "value": "[reference(resourceId('Microsoft.Web/sites', parameters('name')), '2023-12-01', 'full').identity.principalId]"
+            }
+          }
+        }
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Resources/deployments', 'stage02-app-insights')]",
+        "[resourceId('Microsoft.Resources/deployments', 'stage02-app-service-plan')]",
+        "[resourceId('Microsoft.Resources/deployments', 'stage02-key-vault')]",
+        "[resourceId('Microsoft.KeyVault/vaults/secrets', variables('keyVaultName'), variables('sqlSecretName'))]",
+        "[resourceId('Microsoft.Resources/deployments', 'stage02-sql-database')]"
+      ]
+    },
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2025-04-01",
+      "name": "stage02-staging-slot",
+      "properties": {
+        "expressionEvaluationOptions": {
+          "scope": "inner"
+        },
+        "mode": "Incremental",
+        "parameters": {
+          "webAppName": {
+            "value": "[reference(resourceId('Microsoft.Resources/deployments', 'stage02-web-app'), '2025-04-01').outputs.name.value]"
+          },
+          "slotName": {
+            "value": "[variables('slotName')]"
+          },
+          "location": {
+            "value": "[parameters('location')]"
+          },
+          "appServicePlanId": {
+            "value": "[reference(resourceId('Microsoft.Resources/deployments', 'stage02-app-service-plan'), '2025-04-01').outputs.id.value]"
+          },
+          "linuxFxVersion": {
+            "value": "DOTNETCORE|8.0"
+          },
+          "appSettings": {
+            "value": [
+              {
+                "name": "APPLICATIONINSIGHTS_CONNECTION_STRING",
+                "value": "[reference(resourceId('Microsoft.Resources/deployments', 'stage02-app-insights'), '2025-04-01').outputs.connectionString.value]"
+              },
+              {
+                "name": "ConnectionStrings__StorefrontDb",
+                "value": "[format('@Microsoft.KeyVault(SecretUri={0}secrets/{1})', reference(resourceId('Microsoft.Resources/deployments', 'stage02-key-vault'), '2025-04-01').outputs.vaultUri.value, variables('sqlSecretName'))]"
+              },
+              {
+                "name": "REGION",
+                "value": "[parameters('location')]"
+              },
+              {
+                "name": "ASPNETCORE_ENVIRONMENT",
+                "value": "Staging"
+              }
+            ]
+          },
+          "tags": {
+            "value": "[parameters('tags')]"
+          }
+        },
+        "template": {
+          "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+          "contentVersion": "1.0.0.0",
+          "metadata": {
+            "_generator": {
+              "name": "bicep",
+              "version": "0.43.8.12551",
+              "templateHash": "15723121981108333982"
+            }
+          },
+          "parameters": {
+            "webAppName": {
+              "type": "string",
+              "metadata": {
+                "description": "Name of the parent web app."
+              }
+            },
+            "slotName": {
+              "type": "string",
+              "defaultValue": "staging",
+              "metadata": {
+                "description": "Name of the deployment slot, for example staging."
+              }
+            },
+            "location": {
+              "type": "string",
+              "defaultValue": "[resourceGroup().location]",
+              "metadata": {
+                "description": "Azure region for the slot."
+              }
+            },
+            "appServicePlanId": {
+              "type": "string",
+              "metadata": {
+                "description": "Resource ID of the App Service plan hosting the slot."
+              }
+            },
+            "linuxFxVersion": {
+              "type": "string",
+              "defaultValue": "DOTNETCORE|8.0",
+              "metadata": {
+                "description": "Linux runtime stack, for example DOTNETCORE|8.0 or NODE|20-lts."
+              }
+            },
+            "appSettings": {
+              "type": "array",
+              "defaultValue": [],
+              "metadata": {
+                "description": "Application settings as name/value pairs."
+              }
+            },
+            "tags": {
+              "type": "object",
+              "defaultValue": {},
+              "metadata": {
+                "description": "Resource tags."
+              }
+            }
+          },
+          "resources": [
+            {
+              "type": "Microsoft.Web/sites/slots",
+              "apiVersion": "2023-12-01",
+              "name": "[format('{0}/{1}', parameters('webAppName'), parameters('slotName'))]",
+              "location": "[parameters('location')]",
+              "tags": "[parameters('tags')]",
+              "kind": "app,linux",
+              "identity": {
+                "type": "SystemAssigned"
+              },
+              "properties": {
+                "serverFarmId": "[parameters('appServicePlanId')]",
+                "httpsOnly": true,
+                "siteConfig": {
+                  "linuxFxVersion": "[parameters('linuxFxVersion')]",
+                  "ftpsState": "Disabled",
+                  "minTlsVersion": "1.2",
+                  "appSettings": "[parameters('appSettings')]"
+                }
+              }
+            }
+          ],
+          "outputs": {
+            "id": {
+              "type": "string",
+              "metadata": {
+                "description": "Resource ID of the deployment slot."
+              },
+              "value": "[resourceId('Microsoft.Web/sites/slots', parameters('webAppName'), parameters('slotName'))]"
+            },
+            "name": {
+              "type": "string",
+              "metadata": {
+                "description": "Name of the deployment slot."
+              },
+              "value": "[parameters('slotName')]"
+            },
+            "defaultHostName": {
+              "type": "string",
+              "metadata": {
+                "description": "Default host name of the slot."
+              },
+              "value": "[reference(resourceId('Microsoft.Web/sites/slots', parameters('webAppName'), parameters('slotName')), '2023-12-01').defaultHostName]"
+            },
+            "principalId": {
+              "type": "string",
+              "metadata": {
+                "description": "Principal ID of the slot system-assigned managed identity."
+              },
+              "value": "[reference(resourceId('Microsoft.Web/sites/slots', parameters('webAppName'), parameters('slotName')), '2023-12-01', 'full').identity.principalId]"
+            }
+          }
+        }
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Resources/deployments', 'stage02-app-insights')]",
+        "[resourceId('Microsoft.Resources/deployments', 'stage02-app-service-plan')]",
+        "[resourceId('Microsoft.Resources/deployments', 'stage02-key-vault')]",
+        "[resourceId('Microsoft.Resources/deployments', 'stage02-web-app')]"
+      ]
+    },
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2025-04-01",
+      "name": "stage02-webapp-kv-role",
+      "properties": {
+        "expressionEvaluationOptions": {
+          "scope": "inner"
+        },
+        "mode": "Incremental",
+        "parameters": {
+          "keyVaultName": {
+            "value": "[variables('keyVaultName')]"
+          },
+          "principalId": {
+            "value": "[reference(resourceId('Microsoft.Resources/deployments', 'stage02-web-app'), '2025-04-01').outputs.principalId.value]"
+          },
+          "roleDefinitionId": {
+            "value": "[variables('keyVaultSecretsUserRoleId')]"
+          },
+          "principalType": {
+            "value": "ServicePrincipal"
+          }
+        },
+        "template": {
+          "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+          "contentVersion": "1.0.0.0",
+          "metadata": {
+            "_generator": {
+              "name": "bicep",
+              "version": "0.43.8.12551",
+              "templateHash": "4378861032826004254"
+            }
+          },
+          "parameters": {
+            "keyVaultName": {
+              "type": "string",
+              "metadata": {
+                "description": "Name of the existing Key Vault to scope the role assignment to."
+              }
+            },
+            "principalId": {
+              "type": "string",
+              "metadata": {
+                "description": "Principal (object) ID that receives the role assignment."
+              }
+            },
+            "roleDefinitionId": {
+              "type": "string",
+              "metadata": {
+                "description": "Resource ID of the role definition to assign."
+              }
+            },
+            "principalType": {
+              "type": "string",
+              "defaultValue": "ServicePrincipal",
+              "allowedValues": [
+                "User",
+                "Group",
+                "ServicePrincipal",
+                "ForeignGroup",
+                "Device"
+              ],
+              "metadata": {
+                "description": "Type of principal receiving the assignment."
+              }
+            }
+          },
+          "resources": [
+            {
+              "type": "Microsoft.Authorization/roleAssignments",
+              "apiVersion": "2022-04-01",
+              "scope": "[resourceId('Microsoft.KeyVault/vaults', parameters('keyVaultName'))]",
+              "name": "[guid(resourceId('Microsoft.KeyVault/vaults', parameters('keyVaultName')), parameters('principalId'), parameters('roleDefinitionId'))]",
+              "properties": {
+                "principalId": "[parameters('principalId')]",
+                "roleDefinitionId": "[parameters('roleDefinitionId')]",
+                "principalType": "[parameters('principalType')]"
+              }
+            }
+          ],
+          "outputs": {
+            "id": {
+              "type": "string",
+              "metadata": {
+                "description": "Resource ID of the role assignment."
+              },
+              "value": "[extensionResourceId(resourceId('Microsoft.KeyVault/vaults', parameters('keyVaultName')), 'Microsoft.Authorization/roleAssignments', guid(resourceId('Microsoft.KeyVault/vaults', parameters('keyVaultName')), parameters('principalId'), parameters('roleDefinitionId')))]"
+            },
+            "name": {
+              "type": "string",
+              "metadata": {
+                "description": "Name (GUID) of the role assignment."
+              },
+              "value": "[guid(resourceId('Microsoft.KeyVault/vaults', parameters('keyVaultName')), parameters('principalId'), parameters('roleDefinitionId'))]"
+            }
+          }
+        }
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Resources/deployments', 'stage02-key-vault')]",
+        "[resourceId('Microsoft.Resources/deployments', 'stage02-web-app')]"
+      ]
+    },
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2025-04-01",
+      "name": "stage02-slot-kv-role",
+      "properties": {
+        "expressionEvaluationOptions": {
+          "scope": "inner"
+        },
+        "mode": "Incremental",
+        "parameters": {
+          "keyVaultName": {
+            "value": "[variables('keyVaultName')]"
+          },
+          "principalId": {
+            "value": "[reference(resourceId('Microsoft.Resources/deployments', 'stage02-staging-slot'), '2025-04-01').outputs.principalId.value]"
+          },
+          "roleDefinitionId": {
+            "value": "[variables('keyVaultSecretsUserRoleId')]"
+          },
+          "principalType": {
+            "value": "ServicePrincipal"
+          }
+        },
+        "template": {
+          "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+          "contentVersion": "1.0.0.0",
+          "metadata": {
+            "_generator": {
+              "name": "bicep",
+              "version": "0.43.8.12551",
+              "templateHash": "4378861032826004254"
+            }
+          },
+          "parameters": {
+            "keyVaultName": {
+              "type": "string",
+              "metadata": {
+                "description": "Name of the existing Key Vault to scope the role assignment to."
+              }
+            },
+            "principalId": {
+              "type": "string",
+              "metadata": {
+                "description": "Principal (object) ID that receives the role assignment."
+              }
+            },
+            "roleDefinitionId": {
+              "type": "string",
+              "metadata": {
+                "description": "Resource ID of the role definition to assign."
+              }
+            },
+            "principalType": {
+              "type": "string",
+              "defaultValue": "ServicePrincipal",
+              "allowedValues": [
+                "User",
+                "Group",
+                "ServicePrincipal",
+                "ForeignGroup",
+                "Device"
+              ],
+              "metadata": {
+                "description": "Type of principal receiving the assignment."
+              }
+            }
+          },
+          "resources": [
+            {
+              "type": "Microsoft.Authorization/roleAssignments",
+              "apiVersion": "2022-04-01",
+              "scope": "[resourceId('Microsoft.KeyVault/vaults', parameters('keyVaultName'))]",
+              "name": "[guid(resourceId('Microsoft.KeyVault/vaults', parameters('keyVaultName')), parameters('principalId'), parameters('roleDefinitionId'))]",
+              "properties": {
+                "principalId": "[parameters('principalId')]",
+                "roleDefinitionId": "[parameters('roleDefinitionId')]",
+                "principalType": "[parameters('principalType')]"
+              }
+            }
+          ],
+          "outputs": {
+            "id": {
+              "type": "string",
+              "metadata": {
+                "description": "Resource ID of the role assignment."
+              },
+              "value": "[extensionResourceId(resourceId('Microsoft.KeyVault/vaults', parameters('keyVaultName')), 'Microsoft.Authorization/roleAssignments', guid(resourceId('Microsoft.KeyVault/vaults', parameters('keyVaultName')), parameters('principalId'), parameters('roleDefinitionId')))]"
+            },
+            "name": {
+              "type": "string",
+              "metadata": {
+                "description": "Name (GUID) of the role assignment."
+              },
+              "value": "[guid(resourceId('Microsoft.KeyVault/vaults', parameters('keyVaultName')), parameters('principalId'), parameters('roleDefinitionId'))]"
+            }
+          }
+        }
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Resources/deployments', 'stage02-key-vault')]",
+        "[resourceId('Microsoft.Resources/deployments', 'stage02-staging-slot')]"
+      ]
+    },
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2025-04-01",
+      "name": "stage02-action-group",
+      "properties": {
+        "expressionEvaluationOptions": {
+          "scope": "inner"
+        },
+        "mode": "Incremental",
+        "parameters": {
+          "name": {
+            "value": "[variables('actionGroupName')]"
+          },
+          "groupShortName": {
+            "value": "storefront"
+          },
+          "emailReceivers": {
+            "value": [
+              {
+                "name": "primary",
+                "emailAddress": "[parameters('alertEmailAddress')]"
+              }
+            ]
+          },
+          "tags": {
+            "value": "[parameters('tags')]"
+          }
+        },
+        "template": {
+          "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+          "contentVersion": "1.0.0.0",
+          "metadata": {
+            "_generator": {
+              "name": "bicep",
+              "version": "0.43.8.12551",
+              "templateHash": "11385148599443075753"
+            }
+          },
+          "parameters": {
+            "name": {
+              "type": "string",
+              "metadata": {
+                "description": "Name of the action group."
+              }
+            },
+            "groupShortName": {
+              "type": "string",
+              "maxLength": 12,
+              "metadata": {
+                "description": "Short name (max 12 characters) shown in notifications."
+              }
+            },
+            "emailReceivers": {
+              "type": "array",
+              "defaultValue": [],
+              "metadata": {
+                "description": "Email receivers. Each item requires a name and emailAddress."
+              }
+            },
+            "enabled": {
+              "type": "bool",
+              "defaultValue": true,
+              "metadata": {
+                "description": "Enable the action group."
+              }
+            },
+            "tags": {
+              "type": "object",
+              "defaultValue": {},
+              "metadata": {
+                "description": "Resource tags."
+              }
+            }
+          },
+          "resources": [
+            {
+              "type": "Microsoft.Insights/actionGroups",
+              "apiVersion": "2023-01-01",
+              "name": "[parameters('name')]",
+              "location": "Global",
+              "tags": "[parameters('tags')]",
+              "properties": {
+                "copy": [
+                  {
+                    "name": "emailReceivers",
+                    "count": "[length(parameters('emailReceivers'))]",
+                    "input": {
+                      "name": "[parameters('emailReceivers')[copyIndex('emailReceivers')].name]",
+                      "emailAddress": "[parameters('emailReceivers')[copyIndex('emailReceivers')].emailAddress]",
+                      "useCommonAlertSchema": true
+                    }
+                  }
+                ],
+                "groupShortName": "[parameters('groupShortName')]",
+                "enabled": "[parameters('enabled')]"
+              }
+            }
+          ],
+          "outputs": {
+            "id": {
+              "type": "string",
+              "metadata": {
+                "description": "Resource ID of the action group."
+              },
+              "value": "[resourceId('Microsoft.Insights/actionGroups', parameters('name'))]"
+            },
+            "name": {
+              "type": "string",
+              "metadata": {
+                "description": "Name of the action group."
+              },
+              "value": "[parameters('name')]"
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2025-04-01",
+      "name": "stage02-http5xx-alert",
+      "properties": {
+        "expressionEvaluationOptions": {
+          "scope": "inner"
+        },
+        "mode": "Incremental",
+        "parameters": {
+          "name": {
+            "value": "[format('alert-{0}-http5xx', parameters('appBaseName'))]"
+          },
+          "alertDescription": {
+            "value": "Server-side 5xx responses exceeded the threshold on the web app."
+          },
+          "targetResourceId": {
+            "value": "[reference(resourceId('Microsoft.Resources/deployments', 'stage02-web-app'), '2025-04-01').outputs.id.value]"
+          },
+          "metricNamespace": {
+            "value": "Microsoft.Web/sites"
+          },
+          "metricName": {
+            "value": "Http5xx"
+          },
+          "operator": {
+            "value": "GreaterThan"
+          },
+          "timeAggregation": {
+            "value": "Total"
+          },
+          "threshold": {
+            "value": 10
+          },
+          "severity": {
+            "value": 1
+          },
+          "actionGroupId": {
+            "value": "[reference(resourceId('Microsoft.Resources/deployments', 'stage02-action-group'), '2025-04-01').outputs.id.value]"
+          },
+          "tags": {
+            "value": "[parameters('tags')]"
+          }
+        },
+        "template": {
+          "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+          "contentVersion": "1.0.0.0",
+          "metadata": {
+            "_generator": {
+              "name": "bicep",
+              "version": "0.43.8.12551",
+              "templateHash": "2942464775704568793"
+            }
+          },
+          "parameters": {
+            "name": {
+              "type": "string",
+              "metadata": {
+                "description": "Name of the metric alert rule."
+              }
+            },
+            "alertDescription": {
+              "type": "string",
+              "defaultValue": "",
+              "metadata": {
+                "description": "Description of what the alert monitors."
+              }
+            },
+            "targetResourceId": {
+              "type": "string",
+              "metadata": {
+                "description": "Resource ID of the target resource being monitored."
+              }
+            },
+            "metricNamespace": {
+              "type": "string",
+              "metadata": {
+                "description": "Metric namespace of the target resource, for example Microsoft.Web/sites."
+              }
+            },
+            "metricName": {
+              "type": "string",
+              "metadata": {
+                "description": "Name of the metric to evaluate."
+              }
+            },
+            "operator": {
+              "type": "string",
+              "defaultValue": "GreaterThan",
+              "allowedValues": [
+                "GreaterThan",
+                "GreaterThanOrEqual",
+                "LessThan",
+                "LessThanOrEqual"
+              ],
+              "metadata": {
+                "description": "Comparison operator for the threshold."
+              }
+            },
+            "timeAggregation": {
+              "type": "string",
+              "defaultValue": "Average",
+              "allowedValues": [
+                "Average",
+                "Minimum",
+                "Maximum",
+                "Total",
+                "Count"
+              ],
+              "metadata": {
+                "description": "Aggregation applied to the metric before comparison."
+              }
+            },
+            "threshold": {
+              "type": "int",
+              "metadata": {
+                "description": "Threshold value that triggers the alert."
+              }
+            },
+            "severity": {
+              "type": "int",
+              "defaultValue": 3,
+              "allowedValues": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "metadata": {
+                "description": "Alert severity, 0 (critical) to 4 (verbose)."
+              }
+            },
+            "evaluationFrequency": {
+              "type": "string",
+              "defaultValue": "PT5M",
+              "metadata": {
+                "description": "How often the rule evaluates, ISO 8601 duration."
+              }
+            },
+            "windowSize": {
+              "type": "string",
+              "defaultValue": "PT15M",
+              "metadata": {
+                "description": "Time window over which the metric is aggregated, ISO 8601 duration."
+              }
+            },
+            "actionGroupId": {
+              "type": "string",
+              "defaultValue": "",
+              "metadata": {
+                "description": "Resource ID of the action group to notify. Empty disables notification."
+              }
+            },
+            "tags": {
+              "type": "object",
+              "defaultValue": {},
+              "metadata": {
+                "description": "Resource tags."
+              }
+            }
+          },
+          "resources": [
+            {
+              "type": "Microsoft.Insights/metricAlerts",
+              "apiVersion": "2018-03-01",
+              "name": "[parameters('name')]",
+              "location": "global",
+              "tags": "[parameters('tags')]",
+              "properties": {
+                "description": "[parameters('alertDescription')]",
+                "severity": "[parameters('severity')]",
+                "enabled": true,
+                "scopes": [
+                  "[parameters('targetResourceId')]"
+                ],
+                "evaluationFrequency": "[parameters('evaluationFrequency')]",
+                "windowSize": "[parameters('windowSize')]",
+                "criteria": {
+                  "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria",
+                  "allOf": [
+                    {
+                      "name": "Metric1",
+                      "metricNamespace": "[parameters('metricNamespace')]",
+                      "metricName": "[parameters('metricName')]",
+                      "operator": "[parameters('operator')]",
+                      "timeAggregation": "[parameters('timeAggregation')]",
+                      "threshold": "[parameters('threshold')]",
+                      "criterionType": "StaticThresholdCriterion"
+                    }
+                  ]
+                },
+                "actions": "[if(empty(parameters('actionGroupId')), createArray(), createArray(createObject('actionGroupId', parameters('actionGroupId'))))]"
+              }
+            }
+          ],
+          "outputs": {
+            "id": {
+              "type": "string",
+              "metadata": {
+                "description": "Resource ID of the metric alert."
+              },
+              "value": "[resourceId('Microsoft.Insights/metricAlerts', parameters('name'))]"
+            },
+            "name": {
+              "type": "string",
+              "metadata": {
+                "description": "Name of the metric alert."
+              },
+              "value": "[parameters('name')]"
+            }
+          }
+        }
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Resources/deployments', 'stage02-action-group')]",
+        "[resourceId('Microsoft.Resources/deployments', 'stage02-web-app')]"
+      ]
+    },
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2025-04-01",
+      "name": "stage02-responsetime-alert",
+      "properties": {
+        "expressionEvaluationOptions": {
+          "scope": "inner"
+        },
+        "mode": "Incremental",
+        "parameters": {
+          "name": {
+            "value": "[format('alert-{0}-responsetime', parameters('appBaseName'))]"
+          },
+          "alertDescription": {
+            "value": "Average HTTP response time exceeded the threshold on the web app."
+          },
+          "targetResourceId": {
+            "value": "[reference(resourceId('Microsoft.Resources/deployments', 'stage02-web-app'), '2025-04-01').outputs.id.value]"
+          },
+          "metricNamespace": {
+            "value": "Microsoft.Web/sites"
+          },
+          "metricName": {
+            "value": "HttpResponseTime"
+          },
+          "operator": {
+            "value": "GreaterThan"
+          },
+          "timeAggregation": {
+            "value": "Average"
+          },
+          "threshold": {
+            "value": 5
+          },
+          "severity": {
+            "value": 2
+          },
+          "actionGroupId": {
+            "value": "[reference(resourceId('Microsoft.Resources/deployments', 'stage02-action-group'), '2025-04-01').outputs.id.value]"
+          },
+          "tags": {
+            "value": "[parameters('tags')]"
+          }
+        },
+        "template": {
+          "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+          "contentVersion": "1.0.0.0",
+          "metadata": {
+            "_generator": {
+              "name": "bicep",
+              "version": "0.43.8.12551",
+              "templateHash": "2942464775704568793"
+            }
+          },
+          "parameters": {
+            "name": {
+              "type": "string",
+              "metadata": {
+                "description": "Name of the metric alert rule."
+              }
+            },
+            "alertDescription": {
+              "type": "string",
+              "defaultValue": "",
+              "metadata": {
+                "description": "Description of what the alert monitors."
+              }
+            },
+            "targetResourceId": {
+              "type": "string",
+              "metadata": {
+                "description": "Resource ID of the target resource being monitored."
+              }
+            },
+            "metricNamespace": {
+              "type": "string",
+              "metadata": {
+                "description": "Metric namespace of the target resource, for example Microsoft.Web/sites."
+              }
+            },
+            "metricName": {
+              "type": "string",
+              "metadata": {
+                "description": "Name of the metric to evaluate."
+              }
+            },
+            "operator": {
+              "type": "string",
+              "defaultValue": "GreaterThan",
+              "allowedValues": [
+                "GreaterThan",
+                "GreaterThanOrEqual",
+                "LessThan",
+                "LessThanOrEqual"
+              ],
+              "metadata": {
+                "description": "Comparison operator for the threshold."
+              }
+            },
+            "timeAggregation": {
+              "type": "string",
+              "defaultValue": "Average",
+              "allowedValues": [
+                "Average",
+                "Minimum",
+                "Maximum",
+                "Total",
+                "Count"
+              ],
+              "metadata": {
+                "description": "Aggregation applied to the metric before comparison."
+              }
+            },
+            "threshold": {
+              "type": "int",
+              "metadata": {
+                "description": "Threshold value that triggers the alert."
+              }
+            },
+            "severity": {
+              "type": "int",
+              "defaultValue": 3,
+              "allowedValues": [
+                0,
+                1,
+                2,
+                3,
+                4
+              ],
+              "metadata": {
+                "description": "Alert severity, 0 (critical) to 4 (verbose)."
+              }
+            },
+            "evaluationFrequency": {
+              "type": "string",
+              "defaultValue": "PT5M",
+              "metadata": {
+                "description": "How often the rule evaluates, ISO 8601 duration."
+              }
+            },
+            "windowSize": {
+              "type": "string",
+              "defaultValue": "PT15M",
+              "metadata": {
+                "description": "Time window over which the metric is aggregated, ISO 8601 duration."
+              }
+            },
+            "actionGroupId": {
+              "type": "string",
+              "defaultValue": "",
+              "metadata": {
+                "description": "Resource ID of the action group to notify. Empty disables notification."
+              }
+            },
+            "tags": {
+              "type": "object",
+              "defaultValue": {},
+              "metadata": {
+                "description": "Resource tags."
+              }
+            }
+          },
+          "resources": [
+            {
+              "type": "Microsoft.Insights/metricAlerts",
+              "apiVersion": "2018-03-01",
+              "name": "[parameters('name')]",
+              "location": "global",
+              "tags": "[parameters('tags')]",
+              "properties": {
+                "description": "[parameters('alertDescription')]",
+                "severity": "[parameters('severity')]",
+                "enabled": true,
+                "scopes": [
+                  "[parameters('targetResourceId')]"
+                ],
+                "evaluationFrequency": "[parameters('evaluationFrequency')]",
+                "windowSize": "[parameters('windowSize')]",
+                "criteria": {
+                  "odata.type": "Microsoft.Azure.Monitor.SingleResourceMultipleMetricCriteria",
+                  "allOf": [
+                    {
+                      "name": "Metric1",
+                      "metricNamespace": "[parameters('metricNamespace')]",
+                      "metricName": "[parameters('metricName')]",
+                      "operator": "[parameters('operator')]",
+                      "timeAggregation": "[parameters('timeAggregation')]",
+                      "threshold": "[parameters('threshold')]",
+                      "criterionType": "StaticThresholdCriterion"
+                    }
+                  ]
+                },
+                "actions": "[if(empty(parameters('actionGroupId')), createArray(), createArray(createObject('actionGroupId', parameters('actionGroupId'))))]"
+              }
+            }
+          ],
+          "outputs": {
+            "id": {
+              "type": "string",
+              "metadata": {
+                "description": "Resource ID of the metric alert."
+              },
+              "value": "[resourceId('Microsoft.Insights/metricAlerts', parameters('name'))]"
+            },
+            "name": {
+              "type": "string",
+              "metadata": {
+                "description": "Name of the metric alert."
+              },
+              "value": "[parameters('name')]"
+            }
+          }
+        }
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Resources/deployments', 'stage02-action-group')]",
+        "[resourceId('Microsoft.Resources/deployments', 'stage02-web-app')]"
+      ]
+    }
+  ],
+  "outputs": {
+    "webAppName": {
+      "type": "string",
+      "metadata": {
+        "description": "Name of the deployed web app."
+      },
+      "value": "[reference(resourceId('Microsoft.Resources/deployments', 'stage02-web-app'), '2025-04-01').outputs.name.value]"
+    },
+    "webAppUrl": {
+      "type": "string",
+      "metadata": {
+        "description": "Public HTTPS URL of the deployed web app."
+      },
+      "value": "[format('https://{0}', reference(resourceId('Microsoft.Resources/deployments', 'stage02-web-app'), '2025-04-01').outputs.defaultHostName.value)]"
+    },
+    "stagingSlotName": {
+      "type": "string",
+      "metadata": {
+        "description": "Name of the staging deployment slot."
+      },
+      "value": "[reference(resourceId('Microsoft.Resources/deployments', 'stage02-staging-slot'), '2025-04-01').outputs.name.value]"
+    },
+    "keyVaultName": {
+      "type": "string",
+      "metadata": {
+        "description": "Name of the Key Vault holding the SQL connection string."
+      },
+      "value": "[reference(resourceId('Microsoft.Resources/deployments', 'stage02-key-vault'), '2025-04-01').outputs.name.value]"
+    },
+    "appInsightsName": {
+      "type": "string",
+      "metadata": {
+        "description": "Name of the Application Insights component."
+      },
+      "value": "[reference(resourceId('Microsoft.Resources/deployments', 'stage02-app-insights'), '2025-04-01').outputs.name.value]"
+    },
+    "sqlServerFqdn": {
+      "type": "string",
+      "metadata": {
+        "description": "Fully qualified domain name of the SQL logical server."
+      },
+      "value": "[reference(resourceId('Microsoft.Resources/deployments', 'stage02-sql-server'), '2025-04-01').outputs.fullyQualifiedDomainName.value]"
+    },
+    "sqlDatabaseName": {
+      "type": "string",
+      "metadata": {
+        "description": "Name of the SQL database."
+      },
+      "value": "[reference(resourceId('Microsoft.Resources/deployments', 'stage02-sql-database'), '2025-04-01').outputs.name.value]"
+    },
+    "actionGroupName": {
+      "type": "string",
+      "metadata": {
+        "description": "Name of the action group notified by metric alerts."
+      },
+      "value": "[reference(resourceId('Microsoft.Resources/deployments', 'stage02-action-group'), '2025-04-01').outputs.name.value]"
+    }
+  }
+}

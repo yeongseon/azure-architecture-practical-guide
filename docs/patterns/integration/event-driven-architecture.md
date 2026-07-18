@@ -106,6 +106,12 @@ flowchart TD
 - The team cannot operate distributed tracing and asynchronous debugging.
 - Eventual consistency is unacceptable for the critical decision point.
 
+## See Also
+
+- [Design patterns](../index.md)
+- [Queue-based load leveling and competing consumers](queue-based-load-leveling-and-competing-consumers.md)
+- [Saga, idempotency, and outbox](saga-idempotency-and-outbox.md)
+
 ## Microsoft Learn reference
 
 - https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven

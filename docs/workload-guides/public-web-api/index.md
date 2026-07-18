@@ -102,6 +102,12 @@ flowchart TD
 
 This family fits when public ingress, managed web operations, and predictable API delivery are the primary architecture drivers. [Validated]
 
+## See Also
+
+- [Baseline architecture](baseline.md)
+- [Network edge and identity](network-edge-and-identity.md)
+- [Synchronous vs asynchronous](../../patterns/integration/synchronous-vs-asynchronous.md)
+
 ## Microsoft Learn references
 
 - [Baseline highly available zone-redundant web application](https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)

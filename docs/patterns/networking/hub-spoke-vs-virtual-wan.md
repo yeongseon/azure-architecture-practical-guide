@@ -110,6 +110,12 @@ flowchart TD
 - The environment is small and cost-sensitive.
 - Highly customized transit and inspection behaviors are mandatory.
 
+## See Also
+
+- [Design patterns](../index.md)
+- [Private connectivity patterns](private-connectivity-patterns.md)
+- [Network topology basics](../../platform/network-topology-basics.md)
+
 ## Microsoft Learn reference
 
 - https://learn.microsoft.com/en-us/azure/architecture/networking/architecture/hub-spoke

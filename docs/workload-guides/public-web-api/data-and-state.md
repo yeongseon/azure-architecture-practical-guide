@@ -97,6 +97,12 @@ Public APIs often mix strongly consistent transactional writes with eventually c
 
 Good web workload state design keeps compute disposable and makes durable state explicit, minimal, and measurable. [Validated]
 
+## See Also
+
+- [Public web API overview](index.md)
+- [Operations and reliability](operations-and-reliability.md)
+- [Synchronous vs asynchronous](../../patterns/integration/synchronous-vs-asynchronous.md)
+
 ## Microsoft Learn references
 
 - [Choose a data store for an application](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview)

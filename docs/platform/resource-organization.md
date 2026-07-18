@@ -125,6 +125,12 @@ Minimum useful tag set for most estates:
 3. Which resources are expected to share lifecycle and RBAC boundaries?
 4. Can an operator infer owner, environment, and purpose from the naming standard?
 
+## See Also
+
+- [Landing Zones Basics](landing-zones-basics.md) — the platform baseline that consumes this hierarchy
+- [Identity and Governance Foundations](identity-and-governance-foundations.md) — RBAC and policy scoped to management groups, subscriptions, and resource groups
+- [Cost Model Basics](cost-model-basics.md) — how subscription boundaries shape billing and cost visibility
+
 ## Microsoft Learn anchors
 
 - [Organize your Azure resources](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-setup-guide/organize-resources)

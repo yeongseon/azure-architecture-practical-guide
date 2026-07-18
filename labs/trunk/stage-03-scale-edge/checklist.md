@@ -5,7 +5,7 @@ Use this checklist to deploy, verify, and tear down the Stage 3 scale-and-edge a
 ## Prerequisites
 
 - [ ] Azure CLI installed and logged in (`az login`).
-- [ ] Subscription selected (`az account set --subscription <id>`).
+- [ ] Subscription selected (`az account set --subscription <subscription-id>`).
 - [ ] Permission to create resource groups, resources, and **role assignments**.
 - [ ] Strong SQL admin password exported: `export SQL_ADMIN_PASSWORD='...'`.
 - [ ] SQL Entra admin identifiers exported: `export SQL_ENTRA_ADMIN_LOGIN='...'` and `export SQL_ENTRA_ADMIN_OBJECT_ID='...'`.

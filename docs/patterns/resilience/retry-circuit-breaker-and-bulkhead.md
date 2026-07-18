@@ -100,6 +100,12 @@ flowchart TD
 - The operation is not idempotent and duplicates create business harm.
 - Failure originates from quota exhaustion or persistent misconfiguration.
 
+## See Also
+
+- [Design patterns](../index.md)
+- [Health endpoints, graceful degradation, and backpressure](health-endpoints-graceful-degradation-and-backpressure.md)
+- [WAF reliability pillar](../../waf/reliability.md)
+
 ## Microsoft Learn reference
 
 - https://learn.microsoft.com/en-us/azure/architecture/patterns/retry

@@ -101,6 +101,12 @@ flowchart TD
 
 Reliable public workloads combine edge health, safe deployment mechanics, and dependency-aware continuity planning in one operating model. [Validated]
 
+## See Also
+
+- [Public web API overview](index.md)
+- [Cost and anti-patterns](cost-and-anti-patterns.md)
+- [Synchronous vs asynchronous](../../patterns/integration/synchronous-vs-asynchronous.md)
+
 ## Microsoft Learn references
 
 - [Azure App Service reliability](https://learn.microsoft.com/en-us/azure/reliability/reliability-app-service)

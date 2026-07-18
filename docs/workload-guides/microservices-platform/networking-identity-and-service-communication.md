@@ -93,6 +93,12 @@ flowchart TD
 
 Communication architecture should minimize accidental coupling while keeping trust and policy controls understandable to service teams. [Validated]
 
+## See Also
+
+- [Microservices platform overview](index.md)
+- [Data, observability, and reliability](data-observability-and-reliability.md)
+- [Modular monolith vs microservices](../../patterns/decomposition/modular-monolith-vs-microservices.md)
+
 ## Microsoft Learn references
 
 - [Interservice communication in a microservices architecture](https://learn.microsoft.com/en-us/azure/architecture/microservices/design/interservice-communication)
