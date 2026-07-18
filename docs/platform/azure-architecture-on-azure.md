@@ -100,6 +100,12 @@ Ask these before moving into workload design:
 3. Are control-plane and data-plane permissions separately reviewed?
 4. Does the selected region support the service capabilities the architecture depends on?
 
+## See Also
+
+- [Resource Organization](resource-organization.md) — the management hierarchy that sits on the ARM control plane
+- [Landing Zones Basics](landing-zones-basics.md) — how shared platform services are owned separately from workloads
+- [Resilience and Region Strategy](resilience-and-region-strategy.md) — turning regions and zones into deliberate failure domains
+
 ## Microsoft Learn anchors
 
 - [Azure Architecture Guide](https://learn.microsoft.com/en-us/azure/architecture/guide/)

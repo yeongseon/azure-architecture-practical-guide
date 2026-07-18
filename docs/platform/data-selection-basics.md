@@ -79,6 +79,12 @@ flowchart TD
 3. What is the expected partition key or data distribution strategy?
 4. How do latency and cost change when replication or retention grows?
 
+## See Also
+
+- [Compute Selection Basics](compute-selection-basics.md) — the paired compute decision for the same workload
+- [Integration Selection Basics](integration-selection-basics.md) — how data moves between components and systems
+- [Resilience and Region Strategy](resilience-and-region-strategy.md) — replication and RPO implications of the chosen data store
+
 ## Microsoft Learn anchors
 
 - [Choose a data store](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview)

@@ -81,6 +81,12 @@ flowchart TD
 3. Which telemetry is mandatory across all subscriptions or landing zones?
 4. Who owns alert quality and ongoing tuning?
 
+## See Also
+
+- [Resilience and Region Strategy](resilience-and-region-strategy.md) — the detection signals and drill evidence resilience depends on
+- [Cost Model Basics](cost-model-basics.md) — how telemetry volume and retention become billable behavior
+- [Compute Selection Basics](compute-selection-basics.md) — the workloads that must be instrumented end to end
+
 ## Microsoft Learn anchors
 
 - [Azure Monitor overview](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)

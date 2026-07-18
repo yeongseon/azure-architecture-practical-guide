@@ -77,6 +77,12 @@ flowchart TD
 3. Is ordering required globally, per entity, or not at all?
 4. Who owns replay, poison-message handling, and consumer lag visibility?
 
+## See Also
+
+- [Compute Selection Basics](compute-selection-basics.md) — the services that produce and consume these messages
+- [Data Selection Basics](data-selection-basics.md) — where integrated data lands and becomes source of truth
+- [Observability Foundations](observability-foundations.md) — consumer lag, dead-letter, and telemetry for messaging paths
+
 ## Microsoft Learn anchors
 
 - [Choose a messaging service](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/messaging)
