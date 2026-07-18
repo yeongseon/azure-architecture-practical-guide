@@ -18,10 +18,14 @@ public class StorefrontReadinessCheck : IHealthCheck
     {
         try
         {
-            var hasCatalog = await _db.Products.AsNoTracking().AnyAsync(cancellationToken);
-            return hasCatalog
-                ? HealthCheckResult.Healthy("Catalog reachable and seeded.")
-                : HealthCheckResult.Unhealthy("Catalog schema reachable but no products found.");
+            // Readiness is a database *connectivity* check (issue #13): the catalog
+            // schema must be reachable. An empty (not-yet-seeded) table is still
+            // healthy — a freshly-created database before seed.sql must not fail /healthz.
+            var productCount = await _db.Products.AsNoTracking().CountAsync(cancellationToken);
+            return HealthCheckResult.Healthy(
+                productCount > 0
+                    ? $"Catalog reachable and seeded ({productCount} products)."
+                    : "Catalog schema reachable but not yet seeded.");
         }
         catch (Exception ex)
         {

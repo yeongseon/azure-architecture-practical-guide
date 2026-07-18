@@ -23,7 +23,7 @@ practical-storefront/
 | `/` | Product catalog | HTML table of products from the database |
 | `/Home/Create` | Order form | Submit a new order |
 | `/Home/Orders` | Recent orders | Last 20 orders, newest first |
-| `/healthz` | Readiness — catalog reachable and seeded | `{"status":"Healthy"}` |
+| `/healthz` | Readiness — catalog database reachable | `{"status":"Healthy"}` |
 | `/ops/info` | Build metadata | `{"version":"...","region":"..."}` |
 | `/ops/version` | Build version | `{"version":"..."}` |
 
@@ -50,6 +50,8 @@ dotnet run --project src/Practical.Storefront.Web
 ```
 
 Apply the schema and seed data with the scripts under `database/`:
+
+> **Warning:** `database/schema.sql` **drops and recreates** the `dbo.Orders` and `dbo.Products` tables. Running it against a database that already holds data will **permanently delete** existing orders and products. Only run it on a fresh database or when you intend to reset all storefront data.
 
 ```bash
 sqlcmd -S <server>.database.windows.net -d <db> -G -i database/schema.sql
