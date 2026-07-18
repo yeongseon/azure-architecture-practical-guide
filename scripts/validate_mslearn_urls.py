@@ -59,7 +59,20 @@ def extract_mslearn_urls(frontmatter: dict) -> List[str]:
     urls = set()
 
     content_sources = frontmatter.get("content_sources", {})
-    diagrams = content_sources.get("diagrams", [])
+
+    # content_sources may be the canonical dict form ({"diagrams": [...]}) or a
+    # legacy list form ([{type, url}, ...]). Normalize both without crashing.
+    diagrams = []
+    if isinstance(content_sources, dict):
+        diagrams = content_sources.get("diagrams", [])
+    elif isinstance(content_sources, list):
+        for item in content_sources:
+            if isinstance(item, dict):
+                if isinstance(item.get("diagrams"), list):
+                    diagrams.extend(item["diagrams"])
+                url = item.get("url")
+                if url and "learn.microsoft.com" in url:
+                    urls.add(url)
 
     for diagram in diagrams:
         if isinstance(diagram, dict):

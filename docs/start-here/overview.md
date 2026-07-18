@@ -13,6 +13,8 @@ content_sources:
 
 This guide combines Azure Well-Architected Framework principles, Azure Architecture Center patterns, and practical delivery concerns into a single architecture-first reading path.
 
+If you want a staged hands-on companion to the conceptual material, start with the [Practical Journey](../practical-journey/index.md).
+
 ## What this guide covers
 
 [Documented] Microsoft Learn publishes foundational guidance through the [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/) and the [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/).
