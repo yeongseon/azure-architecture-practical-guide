@@ -91,3 +91,8 @@ Primary references: [Azure Architecture Center](https://learn.microsoft.com/azur
 - [Platform Hub](platform/index.md) — Azure architecture foundations
 - [Well-Architected Framework Hub](waf/index.md) — pillar-based evaluation
 
+## Sources
+
+- [Azure Architecture Center](https://learn.microsoft.com/azure/architecture/)
+- [Azure Well-Architected Framework](https://learn.microsoft.com/azure/well-architected/)
+

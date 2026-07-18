@@ -126,3 +126,8 @@ Use the official assessment as a structured complement to human review, not a su
 - [Design labs methodology](../design-labs/methodology.md)
 - [Architecture decision matrix](../reference/architecture-decision-matrix.md)
 
+## Sources
+
+- [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)
+- [Azure Architecture Review assessment](https://learn.microsoft.com/en-us/assessments/azure-architecture-review/)
+

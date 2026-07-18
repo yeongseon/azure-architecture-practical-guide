@@ -97,13 +97,6 @@ Teams can start with simple handlers and add Durable Functions, richer messaging
 - Durable Functions can simplify coordination while increasing storage, replay, and debugging complexity. [Correlated]
 - Trigger concurrency can overwhelm downstream systems if backpressure is not deliberate. [Validated]
 
-## Evidence and references
-
-- [Azure Functions overview](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview)
-- [Azure Functions triggers and bindings](https://learn.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings)
-- [Durable Functions overview](https://learn.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-overview)
-- [Serverless web application reference architecture](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/serverless/web-app)
-
 ## Next decisions
 
 Continue with [Triggers, state, and storage](triggers-state-and-storage.md) and [Operations and reliability](operations-and-reliability.md) to refine trigger semantics, persistence, and operating controls.
@@ -113,4 +106,11 @@ Continue with [Triggers, state, and storage](triggers-state-and-storage.md) and 
 - [Serverless processing overview](index.md)
 - [Triggers, state, and storage](triggers-state-and-storage.md)
 - [Queue-based load leveling and competing consumers](../../patterns/integration/queue-based-load-leveling-and-competing-consumers.md)
+
+## Sources
+
+- [Azure Functions overview](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview)
+- [Azure Functions triggers and bindings](https://learn.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings)
+- [Durable Functions overview](https://learn.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-overview)
+- [Serverless web application reference architecture](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/serverless/web-app)
 

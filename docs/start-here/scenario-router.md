@@ -115,3 +115,9 @@ Some situations straddle two phases — the design decision you make today deter
 - [Patterns Hub](../patterns/index.md) — reusable architecture patterns
 - [Workload Guides Hub](../workload-guides/index.md) — workload-specific baselines
 - [Architecture Reviews Hub](../architecture-reviews/index.md) — review methodology
+
+## Sources
+
+- https://learn.microsoft.com/en-us/azure/architecture/
+- https://learn.microsoft.com/en-us/azure/well-architected/
+

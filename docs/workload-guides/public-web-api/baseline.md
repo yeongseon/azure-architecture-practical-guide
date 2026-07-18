@@ -92,14 +92,6 @@ Most public web applications are operational systems, not analytical platforms. 
 - Cosmos DB cost can rise quickly when partitioning and RU allocation are chosen without measured access patterns. [Correlated]
 - Multi-region active-active adds operational complexity that many teams underestimate in deployment, cache invalidation, and data conflict handling. [Correlated]
 
-## Evidence and references
-
-- [Baseline highly available zone-redundant web application](https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)
-- [Azure Front Door overview](https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview)
-- [Data store choice guide](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview)
-- [Azure Container Apps overview](https://learn.microsoft.com/en-us/azure/container-apps/overview)
-- [Choose between Azure Container Apps, AKS, and App Service](https://learn.microsoft.com/en-us/azure/container-apps/compare-options)
-
 ## Next decisions
 
 Continue with [Network, edge, and identity](network-edge-and-identity.md) and [Data and state](data-and-state.md) to refine ingress, authentication, and persistence choices.
@@ -109,4 +101,12 @@ Continue with [Network, edge, and identity](network-edge-and-identity.md) and [D
 - [Public web API overview](index.md)
 - [Network edge and identity](network-edge-and-identity.md)
 - [Synchronous vs asynchronous](../../patterns/integration/synchronous-vs-asynchronous.md)
+
+## Sources
+
+- [Baseline highly available zone-redundant web application](https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)
+- [Azure Front Door overview](https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview)
+- [Data store choice guide](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview)
+- [Azure Container Apps overview](https://learn.microsoft.com/en-us/azure/container-apps/overview)
+- [Choose between Azure Container Apps, AKS, and App Service](https://learn.microsoft.com/en-us/azure/container-apps/compare-options)
 

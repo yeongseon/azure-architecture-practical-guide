@@ -23,6 +23,10 @@ SOURCE_ALIASES = {
     "Microsoft Learn references",
     "Microsoft Learn reference",
     "Microsoft Learn anchors",
+    "Microsoft Learn anchor",
+    "References",
+    "Related Microsoft Learn references",
+    "Evidence and references",
 }
 
 # All titles that are "source-like"

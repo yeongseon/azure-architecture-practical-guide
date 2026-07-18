@@ -94,10 +94,6 @@ Signals that a page likely belongs elsewhere:
 
 [Inferred] Cross-cutting pages can synthesize multiple sources, but should still declare diagram provenance and use evidence tags for important claims.
 
-## Microsoft Learn anchor
-
-- [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/)
-
 ## Takeaway
 
 [Inferred] The published Phase 1 repository is organized to move readers from fundamentals to patterns, workloads, operations, and design labs.
@@ -111,4 +107,8 @@ When in doubt, ask where the page sits in that flow: orientation, foundation, de
 - [Scenario Router](scenario-router.md) — situation-to-destination index across Design, Build, Operate, and Review
 - [Architecture vs Service Guides](architecture-vs-service-guides.md) — scope positioning
 - [How to Use This Guide](how-to-use-this-guide.md) — reader navigation guidance
+
+## Sources
+
+- [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/)
 

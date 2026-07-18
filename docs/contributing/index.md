@@ -220,3 +220,9 @@ Please read our [Code of Conduct](https://github.com/yeongseon/azure-architectur
 
 - [Repository Map](../start-here/repository-map.md)
 - [Learning Paths](../start-here/learning-paths.md)
+
+## Sources
+
+- https://learn.microsoft.com/en-us/azure/architecture/
+- https://learn.microsoft.com/en-us/azure/well-architected/
+

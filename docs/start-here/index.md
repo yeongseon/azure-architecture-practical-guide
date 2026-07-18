@@ -75,12 +75,6 @@ This section should not spend most of its space on:
 - long Azure CLI walkthroughs
 - feature-by-feature product comparisons without decision context
 
-## References
-
-- [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/)
-- [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)
-- [Azure Architecture Guide](https://learn.microsoft.com/en-us/azure/architecture/guide/)
-
 ## Takeaway
 
 [Inferred] Treat Start Here as the map, not the destination.
@@ -94,4 +88,10 @@ Read this section to establish scope and vocabulary, then move into [Platform](.
 - [How to Use This Guide](how-to-use-this-guide.md) — how the sections connect and pair with Microsoft Learn
 - [Repository Map](repository-map.md) — full documentation structure
 - [Platform Hub](../platform/index.md) — the recommended first destination after this section
+
+## Sources
+
+- [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/)
+- [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)
+- [Azure Architecture Guide](https://learn.microsoft.com/en-us/azure/architecture/guide/)
 
