@@ -89,6 +89,12 @@ flowchart TD
 
 Validate through access reviews, secret rotation drills, policy compliance checks, penetration testing where appropriate, and post-incident learning. A control that exists but is not reviewed or exercised remains only partially trusted.
 
+## See Also
+
+- [Well-Architected Framework](index.md)
+- [Identity and governance foundations](../platform/identity-and-governance-foundations.md)
+- [Identity-first and secrets flow](../patterns/security/identity-first-and-secrets-flow.md)
+
 ## Microsoft Learn references
 
 - [Security pillar](https://learn.microsoft.com/en-us/azure/well-architected/security/)

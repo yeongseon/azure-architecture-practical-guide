@@ -90,6 +90,12 @@ These commitment models are valuable when demand is stable enough. The architect
 - [Correlated] Cost anomalies are linked to traffic, releases, or topology changes.
 - [Inferred] FinOps insights influence architecture reviews and backlog priorities.
 
+## See Also
+
+- [WAF cost optimization pillar](../waf/cost-optimization.md)
+- [Observability and SLOs](observability-and-slos.md)
+- [Design patterns](../patterns/index.md)
+
 ## Microsoft Learn references
 
 - [Azure Cost Management and Billing documentation](https://learn.microsoft.com/en-us/azure/cost-management-billing/)

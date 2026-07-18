@@ -97,6 +97,12 @@ Teams can start with simple handlers and add Durable Functions, richer messaging
 - Durable Functions can simplify coordination while increasing storage, replay, and debugging complexity. [Correlated]
 - Trigger concurrency can overwhelm downstream systems if backpressure is not deliberate. [Validated]
 
+## See Also
+
+- [Serverless processing overview](index.md)
+- [Triggers, state, and storage](triggers-state-and-storage.md)
+- [Queue-based load leveling and competing consumers](../../patterns/integration/queue-based-load-leveling-and-competing-consumers.md)
+
 ## Evidence and references
 
 - [Azure Functions overview](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview)

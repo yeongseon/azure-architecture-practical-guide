@@ -99,6 +99,12 @@ flowchart TD
 
 Internal application integration stays maintainable when data ownership, message ownership, and identity ownership are all explicit. [Validated]
 
+## See Also
+
+- [Private internal app overview](index.md)
+- [Operations and reliability](operations-and-reliability.md)
+- [Private connectivity patterns](../../patterns/networking/private-connectivity-patterns.md)
+
 ## Microsoft Learn references
 
 - [Service Bus messaging overview](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview)

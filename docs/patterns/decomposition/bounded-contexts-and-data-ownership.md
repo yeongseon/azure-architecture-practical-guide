@@ -107,6 +107,12 @@ flowchart TD
 - Add anti-corruption layers where external or legacy models differ.
 - Align identity, secrets, and network access with ownership boundaries.
 
+## See Also
+
+- [Design patterns](../index.md)
+- [Modular monolith vs microservices](modular-monolith-vs-microservices.md)
+- [Strangler fig migration](strangler-fig-migration.md)
+
 ## Microsoft Learn reference
 
 - https://learn.microsoft.com/en-us/azure/architecture/microservices/model/domain-analysis

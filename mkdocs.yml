@@ -50,6 +50,15 @@ extra_javascript:
 
 plugins:
   - search
+  - macros:
+      modules: ['azure_guide_capture_toolkit.mkdocs_macros']
+      j2_variable_start_string: "[[["
+      j2_variable_end_string: "]]]"
+      j2_block_start_string: "[[%"
+      j2_block_end_string: "%]]"
+      j2_comment_start_string: "[[#"
+      j2_comment_end_string: "#]]"
+      on_error_fail: true
   - minify:
       minify_html: true
 
@@ -211,6 +220,12 @@ nav:
     - design-labs/lab-01-public-web-baseline.md
     - design-labs/lab-02-private-internal-app.md
     - design-labs/lab-03-event-driven-orders.md
+  - Practical Journey:
+    - practical-journey/stage-01-mvp.md
+    - practical-journey/stage-02-production-baseline.md
+    - practical-journey/stage-03-scale-edge.md
+    - practical-journey/stage-04-network-isolation.md
+    - practical-journey/stage-05-resilience.md
   - Reference:
     - reference/index.md
     - reference/architecture-decision-matrix.md

@@ -100,6 +100,12 @@ flowchart TD
 
 Serverless reliability comes from disciplined backlog management, idempotent execution, and dependency-aware recovery, not from assuming the platform will hide every failure mode. [Validated]
 
+## See Also
+
+- [Serverless processing overview](index.md)
+- [Cost and anti-patterns](cost-and-anti-patterns.md)
+- [Queue-based load leveling and competing consumers](../../patterns/integration/queue-based-load-leveling-and-competing-consumers.md)
+
 ## Microsoft Learn references
 
 - [Azure Functions scale and hosting](https://learn.microsoft.com/en-us/azure/azure-functions/functions-scale)

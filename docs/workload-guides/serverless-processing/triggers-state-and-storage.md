@@ -101,6 +101,12 @@ flowchart TD
 
 Good serverless designs separate trigger semantics, orchestration mechanics, and durable business data so each can scale and recover on its own terms. [Validated]
 
+## See Also
+
+- [Serverless processing overview](index.md)
+- [Operations and reliability](operations-and-reliability.md)
+- [Queue-based load leveling and competing consumers](../../patterns/integration/queue-based-load-leveling-and-competing-consumers.md)
+
 ## Microsoft Learn references
 
 - [Azure Functions triggers and bindings](https://learn.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings)

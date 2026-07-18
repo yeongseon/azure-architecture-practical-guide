@@ -95,6 +95,12 @@ flowchart TD
 
 Reliable internal applications require an operating model that treats connectivity and name resolution as part of production health, not background infrastructure. [Validated]
 
+## See Also
+
+- [Private internal app overview](index.md)
+- [Cost and anti-patterns](cost-and-anti-patterns.md)
+- [Private connectivity patterns](../../patterns/networking/private-connectivity-patterns.md)
+
 ## Microsoft Learn references
 
 - [Azure Monitor overview](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)

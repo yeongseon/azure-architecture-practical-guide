@@ -98,6 +98,12 @@ flowchart TD
 
 Observability and data ownership are the control mechanisms that keep a microservices platform diagnosable and governable at scale. [Validated]
 
+## See Also
+
+- [Microservices platform overview](index.md)
+- [Cost and anti-patterns](cost-and-anti-patterns.md)
+- [Modular monolith vs microservices](../../patterns/decomposition/modular-monolith-vs-microservices.md)
+
 ## Microsoft Learn references
 
 - [Data considerations for microservices](https://learn.microsoft.com/en-us/azure/architecture/microservices/design/data-considerations)

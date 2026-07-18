@@ -100,6 +100,12 @@ flowchart TD
 - Business stakeholders have not defined which operations truly require strong consistency.
 - The team cannot operate cross-region failover or partition hot-spot mitigation.
 
+## See Also
+
+- [Design patterns](../index.md)
+- [Cache-aside, CQRS, and materialized view](cache-aside-cqrs-and-materialized-view.md)
+- [Multi-tenant data isolation](multi-tenant-data-isolation.md)
+
 ## Microsoft Learn reference
 
 - https://learn.microsoft.com/en-us/azure/architecture/best-practices/data-partitioning

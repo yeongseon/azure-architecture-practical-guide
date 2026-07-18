@@ -95,6 +95,12 @@ The landing zone baseline is effective when it combines clear governance inherit
 
 Baseline landing zones should be opinionated enough to prevent drift but modular enough to add regions, business units, and shared capabilities without major rework. [Validated]
 
+## See Also
+
+- [Landing zone shared services overview](index.md)
+- [Governance and network topology](governance-and-network-topology.md)
+- [Landing zones basics](../../platform/landing-zones-basics.md)
+
 ## Microsoft Learn references
 
 - [Cloud Adoption Framework landing zones](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/)

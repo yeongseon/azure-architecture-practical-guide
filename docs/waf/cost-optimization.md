@@ -100,6 +100,12 @@ Cost optimization should be shared:
 
 Ask whether the architecture can degrade gracefully in cost as well as scale gracefully in demand. Good designs let teams lower spend without rewriting the workload. That usually means modular scaling boundaries, intentional telemetry retention, clear environment strategy, and visible service ownership.
 
+## See Also
+
+- [Well-Architected Framework](index.md)
+- [Pillar trade-offs](pillar-trade-offs.md)
+- [Cost management and FinOps](../operations/cost-management-and-finops.md)
+
 ## Microsoft Learn references
 
 - [Cost Optimization pillar](https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/)
