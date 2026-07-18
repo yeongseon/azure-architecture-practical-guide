@@ -1,4 +1,5 @@
 ---
+description: Overview of the Azure Architecture practical guide — who it is for, what is in and out of scope, how the sections fit together, and where to begin.
 content_sources:
   diagrams:
     - id: start-here-overview-diagram-1
@@ -109,11 +110,11 @@ flowchart TD
 3. Use workload guides when a team needs a concrete starting baseline.
 4. Use design labs now for guided validation, and use Architecture Reviews once that Phase 2 section is published.
 
-## Microsoft Learn anchors
+## Takeaway
 
-- [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)
-- [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/)
-- [Architecture Center guides](https://learn.microsoft.com/en-us/azure/architecture/guide/)
+[Inferred] Read this repository as a decision system.
+
+Use Microsoft Learn for authoritative product detail, and use this guide for the practical question that teams usually ask first: "which Azure architecture choice should we make, and how will we know it was the right one?"
 
 ## See Also
 
@@ -124,8 +125,8 @@ flowchart TD
 - [Platform Hub](../platform/index.md) — Azure architecture foundations
 - [Well-Architected Framework Hub](../waf/index.md) — pillar-based evaluation
 
-## Takeaway
+## Sources
 
-[Inferred] Read this repository as a decision system.
-
-Use Microsoft Learn for authoritative product detail, and use this guide for the practical question that teams usually ask first: "which Azure architecture choice should we make, and how will we know it was the right one?"
+- [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)
+- [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/)
+- [Architecture Center guides](https://learn.microsoft.com/en-us/azure/architecture/guide/)

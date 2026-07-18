@@ -1,5 +1,5 @@
 ---
-description: Practical Journey hub for the Azure Architecture guide — move from MVP to multi-region resilience through five staged deployments, costs, and verification paths.
+description: Practical Journey hub for the Azure Architecture guide — from MVP to multi-region resilience across five staged deployments, with costs and verification.
 content_sources:
   diagrams:
     - id: practical-journey-stage-progression
