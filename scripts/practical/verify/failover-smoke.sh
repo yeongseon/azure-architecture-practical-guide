@@ -18,7 +18,7 @@ else
   fail=$((fail + 1))
 fi
 
-distinct_regions="$(az webapp list --resource-group "$RG" --query "[].location" --output tsv 2>/dev/null | sort -u | wc -l | tr -d ' ')"
+distinct_regions="$(az webapp list --resource-group "$RG" --query "[].location" --output tsv 2>/dev/null | sort -u | wc -l | tr -d ' ' || echo 0)"
 if [[ "${distinct_regions:-0}" -ge 2 ]]; then
   echo "[ ok ] web apps span ${distinct_regions} regions."
 else

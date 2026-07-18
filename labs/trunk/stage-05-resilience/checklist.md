@@ -5,7 +5,7 @@ Use this checklist to deploy, verify, run a failover drill on, and tear down the
 ## Prerequisites
 
 - [ ] Azure CLI installed and logged in (`az login`).
-- [ ] Subscription selected (`az account set --subscription <id>`).
+- [ ] Subscription selected (`az account set --subscription <subscription-id>`).
 - [ ] Permission to create resource groups in two regions, SQL failover groups, and **role assignments**.
 - [ ] Secondary-region capacity for App Service **S1** and Azure SQL (default secondary: `japaneast`).
 - [ ] Strong SQL admin password exported: `export SQL_ADMIN_PASSWORD='...'` (used on both servers).
@@ -23,7 +23,7 @@ Use this checklist to deploy, verify, run a failover drill on, and tear down the
 - [ ] `az webapp list --resource-group rg-practical-storefront-stage05 --query "length(@)"` returns `2` or more.
 - [ ] The two web apps report two distinct `location` values (primary and secondary regions).
 - [ ] `az sql server list` returns two servers.
-- [ ] `az sql failover-group show --server <primarySqlServer> --query replicationRole` reports `Primary`.
+- [ ] `az sql failover-group show --name <failoverGroup> --server <primarySqlServer> --query replicationRole` reports `Primary`.
 - [ ] `az afd origin list` on the origin group returns two origins with priorities `1` and `2`.
 - [ ] `curl https://<frontDoorEndpoint>/` eventually returns `200` (allow several minutes for global propagation).
 - [ ] `curl https://<frontDoorEndpoint>/ops/info` reports `"region": "primary"`.
