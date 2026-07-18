@@ -106,8 +106,9 @@ Serverless reliability comes from disciplined backlog management, idempotent exe
 - [Cost and anti-patterns](cost-and-anti-patterns.md)
 - [Queue-based load leveling and competing consumers](../../patterns/integration/queue-based-load-leveling-and-competing-consumers.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Azure Functions scale and hosting](https://learn.microsoft.com/en-us/azure/azure-functions/functions-scale)
 - [Azure Monitor overview](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
 - [Durable Functions overview](https://learn.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-overview)
+

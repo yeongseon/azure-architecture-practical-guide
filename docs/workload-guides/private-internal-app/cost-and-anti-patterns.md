@@ -105,8 +105,9 @@ Private architecture remains economically sound when each additional network con
 - [Baseline architecture](baseline.md)
 - [Private connectivity patterns](../../patterns/networking/private-connectivity-patterns.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Azure Well-Architected Framework cost optimization](https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/)
 - [Private Endpoint overview](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview)
 - [Azure Architecture Framework cost overview](https://learn.microsoft.com/en-us/azure/architecture/framework/cost/overview)
+

@@ -88,20 +88,21 @@ Landing zones create long-lived organizational constraints, so early design choi
 
 That improves long-term alignment. [Inferred]
 
+## Next reading
+
+- [Baseline architecture](baseline.md)
+- [Governance and network topology](governance-and-network-topology.md)
+- [Platform operations](platform-operations.md)
+
 ## See Also
 
 - [Baseline architecture](baseline.md)
 - [Governance and network topology](governance-and-network-topology.md)
 - [Landing zones basics](../../platform/landing-zones-basics.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Cloud Adoption Framework landing zones](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/)
 - [Azure best practices and recommendations](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/)
 - [Manage cloud adoption at scale](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/manage/)
 
-## Next reading
-
-- [Baseline architecture](baseline.md)
-- [Governance and network topology](governance-and-network-topology.md)
-- [Platform operations](platform-operations.md)

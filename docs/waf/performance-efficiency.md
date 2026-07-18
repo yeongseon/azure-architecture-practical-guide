@@ -91,17 +91,18 @@ Performance is shared across app, data, and platform teams:
 
 Use scenario-based validation: launch spikes, batch overlap, tenant skew, degraded dependency performance, and failover conditions. If performance expectations only hold in the happy path, the architecture is fragile.
 
+## Takeaway
+
+[Validated] Efficient performance comes from choosing the right topology and data boundaries first, then tuning service tiers second.
+
 ## See Also
 
 - [Well-Architected Framework](index.md)
 - [Design patterns](../patterns/index.md)
 - [Pillar trade-offs](pillar-trade-offs.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Performance Efficiency pillar](https://learn.microsoft.com/en-us/azure/well-architected/performance-efficiency/)
 - [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/)
 
-## Takeaway
-
-[Validated] Efficient performance comes from choosing the right topology and data boundaries first, then tuning service tiers second.

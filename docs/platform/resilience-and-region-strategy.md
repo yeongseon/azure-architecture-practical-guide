@@ -78,20 +78,21 @@ Architectural consequences include:
 3. How will traffic, state, secrets, and operational access behave during failover?
 4. When was the last recovery drill and what evidence proved the targets?
 
+## Takeaway
+
+[Inferred] Resilience architecture is credible only when recovery targets, topology, and drills agree with each other.
+
+Design for the failure domain you can explain and validate.
+
 ## See Also
 
 - [Azure Architecture on Azure](azure-architecture-on-azure.md) — regions, zones, and edge as the underlying failure domains
 - [Network Topology Basics](network-topology-basics.md) — routing and connectivity for multi-region designs
 - [Observability Foundations](observability-foundations.md) — detection and drill evidence that validate recovery targets
 
-## Microsoft Learn anchors
+## Sources
 
 - [Azure reliability overview](https://learn.microsoft.com/en-us/azure/reliability/overview)
 - [Azure regions and availability zones](https://learn.microsoft.com/en-us/azure/reliability/regions-list)
 - [Availability zones overview](https://learn.microsoft.com/en-us/azure/availability-zones/az-overview)
 
-## Takeaway
-
-[Inferred] Resilience architecture is credible only when recovery targets, topology, and drills agree with each other.
-
-Design for the failure domain you can explain and validate.

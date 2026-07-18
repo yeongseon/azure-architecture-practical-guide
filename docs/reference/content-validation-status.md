@@ -51,7 +51,8 @@ flowchart TD
 - **In review** means content exists and is structurally reviewable, but the section is still incomplete or only partially populated against the intended scope. [Observed]
 - **Pending** means content is absent or lacks enough structure to evaluate. [Unknown]
 
-## Microsoft Learn references
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/architecture/
 - https://learn.microsoft.com/en-us/azure/well-architected/
+

@@ -102,16 +102,17 @@ flowchart TD
 - Every message requires global ordering.
 - The team lacks message observability and remediation processes.
 
+## Takeaway
+
+Queue-Based Load Leveling absorbs burst pressure; Competing Consumers turn buffered work into scalable throughput. In Azure, Service Bus is the default when reliability semantics matter, and Storage Queues are useful when simplicity is enough.
+
 ## See Also
 
 - [Design patterns](../index.md)
 - [Event-driven architecture](event-driven-architecture.md)
 - [Synchronous vs asynchronous](synchronous-vs-asynchronous.md)
 
-## Microsoft Learn reference
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/architecture/patterns/queue-based-load-leveling
 
-## Takeaway
-
-Queue-Based Load Leveling absorbs burst pressure; Competing Consumers turn buffered work into scalable throughput. In Azure, Service Bus is the default when reliability semantics matter, and Storage Queues are useful when simplicity is enough.

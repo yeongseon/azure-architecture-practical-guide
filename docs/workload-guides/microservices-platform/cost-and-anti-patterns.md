@@ -99,8 +99,9 @@ Review cost alongside architecture review outcomes so service sprawl is challeng
 - [Baseline architecture](baseline.md)
 - [Modular monolith vs microservices](../../patterns/decomposition/modular-monolith-vs-microservices.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Azure Well-Architected Framework cost optimization](https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/)
 - [Architect microservices on Azure](https://learn.microsoft.com/en-us/azure/architecture/microservices/)
 - [Cost optimization in the Azure Architecture Framework](https://learn.microsoft.com/en-us/azure/architecture/framework/cost/overview)
+

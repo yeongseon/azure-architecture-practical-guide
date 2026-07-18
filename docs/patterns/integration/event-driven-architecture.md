@@ -106,16 +106,17 @@ flowchart TD
 - The team cannot operate distributed tracing and asynchronous debugging.
 - Eventual consistency is unacceptable for the critical decision point.
 
+## Takeaway
+
+Choose event-driven architecture when business reactions should be decoupled in time and ownership. On Azure, select Event Grid, Service Bus, or Event Hubs based on semantics first, then throughput and operations second.
+
 ## See Also
 
 - [Design patterns](../index.md)
 - [Queue-based load leveling and competing consumers](queue-based-load-leveling-and-competing-consumers.md)
 - [Saga, idempotency, and outbox](saga-idempotency-and-outbox.md)
 
-## Microsoft Learn reference
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven
 
-## Takeaway
-
-Choose event-driven architecture when business reactions should be decoupled in time and ownership. On Azure, select Event Grid, Service Bus, or Event Hubs based on semantics first, then throughput and operations second.

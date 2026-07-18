@@ -81,6 +81,12 @@ This section should not spend most of its space on:
 - [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)
 - [Azure Architecture Guide](https://learn.microsoft.com/en-us/azure/architecture/guide/)
 
+## Takeaway
+
+[Inferred] Treat Start Here as the map, not the destination.
+
+Read this section to establish scope and vocabulary, then move into [Platform](../platform/index.md) for foundational Azure architecture decisions.
+
 ## See Also
 
 - [Overview](overview.md) — scope, audience, and the evidence model used throughout
@@ -89,8 +95,3 @@ This section should not spend most of its space on:
 - [Repository Map](repository-map.md) — full documentation structure
 - [Platform Hub](../platform/index.md) — the recommended first destination after this section
 
-## Takeaway
-
-[Inferred] Treat Start Here as the map, not the destination.
-
-Read this section to establish scope and vocabulary, then move into [Platform](../platform/index.md) for foundational Azure architecture decisions.

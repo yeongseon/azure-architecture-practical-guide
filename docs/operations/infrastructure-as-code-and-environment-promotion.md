@@ -85,17 +85,18 @@ flowchart TD
 - [Correlated] Production deployment issues are traced back to template or promotion design.
 - [Inferred] Module reuse reduces inconsistent implementation of core controls.
 
+## Takeaway
+
+[Validated] Good IaC is not only declarative deployment. It is the architecture operating model encoded in source, promoted safely, and kept synchronized with real production behavior.
+
 ## See Also
 
 - [Environment promotion and release guardrails](../patterns/deployment/environment-promotion-and-release-guardrails.md)
 - [Policy and governance guardrails](policy-and-governance-guardrails.md)
 - [Architecture lifecycle](architecture-lifecycle.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Bicep overview](https://learn.microsoft.com/en-us/azure/azure-resource-manager/bicep/overview)
 - [What is Azure Resource Manager?](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/overview)
 
-## Takeaway
-
-[Validated] Good IaC is not only declarative deployment. It is the architecture operating model encoded in source, promoted safely, and kept synchronized with real production behavior.

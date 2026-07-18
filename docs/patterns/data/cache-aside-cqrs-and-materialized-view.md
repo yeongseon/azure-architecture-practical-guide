@@ -105,17 +105,18 @@ flowchart TD
 - The workload cannot tolerate asynchronous projection lag.
 - The team lacks operational ownership for cache invalidation and projection rebuilds.
 
+## Takeaway
+
+Adopt cache-aside, CQRS, and materialized views when one authoritative write path must serve many fast, specialized read experiences. On Azure, the pattern works best when teams define freshness, replay, and invalidation rules before optimizing for speed.
+
 ## See Also
 
 - [Design patterns](../index.md)
 - [Consistency, partitioning, and replication](consistency-partitioning-and-replication.md)
 - [Data selection basics](../../platform/data-selection-basics.md)
 
-## Microsoft Learn reference
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/architecture/patterns/cache-aside
 - https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs
 
-## Takeaway
-
-Adopt cache-aside, CQRS, and materialized views when one authoritative write path must serve many fast, specialized read experiences. On Azure, the pattern works best when teams define freshness, replay, and invalidation rules before optimizing for speed.

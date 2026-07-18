@@ -90,17 +90,18 @@ These commitment models are valuable when demand is stable enough. The architect
 - [Correlated] Cost anomalies are linked to traffic, releases, or topology changes.
 - [Inferred] FinOps insights influence architecture reviews and backlog priorities.
 
+## Takeaway
+
+[Validated] FinOps is effective when architecture, operations, and finance share the same cost signals and can act on them before waste becomes structural.
+
 ## See Also
 
 - [WAF cost optimization pillar](../waf/cost-optimization.md)
 - [Observability and SLOs](observability-and-slos.md)
 - [Design patterns](../patterns/index.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Azure Cost Management and Billing documentation](https://learn.microsoft.com/en-us/azure/cost-management-billing/)
 - [FinOps on Azure](https://learn.microsoft.com/en-us/azure/cost-management-billing/finops/)
 
-## Takeaway
-
-[Validated] FinOps is effective when architecture, operations, and finance share the same cost signals and can act on them before waste becomes structural.

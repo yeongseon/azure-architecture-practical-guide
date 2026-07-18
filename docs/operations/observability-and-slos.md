@@ -92,17 +92,18 @@ Avoid vanity SLOs that are easy to meet but weakly tied to actual user impact.
 - [Correlated] Telemetry joins application, dependency, and platform signals.
 - [Inferred] Observability backlog exists for blind spots and noisy alerts.
 
+## Takeaway
+
+[Validated] A workload is only as operable as its observability model. Good SLOs express user commitments, and good telemetry reveals when the architecture is no longer meeting them.
+
 ## See Also
 
 - [WAF operational excellence pillar](../waf/operational-excellence.md)
 - [Business continuity and drills](business-continuity-and-drills.md)
 - [Platform concepts](../platform/index.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Azure Monitor overview](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
 - [Designing a monitoring system](https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/observability)
 
-## Takeaway
-
-[Validated] A workload is only as operable as its observability model. Good SLOs express user commitments, and good telemetry reveals when the architecture is no longer meeting them.

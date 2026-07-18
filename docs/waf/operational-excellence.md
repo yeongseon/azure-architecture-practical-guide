@@ -92,17 +92,18 @@ flowchart TD
 
 Validate operational excellence through release simulations, drift detection, incident exercises, and alert reviews. If a team cannot explain how a change moves from source to safe production rollback, the architecture is not yet operationally sound.
 
+## Takeaway
+
+[Validated] Operational excellence is the architecture pillar that proves whether a design can survive real-world change. Good operations are designed, versioned, and exercised.
+
 ## See Also
 
 - [Well-Architected Framework](index.md)
 - [Observability and SLOs](../operations/observability-and-slos.md)
 - [Reliability pillar](reliability.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Operational Excellence pillar](https://learn.microsoft.com/en-us/azure/well-architected/operational-excellence/)
 - [Azure Monitor overview](https://learn.microsoft.com/en-us/azure/azure-monitor/overview)
 
-## Takeaway
-
-[Validated] Operational excellence is the architecture pillar that proves whether a design can survive real-world change. Good operations are designed, versioned, and exercised.

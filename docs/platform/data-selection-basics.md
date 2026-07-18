@@ -79,13 +79,19 @@ flowchart TD
 3. What is the expected partition key or data distribution strategy?
 4. How do latency and cost change when replication or retention grows?
 
+## Takeaway
+
+[Inferred] Pick the data store that matches the truth model of the workload.
+
+The cheapest or most familiar service is rarely the right answer if consistency, partitioning, and lifecycle are poorly matched.
+
 ## See Also
 
 - [Compute Selection Basics](compute-selection-basics.md) — the paired compute decision for the same workload
 - [Integration Selection Basics](integration-selection-basics.md) — how data moves between components and systems
 - [Resilience and Region Strategy](resilience-and-region-strategy.md) — replication and RPO implications of the chosen data store
 
-## Microsoft Learn anchors
+## Sources
 
 - [Choose a data store](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview)
 - [Data store decision tree](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-decision-tree)
@@ -93,8 +99,3 @@ flowchart TD
 - [Azure Storage documentation](https://learn.microsoft.com/en-us/azure/storage/)
 - [Azure Cache for Redis overview](https://learn.microsoft.com/en-us/azure/azure-cache-for-redis/cache-overview)
 
-## Takeaway
-
-[Inferred] Pick the data store that matches the truth model of the workload.
-
-The cheapest or most familiar service is rarely the right answer if consistency, partitioning, and lifecycle are poorly matched.

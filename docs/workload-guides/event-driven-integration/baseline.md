@@ -101,10 +101,11 @@ This baseline is strongest when messaging, retries, and asynchronous completion 
 - [Messaging and consistency](messaging-and-consistency.md)
 - [Event-driven architecture](../../patterns/integration/event-driven-architecture.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Event-driven architecture style](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/event-driven)
 - [Service Bus messaging overview](https://learn.microsoft.com/en-us/azure/service-bus-messaging/service-bus-messaging-overview)
 - [Azure Functions scale and hosting](https://learn.microsoft.com/en-us/azure/azure-functions/functions-scale)
 - [Azure Container Apps overview](https://learn.microsoft.com/en-us/azure/container-apps/overview)
 - [Choose between Azure Container Apps, AKS, and App Service](https://learn.microsoft.com/en-us/azure/container-apps/compare-options)
+

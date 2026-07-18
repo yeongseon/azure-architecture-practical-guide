@@ -88,20 +88,21 @@ The first sign of a healthy microservices program is clearer team ownership, not
 
 Ownership should become easier to explain. [Observed]
 
+## Next reading
+
+- [Baseline architecture](baseline.md)
+- [Networking, identity, and service communication](networking-identity-and-service-communication.md)
+- [Data, observability, and reliability](data-observability-and-reliability.md)
+
 ## See Also
 
 - [Baseline architecture](baseline.md)
 - [Networking, identity, and service communication](networking-identity-and-service-communication.md)
 - [Modular monolith vs microservices](../../patterns/decomposition/modular-monolith-vs-microservices.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Architect microservices on Azure](https://learn.microsoft.com/en-us/azure/architecture/microservices/)
 - [Interservice communication in a microservices architecture](https://learn.microsoft.com/en-us/azure/architecture/microservices/design/interservice-communication)
 - [Data considerations for microservices](https://learn.microsoft.com/en-us/azure/architecture/microservices/design/data-considerations)
 
-## Next reading
-
-- [Baseline architecture](baseline.md)
-- [Networking, identity, and service communication](networking-identity-and-service-communication.md)
-- [Data, observability, and reliability](data-observability-and-reliability.md)

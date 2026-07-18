@@ -38,7 +38,8 @@ flowchart TD
 - [Design patterns](../patterns/index.md)
 - [Design labs methodology](../design-labs/methodology.md)
 
-## Microsoft Learn references
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/well-architected/
 - https://learn.microsoft.com/en-us/azure/architecture/patterns/
+

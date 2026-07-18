@@ -85,11 +85,11 @@ Examples:
 - [Observed] service guides start making architecture claims without workload context
 - [Correlated] teams overfit to one service because the implementation documentation was easier to find
 
-## Microsoft Learn anchors
+## Takeaway
 
-- [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/)
-- [Architecture guide](https://learn.microsoft.com/en-us/azure/architecture/guide/)
-- [App Service documentation](https://learn.microsoft.com/en-us/azure/app-service/)
+[Inferred] This guide should answer architecture questions that remain valid even if Microsoft changes a portal workflow or CLI parameter.
+
+If the page starts teaching service setup, it is in the wrong place.
 
 ## See Also
 
@@ -97,8 +97,9 @@ Examples:
 - [How to Use This Guide](how-to-use-this-guide.md) — pairing architecture decisions with service configuration sources
 - [Platform Hub](../platform/index.md) — the architecture-first foundations this guide prioritizes
 
-## Takeaway
+## Sources
 
-[Inferred] This guide should answer architecture questions that remain valid even if Microsoft changes a portal workflow or CLI parameter.
+- [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/)
+- [Architecture guide](https://learn.microsoft.com/en-us/azure/architecture/guide/)
+- [App Service documentation](https://learn.microsoft.com/en-us/azure/app-service/)
 
-If the page starts teaching service setup, it is in the wrong place.

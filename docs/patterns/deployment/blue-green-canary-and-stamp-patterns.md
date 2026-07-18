@@ -108,17 +108,18 @@ flowchart TD
 - The team lacks telemetry needed to decide whether promotion is safe.
 - Shared data changes cannot support version overlap or gradual exposure.
 
+## Takeaway
+
+Choose blue-green, canary, and stamp patterns based on how much rollout isolation, traffic control, and repeatable scale your workload needs. On Azure, the pattern only pays off when observability, compatibility, and rollback automation are treated as release prerequisites.
+
 ## See Also
 
 - [Design patterns](../index.md)
 - [Environment promotion and release guardrails](environment-promotion-and-release-guardrails.md)
 - [Infrastructure as code and environment promotion](../../operations/infrastructure-as-code-and-environment-promotion.md)
 
-## Microsoft Learn reference
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/architecture/guide/aks/blue-green-deployment-for-aks
 - https://learn.microsoft.com/en-us/azure/architecture/framework/mission-critical/mission-critical-deployment-testing
 
-## Takeaway
-
-Choose blue-green, canary, and stamp patterns based on how much rollout isolation, traffic control, and repeatable scale your workload needs. On Azure, the pattern only pays off when observability, compatibility, and rollback automation are treated as release prerequisites.

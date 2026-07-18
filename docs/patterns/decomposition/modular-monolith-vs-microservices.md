@@ -115,16 +115,17 @@ flowchart TD
 - Scaling problems are not yet isolated to distinct capabilities.
 - The driver is organizational fashion rather than architecture evidence.
 
+## Takeaway
+
+Choose microservices only when business boundaries, scaling asymmetry, and operational maturity all justify distributed complexity. Otherwise, a modular monolith is often the more Azure-practical design.
+
 ## See Also
 
 - [Design patterns](../index.md)
 - [Bounded contexts and data ownership](bounded-contexts-and-data-ownership.md)
 - [Strangler fig migration](strangler-fig-migration.md)
 
-## Microsoft Learn reference
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/architecture/microservices/
 
-## Takeaway
-
-Choose microservices only when business boundaries, scaling asymmetry, and operational maturity all justify distributed complexity. Otherwise, a modular monolith is often the more Azure-practical design.

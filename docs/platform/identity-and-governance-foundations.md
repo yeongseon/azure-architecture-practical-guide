@@ -97,13 +97,19 @@ Architectural implications:
 3. How do workloads authenticate to Azure services without embedding secrets broadly?
 4. Who approves and revisits governance exceptions?
 
+## Takeaway
+
+[Inferred] Identity and governance foundations are architecture, not administration.
+
+If access boundaries, privilege flow, and policy inheritance are unclear, the rest of the platform remains unstable.
+
 ## See Also
 
 - [Resource Organization](resource-organization.md) — the scopes that RBAC and policy assignments bind to
 - [Landing Zones Basics](landing-zones-basics.md) — how the governance baseline is packaged into the platform layer
 - [Azure Architecture on Azure](azure-architecture-on-azure.md) — control-plane versus data-plane authorization boundaries
 
-## Microsoft Learn anchors
+## Sources
 
 - [Azure RBAC overview](https://learn.microsoft.com/en-us/azure/role-based-access-control/overview)
 - [What is Microsoft Entra ID?](https://learn.microsoft.com/en-us/entra/fundamentals/whatis)
@@ -111,8 +117,3 @@ Architectural implications:
 - [Privileged Identity Management](https://learn.microsoft.com/en-us/entra/id-governance/privileged-identity-management/pim-configure)
 - [Azure Blueprints overview and deprecation](https://learn.microsoft.com/en-us/azure/governance/blueprints/overview)
 
-## Takeaway
-
-[Inferred] Identity and governance foundations are architecture, not administration.
-
-If access boundaries, privilege flow, and policy inheritance are unclear, the rest of the platform remains unstable.

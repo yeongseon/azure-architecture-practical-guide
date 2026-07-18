@@ -98,21 +98,22 @@ Design questions include:
 3. Where are the forced-routing and inspection choke points?
 4. What is the blast radius if the central networking layer fails or misroutes traffic?
 
+## Takeaway
+
+[Inferred] Network topology should be selected for operational clarity and failure containment, not just for diagram elegance.
+
+If DNS, routing, and ownership are unclear, the topology is not finished.
+
 ## See Also
 
 - [Landing Zones Basics](landing-zones-basics.md) — how shared connectivity is owned in the platform layer
 - [Compute Selection Basics](compute-selection-basics.md) — the workloads that consume this connectivity fabric
 - [Resilience and Region Strategy](resilience-and-region-strategy.md) — how topology supports multi-region routing and failover
 
-## Microsoft Learn anchors
+## Sources
 
 - [Azure networking architecture design](https://learn.microsoft.com/en-us/azure/architecture/networking/)
 - [Hub-spoke reference architecture](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/hybrid-networking/hub-spoke)
 - [About Azure Virtual WAN](https://learn.microsoft.com/en-us/azure/virtual-wan/virtual-wan-about)
 - [Private endpoint overview](https://learn.microsoft.com/en-us/azure/private-link/private-endpoint-overview)
 
-## Takeaway
-
-[Inferred] Network topology should be selected for operational clarity and failure containment, not just for diagram elegance.
-
-If DNS, routing, and ownership are unclear, the topology is not finished.

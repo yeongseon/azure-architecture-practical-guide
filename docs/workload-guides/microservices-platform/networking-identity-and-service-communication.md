@@ -99,8 +99,9 @@ Communication architecture should minimize accidental coupling while keeping tru
 - [Data, observability, and reliability](data-observability-and-reliability.md)
 - [Modular monolith vs microservices](../../patterns/decomposition/modular-monolith-vs-microservices.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Interservice communication in a microservices architecture](https://learn.microsoft.com/en-us/azure/architecture/microservices/design/interservice-communication)
 - [Gateway Routing pattern](https://learn.microsoft.com/en-us/azure/architecture/patterns/gateway-routing)
 - [Protect APIs with Application Gateway and API Management](https://learn.microsoft.com/en-us/azure/architecture/web-apps/api-management/architectures/protect-apis)
+

@@ -64,6 +64,10 @@ This section intentionally stays architectural. It explains how to choose operat
 
 Read the section in operating order rather than alphabetical order. Start with lifecycle and ADRs to understand how decisions are recorded, then move into IaC, policy, and observability to see how those decisions are enforced. Finish with continuity, FinOps, and team-topology guidance to confirm the architecture can survive failure, growth, and organizational change.
 
+## Takeaway
+
+[Validated] Strong Azure operations are not an afterthought to architecture. They are the control system that keeps architecture decisions correct as teams, scale, and constraints change.
+
 ## See Also
 
 - [Architecture lifecycle](architecture-lifecycle.md)
@@ -71,11 +75,8 @@ Read the section in operating order rather than alphabetical order. Start with l
 - [Observability and SLOs](observability-and-slos.md)
 - [Business continuity and drills](business-continuity-and-drills.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Cloud Adoption Framework](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/)
 - [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)
 
-## Takeaway
-
-[Validated] Strong Azure operations are not an afterthought to architecture. They are the control system that keeps architecture decisions correct as teams, scale, and constraints change.

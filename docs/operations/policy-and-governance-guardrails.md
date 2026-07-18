@@ -82,17 +82,18 @@ flowchart TD
 - [Correlated] Repeated exception patterns trigger architecture or platform changes.
 - [Unknown] Any control without owner or escalation path is flagged.
 
+## Takeaway
+
+[Validated] Strong guardrails are clear, versioned, reviewable, and paired with an exception process that keeps governance from becoming theater.
+
 ## See Also
 
 - [Identity and governance foundations](../platform/identity-and-governance-foundations.md)
 - [Infrastructure as code and environment promotion](infrastructure-as-code-and-environment-promotion.md)
 - [WAF security pillar](../waf/security.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Azure Policy overview](https://learn.microsoft.com/en-us/azure/governance/policy/overview)
 - [Cloud Adoption Framework governance](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/govern/)
 
-## Takeaway
-
-[Validated] Strong guardrails are clear, versioned, reviewable, and paired with an exception process that keeps governance from becoming theater.

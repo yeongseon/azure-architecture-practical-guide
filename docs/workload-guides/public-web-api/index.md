@@ -102,13 +102,19 @@ flowchart TD
 
 This family fits when public ingress, managed web operations, and predictable API delivery are the primary architecture drivers. [Validated]
 
+## Next reading
+
+- [Baseline architecture](baseline.md)
+- [Network, edge, and identity decisions](network-edge-and-identity.md)
+- [Data and state decisions](data-and-state.md)
+
 ## See Also
 
 - [Baseline architecture](baseline.md)
 - [Network edge and identity](network-edge-and-identity.md)
 - [Synchronous vs asynchronous](../../patterns/integration/synchronous-vs-asynchronous.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Baseline highly available zone-redundant web application](https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)
 - [Azure Front Door overview](https://learn.microsoft.com/en-us/azure/frontdoor/front-door-overview)
@@ -116,8 +122,3 @@ This family fits when public ingress, managed web operations, and predictable AP
 - [Azure Container Apps overview](https://learn.microsoft.com/en-us/azure/container-apps/overview)
 - [Choose between Azure Container Apps, AKS, and App Service](https://learn.microsoft.com/en-us/azure/container-apps/compare-options)
 
-## Next reading
-
-- [Baseline architecture](baseline.md)
-- [Network, edge, and identity decisions](network-edge-and-identity.md)
-- [Data and state decisions](data-and-state.md)

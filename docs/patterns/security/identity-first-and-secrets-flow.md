@@ -106,16 +106,17 @@ Examples where identity-first often works well include Azure SQL Database, Stora
 - Very small internal tools may start with Key Vault-backed secrets before full identity migration.
 - Some external services do not yet support Azure-native identity integration, so a residual secret path remains necessary.
 
+## Takeaway
+
+In Azure, identity-first means treating Managed Identity as the default access path and Key Vault as the controlled exception path. The architectural win is not merely secret storage, but shrinking the entire secrets flow.
+
 ## See Also
 
 - [Design patterns](../index.md)
 - [Zero trust at workload level](zero-trust-at-workload-level.md)
 - [Identity and governance foundations](../../platform/identity-and-governance-foundations.md)
 
-## Microsoft Learn reference
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview
 
-## Takeaway
-
-In Azure, identity-first means treating Managed Identity as the default access path and Key Vault as the controlled exception path. The architectural win is not merely secret storage, but shrinking the entire secrets flow.

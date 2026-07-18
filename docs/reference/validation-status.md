@@ -43,7 +43,8 @@ flowchart TD
 - Promote a lab to reusable baseline only after architecture, cost, and failure testing complete. [Validated]
 - Re-test after major service, policy, or workload assumption changes. [Inferred]
 
-## Microsoft Learn references
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/architecture/
 - https://learn.microsoft.com/en-us/azure/reliability/overview
+

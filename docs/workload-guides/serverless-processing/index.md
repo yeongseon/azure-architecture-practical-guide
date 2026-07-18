@@ -107,21 +107,22 @@ flowchart TD
 
 This family fits when event-driven execution, managed scaling, and explicit workflow state matter more than owning long-lived servers or a permanent application tier. [Validated]
 
+## Next reading
+
+- [Baseline architecture](baseline.md)
+- [Triggers, state, and storage](triggers-state-and-storage.md)
+- [Operations and reliability](operations-and-reliability.md)
+
 ## See Also
 
 - [Baseline architecture](baseline.md)
 - [Triggers, state, and storage](triggers-state-and-storage.md)
 - [Queue-based load leveling and competing consumers](../../patterns/integration/queue-based-load-leveling-and-competing-consumers.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Azure Functions overview](https://learn.microsoft.com/en-us/azure/azure-functions/functions-overview)
 - [Logic Apps overview](https://learn.microsoft.com/en-us/azure/logic-apps/logic-apps-overview)
 - [Azure Functions scale and hosting](https://learn.microsoft.com/en-us/azure/azure-functions/functions-scale)
 - [Serverless web application reference architecture](https://learn.microsoft.com/en-us/azure/architecture/reference-architectures/serverless/web-app)
 
-## Next reading
-
-- [Baseline architecture](baseline.md)
-- [Triggers, state, and storage](triggers-state-and-storage.md)
-- [Operations and reliability](operations-and-reliability.md)

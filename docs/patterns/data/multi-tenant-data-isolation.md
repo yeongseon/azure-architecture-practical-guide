@@ -103,17 +103,18 @@ flowchart TD
 - Regulatory demands require physically dedicated environments for every tenant.
 - The team cannot enforce tenant context consistently across synchronous and asynchronous paths.
 
+## Takeaway
+
+Choose multi-tenant data isolation by matching the tenant risk profile to the minimum viable boundary that stays operable at scale. On Azure, successful designs treat tenant context, restoreability, and noisy-neighbor controls as part of the data architecture from day one.
+
 ## See Also
 
 - [Design patterns](../index.md)
 - [Consistency, partitioning, and replication](consistency-partitioning-and-replication.md)
 - [Zero trust at workload level](../security/zero-trust-at-workload-level.md)
 
-## Microsoft Learn reference
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/overview
 - https://learn.microsoft.com/en-us/azure/architecture/guide/multitenant/approaches/storage-data
 
-## Takeaway
-
-Choose multi-tenant data isolation by matching the tenant risk profile to the minimum viable boundary that stays operable at scale. On Azure, successful designs treat tenant context, restoreability, and noisy-neighbor controls as part of the data architecture from day one.

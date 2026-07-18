@@ -89,17 +89,18 @@ Create ADRs for platform baselines, identity boundaries, region strategy, deploy
 
 [Inferred] A strong ADR is short enough to be read during a design review but specific enough to survive team turnover. If readers cannot tell why a choice was made or what would invalidate it, the record is incomplete.
 
+## Takeaway
+
+[Validated] ADRs turn architecture from memory into evidence. The 16-section ADVR format keeps decisions reviewable, testable, and revisitable.
+
 ## See Also
 
 - [Architecture lifecycle](architecture-lifecycle.md)
 - [Architecture decision matrix](../reference/architecture-decision-matrix.md)
 - [Policy and governance guardrails](policy-and-governance-guardrails.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Azure Architecture Center patterns](https://learn.microsoft.com/en-us/azure/architecture/patterns/)
 - [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)
 
-## Takeaway
-
-[Validated] ADRs turn architecture from memory into evidence. The 16-section ADVR format keeps decisions reviewable, testable, and revisitable.

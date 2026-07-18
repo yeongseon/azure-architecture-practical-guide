@@ -105,16 +105,17 @@ flowchart TD
 - State consistency requirements are strict and cross-region write coordination is unacceptable.
 - The business does not value the additional cost and complexity enough to justify it.
 
+## Takeaway
+
+Choose active-passive when you need regional resilience with simpler operations. Choose active-active only when latency, continuity, and traffic distribution benefits clearly outweigh the higher consistency and operating complexity.
+
 ## See Also
 
 - [Design patterns](../index.md)
 - [Resilience and region strategy](../../platform/resilience-and-region-strategy.md)
 - [Retry, circuit breaker, and bulkhead](retry-circuit-breaker-and-bulkhead.md)
 
-## Microsoft Learn reference
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/architecture/guide/networking/global-web-applications/overview
 
-## Takeaway
-
-Choose active-passive when you need regional resilience with simpler operations. Choose active-active only when latency, continuity, and traffic distribution benefits clearly outweigh the higher consistency and operating complexity.

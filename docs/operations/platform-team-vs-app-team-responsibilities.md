@@ -81,17 +81,18 @@ Use clear interfaces:
 - [Correlated] Platform roadmap changes respond to recurring app-team friction.
 - [Inferred] Shared responsibility reduces ambiguity without diluting accountability.
 
+## Takeaway
+
+[Validated] High-performing Azure organizations do not choose between platform control and app autonomy. They define interfaces, guardrails, and escalation paths so both can move with clarity.
+
 ## See Also
 
 - [Architecture lifecycle](architecture-lifecycle.md)
 - [Policy and governance guardrails](policy-and-governance-guardrails.md)
 - [ADR process](adr-process.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Cloud Adoption Framework organize guidance](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/organize/)
 - [Cloud Adoption Framework ready guidance](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/)
 
-## Takeaway
-
-[Validated] High-performing Azure organizations do not choose between platform control and app autonomy. They define interfaces, guardrails, and escalation paths so both can move with clarity.

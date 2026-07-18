@@ -107,8 +107,9 @@ Good serverless designs separate trigger semantics, orchestration mechanics, and
 - [Operations and reliability](operations-and-reliability.md)
 - [Queue-based load leveling and competing consumers](../../patterns/integration/queue-based-load-leveling-and-competing-consumers.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Azure Functions triggers and bindings](https://learn.microsoft.com/en-us/azure/azure-functions/functions-triggers-bindings)
 - [Durable Functions overview](https://learn.microsoft.com/en-us/azure/azure-functions/durable/durable-functions-overview)
 - [Choose a data store for an application](https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/data-store-overview)
+

@@ -103,8 +103,9 @@ The best public web cost optimizations usually remove unused complexity before t
 - [Baseline architecture](baseline.md)
 - [Synchronous vs asynchronous](../../patterns/integration/synchronous-vs-asynchronous.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Azure Well-Architected Framework cost optimization](https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/)
 - [Baseline highly available zone-redundant web application](https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)
 - [Azure Architecture Center cost guidance](https://learn.microsoft.com/en-us/azure/architecture/framework/cost/overview)
+

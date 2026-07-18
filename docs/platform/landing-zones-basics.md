@@ -86,20 +86,21 @@ flowchart TD
 !!! tip
     If a design choice affects many workloads, make it part of the landing zone. If it only affects one workload, keep it in the application boundary unless policy says otherwise.
 
+## Takeaway
+
+[Inferred] A landing zone is valuable when it standardizes the hard parts of Azure ownership without smothering workload autonomy.
+
+Design it as an operating model, not as a diagram alone.
+
 ## See Also
 
 - [Resource Organization](resource-organization.md) — the management hierarchy that anchors the platform layer
 - [Identity and Governance Foundations](identity-and-governance-foundations.md) — the identity and policy baseline a landing zone standardizes
 - [Network Topology Basics](network-topology-basics.md) — the shared connectivity services owned by the platform team
 
-## Microsoft Learn anchors
+## Sources
 
 - [Cloud Adoption Framework landing zones](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/)
 - [Landing zone design areas](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/design-areas)
 - [Azure landing zone architecture](https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/landing-zone/)
 
-## Takeaway
-
-[Inferred] A landing zone is valuable when it standardizes the hard parts of Azure ownership without smothering workload autonomy.
-
-Design it as an operating model, not as a diagram alone.

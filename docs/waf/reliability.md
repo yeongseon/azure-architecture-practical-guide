@@ -90,17 +90,18 @@ Reliability reviews should name and validate both:
 
 Run tabletop reviews, backup restorations, zonal failure simulations, dependency throttling tests, and failover exercises. Reliability without drills is mostly [Assumed].
 
+## Takeaway
+
+[Validated] Reliable Azure architectures are explicit about failure, realistic about recovery, and measured against RTO and RPO commitments rather than optimistic diagrams.
+
 ## See Also
 
 - [Well-Architected Framework](index.md)
 - [Resilience and region strategy](../platform/resilience-and-region-strategy.md)
 - [Business continuity and drills](../operations/business-continuity-and-drills.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Reliability pillar](https://learn.microsoft.com/en-us/azure/well-architected/reliability/)
 - [Azure reliability documentation](https://learn.microsoft.com/en-us/azure/reliability/overview)
 
-## Takeaway
-
-[Validated] Reliable Azure architectures are explicit about failure, realistic about recovery, and measured against RTO and RPO commitments rather than optimistic diagrams.

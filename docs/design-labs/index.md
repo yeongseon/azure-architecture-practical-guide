@@ -69,7 +69,8 @@ Use the evidence tags consistently:
 - [Workload Guides](../workload-guides/index.md) — the implementation blueprints each lab pairs with
 - [Patterns](../patterns/index.md) — reusable design patterns referenced across the labs
 
-## Microsoft Learn references
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/architecture/
 - https://learn.microsoft.com/en-us/azure/well-architected/
+

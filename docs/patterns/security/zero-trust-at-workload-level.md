@@ -96,17 +96,18 @@ flowchart TD
 - Not as a one-time product rollout without ownership for policy, exceptions, and monitoring.
 - Not as a full pattern if critical dependencies still depend on unbounded shared trust and no mitigation exists.
 
+## Takeaway
+
+Apply Zero Trust at workload level by making every identity, network path, and privileged action earn trust continuously. On Azure, the pattern succeeds when least privilege, policy enforcement, and telemetry are built into normal platform operations instead of added after incidents.
+
 ## See Also
 
 - [Design patterns](../index.md)
 - [Identity-first and secrets flow](identity-first-and-secrets-flow.md)
 - [WAF security pillar](../../waf/security.md)
 
-## Microsoft Learn reference
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/security/fundamentals/zero-trust
 - https://learn.microsoft.com/en-us/security/zero-trust/azure-infrastructure-overview
 
-## Takeaway
-
-Apply Zero Trust at workload level by making every identity, network path, and privileged action earn trust continuously. On Azure, the pattern succeeds when least privilege, policy enforcement, and telemetry are built into normal platform operations instead of added after incidents.

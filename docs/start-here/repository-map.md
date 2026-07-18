@@ -98,6 +98,12 @@ Signals that a page likely belongs elsewhere:
 
 - [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/)
 
+## Takeaway
+
+[Inferred] The published Phase 1 repository is organized to move readers from fundamentals to patterns, workloads, operations, and design labs.
+
+When in doubt, ask where the page sits in that flow: orientation, foundation, decision pattern, workload application, operation, design lab, or planned future review content.
+
 ## See Also
 
 - [Overview](overview.md) — what this guide is and who it's for
@@ -106,8 +112,3 @@ Signals that a page likely belongs elsewhere:
 - [Architecture vs Service Guides](architecture-vs-service-guides.md) — scope positioning
 - [How to Use This Guide](how-to-use-this-guide.md) — reader navigation guidance
 
-## Takeaway
-
-[Inferred] The published Phase 1 repository is organized to move readers from fundamentals to patterns, workloads, operations, and design labs.
-
-When in doubt, ask where the page sits in that flow: orientation, foundation, decision pattern, workload application, operation, design lab, or planned future review content.

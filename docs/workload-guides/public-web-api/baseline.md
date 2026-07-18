@@ -92,12 +92,6 @@ Most public web applications are operational systems, not analytical platforms. 
 - Cosmos DB cost can rise quickly when partitioning and RU allocation are chosen without measured access patterns. [Correlated]
 - Multi-region active-active adds operational complexity that many teams underestimate in deployment, cache invalidation, and data conflict handling. [Correlated]
 
-## See Also
-
-- [Public web API overview](index.md)
-- [Network edge and identity](network-edge-and-identity.md)
-- [Synchronous vs asynchronous](../../patterns/integration/synchronous-vs-asynchronous.md)
-
 ## Evidence and references
 
 - [Baseline highly available zone-redundant web application](https://learn.microsoft.com/en-us/azure/architecture/web-apps/app-service/architectures/baseline-zone-redundant)
@@ -109,3 +103,10 @@ Most public web applications are operational systems, not analytical platforms. 
 ## Next decisions
 
 Continue with [Network, edge, and identity](network-edge-and-identity.md) and [Data and state](data-and-state.md) to refine ingress, authentication, and persistence choices.
+
+## See Also
+
+- [Public web API overview](index.md)
+- [Network edge and identity](network-edge-and-identity.md)
+- [Synchronous vs asynchronous](../../patterns/integration/synchronous-vs-asynchronous.md)
+

@@ -113,20 +113,21 @@ When applying any pattern in this guide, collect evidence beyond diagrams:
 - [Correlated] Signals that link architecture choices to production pain points.
 - [Unknown] Explicit gaps that still need tests or drills.
 
+## Next steps
+
+- Use [service-selection-patterns.md](service-selection-patterns.md) to frame architecture choices.
+- Use the subfolders in this section to evaluate specific pattern families.
+- Use workload guides to combine patterns into a deployable Azure baseline.
+
 ## See Also
 
 - [Service selection patterns](service-selection-patterns.md)
 - [Well-Architected Framework](../waf/index.md)
 - [WAF pillar to pattern map](../reference/waf-pillar-to-pattern-map.md)
 
-## Microsoft Learn references
+## Sources
 
 - https://learn.microsoft.com/en-us/azure/architecture/
 - https://learn.microsoft.com/en-us/azure/architecture/guide/technology-choices/
 - https://learn.microsoft.com/en-us/azure/well-architected/
 
-## Next steps
-
-- Use [service-selection-patterns.md](service-selection-patterns.md) to frame architecture choices.
-- Use the subfolders in this section to evaluate specific pattern families.
-- Use workload guides to combine patterns into a deployable Azure baseline.

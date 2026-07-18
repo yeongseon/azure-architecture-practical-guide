@@ -116,12 +116,13 @@ Use the official assessment as a structured complement to human review, not a su
 - [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)
 - [Azure Architecture Review assessment](https://learn.microsoft.com/en-us/assessments/azure-architecture-review/)
 
+## Takeaway
+
+[Validated] A strong architecture review produces clear evidence, named owners, and validation plans across all five pillars instead of a generic statement that the design is "well architected."
+
 ## See Also
 
 - [Well-Architected Framework](index.md)
 - [Design labs methodology](../design-labs/methodology.md)
 - [Architecture decision matrix](../reference/architecture-decision-matrix.md)
 
-## Takeaway
-
-[Validated] A strong architecture review produces clear evidence, named owners, and validation plans across all five pillars instead of a generic statement that the design is "well architected."

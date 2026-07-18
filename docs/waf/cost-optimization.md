@@ -100,17 +100,18 @@ Cost optimization should be shared:
 
 Ask whether the architecture can degrade gracefully in cost as well as scale gracefully in demand. Good designs let teams lower spend without rewriting the workload. That usually means modular scaling boundaries, intentional telemetry retention, clear environment strategy, and visible service ownership.
 
+## Takeaway
+
+[Validated] A cost-optimized Azure architecture is one where spend follows value, waste is visible, and expensive reliability or performance choices are deliberate rather than accidental.
+
 ## See Also
 
 - [Well-Architected Framework](index.md)
 - [Pillar trade-offs](pillar-trade-offs.md)
 - [Cost management and FinOps](../operations/cost-management-and-finops.md)
 
-## Microsoft Learn references
+## Sources
 
 - [Cost Optimization pillar](https://learn.microsoft.com/en-us/azure/well-architected/cost-optimization/)
 - [Azure Cost Management and Billing documentation](https://learn.microsoft.com/en-us/azure/cost-management-billing/)
 
-## Takeaway
-
-[Validated] A cost-optimized Azure architecture is one where spend follows value, waste is visible, and expensive reliability or performance choices are deliberate rather than accidental.
