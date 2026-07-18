@@ -223,6 +223,7 @@ nav:
   - Practical Journey:
     - practical-journey/stage-01-mvp.md
     - practical-journey/stage-02-production-baseline.md
+    - practical-journey/stage-03-scale-edge.md
   - Reference:
     - reference/index.md
     - reference/architecture-decision-matrix.md
