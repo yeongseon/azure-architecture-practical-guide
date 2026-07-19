@@ -99,6 +99,17 @@ az deployment group create \
   --parameters sqlAdministratorLoginPassword="$SQL_ADMIN_PASSWORD"
 ```
 
+| Command | Purpose |
+|---------|---------|
+| `az group create --resource-group rg-practical-storefront-stage04 --location koreacentral` | Creates the resource group that holds every Stage 4 resource. |
+| `--resource-group rg-practical-storefront-stage04` | Names the resource group to create. |
+| `--location koreacentral` | Sets the Azure region for the resource group. |
+| `az deployment group create` | Deploys the Bicep template into the resource group. |
+| `--resource-group rg-practical-storefront-stage04` | Targets the resource group that receives the deployment. |
+| `--template-file infra/bicep/stages/stage-04-network-isolation/main.bicep` | Points to the Bicep template to deploy. |
+| `--parameters infra/bicep/stages/stage-04-network-isolation/main.bicepparam` | Supplies deployment parameters from the `.bicepparam` file. |
+| `--parameters sqlAdministratorLoginPassword="$SQL_ADMIN_PASSWORD"` | Overrides the SQL administrator password inline from the exported variable. |
+
 ## Verify
 
 ```bash
@@ -120,6 +131,12 @@ az sql server show --name <sqlServer> --resource-group rg-practical-storefront-s
 az network private-endpoint show --name <sqlPrivateEndpoint> --resource-group rg-practical-storefront-stage04 --query "privateLinkServiceConnections[0].privateLinkServiceConnectionState.status"
 az network private-dns zone show --name privatelink.database.windows.net --resource-group rg-practical-storefront-stage04 --query name
 ```
+
+| Command | Purpose |
+|---------|---------|
+| `az sql server show --name <sqlServer> --resource-group rg-practical-storefront-stage04 --query publicNetworkAccess` | Returns whether the SQL server's public network access is disabled. |
+| `az network private-endpoint show --name <sqlPrivateEndpoint> --resource-group rg-practical-storefront-stage04 --query "privateLinkServiceConnections[0].privateLinkServiceConnectionState.status"` | Returns the approval status of the SQL private endpoint connection. |
+| `az network private-dns zone show --name privatelink.database.windows.net --resource-group rg-practical-storefront-stage04 --query name` | Confirms the private DNS zone for SQL exists and returns its name. |
 
 To confirm the app actually resolves SQL privately, open the App Service SSH/Kudu console and run `nslookup <sqlServer>.database.windows.net`; it should resolve to a `10.x.x.x` address in the private-endpoint subnet.
 

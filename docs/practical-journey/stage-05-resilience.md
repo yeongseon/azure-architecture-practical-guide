@@ -102,6 +102,17 @@ az deployment group create \
   --parameters sqlAdministratorLoginPassword="$SQL_ADMIN_PASSWORD"
 ```
 
+| Command | Purpose |
+|---------|---------|
+| `az group create --resource-group rg-practical-storefront-stage05 --location koreacentral` | Creates the resource group that holds every Stage 5 resource. |
+| `--resource-group rg-practical-storefront-stage05` | Names the resource group to create. |
+| `--location koreacentral` | Sets the Azure region for the resource group. |
+| `az deployment group create` | Deploys the Bicep template into the resource group. |
+| `--resource-group rg-practical-storefront-stage05` | Targets the resource group that receives the deployment. |
+| `--template-file infra/bicep/stages/stage-05-resilience/main.bicep` | Points to the Bicep template to deploy. |
+| `--parameters infra/bicep/stages/stage-05-resilience/main.bicepparam` | Supplies deployment parameters from the `.bicepparam` file. |
+| `--parameters sqlAdministratorLoginPassword="$SQL_ADMIN_PASSWORD"` | Overrides the SQL administrator password inline from the exported variable. |
+
 ## Verify
 
 ```bash
@@ -132,6 +143,13 @@ sleep 120
 curl -s "https://${FRONTDOOR}/ops/info"
 ```
 
+| Command | Purpose |
+|---------|---------|
+| `az afd endpoint list --profile-name <profile> --resource-group "$RG" --query '[0].hostName' --output tsv` | Returns the Front Door endpoint hostname as plain text for use in a shell variable. |
+| `az afd profile list --resource-group "$RG" --query '[0].name' --output tsv` | Returns the Front Door profile name as plain text, used to look up the endpoint. |
+| `--output tsv` | Emits a plain tab-separated value with no quoting, suitable for shell variable capture. |
+| `az webapp stop --name <primaryWebApp> --resource-group "$RG"` | Stops the primary region's web app to simulate a regional outage. |
+
 After the primary stops and Front Door's health probe (30s interval, 3 of 4 samples) fails it out of rotation — typically within 1–2 minutes — `/ops/info` reports `"region": "secondary"` — user traffic has failed over at the **app tier** while the database read-write role is still in the primary region. To fail the **data tier** over as well:
 
 ```bash
@@ -139,6 +157,11 @@ az sql failover-group set-primary --name <failoverGroup> --server <secondarySqlS
 
 az sql failover-group show --name <failoverGroup> --server <secondarySqlServer> --resource-group "$RG" --query replicationRole
 ```
+
+| Command | Purpose |
+|---------|---------|
+| `az sql failover-group set-primary --name <failoverGroup> --server <secondarySqlServer> --resource-group "$RG"` | Promotes the secondary SQL server to the read-write primary role, failing the data tier over. |
+| `az sql failover-group show --name <failoverGroup> --server <secondarySqlServer> --resource-group "$RG" --query replicationRole` | Returns the replication role of the specified server to confirm the failover completed. |
 
 The role now reports `Primary` on the secondary server. Fail back by starting the primary app and running `set-primary` against the primary server again.
 

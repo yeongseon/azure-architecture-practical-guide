@@ -82,6 +82,17 @@ az deployment group create \
   --parameters sqlAdministratorLoginPassword="$SQL_ADMIN_PASSWORD"
 ```
 
+| Command | Purpose |
+|---------|---------|
+| `az group create --resource-group rg-practical-storefront-stage01 --location koreacentral` | Creates the resource group that holds every Stage 1 resource. |
+| `--resource-group rg-practical-storefront-stage01` | Names the resource group to create. |
+| `--location koreacentral` | Sets the Azure region for the resource group. |
+| `az deployment group create` | Deploys the Bicep template into the resource group. |
+| `--resource-group rg-practical-storefront-stage01` | Targets the resource group that receives the deployment. |
+| `--template-file infra/bicep/stages/stage-01-mvp/main.bicep` | Points to the Bicep template to deploy. |
+| `--parameters infra/bicep/stages/stage-01-mvp/main.bicepparam` | Supplies deployment parameters from the `.bicepparam` file. |
+| `--parameters sqlAdministratorLoginPassword="$SQL_ADMIN_PASSWORD"` | Overrides the SQL administrator password inline from the exported variable. |
+
 ## Verify
 
 ```bash
@@ -102,6 +113,14 @@ az monitor app-insights metrics show \
   --metric requests/count \
   --interval PT5M
 ```
+
+| Command | Purpose |
+|---------|---------|
+| `az monitor app-insights metrics show` | Reads an aggregated metric from the Application Insights resource. |
+| `--app <appInsightsName>` | Identifies the Application Insights component to query. |
+| `--resource-group rg-practical-storefront-stage01` | Locates the Application Insights resource. |
+| `--metric requests/count` | Selects the request-count metric to return. |
+| `--interval PT5M` | Aggregates the metric over 5-minute (ISO-8601) buckets. |
 
 A `value` greater than `0` confirms Application Insights is capturing requests.
 

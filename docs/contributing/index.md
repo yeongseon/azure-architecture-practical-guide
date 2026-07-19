@@ -129,6 +129,12 @@ Brief introduction
 az group create --name $RG --location $LOCATION
 ```
 
+| Command | Purpose |
+|---------|---------|
+| `az group create --name $RG --location $LOCATION` | Creates a resource group using readable long flags. |
+| `--name $RG` | Names the resource group to create. |
+| `--location $LOCATION` | Sets the Azure region for the resource group. |
+
 ```text
 # NEVER use short flags in documentation
 az group create -n $RG -l $LOCATION  # ❌ Don't do this

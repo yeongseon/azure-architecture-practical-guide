@@ -27,6 +27,14 @@ az account show --output table
 az account set --subscription <subscription-id-or-name>
 ```
 
+| Command | Purpose |
+|---------|---------|
+| `az login` | Starts interactive browser sign-in to Azure. |
+| `az account show --output table` | Displays the currently active subscription as a formatted table. |
+| `--output table` | Renders the output as a human-readable table instead of JSON. |
+| `az account set --subscription <subscription-id-or-name>` | Selects the subscription that subsequent commands target. |
+| `--subscription <subscription-id-or-name>` | Identifies the subscription to make active, by ID or display name. |
+
 If you are unsure whether you can deploy, confirm that your identity can create or update resource groups in the target subscription. The driver scripts call `az group create`, `az deployment group create`, `az group show`, and `az group delete`, so Contributor rights are the practical minimum.
 
 ## Install and verify the CLI toolchain
@@ -38,6 +46,12 @@ az bicep install
 az bicep version
 az version
 ```
+
+| Command | Purpose |
+|---------|---------|
+| `az bicep install` | Installs the Bicep CLI that Azure CLI uses to compile `.bicep` templates. |
+| `az bicep version` | Prints the installed Bicep CLI version. |
+| `az version` | Prints the Azure CLI core and installed component versions. |
 
 The Practical Journey scripts call `az` directly and the stage parameter files use Bicep features such as `readEnvironmentVariable(...)`, so both Azure CLI and the Bicep CLI integration need to work before deployment.
 

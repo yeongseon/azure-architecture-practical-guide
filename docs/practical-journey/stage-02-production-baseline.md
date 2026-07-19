@@ -96,6 +96,17 @@ az deployment group create \
   --parameters sqlAdministratorLoginPassword="$SQL_ADMIN_PASSWORD"
 ```
 
+| Command | Purpose |
+|---------|---------|
+| `az group create --resource-group rg-practical-storefront-stage02 --location koreacentral` | Creates the resource group that holds every Stage 2 resource. |
+| `--resource-group rg-practical-storefront-stage02` | Names the resource group to create. |
+| `--location koreacentral` | Sets the Azure region for the resource group. |
+| `az deployment group create` | Deploys the Bicep template into the resource group. |
+| `--resource-group rg-practical-storefront-stage02` | Targets the resource group that receives the deployment. |
+| `--template-file infra/bicep/stages/stage-02-production-baseline/main.bicep` | Points to the Bicep template to deploy. |
+| `--parameters infra/bicep/stages/stage-02-production-baseline/main.bicepparam` | Supplies deployment parameters from the `.bicepparam` file. |
+| `--parameters sqlAdministratorLoginPassword="$SQL_ADMIN_PASSWORD"` | Overrides the SQL administrator password inline from the exported variable. |
+
 ## Verify
 
 ```bash
@@ -117,6 +128,14 @@ az sql server ad-admin list --server-name <sqlServer> --resource-group rg-practi
 az webapp deployment slot list --name <webAppName> --resource-group rg-practical-storefront-stage02 --query "[].name"
 az monitor metrics alert list --resource-group rg-practical-storefront-stage02 --query "[].name"
 ```
+
+| Command | Purpose |
+|---------|---------|
+| `az webapp identity show --name <webAppName> --resource-group rg-practical-storefront-stage02 --query principalId` | Confirms the web app has a managed identity and returns its principal ID. |
+| `az keyvault secret show --vault-name <keyVaultName> --name SqlConnectionString --query id` | Confirms the Key Vault holds the `SqlConnectionString` secret and returns its ID. |
+| `az sql server ad-admin list --server-name <sqlServer> --resource-group rg-practical-storefront-stage02` | Lists the Microsoft Entra administrator configured on the SQL server. |
+| `az webapp deployment slot list --name <webAppName> --resource-group rg-practical-storefront-stage02 --query "[].name"` | Lists the deployment slots, confirming the staging slot exists. |
+| `az monitor metrics alert list --resource-group rg-practical-storefront-stage02 --query "[].name"` | Lists the configured metric alerts by name. |
 
 See [`labs/trunk/stage-02-production-baseline/`](https://github.com/yeongseon/azure-architecture-practical-guide/tree/main/labs/trunk/stage-02-production-baseline) for the full checklist, sample requests, and expected results.
 
