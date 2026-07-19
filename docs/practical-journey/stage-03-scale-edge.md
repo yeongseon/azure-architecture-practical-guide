@@ -101,6 +101,17 @@ az deployment group create \
   --parameters sqlAdministratorLoginPassword="$SQL_ADMIN_PASSWORD"
 ```
 
+| Command | Purpose |
+|---------|---------|
+| `az group create --resource-group rg-practical-storefront-stage03 --location koreacentral` | Creates the resource group that holds every Stage 3 resource. |
+| `--resource-group rg-practical-storefront-stage03` | Names the resource group to create. |
+| `--location koreacentral` | Sets the Azure region for the resource group. |
+| `az deployment group create` | Deploys the Bicep template into the resource group. |
+| `--resource-group rg-practical-storefront-stage03` | Targets the resource group that receives the deployment. |
+| `--template-file infra/bicep/stages/stage-03-scale-edge/main.bicep` | Points to the Bicep template to deploy. |
+| `--parameters infra/bicep/stages/stage-03-scale-edge/main.bicepparam` | Supplies deployment parameters from the `.bicepparam` file. |
+| `--parameters sqlAdministratorLoginPassword="$SQL_ADMIN_PASSWORD"` | Overrides the SQL administrator password inline from the exported variable. |
+
 ## Verify
 
 ```bash
@@ -122,6 +133,13 @@ az afd security-policy list --profile-name <afdProfile> --resource-group rg-prac
 az afd origin-group show --profile-name <afdProfile> --origin-group-name og-storefront --resource-group rg-practical-storefront-stage03 --query healthProbeSettings.probePath
 az monitor autoscale show --name <autoscaleName> --resource-group rg-practical-storefront-stage03 --query "profiles[0].capacity.maximum"
 ```
+
+| Command | Purpose |
+|---------|---------|
+| `az afd endpoint show --profile-name <afdProfile> --endpoint-name <afdEndpoint> --resource-group rg-practical-storefront-stage03 --query enabledState` | Returns whether the Front Door endpoint is enabled. |
+| `az afd security-policy list --profile-name <afdProfile> --resource-group rg-practical-storefront-stage03 --query "length(@)"` | Counts the security policies associated with the Front Door profile, confirming a WAF policy is attached. |
+| `az afd origin-group show --profile-name <afdProfile> --origin-group-name og-storefront --resource-group rg-practical-storefront-stage03 --query healthProbeSettings.probePath` | Returns the health-probe path the origin group uses. |
+| `az monitor autoscale show --name <autoscaleName> --resource-group rg-practical-storefront-stage03 --query "profiles[0].capacity.maximum"` | Returns the configured autoscale maximum instance count. |
 
 See [`labs/trunk/stage-03-scale-edge/`](https://github.com/yeongseon/azure-architecture-practical-guide/tree/main/labs/trunk/stage-03-scale-edge) for the full checklist, sample requests, and expected results.
 

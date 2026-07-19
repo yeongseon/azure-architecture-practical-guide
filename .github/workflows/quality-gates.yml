@@ -203,6 +203,26 @@ jobs:
             exit 1
           fi
 
+  validate-cli-explanations:
+    name: Validate Azure CLI Explanation Tables
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Enforce explanation tables after Azure CLI code fences
+        run: |
+          if ! python scripts/validate_cli_explanations.py; then
+            echo "::error::Azure CLI explanation table validation failed. Add a '| Command | Purpose |' table immediately after each bash az code fence."
+            exit 1
+          fi
+
   validate-advr-sections:
     name: Validate ADVR Sections
     runs-on: ubuntu-latest
