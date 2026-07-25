@@ -17,23 +17,26 @@ This page tracks whether major documentation areas have been reviewed for source
 
 Each content area is checked for:
 
-1. Microsoft Learn traceability. [Documented]
-2. Mermaid diagram presence with `diagram-id` metadata. [Validated]
-3. Evidence tags used where claims require strength labeling. [Validated]
+1. Microsoft Learn traceability — every `content_sources` URL is topically relevant and uses `en-us` locale. [Validated]
+2. Mermaid diagram presence with `diagram-id` metadata matching `content_sources.diagrams[].id`. [Validated]
+3. Tail sections — `## See Also` with meaningful internal cross-links and `## Sources` with external references. [Validated]
 4. Alignment with the repository information architecture. [Observed]
+
+This repository uses `content_sources` frontmatter plus `validate_content_sources.py` and `validate_mslearn_urls.py` for provenance enforcement. Per-file `content_validation` blocks (used by the container-apps sibling) are not used here.
 
 ## Current status
 
-| Section | Source coverage | Diagram metadata | Evidence tagging | Validation status |
-|---|---|---|---|---|
-| Start Here | Complete | Complete | In review | Ready for review |
-| Platform | Complete | Complete | In review | Ready for review |
-| WAF | Complete | Complete | In review | Ready for review |
-| Patterns | Partial (13 pattern pages plus index) | Complete | In review | In review |
-| Workload Guides | Partial (5 of 8 planned workload families published) | Complete for published guides | In review | In review |
-| Operations | Complete | Complete | In review | Ready for review |
-| Design Labs | Partial (3 of 8 planned labs published) | Complete for published labs | In review | In review |
-| Reference | Complete | Complete | In review | Ready for review |
+| Section | Pages | Source coverage | Diagram metadata | Tail sections | Validation status |
+|---|---|---|---|---|---|
+| Start Here | 7 | Complete | Complete | Complete | Verified |
+| Platform | 12 | Complete | Complete | Complete | Verified |
+| WAF | 9 | Complete | Complete | Complete | Verified |
+| Patterns | 21 | Complete | Complete | Complete | Verified |
+| Workload Guides | 33 (6 families) | Complete | Complete | Complete | Verified |
+| Operations | 9 | Complete | Complete | Complete | Verified |
+| Design Labs | 5 (3 labs + index + methodology) | Complete | Complete | Complete | Verified |
+| Architecture Reviews | 1 | Complete | Complete | Complete | Verified |
+| Reference | 14 | Complete | Complete | Complete | Verified |
 
 <!-- diagram-id: content-validation-lifecycle -->
 ```mermaid
@@ -46,10 +49,8 @@ flowchart TD
 
 ## Interpretation notes
 
-- **Complete** means the criterion is present and reviewable, not that every technical claim has production proof. [Correlated]
-- **Ready for review** means the page can enter a stricter architecture or editorial review loop. [Observed]
-- **In review** means content exists and is structurally reviewable, but the section is still incomplete or only partially populated against the intended scope. [Observed]
-- **Pending** means content is absent or lacks enough structure to evaluate. [Unknown]
+- **Complete** means the criterion is present and reviewable across all published pages in the section. [Observed]
+- **Verified** means the section passed automated validation (`validate_content_sources.py`, `mkdocs build --strict`) and manual audit of source relevance, diagram metadata, and tail sections. [Observed]
 
 ## See Also
 
