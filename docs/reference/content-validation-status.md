@@ -34,9 +34,11 @@ This repository uses `content_sources` frontmatter plus `validate_content_source
 | Patterns | 21 | Complete | Complete | Complete | Verified |
 | Workload Guides | 33 (6 families) | Complete | Complete | Complete | Verified |
 | Operations | 9 | Complete | Complete | Complete | Verified |
+| Practical Journey | 10 (5 stages + hubs) | Complete | Complete | Complete | Verified |
 | Design Labs | 5 (3 labs + index + methodology) | Complete | Complete | Complete | Verified |
 | Architecture Reviews | 1 | Complete | Complete | Complete | Verified |
 | Reference | 14 | Complete | Complete | Complete | Verified |
+| Contributing | 4 (series contracts) | Complete | Complete | Complete | Verified |
 
 <!-- diagram-id: content-validation-lifecycle -->
 ```mermaid
