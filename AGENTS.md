@@ -297,7 +297,6 @@ Portal screenshots are managed as **build artifacts driven by a manifest** (`scr
 - Encode/downscale raw PNGs to WebP with the `capture-optimize-webp` CLI; refresh existing captures through the `capture-diff-gate` CLI (both provided by the `azure-guide-capture-toolkit` package; below `diff_threshold` only `verified` is bumped, image bytes untouched).
 - Screenshots may be committed as WebP produced by this pipeline. When a capture is optimized to WebP, the **final rendered `.webp`** — not only the raw PNG — MUST be visually verified for PII and caption accuracy before merge. A PII or caption defect introduced or hidden by re-encoding is treated the same as one in a raw PNG.
 - See `scripts/capture/README.md` for the full workflow.
->>>>>>> origin/main
 
 ## Microsoft Learn URL Locale
 
