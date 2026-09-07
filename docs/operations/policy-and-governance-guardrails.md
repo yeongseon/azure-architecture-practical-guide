@@ -86,6 +86,43 @@ flowchart TD
 
 [Validated] Strong guardrails are clear, versioned, reviewable, and paired with an exception process that keeps governance from becoming theater.
 
+## Prerequisites
+
+- Documented architecture standards that the guardrails are meant to enforce.
+- Access to Azure Policy (built-in and custom definitions, initiatives) and the scopes — management groups, subscriptions, landing zones — where they apply.
+- An exception workflow with owner and expiry, plus compliance visibility by scope and owner.
+- Named ownership across governance, platform, application, and security teams.
+
+## When to Use
+
+Apply guardrails wherever architecture decisions must survive day-to-day delivery pressure. Introduce or tighten controls when:
+
+- subscription sprawl produces inconsistent control posture,
+- security or networking decisions are implemented differently across teams,
+- exemptions are granted repeatedly under delivery pressure,
+- a new landing zone or workload type needs a consistent baseline.
+
+## Procedure
+
+1. Define architecture standards and the guardrail intent behind them.
+2. Map each standard to a built-in or custom policy definition, grouping related controls into initiatives.
+3. Version policy definitions and assignments in source control.
+4. Test in lower scopes before broad assignment, moving from audit toward enforcement.
+5. Review compliance, exceptions, and false positives regularly, refining definitions from what you learn.
+
+## Verification
+
+- Required standards are mapped to specific policy controls, and violations and exemptions are visible by scope and owner.
+- [Observed] Compliance trend and remediation time are tracked.
+- [Validated] New policies are tested before wide enforcement.
+- [Unknown] Any control without an owner or escalation path is flagged for follow-up.
+
+## Rollback / Troubleshooting
+
+- If enforcement blocks legitimate delivery, fall back to audit for that control while you refine the definition — do not grant a broad, open-ended exemption.
+- Diagnose the documented failure modes — audit everywhere that never progresses to enforcement, long-lived exceptions that quietly replace standards, or compliance percentages reported without checking real risk reduction.
+- When repeated exception patterns appear, treat them as a trigger to change the architecture or platform capability rather than to keep exempting.
+
 ## See Also
 
 - [Identity and governance foundations](../platform/identity-and-governance-foundations.md)

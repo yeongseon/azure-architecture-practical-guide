@@ -96,6 +96,43 @@ Avoid vanity SLOs that are easy to meet but weakly tied to actual user impact.
 
 [Validated] A workload is only as operable as its observability model. Good SLOs express user commitments, and good telemetry reveals when the architecture is no longer meeting them.
 
+## Prerequisites
+
+- Telemetry pipelines for metrics, logs, traces, and health events across the workload and its dependencies.
+- Identified critical user journeys for which SLIs and SLOs can be defined.
+- Alert routing and escalation paths mapped to teams that can act.
+- Agreement on error-budget meaning between application, platform, security, and product owners.
+
+## When to Use
+
+Design observability and SLOs for any workload with real user or business impact. Revisit them when:
+
+- new critical journeys or dependencies are introduced,
+- alert noise rises or dashboards look healthy while users report failures,
+- an incident review shows the wrong owners were paged,
+- error-budget policy or reliability targets change.
+
+## Procedure
+
+1. Collect telemetry signals — metrics, logs, traces, and health events.
+2. Derive SLIs that represent user experience and operational risk (success rate, p95/p99 latency, backlog age, recovery time, data freshness).
+3. Set SLOs as targets over time, avoiding vanity indicators weakly tied to user impact.
+4. Route alerts and escalation to the owners who can act, separating symptom alerts from cause signals.
+5. Feed incident learning back into SLOs, telemetry coverage, and architecture change.
+
+## Verification
+
+- Critical user journeys have defined SLIs and SLOs, and alerts map to actionable ownership.
+- [Observed] Error-budget burn, latency, and availability trends are visible on shared dashboards.
+- [Validated] Alert routing and escalation paths are exercised, not assumed.
+- [Correlated] Telemetry joins application, dependency, and platform signals for faster diagnosis.
+
+## Rollback / Troubleshooting
+
+- If an SLO or alert change increases noise or masks real degradation, revert to the prior definition and refine before re-enabling.
+- Diagnose the documented failure modes — teams learning of failure only from user reports, alerts paging the wrong owners, or dashboards looking healthy while critical workflows degrade.
+- Maintain an observability backlog for blind spots and noisy alerts so weak signals are corrected instead of tolerated.
+
 ## See Also
 
 - [WAF operational excellence pillar](../waf/operational-excellence.md)
