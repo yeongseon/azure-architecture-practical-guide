@@ -93,6 +93,44 @@ Create ADRs for platform baselines, identity boundaries, region strategy, deploy
 
 [Validated] ADRs turn architecture from memory into evidence. The 16-section ADVR format keeps decisions reviewable, testable, and revisitable.
 
+## Prerequisites
+
+- An agreed ADR template (the 16-section ADVR format above) and a location for the ADR log that is searchable and version-controlled.
+- Named owners and approvers who can accept, supersede, or retire a decision.
+- Links available to the architecture diagrams, review notes, and platform changes the decision affects.
+- A shared understanding of the evidence levels (`[Documented]`, `[Observed]`, `[Measured]`, `[Validated]`, `[Unknown]`) so records state how strong their support is.
+
+## When to Use
+
+Create or revisit an ADR when a decision is durable, cross-cutting, or expensive to reverse. Typical triggers:
+
+- platform baselines, identity boundaries, region strategy, deployment topology, or data platform selection,
+- a major change to the operational model or ownership of a workload,
+- recurring incidents, cost spikes, or assumptions that no longer match reality.
+
+Do not raise an ADR for reversible, local implementation details that carry no lasting trade-off.
+
+## Procedure
+
+1. Frame the decision question and capture business context, scope, and constraints.
+2. Record candidate options with evidence, then the recommended option and its architecture hypothesis.
+3. Add predicted outcomes, a validation plan, and explicit falsification criteria.
+4. Review with the affected owners, capture trade-offs, guardrails, and revisit triggers, then set the ADR status to accepted.
+5. Append the record to the ADR log with identifier, date, owners, and affected systems.
+
+## Verification
+
+- Each accepted ADR states why the choice was made and what evidence would invalidate it.
+- [Documented] Official guidance and internal standards are cited for the choice.
+- [Validated] Risky decisions link to proof-of-concept or drill results, and missing data is tagged `[Unknown]` rather than hidden.
+- The ADR log is reviewed on the cadence above when incidents recur, costs spike, or assumptions drift.
+
+## Rollback / Troubleshooting
+
+- If a decision proves wrong, do not silently edit it: mark the ADR superseded or retired and write a new record that references it.
+- Watch for the common anti-patterns — ADRs written only after implementation, alternatives omitted, missing falsification criteria, or one ADR covering too many decisions — and correct the record rather than the memory.
+- When accepted ADRs drift from the running architecture, open a revisit and restore alignment before adding new exceptions.
+
 ## See Also
 
 - [Architecture lifecycle](architecture-lifecycle.md)

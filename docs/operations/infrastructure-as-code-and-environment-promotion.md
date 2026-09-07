@@ -89,6 +89,43 @@ flowchart TD
 
 [Validated] Good IaC is not only declarative deployment. It is the architecture operating model encoded in source, promoted safely, and kept synchronized with real production behavior.
 
+## Prerequisites
+
+- A declarative IaC toolchain (Bicep or Terraform) with definitions in source control.
+- Reusable modules for common platform patterns, with environment-specific data separated from shared topology.
+- Defined promotion environments (development, staging or pre-production, production) with promotion gates and approvers.
+- A secrets strategy that keeps secrets out of source, plus explicit rollback or forward-fix conventions.
+
+## When to Use
+
+Use IaC and controlled promotion for any Azure topology that must be reproducible or auditable. Apply the promotion discipline whenever:
+
+- topology, policy, identity, or networking controls change,
+- a workload moves from prototype toward production,
+- multiple environments must stay consistent,
+- an emergency fix was applied and needs to return to source control.
+
+## Procedure
+
+1. Author or update reusable modules and workload composition from source definitions.
+2. Deploy to development, validating structure and parameters.
+3. Promote to staging or pre-production to prove policy, network, and dependency compatibility.
+4. Promote to production through the defined gates, with rollback or forward-fix ready.
+5. Feed operational results back into the modules and parameter sets.
+
+## Verification
+
+- [Observed] Promotion paths are standardized and auditable, and drift, failed deployments, and rollback frequency are tracked.
+- [Validated] Non-production environments prove policy and dependency compatibility before production.
+- [Correlated] Production deployment issues are traced back to template or promotion design.
+- [Inferred] Module reuse reduces inconsistent implementation of core controls.
+
+## Rollback / Troubleshooting
+
+- Prefer promoting a corrected, reviewed definition; when an emergency manual fix is unavoidable, reconcile it back into source before the next promotion so drift does not persist.
+- Diagnose the documented failure modes — staging that does not represent production risk, policy failures found only at production time, or partial rollouts breaking shared dependencies.
+- Reject the anti-pattern of one code path for dev with manual production exceptions; restore a single promoted path and re-run through the gates.
+
 ## See Also
 
 - [Environment promotion and release guardrails](../patterns/deployment/environment-promotion-and-release-guardrails.md)

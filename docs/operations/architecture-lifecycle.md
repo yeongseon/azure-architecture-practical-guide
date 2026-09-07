@@ -86,6 +86,43 @@ flowchart TD
 
 [Validated] The best architecture lifecycle is a deliberate loop: decide, encode, operate, learn, and revisit before production pressure makes redesign unavoidable.
 
+## Prerequisites
+
+- Defined outputs and exit criteria for each lifecycle phase (Design, Build, Deploy, Operate, Evolve).
+- Decision records (ADRs) and diagrams that capture the original goals, constraints, and trade-offs.
+- Named ownership per phase so architects, platform, security, release, and application teams know their responsibilities.
+- Visibility into deployment, incident, cost, and performance trends so drift is observable rather than hidden.
+
+## When to Use
+
+Apply this lifecycle model continuously for any workload expected to live beyond its first release. Actively re-enter the loop when:
+
+- traffic, tenant mix, or compliance constraints change materially,
+- the same dependency or failure mode causes repeated incidents,
+- cost growth outpaces business value, or platform changes make an earlier trade-off obsolete,
+- team topology changes shift operational ownership.
+
+## Procedure
+
+1. **Design** — define goals, constraints, options, and quality priorities; record them as ADRs and diagrams.
+2. **Build** — encode topology, policy, identity, and dependencies into versioned delivery assets.
+3. **Deploy** — promote changes through controlled environments with approvals and rollback plans.
+4. **Operate** — monitor SLOs, support, optimize, and recover the workload.
+5. **Evolve** — feed operational, incident, and cost signals back into revisit triggers and the redesign backlog.
+
+## Verification
+
+- Each phase produces its defined outputs and meets exit criteria before the next phase begins.
+- [Observed] Drift and exceptions are visible rather than buried in tickets.
+- [Correlated] Deployment, incident, cost, and performance trends inform architecture change.
+- [Validated] Revisit triggers lead to actual architecture reviews, not just backlog notes.
+
+## Rollback / Troubleshooting
+
+- When a phase ships without updated decision records, pause and reconcile the ADRs before the change compounds drift.
+- Guard against the anti-patterns — treating the first diagram as final, accumulating silent exceptions, or waiting for a major outage to review reliability and security assumptions.
+- Use the practical review questions (which assumptions no longer hold, which controls only compensate for old constraints, which decisions are becoming expensive to reverse) to decide when to roll a decision back into redesign.
+
 ## See Also
 
 - [ADR process](adr-process.md)

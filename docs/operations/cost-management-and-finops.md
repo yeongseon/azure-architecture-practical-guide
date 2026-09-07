@@ -94,6 +94,43 @@ These commitment models are valuable when demand is stable enough. The architect
 
 [Validated] FinOps is effective when architecture, operations, and finance share the same cost signals and can act on them before waste becomes structural.
 
+## Prerequisites
+
+- Cost ownership assigned at subscription, resource group, workload, and environment levels.
+- A consistent tag taxonomy (workload, environment, owner, cost center, business unit) enforced by policy.
+- Access to Azure Cost Management data, budgets, and anomaly alerts routed to teams that can act.
+- Agreement that baseline spend is separated from burst or project-specific spend.
+
+## When to Use
+
+Apply FinOps continuously once a workload has meaningful or growing Azure consumption. Give it extra attention when:
+
+- a shared-service bill grows without a clear owner,
+- egress, telemetry, or premium-service costs become hard to explain,
+- commitment discounts (reservations, savings plans) are being considered or renewed,
+- budget surprises recur because architecture review is disconnected from finance review.
+
+## Procedure
+
+1. Allocate and tag resources so spend maps to accountable owners.
+2. Set budgets and forecasts at scopes where teams can actually act.
+3. Observe spend and anomalies, comparing them to release events, traffic changes, and incident timelines.
+4. Optimize usage, commitments, and design — validating that discounts match sustained usage.
+5. Report outcomes to owners and feed cost insights back into architecture reviews.
+
+## Verification
+
+- [Observed] Spend by workload, environment, and shared service is visible, and budget alerts reach teams that can act.
+- [Validated] Commitment discounts are reviewed against real usage before renewal.
+- [Correlated] Cost anomalies are linked to traffic, releases, or topology changes rather than treated as noise.
+- [Inferred] FinOps insights influence architecture reviews and backlog priorities.
+
+## Rollback / Troubleshooting
+
+- If an optimization threatens stability, restore the prior configuration — never cut observability or resilience indiscriminately to hit a short-term budget target.
+- Diagnose the documented failure modes: an unowned shared-service bill, premium services left running after temporary scaling, or reservations that no longer match workload shape.
+- When commitments prove wrong for the demand pattern, treat overcommitment as waste and rebalance toward elasticity where that is the real value.
+
 ## See Also
 
 - [WAF cost optimization pillar](../waf/cost-optimization.md)
