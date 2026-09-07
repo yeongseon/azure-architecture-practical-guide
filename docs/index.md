@@ -79,7 +79,7 @@ Architecture Reviews are planned for Phase 2. In the current published Phase 1 s
 
 This is an independent community project. Not affiliated with or endorsed by Microsoft.
 
-Primary references: [Azure Architecture Center](https://learn.microsoft.com/azure/architecture/) and [Azure Well-Architected Framework](https://learn.microsoft.com/azure/well-architected/).
+Primary references: [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/) and [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/).
 
 ## See Also
 
@@ -93,6 +93,6 @@ Primary references: [Azure Architecture Center](https://learn.microsoft.com/azur
 
 ## Sources
 
-- [Azure Architecture Center](https://learn.microsoft.com/azure/architecture/)
-- [Azure Well-Architected Framework](https://learn.microsoft.com/azure/well-architected/)
+- [Azure Architecture Center](https://learn.microsoft.com/en-us/azure/architecture/)
+- [Azure Well-Architected Framework](https://learn.microsoft.com/en-us/azure/well-architected/)
 
