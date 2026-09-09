@@ -37,6 +37,10 @@ Use a design lab first to frame the decision, then use the aligned workload guid
 | Lab 07: Landing Zone Baseline | Landing Zone and Shared Services | Backlog item for later phase | Planned |
 | Lab 08: AI RAG Enterprise Baseline | AI and RAG | Backlog item for later phase | Planned |
 
+## Practical Journey
+
+The [Practical Journey](../practical-journey/index.md) is the deployment companion to these design labs: a staged deploy → verify → destroy sequence that walks one sample workload from a public MVP to a resilient multi-region baseline. Use a design lab to frame and justify the decision, then follow the journey stages to see those decisions take shape in a real Azure subscription.
+
 ## Lab workflow
 
 <!-- diagram-id: design-labs-index-map -->
@@ -66,6 +70,7 @@ Use the evidence tags consistently:
 ## See Also
 
 - [Design Lab Methodology](methodology.md) — the ADVR structure every lab follows
+- [Practical Journey](../practical-journey/index.md) — the staged deployment companion to these design labs
 - [Workload Guides](../workload-guides/index.md) — the implementation blueprints each lab pairs with
 - [Patterns](../patterns/index.md) — reusable design patterns referenced across the labs
 

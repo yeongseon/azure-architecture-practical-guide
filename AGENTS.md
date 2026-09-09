@@ -67,6 +67,8 @@ Approved top-level sections (with source directories):
 
 Do not force this repository into the service-guide core section model where it would reduce clarity.
 
+`docs/practical-journey/` (the staged deploy → verify → destroy sequence) is nav-nested under `Design Labs` as a named subsection. It is a hands-on companion to the design exercises, not a top-level section — do not re-promote it to the top level, because the approved list above plus the 6–9 top-level navigation budget do not allow a tenth section.
+
 Large collections should be exposed through workload or review hub pages, not by adding every orphan page directly to the top-level nav.
 
 ## Repository Structure
@@ -82,6 +84,7 @@ Large collections should be exposed through workload or review hub pages, not by
 │   │   └── migration-playbooks/ # Stepwise modernization and transition guides
 │   ├── assets/                 # Images, icons
 │   ├── design-labs/            # Guided design exercises
+│   ├── practical-journey/      # Staged deploy → verify → destroy journey (nav-nested under Design Labs)
 │   ├── operations/             # ADRs, IaC, governance, observability, FinOps
 │   ├── patterns/               # Architecture patterns
 │   ├── platform/               # Azure architecture foundations
