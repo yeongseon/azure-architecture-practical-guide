@@ -150,7 +150,7 @@ def has_visual_asset(text: str) -> bool:
 
 
 def in_scope_pages() -> list[Path]:
-    """Return factual-claim pages (per ``lib.content_scope``) under docs/."""
+    """Return factual-claim pages (per this repo's self-contained scope) under docs/."""
     return sorted(
         p for p in DOCS.rglob("*.md") if is_in_scope(p.relative_to(DOCS).as_posix())
     )
