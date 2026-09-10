@@ -113,27 +113,32 @@ nav:
     - About: about.md
   - Platform:
     - platform/index.md
-    - platform/azure-architecture-on-azure.md
-    - platform/resource-organization.md
-    - platform/landing-zones-basics.md
-    - platform/identity-and-governance-foundations.md
-    - platform/network-topology-basics.md
-    - platform/compute-selection-basics.md
-    - platform/data-selection-basics.md
-    - platform/integration-selection-basics.md
-    - platform/observability-foundations.md
-    - platform/resilience-and-region-strategy.md
-    - platform/cost-model-basics.md
+    - Foundations:
+      - Azure Architecture on Azure: platform/azure-architecture-on-azure.md
+      - Resource Organization: platform/resource-organization.md
+      - Landing Zones Basics: platform/landing-zones-basics.md
+    - Identity, Network and Compute:
+      - Identity and Governance Foundations: platform/identity-and-governance-foundations.md
+      - Network Topology Basics: platform/network-topology-basics.md
+      - Compute Selection Basics: platform/compute-selection-basics.md
+    - Data and Integration:
+      - Data Selection Basics: platform/data-selection-basics.md
+      - Integration Selection Basics: platform/integration-selection-basics.md
+    - Operations Foundations:
+      - Observability Foundations: platform/observability-foundations.md
+      - Resilience and Region Strategy: platform/resilience-and-region-strategy.md
+      - Cost Model Basics: platform/cost-model-basics.md
   - Well-Architected Framework:
     - waf/index.md
-    - waf/using-waf-in-this-guide.md
-    - waf/cost-optimization.md
-    - waf/operational-excellence.md
-    - waf/performance-efficiency.md
-    - waf/reliability.md
-    - waf/security.md
-    - waf/pillar-trade-offs.md
-    - waf/architecture-assessment-checklist.md
+    - Using WAF in This Guide: waf/using-waf-in-this-guide.md
+    - Five Pillars:
+      - Cost Optimization: waf/cost-optimization.md
+      - Operational Excellence: waf/operational-excellence.md
+      - Performance Efficiency: waf/performance-efficiency.md
+      - Reliability: waf/reliability.md
+      - Security: waf/security.md
+    - Pillar Trade-offs: waf/pillar-trade-offs.md
+    - Architecture Assessment Checklist: waf/architecture-assessment-checklist.md
   - Architecture Patterns:
     - patterns/index.md
     - patterns/service-selection-patterns.md
@@ -204,14 +209,17 @@ nav:
       - workload-guides/landing-zone-shared-services/cost-and-anti-patterns.md
   - Operations:
     - operations/index.md
-    - operations/architecture-lifecycle.md
-    - operations/adr-process.md
-    - operations/infrastructure-as-code-and-environment-promotion.md
-    - operations/policy-and-governance-guardrails.md
-    - operations/observability-and-slos.md
-    - operations/cost-management-and-finops.md
-    - operations/business-continuity-and-drills.md
-    - operations/platform-team-vs-app-team-responsibilities.md
+    - Decisions and Process:
+      - Architecture Lifecycle: operations/architecture-lifecycle.md
+      - ADR Process: operations/adr-process.md
+    - Delivery Guardrails:
+      - Infrastructure as Code and Environment Promotion: operations/infrastructure-as-code-and-environment-promotion.md
+      - Policy and Governance Guardrails: operations/policy-and-governance-guardrails.md
+    - Runtime Operations:
+      - Observability and SLOs: operations/observability-and-slos.md
+      - Business Continuity and Drills: operations/business-continuity-and-drills.md
+    - Cost Management and FinOps: operations/cost-management-and-finops.md
+    - Platform Team vs App Team Responsibilities: operations/platform-team-vs-app-team-responsibilities.md
   - Architecture Reviews:
     - architecture-reviews/index.md
   - Design Labs:
@@ -233,19 +241,21 @@ nav:
       - practical-journey/stage-05-resilience.md
   - Reference:
     - reference/index.md
-    - reference/architecture-decision-matrix.md
-    - reference/compute-selection-cheatsheet.md
-    - reference/data-selection-cheatsheet.md
-    - reference/messaging-selection-cheatsheet.md
-    - reference/network-topology-cheatsheet.md
-    - reference/resilience-targets-rto-rpo.md
-    - reference/waf-pillar-to-pattern-map.md
-    - reference/security-control-mapping.md
-    - reference/glossary.md
-    - reference/source-index.md
-    - reference/series-portal.md
-    - reference/content-validation-status.md
-    - reference/validation-status.md
+    - Selection Cheatsheets:
+      - Compute Selection Cheatsheet: reference/compute-selection-cheatsheet.md
+      - Data Selection Cheatsheet: reference/data-selection-cheatsheet.md
+      - Messaging Selection Cheatsheet: reference/messaging-selection-cheatsheet.md
+      - Network Topology Cheatsheet: reference/network-topology-cheatsheet.md
+    - Architecture Decision Matrix: reference/architecture-decision-matrix.md
+    - Resilience Targets RTO RPO: reference/resilience-targets-rto-rpo.md
+    - WAF Pillar to Pattern Map: reference/waf-pillar-to-pattern-map.md
+    - Security Control Mapping: reference/security-control-mapping.md
+    - Glossary: reference/glossary.md
+    - Portals and Dashboards:
+      - Source Index: reference/source-index.md
+      - Series Portal: reference/series-portal.md
+      - Content Validation Status: reference/content-validation-status.md
+      - Validation Status: reference/validation-status.md
   - Contributing:
     - contributing/index.md
     - contributing/language-guide-baseline.md
