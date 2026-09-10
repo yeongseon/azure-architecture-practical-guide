@@ -124,7 +124,7 @@ nav:
     - Data and Integration:
       - Data Selection Basics: platform/data-selection-basics.md
       - Integration Selection Basics: platform/integration-selection-basics.md
-    - Operations Foundations:
+    - Operational Foundations:
       - Observability Foundations: platform/observability-foundations.md
       - Resilience and Region Strategy: platform/resilience-and-region-strategy.md
       - Cost Model Basics: platform/cost-model-basics.md
